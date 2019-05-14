@@ -12,19 +12,19 @@
     "test": "run-p --race dev cy:run"
   },
   "dependencies": {
-    "compression": "^1.7.1",
-    "polka": "^0.5.0",
-    "sirv": "^0.4.0"
+    "compression": "^1.7.4",
+    "polka": "^0.5.2",
+    "sirv": "^0.4.2"
   },
   "devDependencies": {
     "css-loader": "^2.1.1",
     "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5",
-    "sapper": "^0.26",
+    "sapper": "^0.27.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "svelte": "^3.0.0",
-    "svelte-loader": "^2.9.0",
-    "webpack": "^4.7.0"
+    "svelte": "^3.3.0",
+    "svelte-loader": "^2.13.3",
+    "webpack": "^4.31.0"
   }
 }
