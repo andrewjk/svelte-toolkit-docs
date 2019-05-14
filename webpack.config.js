@@ -25,6 +25,14 @@ module.exports = {
 							hotReload: false // pending https://github.com/sveltejs/svelte/issues/2377
 						}
 					}
+				},
+				{
+					test: /\.scss$/,
+					use: [
+						'style-loader',
+						'css-loader',
+						'sass-loader'
+					]
 				}
 			]
 		},
