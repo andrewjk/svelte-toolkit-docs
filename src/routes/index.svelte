@@ -14,6 +14,13 @@
 	</ul>
 
 	<ul>
-		<li><a href="components/panel">Panel</a></li>
+		<li><a href="components/accordion">Accordion</a></li>
+		<li><a href="components/alert">Alert</a></li>
+		<li><a href="components/breadcrumb">Breadcrumb</a></li>
+		<li><a href="components/button">Button</a></li>
+		<li><a href="components/notification">Notification</a></li>
+		<li><a href="components/offscreen">Off-screen</a></li>
+		<li><a href="components/pagenav">Pagination</a></li>
+		<li><a href="components/tabs">Tabs</a></li>
 	</ul>
 </div>
