@@ -1,5 +1,6 @@
 <script>
   import { Tabs, TabItem } from "../../../../svelte-toolkit/main.js";
+  import { items } from '../../stores/items'
 
   export let items;
 
@@ -15,7 +16,7 @@
 
   <h3>Demo</h3>
   <Tabs {multiple} bind:value>
-    {#each items as item}
+      {#each $items as item}
       <TabItem id={item.id} header={item.name}>{item.text}</TabItem>
     {/each}
   </Tabs>

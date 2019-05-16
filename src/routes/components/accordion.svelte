@@ -1,5 +1,6 @@
 <script>
   import { Accordion, AccordionItem } from "../../../../svelte-toolkit/main.js";
+  import { items } from '../../stores/items'
 
   let value = -1;
   let multiple = false;
@@ -34,7 +35,7 @@
 
   <h3>Demo</h3>
   <Accordion {multiple} bind:value>
-    {#each items as item}
+      {#each $items as item}
       <AccordionItem header={item.name}>{item.text}</AccordionItem>
     {/each}
   </Accordion>
