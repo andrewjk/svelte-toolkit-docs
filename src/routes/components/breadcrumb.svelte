@@ -10,32 +10,38 @@
   </p>
 
   <h3>Demo</h3>
-  <Breadcrumb>
-    {#each items as item}
-      <BreadcrumbItem href={item.href}>{item.name}</BreadcrumbItem>
-    {/each}
-  </Breadcrumb>
-
-  <h3>Code</h3>
-  <pre>
-  &lt;Breadcrumb &lbrace;multiple&rbrace;&gt;
-    &lbrace;#each items as item&rbrace;
-      &lt;BreadcrumbItem href=&lbrace;item.href&rbrace;&gt;&lbrace;item.name&rbrace;&lt;/BreadcrumbItem&gt;
-    &lbrace;/each&rbrace;
-  &lt;/Breadcrumb&gt;
-  </pre>
+  <div class="block">
+    <Breadcrumb>
+      {#each $items as item}
+        <BreadcrumbItem href={item.href}>{item.name}</BreadcrumbItem>
+      {/each}
+    </Breadcrumb>
+  </div>
 
   <h3>Properties</h3>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Default</th>
-        <th>Description</th>
-        <th>Change</th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
+  <div class="block">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Default</th>
+          <th>Description</th>
+          <th>Change</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Code</h3>
+  <div class="block">
+    <pre>
+&lt;Breadcrumb &lbrace;multiple&rbrace;&gt;
+  &lbrace;#each items as item&rbrace;
+    &lt;BreadcrumbItem href=&lbrace;item.href&rbrace;&gt;&lbrace;item.name&rbrace;&lt;/BreadcrumbItem&gt;
+  &lbrace;/each&rbrace;
+&lt;/Breadcrumb&gt;
+    </pre>
+  </div>
 </div>
