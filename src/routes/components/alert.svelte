@@ -1,5 +1,5 @@
 <script>
-  import { Alert } from "../../../../svelte-toolkit/build";
+  import { Alert } from "../../../../svelte-toolkit/main.js";
 
   let message = "Pay attention to me!"
 

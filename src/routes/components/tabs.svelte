@@ -1,5 +1,5 @@
 <script>
-  import { Tabs, TabItem } from "../../../../svelte-toolkit/build";
+  import { Tabs, TabItem } from "../../../../svelte-toolkit/main.js";
 
   export let items;
 

@@ -1,5 +1,5 @@
 <script>
-  import { Notification } from "../../../../svelte-toolkit/build";
+  import { Notification } from "../../../../svelte-toolkit/main.js";
 
   let type = "info";
   let message = "You might be interested to know this..."

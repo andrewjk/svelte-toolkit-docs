@@ -1,7 +1,5 @@
 <script>
-  import { Breadcrumb, BreadcrumbItem } from "../../../../svelte-toolkit/build";
-
-  export let items;
+  import { Breadcrumb, BreadcrumbItem } from "../../../../svelte-toolkit/main.js";
 </script>
 
 <div class="container">

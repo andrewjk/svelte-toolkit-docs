@@ -1,5 +1,5 @@
 <script>
-  import { Accordion, AccordionItem } from "../../../../svelte-toolkit/build";
+  import { Accordion, AccordionItem } from "../../../../svelte-toolkit/main.js";
 
   let value = -1;
   let multiple = false;

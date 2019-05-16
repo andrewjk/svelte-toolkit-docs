@@ -1,5 +1,5 @@
 <script>
-  import { OffScreen } from "../../../../svelte-toolkit/build";
+  import { OffScreen } from "../../../../svelte-toolkit/main.js";
 
   let visible = false;
   let direction = "left";

@@ -1,5 +1,5 @@
 <script>
-  import { Button } from "../../../../svelte-toolkit/build";
+  import { Button } from "../../../../svelte-toolkit/main.js";
 
   let type = "";
   let size = "";
