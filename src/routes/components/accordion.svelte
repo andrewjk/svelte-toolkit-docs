@@ -23,7 +23,7 @@
 
   <h3>Properties</h3>
   <div class="block">
-    <table>
+    <table class="table">
       <thead>
         <tr>
           <th>Name</th>

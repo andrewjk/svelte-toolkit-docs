@@ -12,15 +12,15 @@
   <h3>Demo</h3>
   <div class="block">
     <Breadcrumb>
-      {#each $items as item}
-        <BreadcrumbItem href={item.href}>{item.name}</BreadcrumbItem>
+      {#each $items as item, index}
+        <BreadcrumbItem href={item.href} current={index === 2}>{item.name}</BreadcrumbItem>
       {/each}
     </Breadcrumb>
   </div>
 
   <h3>Properties</h3>
   <div class="block">
-    <table>
+    <table class="table">
       <thead>
         <tr>
           <th>Name</th>

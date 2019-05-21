@@ -18,12 +18,12 @@
   <h3>Demo</h3>
   <div class="block">
     <OffScreen bind:visible bind:direction>Here's your hidden content</OffScreen>
-    <button on:click={toggleOffScreen}>Show the off-screen</button>
+    <button class="button full-width" on:click={toggleOffScreen}>Show the off-screen</button>
   </div>
 
   <h3>Properties</h3>
   <div class="block">
-    <table>
+    <table class="table">
       <thead>
         <tr>
           <th>Name</th>
