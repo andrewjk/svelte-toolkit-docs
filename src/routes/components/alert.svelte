@@ -1,13 +1,16 @@
 <script>
   import { Alert } from "../../../../svelte-toolkit/main.js";
+  import { Button } from "../../../../svelte-toolkit/main.js";
 
   let message = "Pay attention to me!"
+  let direction = "top";
+  let closable = true;
+  let duration = 5000;
 
-  function openAlert(e) {
-    var type = e.target.dataset.type
+  function openAlert(type) {
     const alert = new Alert({
       target: document.body,
-      props: { type, message },
+      props: { type, message, direction, closable, duration },
       intro: true
     });
   }
@@ -21,10 +24,11 @@
 
   <h3>Demo</h3>
   <div class="block">
-    <button data-type="info" on:click={openAlert}>Open an info alert</button><br/>
-    <button data-type="success" on:click={openAlert}>Open a success alert</button><br/>
-    <button data-type="warning" on:click={openAlert}>Open a warning alert</button><br/>
-    <button data-type="danger" on:click={openAlert}>Open a danger alert</button><br/>
+    <Button type="default" on:click={e => openAlert('default')}>Open a default alert</Button>
+    <Button type="info" on:click={e => openAlert('info')}>Open an info alert</Button>
+    <Button type="success" on:click={e => openAlert('success')}>Open a success alert</Button>
+    <Button type="warning" on:click={e => openAlert('warning')}>Open a warning alert</Button>
+    <Button type="danger" on:click={e => openAlert('danger')}>Open a danger alert</Button>
   </div>
 
   <h3>Properties</h3>
@@ -64,6 +68,64 @@
             <input type="text" bind:value="{message}">
           </td>
         </tr>
+        <tr>
+          <td>direction</td>
+          <td>top</td>
+          <td>
+            top-left, top, top-right, bottom-left, bottom, or bottom-right
+          </td>
+          <td>
+            <select bind:value={direction}>
+              <option>top-left</option>
+              <option>top</option>
+              <option>top-right</option>
+              <option>bottom-left</option>
+              <option>bottom</option>
+              <option>bottom-right</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>closable</td>
+          <td>true</td>
+          <td>
+            Set to true to display a close button at the right of the alert
+          </td>
+          <td>
+            <label>
+              <input type="checkbox" bind:checked={closable} />
+              Allow closing the alert
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>duration</td>
+          <td>5000</td>
+          <td>
+            The number of milliseconds to wait before closing the alert. Set to -1 to never close (but make sure you leave closable true!)
+          </td>
+          <td>
+            <input type="number" bind:value={duration} />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Events</h3>
+  <div class="block">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Args</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>closed</td>
+          <td>-</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -71,7 +133,12 @@
   <h3>Code</h3>
   <div class="block">
     <pre>
-      TODO: I don't know how to put this stuff in here?!
+const alert = new Alert(&lbrace;
+  target: document.body,
+  props: &lbrace; type, message, direction, closable, duration &rbrace;,
+  intro: true
+&rbrace);
+alert.$on('closed', onclosed);
     </pre>
   </div>
 </div>
