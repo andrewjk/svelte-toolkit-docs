@@ -1,8 +1,10 @@
 <script>
   import { Notification } from "../../../../svelte-toolkit/main.js";
 
-  let type = "info";
   let message = "You might be interested to know this..."
+  let type = "info";
+  let closable = true;
+  let duration = 0;
 </script>
 
 <div class="container">
@@ -13,7 +15,7 @@
 
   <h3>Demo</h3>
   <div class="block">
-    <Notification bind:type bind:message/>
+    <Notification bind:message bind:type bind:closable bind:duration/>
   </div>
 
   <h3>Properties</h3>
@@ -30,12 +32,13 @@
       <tbody>
         <tr>
           <td>type</td>
-          <td>info</td>
+          <td>default</td>
           <td>
-            info, success, warning, or danger
+            default, info, success, warning, or danger
           </td>
           <td>
             <select bind:value="{type}">
+              <option>default</option>
               <option>info</option>
               <option>success</option>
               <option>warning</option>
@@ -52,6 +55,47 @@
           <td>
             <input type="text" bind:value="{message}">
           </td>
+        </tr>
+        <tr>
+          <td>closable</td>
+          <td>true</td>
+          <td>
+            Set to true to display a close button at the right of the notification
+          </td>
+          <td>
+            <label>
+              <input type="checkbox" bind:checked={closable} />
+              Allow closing the notification
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>duration</td>
+          <td>-1</td>
+          <td>
+            The number of milliseconds to wait before closing the notification. Set to -1 to never close
+          </td>
+          <td>
+            <input type="number" bind:value={duration} />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Events</h3>
+  <div class="block">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Args</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>closed</td>
+          <td>&nbsp;</td>
         </tr>
       </tbody>
     </table>
