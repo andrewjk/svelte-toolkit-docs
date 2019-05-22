@@ -45,12 +45,13 @@
       <tbody>
         <tr>
           <td>type</td>
-          <td>info</td>
+          <td>default</td>
           <td>
-            info, success, warning, or danger
+            default, info, success, warning, or danger
           </td>
           <td>
             <select>
+              <option>default</option>
               <option>info</option>
               <option>success</option>
               <option>warning</option>
@@ -60,7 +61,7 @@
         </tr>
         <tr>
           <td>message</td>
-          <td>-</td>
+          <td>&nbsp;</td>
           <td>
             The message to display in the alert, which can also come from slot content
           </td>
@@ -124,7 +125,7 @@
       <tbody>
         <tr>
           <td>closed</td>
-          <td>-</td>
+          <td>&nbsp;</td>
         </tr>
       </tbody>
     </table>

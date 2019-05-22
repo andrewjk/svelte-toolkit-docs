@@ -30,6 +30,12 @@
         </tr>
       </thead>
       <tbody>
+        <tr>
+          <td>current (BreadcrumbItem)</td>
+          <td>false</td>
+          <td>true if this breadcrumb item is the current page</td>
+          <td></td>
+        </tr>
       </tbody>
     </table>
   </div>

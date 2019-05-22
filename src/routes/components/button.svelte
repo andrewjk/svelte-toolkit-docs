@@ -55,7 +55,7 @@
       <tbody>
         <tr>
           <td>type</td>
-          <td>-</td>
+          <td>&nbsp;</td>
           <td>
             info, success, warning, danger, cancel
           </td>
@@ -72,7 +72,7 @@
         </tr>
         <tr>
           <td>size</td>
-          <td>-</td>
+          <td>&nbsp;</td>
           <td>
             small, medium, large, or inline
           </td>

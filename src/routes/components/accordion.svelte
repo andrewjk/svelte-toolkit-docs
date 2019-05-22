@@ -62,6 +62,28 @@
     </table>
   </div>
 
+  <h3>Events</h3>
+  <div class="block">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Args</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>changed</td>
+          <td>value: the index of the expanded item</td>
+        </tr>
+        <tr>
+          <td>expandedChanged (AccordionItem)</td>
+          <td>expanded: whether the changed item is expanded</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <h3>Code</h3>
   <div class="block">
     <pre>
