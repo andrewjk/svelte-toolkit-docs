@@ -1,0 +1,88 @@
+<script>
+  import { Switcher, SwitcherItem } from "../../../../svelte-toolkit/main.js";
+  import { items } from '../../stores/items'
+
+  let value = 0;
+  let multiple = false;
+</script>
+
+<div class="container">
+  <h2>Switcher</h2>
+  <p>
+    A set of panels that can be switched between, either programmatically or using one of the navigation components.
+  </p>
+
+  <h3>Demo</h3>
+  <div class="block">
+    <Switcher {multiple} bind:value>
+      {#each $items as item}
+        <SwitcherItem>
+          <h4>{item.name}</h4>
+          <p>{item.text}</p>
+        </SwitcherItem>
+      {/each}
+    </Switcher>
+  </div>
+
+  <h3>Properties</h3>
+  <div class="block">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Default</th>
+          <th>Description</th>
+          <th>Change</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>value</td>
+          <td>0</td>
+          <td>
+            the index of the active item
+          </td>
+          <td>
+            <input type="number" bind:value />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Events</h3>
+  <div class="block">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Args</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>changed</td>
+          <td>value: the index of the active item</td>
+        </tr>
+        <tr>
+          <td>activeChanged (SwitcherItem)</td>
+          <td>active: whether the changed item is active</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Code</h3>
+  <div class="block">
+    <pre>
+&lt;Switcher &lbrace;multiple&rbrace;&gt;
+  &lbrace;#each items as item&rbrace;
+    &lt;SwitcherItem&gt;
+      &lt;h4&gt;&lbrace;item.name&rbrace;&lt;/h4&gt;
+      &lt;p&gt;&lbrace;item.text&rbrace;&lt;/p&gt;
+    &lt;/SwitcherItem&gt;
+  &lbrace;/each&rbrace;
+&lt;/Switcher&gt;
+    </pre>
+  </div>
+</div>
