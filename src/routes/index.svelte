@@ -20,6 +20,7 @@
 		<li><a href="components/button">Button</a></li>
 		<li><a href="components/notification">Notification</a></li>
 		<li><a href="components/offscreen">Off-screen</a></li>
+		<li><a href="components/pagination">Pagination</a></li>
 		<li><a href="components/panel">Panel</a></li>
 		<li><a href="components/switcher">Switcher</a></li>
 		<li><a href="components/tabs">Tabs</a></li>
