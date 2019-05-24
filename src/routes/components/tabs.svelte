@@ -3,7 +3,7 @@
   import { items } from '../../stores/items'
 
   let value = 0;
-  let multiple = false;
+  let boxed = false;
 </script>
 
 <div class="container">
@@ -14,7 +14,7 @@
 
   <h3>Demo</h3>
   <div class="block">
-    <Tabs {multiple} bind:value>
+    <Tabs {boxed} bind:value>
       {#each $items as item}
         <TabItem id={item.id} header={item.name}>{item.text}</TabItem>
       {/each}
@@ -41,6 +41,19 @@
           </td>
           <td>
             <input type="number" bind:value />
+          </td>
+        </tr>
+        <tr>
+          <td>boxed</td>
+          <td>false</td>
+          <td>
+            true to draw the tabs with a border around them
+          </td>
+          <td>
+            <label>
+              <input type="checkbox" bind:checked={boxed} />
+              Make the tabs boxed
+            </label>
           </td>
         </tr>
       </tbody>
