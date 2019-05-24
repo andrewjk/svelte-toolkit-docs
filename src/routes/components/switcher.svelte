@@ -2,8 +2,7 @@
   import { Switcher, SwitcherItem } from "../../../../svelte-toolkit/main.js";
   import { items } from '../../stores/items'
 
-  let value = 0;
-  let multiple = false;
+  let index = 0;
 </script>
 
 <div class="container">
@@ -14,7 +13,7 @@
 
   <h3>Demo</h3>
   <div class="block">
-    <Switcher {multiple} bind:value>
+    <Switcher bind:index>
       {#each $items as item}
         <SwitcherItem>
           <h4>{item.name}</h4>
@@ -37,13 +36,13 @@
       </thead>
       <tbody>
         <tr>
-          <td>value</td>
+          <td>index</td>
           <td>0</td>
           <td>
             the index of the active item
           </td>
           <td>
-            <input type="number" bind:value />
+            <input type="number" bind:value={index} />
           </td>
         </tr>
       </tbody>
@@ -62,7 +61,7 @@
       <tbody>
         <tr>
           <td>changed</td>
-          <td>value: the index of the active item</td>
+          <td>index: the index of the active item</td>
         </tr>
         <tr>
           <td>activeChanged (SwitcherItem)</td>
