@@ -9,7 +9,7 @@
     
     <p>Font sizes and spacing are set in rems, so that you can easily adjust sizing by setting html font-size. Base rem sizing has been adjusted by default so that 1rem = 10px.</p>
 
-    <p>Text is set in sans-serif at 1.5rem (15px) with a line-height of 2.2rem (22px).</p>
+    <p>Text is set in sans-serif at 1.5rem (15px) with a line-height of 1.4.</p>
 
     <p>Headings are set at the following sizes by default:</p>
 
