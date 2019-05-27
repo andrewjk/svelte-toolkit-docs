@@ -90,7 +90,7 @@
         </tr>
         <tr>
           <td>finished</td>
-          <td></td>
+          <td>&nbsp;</td>
         </tr>
       </tbody>
     </table>

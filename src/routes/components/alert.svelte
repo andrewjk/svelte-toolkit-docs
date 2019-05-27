@@ -2,7 +2,7 @@
   import { Alert } from "../../../../svelte-toolkit/main.js";
   import { Button } from "../../../../svelte-toolkit/main.js";
 
-  let message = "Pay attention to me!"
+  let content = "Pay attention to me!"
   let direction = "top";
   let closable = true;
   let duration = 5000;
@@ -10,7 +10,7 @@
   function openAlert(type) {
     const alert = new Alert({
       target: document.body,
-      props: { type, message, direction, closable, duration },
+      props: { type, content, direction, closable, duration },
       intro: true
     });
   }
@@ -45,9 +45,9 @@
       <tbody>
         <tr>
           <td>type</td>
-          <td>default</td>
+          <td>&nbsp;</td>
           <td>
-            default, info, success, warning, or danger
+            info, success, warning, or danger
           </td>
           <td>
             <select>
@@ -60,13 +60,13 @@
           </td>
         </tr>
         <tr>
-          <td>message</td>
+          <td>content</td>
           <td>&nbsp;</td>
           <td>
-            The message to display in the alert, which can also come from slot content
+            The content to display in the alert, which can also come from slot content
           </td>
           <td>
-            <input type="text" bind:value="{message}">
+            <input type="text" bind:value="{content}">
           </td>
         </tr>
         <tr>
@@ -136,7 +136,7 @@
     <pre>
 const alert = new Alert(&lbrace;
   target: document.body,
-  props: &lbrace; type, message, direction, closable, duration &rbrace;,
+  props: &lbrace; type, content, direction, closable, duration &rbrace;,
   intro: true
 &rbrace);
 alert.$on('closed', onclosed);

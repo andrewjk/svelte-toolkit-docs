@@ -47,7 +47,7 @@
           <td>boxed</td>
           <td>false</td>
           <td>
-            true to draw the tabs with a border around them
+            true to draw the tabs with a squarish border around them
           </td>
           <td>
             <label>

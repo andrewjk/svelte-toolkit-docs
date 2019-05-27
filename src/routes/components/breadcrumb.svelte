@@ -34,7 +34,7 @@
           <td>current (BreadcrumbItem)</td>
           <td>false</td>
           <td>true if this breadcrumb item is the current page</td>
-          <td></td>
+          <td>&nbsp;</td>
         </tr>
       </tbody>
     </table>

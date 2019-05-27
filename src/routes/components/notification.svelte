@@ -1,8 +1,8 @@
 <script>
   import { Notification } from "../../../../svelte-toolkit/main.js";
 
-  let message = "You might be interested to know this..."
-  let type = "info";
+  let content = "You might be interested to know this..."
+  let type = "";
   let closable = true;
   let duration = 0;
 </script>
@@ -15,7 +15,7 @@
 
   <h3>Demo</h3>
   <div class="block">
-    <Notification bind:message bind:type bind:closable bind:duration/>
+    <Notification bind:content bind:type bind:closable bind:duration/>
   </div>
 
   <h3>Properties</h3>
@@ -32,9 +32,9 @@
       <tbody>
         <tr>
           <td>type</td>
-          <td>default</td>
+          <td>&nbsp;</td>
           <td>
-            default, info, success, warning, or danger
+            info, success, warning, or danger
           </td>
           <td>
             <select bind:value="{type}">
@@ -47,13 +47,13 @@
           </td>
         </tr>
         <tr>
-          <td>message</td>
+          <td>content</td>
           <td>&nbsp;</td>
           <td>
-            The message to display in the notification, which can also come from slot content
+            The content to display in the notification, which can also come from slot content
           </td>
           <td>
-            <input type="text" bind:value="{message}">
+            <input type="text" bind:value="{content}">
           </td>
         </tr>
         <tr>
@@ -110,7 +110,7 @@
 
 ~ OR ~
 
-&lt;Notification type="info" message="You might be interested to know this..."/&gt;
+&lt;Notification type="info" content="You might be interested to know this..."/&gt;
     </pre>
   </div>
 </div>
