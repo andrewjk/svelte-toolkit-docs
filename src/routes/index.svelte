@@ -16,6 +16,7 @@
 	<ul>
 		<li><a href="components/accordion">Accordion</a></li>
 		<li><a href="components/alert">Alert</a></li>
+		<li><a href="components/badge">Badge</a></li>
 		<li><a href="components/breadcrumb">Breadcrumb</a></li>
 		<li><a href="components/button">Button</a></li>
 		<li><a href="components/notification">Notification</a></li>
