@@ -2,7 +2,7 @@
   import { OffScreen } from "../../../../svelte-toolkit/main.js";
 
   let visible = false;
-  let direction = "left";
+  let position = "left";
 
   function toggleOffScreen(e) {
     visible = !visible;
@@ -10,14 +10,14 @@
 </script>
 
 <div class="container">
-  <h2>OffScreen</h2>
+  <h2>Off-Screen</h2>
   <p>
     A panel that can appear from off-screen.
   </p>
 
   <h3>Demo</h3>
   <div class="block">
-    <OffScreen bind:visible bind:direction>Here's your hidden content</OffScreen>
+    <OffScreen bind:visible bind:position>Here's your hidden content</OffScreen>
     <button class="button full-width" on:click={toggleOffScreen}>Show the off-screen</button>
   </div>
 
@@ -47,13 +47,13 @@
           </td>
         </tr>
         <tr>
-          <td>direction</td>
+          <td>position</td>
           <td>left</td>
           <td>
             left, top, right, or bottom
           </td>
           <td>
-            <select bind:value={direction}>
+            <select bind:value={position}>
               <option>left</option>
               <option>top</option>
               <option>right</option>

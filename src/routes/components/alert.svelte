@@ -3,14 +3,14 @@
   import { Button } from "../../../../svelte-toolkit/main.js";
 
   let content = "Pay attention to me!"
-  let direction = "top";
+  let position = "top";
   let closable = true;
   let duration = 5000;
 
   function openAlert(type) {
     const alert = new Alert({
       target: document.body,
-      props: { type, content, direction, closable, duration },
+      props: { type, content, position, closable, duration },
       intro: true
     });
   }
@@ -68,13 +68,13 @@
           </td>
         </tr>
         <tr>
-          <td>direction</td>
+          <td>position</td>
           <td>top</td>
           <td>
             top-left, top, top-right, bottom-left, bottom, or bottom-right
           </td>
           <td>
-            <select bind:value={direction}>
+            <select bind:value={position}>
               <option>top-left</option>
               <option>top</option>
               <option>top-right</option>
@@ -134,7 +134,7 @@
     <pre>
 const alert = new Alert(&lbrace;
   target: document.body,
-  props: &lbrace; type, content, direction, closable, duration &rbrace;,
+  props: &lbrace; type, content, position, closable, duration &rbrace;,
   intro: true
 &rbrace);
 alert.$on('closed', onclosed);
