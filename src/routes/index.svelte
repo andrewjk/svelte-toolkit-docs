@@ -26,5 +26,7 @@
 		<li><a href="components/switcher">Switcher</a></li>
 		<li><a href="components/tabs">Tabs</a></li>
 		<li><a href="components/wizard-nav">Wizard Navigation</a></li>
+
+		<li><a href="components/icons">Icons</a></li>
 	</ul>
 </div>
