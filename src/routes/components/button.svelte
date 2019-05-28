@@ -1,7 +1,7 @@
 <script>
   import { Button } from "../../../../svelte-toolkit/main.js";
 
-  let type = "";
+  let type = "info";
   let size = "";
   let disabled = false;
   let loading = false;
@@ -19,11 +19,11 @@
 
   <h3>Colors</h3>
   <div class="block">
-    <Button>Default</Button> 
     <Button type="info">Info</Button>
     <Button type="success">Success</Button>
     <Button type="warning">Warning</Button>
     <Button type="danger">Danger</Button>
+    <Button type="select">Select</Button> 
     <Button type="cancel">Cancel</Button>
   </div>
 
@@ -55,17 +55,17 @@
       <tbody>
         <tr>
           <td>type</td>
-          <td>&nbsp;</td>
+          <td>info</td>
           <td>
-            info, success, warning, danger, cancel
+            info, success, warning, danger, select, cancel
           </td>
           <td>
             <select bind:value={type}>
-              <option>-</option>
               <option>info</option>
               <option>success</option>
               <option>warning</option>
               <option>danger</option>
+              <option>select</option>
               <option>cancel</option>
             </select>
           </td>

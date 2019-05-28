@@ -24,7 +24,6 @@
 
   <h3>Demo</h3>
   <div class="block">
-    <Button type="default" on:click={e => openAlert('default')}>Open a default alert</Button>
     <Button type="info" on:click={e => openAlert('info')}>Open an info alert</Button>
     <Button type="success" on:click={e => openAlert('success')}>Open a success alert</Button>
     <Button type="warning" on:click={e => openAlert('warning')}>Open a warning alert</Button>
@@ -45,13 +44,12 @@
       <tbody>
         <tr>
           <td>type</td>
-          <td>&nbsp;</td>
+          <td>info</td>
           <td>
             info, success, warning, or danger
           </td>
           <td>
             <select>
-              <option>default</option>
               <option>info</option>
               <option>success</option>
               <option>warning</option>

@@ -1,7 +1,7 @@
 <script>
   import { Badge } from "../../../../svelte-toolkit/main.js";
 
-  let type = "";
+  let type = "info";
   let boxed = false;
   let content = "5";
 </script>
@@ -31,13 +31,12 @@
       <tbody>
         <tr>
           <td>type</td>
-          <td>&nbsp;</td>
+          <td>info</td>
           <td>
             info, success, warning, or danger
           </td>
           <td>
             <select bind:value="{type}">
-              <option>default</option>
               <option>info</option>
               <option>success</option>
               <option>warning</option>

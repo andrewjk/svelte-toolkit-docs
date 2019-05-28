@@ -2,7 +2,7 @@
   import { Notification } from "../../../../svelte-toolkit/main.js";
 
   let content = "You might be interested to know this..."
-  let type = "";
+  let type = "info";
   let closable = true;
   let duration = 0;
 </script>
@@ -32,13 +32,12 @@
       <tbody>
         <tr>
           <td>type</td>
-          <td>&nbsp;</td>
+          <td>info</td>
           <td>
             info, success, warning, or danger
           </td>
           <td>
             <select bind:value="{type}">
-              <option>default</option>
               <option>info</option>
               <option>success</option>
               <option>warning</option>
