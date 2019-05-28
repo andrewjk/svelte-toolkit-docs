@@ -19,6 +19,7 @@
 		<li><a href="components/badge">Badge</a></li>
 		<li><a href="components/breadcrumb">Breadcrumb</a></li>
 		<li><a href="components/button">Button</a></li>
+		<li><a href="components/calendar">Calendar</a></li>
 		<li><a href="components/notification">Notification</a></li>
 		<li><a href="components/offscreen">Off-screen</a></li>
 		<li><a href="components/pagination">Pagination</a></li>
