@@ -21,12 +21,12 @@
 		<li><a href="components/button">Button</a></li>
 		<li><a href="components/calendar">Calendar</a></li>
 		<li><a href="components/notification">Notification</a></li>
-		<li><a href="components/offscreen">Off-screen</a></li>
+		<li><a href="components/offscreen">Off-Screen</a></li>
 		<li><a href="components/pagination">Pagination</a></li>
 		<li><a href="components/panel">Panel</a></li>
 		<li><a href="components/switcher">Switcher</a></li>
-		<li><a href="components/tab-group">Tab Group</a></li>
-		<li><a href="components/wizard-nav">Wizard Navigation</a></li>
+		<li><a href="components/tabgroup">Tab Group</a></li>
+		<li><a href="components/wizardnav">Wizard Navigation</a></li>
 
 		<li><a href="components/icons">Icons</a></li>
 	</ul>
