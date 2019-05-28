@@ -25,7 +25,6 @@
       text: "Something to look forward to"
     }
   ];
-  console.log(events);
 
   function dummyDate(days) {
     const today = new Date();
@@ -90,7 +89,7 @@
           <td />
           <td>
             an array of events to display in the calendar, where each event can
-            have the properties date, text and color
+            have the properties date, content and color
           </td>
           <td>TODO:</td>
         </tr>
