@@ -60,6 +60,28 @@
     </table>
   </div>
 
+  <h3>Events</h3>
+  <div class="block">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Args</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>hanged</td>
+          <td>index: the index of the active item</td>
+        </tr>
+        <tr>
+          <td>activeChange (TabItem)</td>
+          <td>active: whether the changed item is active</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <h3>Code</h3>
   <div class="block">
     <pre>

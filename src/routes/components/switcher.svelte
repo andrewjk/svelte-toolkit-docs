@@ -60,11 +60,11 @@
       </thead>
       <tbody>
         <tr>
-          <td>changed</td>
+          <td>hanged</td>
           <td>index: the index of the active item</td>
         </tr>
         <tr>
-          <td>activeChanged (SwitcherItem)</td>
+          <td>activeChange (SwitcherItem)</td>
           <td>active: whether the changed item is active</td>
         </tr>
       </tbody>

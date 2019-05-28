@@ -85,7 +85,7 @@
       </thead>
       <tbody>
         <tr>
-          <td>changed</td>
+          <td>change</td>
           <td>value: the number of the current page</td>
         </tr>
         <tr>

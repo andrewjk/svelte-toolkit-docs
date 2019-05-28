@@ -73,11 +73,11 @@
       </thead>
       <tbody>
         <tr>
-          <td>changed</td>
+          <td>change</td>
           <td>value: the index of the expanded item</td>
         </tr>
         <tr>
-          <td>expandedChanged (AccordionItem)</td>
+          <td>expandedChange (AccordionItem)</td>
           <td>expanded: whether the changed item is expanded</td>
         </tr>
       </tbody>
