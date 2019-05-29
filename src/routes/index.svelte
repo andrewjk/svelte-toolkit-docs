@@ -20,6 +20,7 @@
 		<li><a href="components/breadcrumb">Breadcrumb</a></li>
 		<li><a href="components/button">Button</a></li>
 		<li><a href="components/calendar">Calendar</a></li>
+		<li><a href="components/dialog">Dialog</a></li>
 		<li><a href="components/navbar">Nav Bar</a></li>
 		<li><a href="components/notification">Notification</a></li>
 		<li><a href="components/offscreen">Off-Screen</a></li>
