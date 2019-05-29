@@ -30,10 +30,10 @@
   <h3>Sizes</h3>
   <div class="block">
     <Button>Default</Button> 
-    <Button size="small">Small</Button>
-    <Button size="medium">Medium</Button>
-    <Button size="large">Large</Button>
-    <Button size="inline">Inline</Button>
+    <Button size="small" type="success">Small</Button>
+    <Button size="medium" type="warning">Medium</Button>
+    <Button size="large" type="danger">Large</Button>
+    <Button size="inline" type="cancel">Inline</Button>
   </div>
 
   <h3>Demo</h3>
