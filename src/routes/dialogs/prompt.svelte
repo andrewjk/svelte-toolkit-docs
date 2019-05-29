@@ -1,41 +1,37 @@
 <script>
-  import { showDialog } from "../../../../svelte-toolkit/main.js";
+  import { showPrompt } from "../../../../svelte-toolkit/main.js";
   import { Button } from "../../../../svelte-toolkit/main.js";
 
   export let header = "Header";
   export let content =
-    "Click the OK button to accept the very reasonable terms and conditions.";
-  export let buttons = [
-    { content: "OK", confirm: true },
-    { content: "Um", result: 'Um...' },
-    { content: "Cancel", cancel: true }
-  ];
+    "Enter your name below:";
+  export let buttonContent = "OK";
 
-  async function openDialog() {
-    const result = await showDialog({
+  async function openPrompt() {
+    const result = await showPrompt({
       header,
       content,
-      buttons
+      buttonContent
     });
-    if (result === true) {
-      alert("You accepted!");
-    } else if (result === false) {
-      alert("You didn't accept :(");
-    } else {
-      alert(result)
+    if (result) {
+      alert(`Hi, ${result}!`);
     }
   }
 
   $: exampleCode =
-    "const result = await showDialog({\n" + 
-    "  header: '" + header + "',\n" + 
-    "  content: '" + content + "',\n" + 
-    "  buttons\n" + 
+    "const result = await showPrompt({\n" +
+    "  header: '" +
+    header +
+    "',\n" +
+    "  content: '" +
+    content +
+    "',\n" +
+    "  buttonContent: '" + buttonContent + "'\n" +
     "});";
 </script>
 
 <div class="container">
-  <h2>Dialog</h2>
+  <h2>Prompt</h2>
   <p>
     A dialog, per
     <a
@@ -48,7 +44,7 @@
 
   <h3>Demo</h3>
   <div class="block">
-    <Button on:click={e => openDialog()}>Open a dialog</Button>
+    <Button on:click={e => openPrompt()}>Open the prompt dialog</Button>
   </div>
 
   <h3>Properties</h3>
@@ -83,6 +79,16 @@
           </td>
           <td>
             <input type="text" bind:value={content} />
+          </td>
+        </tr>
+        <tr>
+          <td>buttonContent</td>
+          <td>OK</td>
+          <td>
+            The content to display in the dialog's button
+          </td>
+          <td>
+            <input type="text" bind:value={buttonContent} />
           </td>
         </tr>
       </tbody>
