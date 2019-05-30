@@ -4,6 +4,13 @@
   let visible = false;
   let position = "left";
 
+  $: exampleCode =
+    "<OffScreen visible={" +
+    visible +
+    '} position="' +
+    position +
+    "\"}>Here's your hidden content</OffScreen>\n";
+
   function toggleOffScreen(e) {
     visible = !visible;
   }
@@ -11,14 +18,14 @@
 
 <div class="container">
   <h2>Off-Screen</h2>
-  <p>
-    A panel that can appear from off-screen.
-  </p>
+  <p>A panel that can appear from off-screen.</p>
 
   <h3>Demo</h3>
   <div class="block">
-    <OffScreen bind:visible bind:position>Here's your hidden content</OffScreen>
-    <button class="button full-width" on:click={toggleOffScreen}>Show the off-screen</button>
+    <OffScreen bind:visible {position}>Here's your hidden content</OffScreen>
+    <button class="button full-width" on:click={toggleOffScreen}>
+      Show the off-screen
+    </button>
   </div>
 
   <h3>Properties</h3>
@@ -36,9 +43,7 @@
         <tr>
           <td>visible</td>
           <td>false</td>
-          <td>
-            true to show the off-screen
-          </td>
+          <td>true to show the off-screen</td>
           <td>
             <label>
               <input type="checkbox" bind:checked={visible} />
@@ -49,9 +54,7 @@
         <tr>
           <td>position</td>
           <td>left</td>
-          <td>
-            left, top, right, or bottom
-          </td>
+          <td>left, top, right, or bottom</td>
           <td>
             <select bind:value={position}>
               <option>left</option>
@@ -67,8 +70,6 @@
 
   <h3>Code</h3>
   <div class="block">
-    <pre>
-      TODO: I don't know how to put this stuff in here?!
-    </pre>
+    <pre>{exampleCode}</pre>
   </div>
 </div>

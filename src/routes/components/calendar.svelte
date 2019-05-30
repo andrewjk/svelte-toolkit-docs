@@ -26,6 +26,13 @@
     }
   ];
 
+  $: exampleCode =
+    "<Calendar startOfWeek={" +
+    startOfWeek +
+    "} selectable={" +
+    selectable +
+    "} value={new Date()} {events} />";
+
   function dummyDate(days) {
     const today = new Date();
     today.setDate(today.getDate() + days);
@@ -99,6 +106,6 @@
 
   <h3>Code</h3>
   <div class="block">
-    <pre>TODO:</pre>
+    <pre>{exampleCode}</pre>
   </div>
 </div>

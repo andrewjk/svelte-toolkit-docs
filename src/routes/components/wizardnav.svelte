@@ -7,6 +7,9 @@
 
   $: items = [...Array(itemCount).keys()].map(i => ++i);
 
+  $: exampleCode = 
+    "<WizardNav index={" + index + "} itemCount={" + itemCount + "} on:finished={handleFinished}/>";
+
   function handleFinished(e) {
     alert('Hooray!');
   }
@@ -35,7 +38,7 @@
         </SwitcherItem>
       {/each}
     </Switcher>
-    <WizardNav bind:index bind:itemCount on:finished={handleFinished}/>
+    <WizardNav bind:index {itemCount} on:finished={handleFinished}/>
   </div>
 
   <h3>Properties</h3>
@@ -52,7 +55,7 @@
       <tbody>
         <tr>
           <td>index</td>
-          <td>1</td>
+          <td>0</td>
           <td>
             the current index
           </td>
@@ -98,8 +101,6 @@
 
   <h3>Code</h3>
   <div class="block">
-    <pre>
-&lt;WizardNav bind:index bind:pageSize bind:itemCount/&gt;
-    </pre>
+    <pre>{exampleCode}</pre>
   </div>
 </div>

@@ -6,15 +6,32 @@
   let disabled = false;
   let loading = false;
 
+  $: exampleCode =
+    '<Button type="' +
+    type +
+    '" size="' +
+    size +
+    '" disabled={' +
+    disabled +
+    "} loading={" +
+    loading +
+    "}>Click me</Button>";
+
   function handleClick(e) {
-    alert('Hooray!');
+    alert("Hooray!");
   }
 </script>
 
 <div class="container">
   <h2>Button</h2>
   <p>
-    A button, per <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#button" target="_blank">https://www.w3.org/TR/wai-aria-practices-1.1/#button</a>.
+    A button, per
+    <a
+      href="https://www.w3.org/TR/wai-aria-practices-1.1/#button"
+      target="_blank">
+      https://www.w3.org/TR/wai-aria-practices-1.1/#button
+    </a>
+    .
   </p>
 
   <h3>Colors</h3>
@@ -23,13 +40,13 @@
     <Button type="success">Success</Button>
     <Button type="warning">Warning</Button>
     <Button type="danger">Danger</Button>
-    <Button type="select">Select</Button> 
+    <Button type="select">Select</Button>
     <Button type="cancel">Cancel</Button>
   </div>
 
   <h3>Sizes</h3>
   <div class="block">
-    <Button>Default</Button> 
+    <Button>Default</Button>
     <Button size="small" type="success">Small</Button>
     <Button size="medium" type="warning">Medium</Button>
     <Button size="large" type="danger">Large</Button>
@@ -38,7 +55,15 @@
 
   <h3>Demo</h3>
   <div class="block">
-    <Button bind:type bind:size bind:disabled bind:loading on:click={handleClick}>Click me</Button><br/>
+    <Button
+      {type}
+      {size}
+      {disabled}
+      {loading}
+      on:click={handleClick}>
+      Click me
+    </Button>
+    <br />
   </div>
 
   <h3>Properties</h3>
@@ -56,9 +81,7 @@
         <tr>
           <td>type</td>
           <td>info</td>
-          <td>
-            info, success, warning, danger, select, cancel
-          </td>
+          <td>info, success, warning, danger, select, cancel</td>
           <td>
             <select bind:value={type}>
               <option>info</option>
@@ -72,10 +95,8 @@
         </tr>
         <tr>
           <td>size</td>
-          <td>&nbsp;</td>
-          <td>
-            small, medium, large, or inline
-          </td>
+          <td />
+          <td>small, medium, large, or inline</td>
           <td>
             <select bind:value={size}>
               <option>-</option>
@@ -89,9 +110,7 @@
         <tr>
           <td>disabled</td>
           <td>false</td>
-          <td>
-            Set to true to disable the button
-          </td>
+          <td>Set to true to disable the button</td>
           <td>
             <label>
               <input type="checkbox" bind:checked={disabled} />
@@ -118,8 +137,6 @@
 
   <h3>Code</h3>
   <div class="block">
-    <pre>
-&lt;Button&gt;Click me&lt;/Button&gt;
-    </pre>
+    <pre>{exampleCode}</pre>
   </div>
 </div>

@@ -4,17 +4,24 @@
   let pageNumber = 1;
   let pageSize = 10;
   let itemCount = 50;
+
+  $: exampleCode =
+    "<Pagination pageNumber={" +
+    pageNumber +
+    "} pageSize={" +
+    pageSize +
+    "} itemCount={" +
+    itemCount +
+    "}/>";
 </script>
 
 <div class="container">
   <h2>Pagination</h2>
-  <p>
-    Numbers for navigating through components that contain paged data.
-  </p>
+  <p>Numbers for navigating through components that contain paged data.</p>
 
   <h3>Demo</h3>
   <div class="block">
-    <Pagination bind:pageNumber bind:pageSize bind:itemCount/>
+    <Pagination bind:pageNumber {pageSize} {itemCount} />
   </div>
 
   <h3>Properties</h3>
@@ -32,9 +39,7 @@
         <tr>
           <td>pageNumber</td>
           <td>1</td>
-          <td>
-            the current page number
-          </td>
+          <td>the current page number</td>
           <td>
             <input type="number" bind:value={pageNumber} />
           </td>
@@ -42,19 +47,15 @@
         <tr>
           <td>pageSize</td>
           <td>10</td>
-          <td>
-            the number of items displayed on each page
-          </td>
+          <td>the number of items displayed on each page</td>
           <td>
             <input type="number" bind:value={pageSize} />
           </td>
         </tr>
         <tr>
           <td>itemCount</td>
-          <td>&nbsp;</td>
-          <td>
-            the total number of items
-          </td>
+          <td />
+          <td>the total number of items</td>
           <td>
             <input type="number" bind:value={itemCount} />
           </td>
@@ -83,8 +84,6 @@
 
   <h3>Code</h3>
   <div class="block">
-    <pre>
-&lt;Pagination bind:pageNumber bind:pageSize bind:itemCount/&gt;
-    </pre>
+    <pre>{exampleCode}</pre>
   </div>
 </div>

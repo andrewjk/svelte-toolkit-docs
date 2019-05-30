@@ -1,15 +1,47 @@
 <script>
   import { Accordion, AccordionItem } from "../../../../svelte-toolkit/main.js";
-  import { items } from '../../stores/items'
+  import { items } from "../../stores/items";
 
   let value = -1;
   let multiple = false;
+
+  $: exampleCode =
+    "<Accordion multiple={" +
+    multiple +
+    "} value={" +
+    value +
+    "}>\n" +
+    "  {#each items as item}\n" +
+    "    <AccordionItem header={item.header}>{item.text}</AccordionItem>\n" +
+    "  {/each}\n" +
+    "</Accordion>\n" +
+    "\n" +
+    "~ OR ~\n" +
+    "\n" +
+    "<Accordion multiple={" +
+    multiple +
+    "} value={" +
+    value +
+    "}>\n" +
+    "  {#each items as item}\n" +
+    "    <AccordionItem>\n" +
+    '      <div slot="header">{item.header}</div>\n' +
+    "      <div>{item.text}</div>\n" +
+    "    </AccordionItem>\n" +
+    "  {/each}\n" +
+    "</Accordion>\n";
 </script>
 
 <div class="container">
   <h2>Accordion</h2>
   <p>
-    An accordion, per <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#accordion" target="_blank">https://www.w3.org/TR/wai-aria-practices-1.1/#accordion</a>.
+    An accordion, per
+    <a
+      href="https://www.w3.org/TR/wai-aria-practices-1.1/#accordion"
+      target="_blank">
+      https://www.w3.org/TR/wai-aria-practices-1.1/#accordion
+    </a>
+    .
   </p>
 
   <h3>Demo</h3>
@@ -37,7 +69,8 @@
           <td>value</td>
           <td>-1</td>
           <td>
-            the index of the expanded item, or an array of indices if multiple is true (see below)
+            the index of the expanded item, or an array of indices if multiple
+            is true (see below)
           </td>
           <td>
             {#if multiple}
@@ -86,23 +119,6 @@
 
   <h3>Code</h3>
   <div class="block">
-    <pre>
-&lt;Accordion &lbrace;multiple&rbrace;&gt;
-  &lbrace;#each items as item&rbrace;
-    &lt;AccordionItem header=&lbrace;item.name&rbrace;&gt;&lbrace;item.text&rbrace;&lt;/AccordionItem&gt;
-  &lbrace;/each&rbrace;
-&lt;/Accordion&gt;
-
-~ OR ~
-
-&lt;Accordion &lbrace;multiple&rbrace;&gt;
-  &lbrace;#each items as item&rbrace;
-    &lt;AccordionItem&gt;
-      &lt;div slot="header"&gt;&lbrace;item.name&rbrace;&lt;/div&gt;
-      &lt;div&gt;&lbrace;item.text&rbrace;&lt;/div&gt;
-    &lt;/AccordionItem&gt;
-  &lbrace;/each&rbrace;
-&lt;/Accordion&gt;
-    </pre>
+    <pre>{exampleCode}</pre>
   </div>
 </div>

@@ -1,15 +1,39 @@
 <script>
   import { TabGroup, TabItem } from "../../../../svelte-toolkit/main.js";
-  import { items } from '../../stores/items'
+  import { items } from "../../stores/items";
 
   let value = 0;
   let boxed = false;
+
+  $: exampleCode =
+    "<TabGroup boxed={" + boxed + "} value={" + value + "}>\n" +
+    "  {#each items as item}\n" +
+    "    <TabItem id={item.id} header={item.header}>{item.text}</TabItem>\n" +
+    "  {/each}\n" +
+    "</TabGroup>\n" +
+    "\n" +
+    "~ OR ~\n" +
+    "\n" +
+    "<TabGroup boxed={" + boxed + "} value={" + value + "}>\n" +
+    "  {#each items as item}\n" +
+    "    <TabItem id={item.id}>\n" +
+    '      <div slot="header">{item.header}</div>\n' +
+    "      <div>{item.text}</div>\n" +
+    "    </TabItem>\n" +
+    "  {/each}\n" +
+    "</TabGroup>";
 </script>
 
 <div class="container">
   <h2>TabGroup</h2>
   <p>
-    TabGroup, per <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel" target="_blank">https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel</a>.
+    TabGroup, per
+    <a
+      href="https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel"
+      target="_blank">
+      https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel
+    </a>
+    .
   </p>
 
   <h3>Demo</h3>
@@ -36,9 +60,7 @@
         <tr>
           <td>value</td>
           <td>0</td>
-          <td>
-            the index of the active item
-          </td>
+          <td>the index of the active item</td>
           <td>
             <input type="number" bind:value />
           </td>
@@ -46,9 +68,7 @@
         <tr>
           <td>boxed</td>
           <td>false</td>
-          <td>
-            true to draw the tabs with a squarish border around them
-          </td>
+          <td>true to draw the tabs with a squarish border around them</td>
           <td>
             <label>
               <input type="checkbox" bind:checked={boxed} />
@@ -84,23 +104,6 @@
 
   <h3>Code</h3>
   <div class="block">
-    <pre>
-&lt;TabGroup &lbrace;multiple&rbrace;&gt;
-  &lbrace;#each items as item&rbrace;
-    &lt;TabItem id=&lbrace;item.id&rbrace; header=&lbrace;item.name&rbrace;&gt;&lbrace;item.text&rbrace;&lt;/TabItem&gt;
-  &lbrace;/each&rbrace;
-&lt;/TabGroup&gt;
-
-~ OR ~
-
-&lt;TabGroup &lbrace;multiple&rbrace;&gt;
-  &lbrace;#each items as item&rbrace;
-    &lt;TabItem id=&lbrace;item.id&rbrace;&gt;
-      &lt;div slot="header"&gt;&lbrace;item.name&rbrace;&lt;/div&gt;
-      &lt;div&gt;&lbrace;item.text&rbrace;&lt;/div&gt;
-    &lt;/TabItem&gt;
-  &lbrace;/each&rbrace;
-&lt;/TabGroup&gt;
-    </pre>
+    <pre>{exampleCode}</pre>
   </div>
 </div>

@@ -2,19 +2,29 @@
   import { showAlert } from "../../../../svelte-toolkit/main.js";
   import { Button } from "../../../../svelte-toolkit/main.js";
 
-  let type = "";
+  let type = "info";
   let content = "Pay attention to me!";
   let position = "top";
   let closable = true;
   let duration = 5000;
 
-  $: exampleCode = 
-    "showAlert({\n" + 
-    "  type: '" + type + "',\n" + 
-    "  content: '" + content + "',\n" + 
-    "  position: '" + position + "',\n" + 
-    "  closable: '" + closable + "',\n" + 
-    "  duration: '" + duration + "'\n" + 
+  $: exampleCode =
+    "showAlert({\n" +
+    "  type: '" +
+    type +
+    "',\n" +
+    "  content: '" +
+    content +
+    "',\n" +
+    "  position: '" +
+    position +
+    "',\n" +
+    "  closable: '" +
+    closable +
+    "',\n" +
+    "  duration: '" +
+    duration +
+    "'\n" +
     "});";
 
   function openAlert(type) {

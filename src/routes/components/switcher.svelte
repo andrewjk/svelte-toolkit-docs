@@ -1,14 +1,27 @@
 <script>
   import { Switcher, SwitcherItem } from "../../../../svelte-toolkit/main.js";
-  import { items } from '../../stores/items'
+  import { items } from "../../stores/items";
 
   let index = 0;
+
+  $: exampleCode =
+    "<Switcher index={" +
+    index +
+    "}>\n" +
+    "  {#each $items as item}\n" +
+    "    <SwitcherItem>\n" +
+    "      <h4>{item.header}</h4>\n" +
+    "      <p>{item.text}</p>\n" +
+    "    </SwitcherItem>\n" +
+    "  {/each}\n" +
+    "</Switcher>";
 </script>
 
 <div class="container">
   <h2>Switcher</h2>
   <p>
-    A set of panels that can be switched between, either programmatically or using one of the navigation components.
+    A set of panels that can be switched between, either programmatically or
+    using one of the navigation components.
   </p>
 
   <h3>Demo</h3>
@@ -38,9 +51,7 @@
         <tr>
           <td>index</td>
           <td>0</td>
-          <td>
-            the index of the active item
-          </td>
+          <td>the index of the active item</td>
           <td>
             <input type="number" bind:value={index} />
           </td>
@@ -73,15 +84,6 @@
 
   <h3>Code</h3>
   <div class="block">
-    <pre>
-&lt;Switcher &lbrace;multiple&rbrace;&gt;
-  &lbrace;#each items as item&rbrace;
-    &lt;SwitcherItem&gt;
-      &lt;h4&gt;&lbrace;item.name&rbrace;&lt;/h4&gt;
-      &lt;p&gt;&lbrace;item.text&rbrace;&lt;/p&gt;
-    &lt;/SwitcherItem&gt;
-  &lbrace;/each&rbrace;
-&lt;/Switcher&gt;
-    </pre>
+    <pre>{exampleCode}</pre>
   </div>
 </div>

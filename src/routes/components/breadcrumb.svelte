@@ -1,19 +1,37 @@
 <script>
-  import { Breadcrumb, BreadcrumbItem } from "../../../../svelte-toolkit/main.js";
-  import { items } from '../../stores/items'
+  import {
+    Breadcrumb,
+    BreadcrumbItem
+  } from "../../../../svelte-toolkit/main.js";
+  import { items } from "../../stores/items";
+
+  $: exampleCode =
+    "<Breadcrumb>\n" +
+    "  {#each items as item}\n" +
+    "    <BreadcrumbItem href={item.href}>{item.title}</BreadcrumbItem>\n" +
+    "  {/each}\n" +
+    "</Breadcrumb>";
 </script>
 
 <div class="container">
   <h2>Breadcrumb</h2>
   <p>
-    A breadcrumb, per <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#breadcrumb" target="_blank">https://www.w3.org/TR/wai-aria-practices-1.1/#breadcrumb</a>.
+    A breadcrumb, per
+    <a
+      href="https://www.w3.org/TR/wai-aria-practices-1.1/#breadcrumb"
+      target="_blank">
+      https://www.w3.org/TR/wai-aria-practices-1.1/#breadcrumb
+    </a>
+    .
   </p>
 
   <h3>Demo</h3>
   <div class="block">
     <Breadcrumb>
       {#each $items as item, index}
-        <BreadcrumbItem href={item.href} current={index === 2}>{item.name}</BreadcrumbItem>
+        <BreadcrumbItem href={item.href} current={index === 2}>
+           {item.name}
+        </BreadcrumbItem>
       {/each}
     </Breadcrumb>
   </div>
@@ -34,7 +52,7 @@
           <td>current (BreadcrumbItem)</td>
           <td>false</td>
           <td>true if this breadcrumb item is the current page</td>
-          <td>&nbsp;</td>
+          <td />
         </tr>
       </tbody>
     </table>
@@ -42,12 +60,6 @@
 
   <h3>Code</h3>
   <div class="block">
-    <pre>
-&lt;Breadcrumb &lbrace;multiple&rbrace;&gt;
-  &lbrace;#each items as item&rbrace;
-    &lt;BreadcrumbItem href=&lbrace;item.href&rbrace;&gt;&lbrace;item.name&rbrace;&lt;/BreadcrumbItem&gt;
-  &lbrace;/each&rbrace;
-&lt;/Breadcrumb&gt;
-    </pre>
+    <pre>{exampleCode} </pre>
   </div>
 </div>

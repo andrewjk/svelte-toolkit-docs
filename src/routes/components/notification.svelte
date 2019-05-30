@@ -1,21 +1,42 @@
 <script>
   import { Notification } from "../../../../svelte-toolkit/main.js";
 
-  let content = "You might be interested to know this..."
+  let content = "You might be interested to know this...";
   let type = "info";
   let closable = true;
   let duration = 0;
+
+  $: exampleCode =
+    '<Notification content="' +
+    content +
+    '" type={' +
+    type +
+    "} closable={" +
+    closable +
+    "} duration={" +
+    duration +
+    "}/>\n" +
+    "\n" +
+    "~ OR ~\n" +
+    "\n" +
+    "<Notification type={" +
+    type +
+    "} closable={" +
+    closable +
+    "} duration={" +
+    duration +
+    "}/>" +
+    content +
+    "</Notification>";
 </script>
 
 <div class="container">
   <h2>Notification</h2>
-  <p>
-    A notification that can be shown to the user.
-  </p>
+  <p>A notification that can be shown to the user.</p>
 
   <h3>Demo</h3>
   <div class="block">
-    <Notification bind:content bind:type bind:closable bind:duration/>
+    <Notification {content} {type} {closable} {duration} />
   </div>
 
   <h3>Properties</h3>
@@ -33,11 +54,9 @@
         <tr>
           <td>type</td>
           <td>info</td>
+          <td>info, success, warning, or danger</td>
           <td>
-            info, success, warning, or danger
-          </td>
-          <td>
-            <select bind:value="{type}">
+            <select bind:value={type}>
               <option>info</option>
               <option>success</option>
               <option>warning</option>
@@ -47,19 +66,21 @@
         </tr>
         <tr>
           <td>content</td>
-          <td>&nbsp;</td>
+          <td />
           <td>
-            The content to display in the notification, which can also come from slot content
+            The content to display in the notification, which can also come from
+            slot content
           </td>
           <td>
-            <input type="text" bind:value="{content}">
+            <input type="text" bind:value={content} />
           </td>
         </tr>
         <tr>
           <td>closable</td>
           <td>true</td>
           <td>
-            Set to true to display a close button at the right of the notification
+            Set to true to display a close button at the right of the
+            notification
           </td>
           <td>
             <label>
@@ -72,7 +93,8 @@
           <td>duration</td>
           <td>-1</td>
           <td>
-            The number of milliseconds to wait before closing the notification. Set to -1 to never close
+            The number of milliseconds to wait before closing the notification.
+            Set to -1 to never close
           </td>
           <td>
             <input type="number" bind:value={duration} />
@@ -94,7 +116,7 @@
       <tbody>
         <tr>
           <td>closed</td>
-          <td>&nbsp;</td>
+          <td />
         </tr>
       </tbody>
     </table>
@@ -102,14 +124,6 @@
 
   <h3>Code</h3>
   <div class="block">
-    <pre>
-&lt;Notification type="info"&gt;
-  You might be interested to know this...
-&lt;/Notification&gt;
-
-~ OR ~
-
-&lt;Notification type="info" content="You might be interested to know this..."/&gt;
-    </pre>
+    <pre> {exampleCode} </pre>
   </div>
 </div>
