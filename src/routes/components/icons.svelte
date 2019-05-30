@@ -24,7 +24,8 @@
       "<ChevronLeft />\n" +
       "<ChevronRight />\n" +
       "<Bars />\n" +
-      "<Cross />"
+      "<Cross />\n" +
+      "<Check />"
     );
   }
 </script>
