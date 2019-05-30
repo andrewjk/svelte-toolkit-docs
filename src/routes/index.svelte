@@ -66,6 +66,13 @@
     </li>
   </ul>
 
+  <h2>Forms</h2>
+  <ul>
+    <li>
+      <a href="forms/validation">Validation</a>
+    </li>
+  </ul>
+
   <h2>Dialogs</h2>
   <ul>
     <li>
