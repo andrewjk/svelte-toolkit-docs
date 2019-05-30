@@ -9,7 +9,8 @@
     ChevronLeft,
     ChevronRight,
     Bars,
-    Cross
+    Cross,
+    Check
   } from "../../../../svelte-toolkit/main.js";
 
   function exampleCode() {
@@ -55,6 +56,7 @@
     <div class="block">
       <Bars />
       <Cross />
+      <Check />
     </div>
   </div>
 
