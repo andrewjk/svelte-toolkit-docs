@@ -56,6 +56,9 @@
       <a href="components/panel">Panel</a>
     </li>
     <li>
+      <a href="components/progress">Progress</a>
+    </li>
+    <li>
       <a href="components/switcher">Switcher</a>
     </li>
     <li>
