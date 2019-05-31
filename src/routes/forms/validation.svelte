@@ -2,7 +2,7 @@
   import {
     ValidationSummary,
     Field,
-    Input,
+    TextBox,
     Button,
     Validator
   } from "../../../../svelte-toolkit/main.js";
@@ -39,7 +39,7 @@
       minlength="2"
       maxlength="10"
       friendlyName="Required field">
-      <Input bind:value={requiredValue} />
+      <TextBox bind:value={requiredValue} />
     </Field>
   </div>
   <div class="block">
@@ -51,7 +51,7 @@
       {validator}
       friendlyName="Regex field">
       <label slot="label">Please enter four numbers:</label>
-      <Input bind:value={regexValue}
+      <TextBox bind:value={regexValue}
  />
     </Field>
   </div>
@@ -63,7 +63,7 @@
       {validator}
       friendlyName="Password">
       <label slot="label">Enter two fields that are the same:</label>
-      <Input contentType="password" bind:value={password1Value} />
+      <TextBox contentType="password" bind:value={password1Value} />
     </Field>
     <Field
       name="field4"
@@ -71,7 +71,7 @@
       compareTo="field3"
       {validator}
       friendlyName="Confirm password">
-      <Input contentType="password" bind:value={password2Value} />
+      <TextBox contentType="password" bind:value={password2Value} />
     </Field>
   </div>
   <div class="block">
