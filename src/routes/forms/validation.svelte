@@ -1,5 +1,16 @@
 <script>
-  import { ValidationSummary, Input, Button, Validator } from "../../../../svelte-toolkit/main.js";
+  import {
+    ValidationSummary,
+    Field,
+    Input,
+    Button,
+    Validator
+  } from "../../../../svelte-toolkit/main.js";
+
+  let requiredValue = "";
+  let regexValue = "";
+  let password1Value = "";
+  let password2Value = "";
 
   let validator = new Validator(false);
 
@@ -16,21 +27,52 @@
   <p>Validation for form elements.</p>
 
   <h3>Demo</h3>
-  <ValidationSummary {validator}/>
+  <ValidationSummary {validator} />
   <div class="block">
-    <h4>Required and length</h4>
-    <p>Please enter something:</p>
-    <Input name="field" required={true} minlength="2" maxlength="10" {validator} friendlyName="Required field"/>
+    <h4>Required</h4>
+    <Field
+      label="Please enter something:"
+      bind:value={requiredValue}
+      name="field"
+      {validator}
+      required={true}
+      minlength="2"
+      maxlength="10"
+      friendlyName="Required field">
+      <Input bind:value={requiredValue} />
+    </Field>
   </div>
   <div class="block">
     <h4>Regex</h4>
-    <p>Please enter four numbers:</p>
-    <Input name="field2" regex={/\d{4}/} {validator} friendlyName="Regex field"/>
+    <Field
+      name="field2"
+      bind:value={regexValue}
+      regex={/\d{4}/}
+      {validator}
+      friendlyName="Regex field">
+      <label slot="label">Please enter four numbers:</label>
+      <Input bind:value={regexValue}
+ />
+    </Field>
   </div>
   <div class="block">
-    <h4>Enter two fields that are the same:</h4>
-    <Input name="field3" {validator} friendlyName="Password"/>
-    <Input name="field4" compareTo="field3" {validator} friendlyName="Confirm password"/>
+    <h4>Compare</h4>
+    <Field
+      name="field3"
+      bind:value={password1Value}
+      {validator}
+      friendlyName="Password">
+      <label slot="label">Enter two fields that are the same:</label>
+      <Input contentType="password" bind:value={password1Value} />
+    </Field>
+    <Field
+      name="field4"
+      bind:value={password2Value}
+      compareTo="field3"
+      {validator}
+      friendlyName="Confirm password">
+      <Input contentType="password" bind:value={password2Value} />
+    </Field>
   </div>
   <div class="block">
     <Button on:click={handleClick}>Check it</Button>
