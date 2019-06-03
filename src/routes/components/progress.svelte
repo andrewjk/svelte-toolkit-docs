@@ -14,17 +14,25 @@
 
   <h3>Colors</h3>
   <div class="block">
+    Info
     <Progress value={15} type="info"/>
+    Success
     <Progress value={30} type="success"/>
+    Warning
     <Progress value={45} type="warning"/>
+    Danger
     <Progress value={60} type="danger"/>
   </div>
 
   <h3>Sizes</h3>
   <div class="block">
+    Default
     <Progress value={45}/>
+    Small
     <Progress value={60} size="small" type="success"/>
+    Medium
     <Progress value={75} size="medium" type="warning"/>
+    Large
     <Progress value={90} size="large" type="danger"/>
   </div>
 
