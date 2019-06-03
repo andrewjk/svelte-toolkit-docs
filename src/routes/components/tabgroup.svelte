@@ -25,9 +25,9 @@
 </script>
 
 <div class="container">
-  <h2>TabGroup</h2>
+  <h2>Tab Group</h2>
   <p>
-    TabGroup, per
+    Tabs, per
     <a
       href="https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel"
       target="_blank">
