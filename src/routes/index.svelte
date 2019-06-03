@@ -1,7 +1,3 @@
-<svelte:head>
-  <title>Svelte Toolkit</title>
-</svelte:head>
-
 <div class="container">
   <h1>Svelte Toolkit</h1>
 
