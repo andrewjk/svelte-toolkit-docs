@@ -8,7 +8,7 @@
   let type = "";
 
   $: exampleCode =
-    "<SubNavMenu>\n" +
+    "<SubNavMenu type=\"" + type + "\">\n" +
     "  {#each items as item}\n" +
     "    <SubNavMenuItem href={item.href}>{item.title}</SubNavMenuItem>\n" +
     "  {/each}\n" +
@@ -53,11 +53,12 @@
         <tr>
           <td>type</td>
           <td />
-          <td>line</td>
+          <td>line, vertical</td>
           <td>
             <select bind:value={type}>
               <option>-</option>
               <option>line</option>
+              <option>vertical</option>
             </select>
           </td>
         </tr>
