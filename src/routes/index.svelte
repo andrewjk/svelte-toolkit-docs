@@ -59,6 +59,9 @@
       <a href="components/progress">Progress</a>
     </li>
     <li>
+      <a href="components/subnavmenu">Sub Nav Menu</a>
+    </li>
+    <li>
       <a href="components/switcher">Switcher</a>
     </li>
     <li>
