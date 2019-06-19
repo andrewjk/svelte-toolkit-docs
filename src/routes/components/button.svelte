@@ -3,6 +3,8 @@
 
   let type = "info";
   let size = "";
+  let submit = false;
+  let reset = false;
   let disabled = false;
   let loading = false;
 
@@ -11,7 +13,11 @@
     type +
     '" size="' +
     size +
-    '" disabled={' +
+    '" submit={' +
+    submit +
+    '} reset={' +
+    reset +
+    '} disabled={' +
     disabled +
     "} loading={" +
     loading +
@@ -58,6 +64,8 @@
     <Button
       {type}
       {size}
+      {submit}
+      {reset}
       {disabled}
       {loading}
       on:click={handleClick}>
@@ -105,6 +113,28 @@
               <option>large</option>
               <option>inline</option>
             </select>
+          </td>
+        </tr>
+        <tr>
+          <td>submit</td>
+          <td>false</td>
+          <td>Set to true to make this a submit button</td>
+          <td>
+            <label>
+              <input type="checkbox" bind:checked={submit} />
+              Make a submit button
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>reset</td>
+          <td>false</td>
+          <td>Set to true to make this a reset button</td>
+          <td>
+            <label>
+              <input type="checkbox" bind:checked={reset} />
+              Make a reset button
+            </label>
           </td>
         </tr>
         <tr>
