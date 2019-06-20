@@ -33,13 +33,13 @@
     <Field
       label="Please enter something:"
       bind:value={requiredValue}
-      name="field"
+      name="field1"
       {validator}
       required={true}
       minlength="2"
       maxlength="10"
       friendlyName="Required field">
-      <TextBox bind:value={requiredValue} />
+      <TextBox />
     </Field>
   </div>
   <div class="block">
@@ -47,12 +47,11 @@
     <Field
       name="field2"
       bind:value={regexValue}
-      regex={/\d{4}/}
       {validator}
+      regex={/\d{4}/}
       friendlyName="Regex field">
       <label slot="label">Please enter four numbers:</label>
-      <TextBox bind:value={regexValue}
- />
+      <TextBox />
     </Field>
   </div>
   <div class="block">
@@ -63,15 +62,15 @@
       {validator}
       friendlyName="Password">
       <label slot="label">Enter two fields that are the same:</label>
-      <TextBox contentType="password" bind:value={password1Value} />
+      <TextBox contentType="password" />
     </Field>
     <Field
       name="field4"
       bind:value={password2Value}
-      compareTo="field3"
       {validator}
+      compareTo="field3"
       friendlyName="Confirm password">
-      <TextBox contentType="password" bind:value={password2Value} />
+      <TextBox contentType="password" />
     </Field>
   </div>
   <div class="block">
