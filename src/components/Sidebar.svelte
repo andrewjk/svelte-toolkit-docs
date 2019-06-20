@@ -74,6 +74,15 @@
 <SubNavMenuHeader>Forms</SubNavMenuHeader>
 <SubNavMenu type="vertical">
   <SubNavMenuItem>
+    <a href="forms/field">Field</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
+    <a href="forms/checkbox">CheckBox</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
+    <a href="forms/textbox">TextBox</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
     <a href="forms/validation">Validation</a>
   </SubNavMenuItem>
 </SubNavMenu>
