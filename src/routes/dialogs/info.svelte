@@ -7,13 +7,15 @@
     "Click the OK button to accept the very reasonable terms and conditions.";
   export let buttonContent = "OK";
 
+  let message = "";
+
   async function openInfo() {
     const result = await showInfo({
       header,
       content,
       buttonContent
     });
-    alert("You accepted!");
+    message = "You accepted!";
   }
 
   $: exampleCode =
@@ -44,6 +46,9 @@
   <div class="block">
     <Button on:click={e => openInfo()}>Open the info dialog</Button>
   </div>
+  {#if message}
+    <div class="block">{message}</div>
+  {/if}
 
   <h3>Properties</h3>
   <div class="block">

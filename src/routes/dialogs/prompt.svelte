@@ -7,6 +7,8 @@
     "Enter your name below:";
   export let buttonContent = "OK";
 
+  let message = "";
+
   async function openPrompt() {
     const result = await showPrompt({
       header,
@@ -14,7 +16,7 @@
       buttonContent
     });
     if (result) {
-      alert(`Hi, ${result}!`);
+      message = `Hi, ${result}!`;
     }
   }
 
@@ -46,6 +48,9 @@
   <div class="block">
     <Button on:click={e => openPrompt()}>Open the prompt dialog</Button>
   </div>
+  {#if message}
+    <div class="block">{message}</div>
+  {/if}
 
   <h3>Properties</h3>
   <div class="block">

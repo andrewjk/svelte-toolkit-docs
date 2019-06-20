@@ -11,6 +11,8 @@
     { content: "Cancel", cancel: true }
   ];
 
+  let message = "";
+
   async function openConfirm() {
     const result = await showConfirm({
       header,
@@ -18,11 +20,11 @@
       buttons
     });
     if (result === true) {
-      alert("You accepted!");
+      message = "You accepted!";
     } else if (result === false) {
-      alert("You didn't accept :(");
+      message = "You didn't accept :(";
     } else {
-      alert(result);
+      message = result;
     }
   }
 
@@ -54,6 +56,9 @@
   <div class="block">
     <Button on:click={e => openConfirm()}>Open the confirm dialog</Button>
   </div>
+  {#if message}
+    <div class="block">{message}</div>
+  {/if}
 
   <h3>Properties</h3>
   <div class="block">
