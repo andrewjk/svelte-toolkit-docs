@@ -18,14 +18,14 @@
     "sirv": "^0.4.2"
   },
   "devDependencies": {
-    "css-loader": "^2.1.1",
+    "css-loader": "^3.0.0",
     "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5",
-    "sapper": "^0.27.1",
+    "sapper": "^0.27.4",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "svelte": "^3.4.4",
+    "svelte": "^3.5.3",
     "svelte-loader": "^2.13.4",
-    "webpack": "^4.32.2"
+    "webpack": "^4.34.0"
   }
 }
