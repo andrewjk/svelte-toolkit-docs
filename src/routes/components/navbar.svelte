@@ -66,7 +66,7 @@
   <h3>Demo</h3>
   <div class="block nav-bar-demo">
     <NavBar>
-      <NavLogo src="logo-192.png" alt="Svelte logo" />
+      <NavLogo src="logo-192.png" alt="Svelte logo" height="48" />
       <NavMenu>
         <NavMenuItem>
           <a href="components/accordion">Accordion</a>
