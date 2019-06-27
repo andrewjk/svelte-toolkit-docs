@@ -2,11 +2,11 @@
   import { TabGroup, TabItem } from "svelte-toolkit";
   import { items } from "../../stores/items";
 
-  let value = 0;
+  let index = 0;
   let boxed = false;
 
   $: exampleCode = `
-<TabGroup boxed={${boxed}} value={${value}}>
+<TabGroup boxed={${boxed}} index={${index}}>
   {#each items as item}
     <TabItem id={item.id} header={item.header}>{item.text}</TabItem>
   {/each}
@@ -14,7 +14,7 @@
 
 ~ OR ~
 
-<TabGroup boxed={${boxed}} value={${value}}>
+<TabGroup boxed={${boxed}} index={${index}}>
   {#each items as item}
     <TabItem id={item.id}>
       <div slot="header">{item.header}</div>
@@ -42,7 +42,7 @@
 
   <h3>Demo</h3>
   <div class="block">
-    <TabGroup {boxed} bind:value>
+    <TabGroup {boxed} bind:index>
       {#each $items as item}
         <TabItem id={item.id} header={item.name}>{item.text}</TabItem>
       {/each}
@@ -62,11 +62,11 @@
       </thead>
       <tbody>
         <tr>
-          <td>value</td>
+          <td>index</td>
           <td>0</td>
           <td>the index of the active item</td>
           <td>
-            <input type="number" bind:value />
+            <input type="number" bind:value={index} />
           </td>
         </tr>
         <tr>
