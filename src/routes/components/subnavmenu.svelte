@@ -2,7 +2,7 @@
   import {
     SubNavMenu,
     SubNavMenuItem
-  } from "../../../../svelte-toolkit/main.js";
+  } from "svelte-toolkit";
   import { items } from "../../stores/items";
 
   let type = "";

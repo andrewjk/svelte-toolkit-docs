@@ -1,5 +1,5 @@
 <script>
-  import { CheckBox } from "../../../../svelte-toolkit/main.js";
+  import { CheckBox } from "svelte-toolkit";
 
   let type = "";
   let name = "field1";

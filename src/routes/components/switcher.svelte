@@ -1,5 +1,5 @@
 <script>
-  import { Switcher, SwitcherItem } from "../../../../svelte-toolkit/main.js";
+  import { Switcher, SwitcherItem } from "svelte-toolkit";
   import { items } from "../../stores/items";
 
   let index = 0;

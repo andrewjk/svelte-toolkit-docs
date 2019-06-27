@@ -1,6 +1,6 @@
 <script>
-  import { Switcher, SwitcherItem } from "../../../../svelte-toolkit/main.js";
-  import { WizardNav } from "../../../../svelte-toolkit/main.js";
+  import { Switcher, SwitcherItem } from "svelte-toolkit";
+  import { WizardNav } from "svelte-toolkit";
 
   let index = 0;
   let itemCount = 5;

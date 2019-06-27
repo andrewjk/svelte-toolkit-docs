@@ -2,6 +2,7 @@
   "name": "svelte-toolkit-docs",
   "description": "Documentation for svelte-toolkit, a collection of UI components for Svelte",
   "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build",
@@ -26,6 +27,7 @@
     "style-loader": "^0.23.1",
     "svelte": "^3.6.1",
     "svelte-loader": "^2.13.4",
+    "svelte-toolkit": "^0.0.7",
     "webpack": "^4.35.0"
   }
 }

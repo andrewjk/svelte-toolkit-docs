@@ -1,5 +1,5 @@
 <script>
-  import { Progress } from "../../../../svelte-toolkit/main.js";
+  import { Progress } from "svelte-toolkit";
 
   let type = "info";
   let size = "";

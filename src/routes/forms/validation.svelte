@@ -5,7 +5,7 @@
     TextBox,
     Button,
     Validator
-  } from "../../../../svelte-toolkit/main.js";
+  } from "svelte-toolkit";
 
   let requiredValue = "";
   let regexValue = "";

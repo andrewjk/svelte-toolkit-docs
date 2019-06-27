@@ -1,5 +1,5 @@
 <script>
-  import { Calendar } from "../../../../svelte-toolkit/main.js";
+  import { Calendar } from "svelte-toolkit";
 
   const today = new Date();
 

@@ -8,7 +8,7 @@
     DropDownMenuItem,
     DropDownMenuDivider,
     Button
-  } from "../../../../svelte-toolkit/main.js";
+  } from "svelte-toolkit";
 
   function exampleCode () {
     return '' +

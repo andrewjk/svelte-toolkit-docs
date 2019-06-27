@@ -1,5 +1,5 @@
 <script>
-  import { Field, TextBox } from "../../../../svelte-toolkit/main.js";
+  import { Field, TextBox } from "svelte-toolkit";
 
   let label = "Your location:";
   let name = "location";

@@ -1,6 +1,6 @@
 <script>
-  import { showPrompt } from "../../../../svelte-toolkit/main.js";
-  import { Button } from "../../../../svelte-toolkit/main.js";
+  import { showPrompt } from "svelte-toolkit";
+  import { Button } from "svelte-toolkit";
 
   export let header = "Header";
   export let content =

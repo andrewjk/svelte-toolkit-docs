@@ -3,7 +3,7 @@
     SubNavMenu,
     SubNavMenuItem,
     SubNavMenuHeader
-  } from "../../../svelte-toolkit/main.js";
+  } from "svelte-toolkit";
 </script>
 
 <SubNavMenuHeader>General</SubNavMenuHeader>

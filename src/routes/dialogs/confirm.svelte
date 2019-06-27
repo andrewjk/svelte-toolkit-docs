@@ -1,6 +1,6 @@
 <script>
-  import { showConfirm } from "../../../../svelte-toolkit/main.js";
-  import { Button } from "../../../../svelte-toolkit/main.js";
+  import { showConfirm } from "svelte-toolkit";
+  import { Button } from "svelte-toolkit";
 
   export let header = "Header";
   export let content =

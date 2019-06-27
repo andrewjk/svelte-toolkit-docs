@@ -1,5 +1,5 @@
 <script>
-  import { Pagination } from "../../../../svelte-toolkit/main.js";
+  import { Pagination } from "svelte-toolkit";
 
   let pageNumber = 1;
   let pageSize = 10;

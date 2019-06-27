@@ -1,5 +1,5 @@
 <script>
-  import { Badge } from "../../../../svelte-toolkit/main.js";
+  import { Badge } from "svelte-toolkit";
 
   let type = "info";
   let boxed = false;
