@@ -1,6 +1,5 @@
 <script>
-  import { showConfirm } from "svelte-toolkit";
-  import { Button } from "svelte-toolkit";
+  import { Button, showConfirm } from "svelte-toolkit";
 
   export let header = "Header";
   export let content =

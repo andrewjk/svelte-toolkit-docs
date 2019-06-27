@@ -1,6 +1,5 @@
 <script>
-  import { showAlert } from "svelte-toolkit";
-  import { Button } from "svelte-toolkit";
+  import { Button, showAlert } from "svelte-toolkit";
 
   let type = "info";
   let content = "Pay attention to me!";

@@ -1,6 +1,5 @@
 <script>
-  import { showInfo } from "svelte-toolkit";
-  import { Button } from "svelte-toolkit";
+  import { Button, showInfo } from "svelte-toolkit";
 
   export let header = "Header";
   export let content =
