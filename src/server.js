@@ -8,6 +8,7 @@ const dev = NODE_ENV === 'development';
 
 polka() // You can also use Express
 	.use(
+		process.env.SAPPER_EXPORT && '/svelte-toolkit-docs' || undefined,
 		compression({ threshold: 0 }),
 		sirv('static', { dev }),
 		sapper.middleware()
