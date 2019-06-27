@@ -40,6 +40,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>Calendar | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Calendar</h2>
   <p>

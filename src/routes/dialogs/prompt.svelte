@@ -32,6 +32,10 @@
     "});";
 </script>
 
+<svelte:head>
+  <title>Prompt Dialog | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Prompt</h2>
   <p>

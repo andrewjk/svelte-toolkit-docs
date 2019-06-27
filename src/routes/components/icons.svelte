@@ -30,6 +30,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>Icons | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Icons</h2>
   <p>

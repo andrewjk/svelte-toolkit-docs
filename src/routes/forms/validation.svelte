@@ -22,6 +22,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>Validation | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Validation</h2>
   <p>Validation for form elements.</p>

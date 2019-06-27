@@ -32,6 +32,10 @@
     "</Accordion>\n";
 </script>
 
+<svelte:head>
+  <title>Accordion | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Accordion</h2>
   <p>

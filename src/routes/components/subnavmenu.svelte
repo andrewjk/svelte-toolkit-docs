@@ -15,6 +15,10 @@
     "</SubNavMenu>";
 </script>
 
+<svelte:head>
+  <title>Sub Nav Menu | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Sub Nav Menu</h2>
   <p>

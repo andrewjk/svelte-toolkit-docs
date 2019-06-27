@@ -40,6 +40,10 @@
     "});";
 </script>
 
+<svelte:head>
+  <title>Confirm Dialog | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Confirm</h2>
   <p>

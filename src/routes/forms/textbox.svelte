@@ -10,6 +10,10 @@
   $: exampleCode = `<TextBox name="${name}" type="${type}" contentType="${contentType}" maxlength={${maxlength}} bind:value />`;
 </script>
 
+<svelte:head>
+  <title>TextBox | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>TextBox</h2>
   <p>A textbox.</p>

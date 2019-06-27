@@ -1,5 +1,6 @@
+
 <svelte:head>
-	<title>Panel Component</title>
+  <title>Panel | Svelte Toolkit</title>
 </svelte:head>
 
 <div class="container">

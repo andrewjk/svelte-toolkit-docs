@@ -16,6 +16,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>Off-Screen | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Off-Screen</h2>
   <p>A panel that can appear from off-screen.</p>

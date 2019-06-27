@@ -24,6 +24,10 @@
     "</TabGroup>";
 </script>
 
+<svelte:head>
+  <title>Tab Group | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Tab Group</h2>
   <p>

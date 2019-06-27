@@ -56,7 +56,7 @@
 </style>
 
 <svelte:head>
-  <title>Navbar</title>
+  <title>Navbar | Svelte Toolkit</title>
 </svelte:head>
 
 <div class="container">

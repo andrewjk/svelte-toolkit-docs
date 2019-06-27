@@ -15,6 +15,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>Wizard Navigation | Svelte Toolkit</title>
+</svelte:head>
+
 <style>
   .bignum {
     color: darkgray;
@@ -24,7 +28,7 @@
 </style>
 
 <div class="container">
-  <h2>WizardNav</h2>
+  <h2>Wizard Navigation</h2>
   <p>
     Wizard-style navigation for use with a switcher.
   </p>

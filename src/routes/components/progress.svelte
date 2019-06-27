@@ -8,6 +8,10 @@
   $: exampleCode = '<Progress type="' + type + '" size="' + size + '" value={' + value + '}/>';
 </script>
 
+<svelte:head>
+  <title>Progress | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Progress</h2>
   <p>A progress bar.</p>

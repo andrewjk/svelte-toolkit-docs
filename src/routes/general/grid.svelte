@@ -1,13 +1,13 @@
-<svelte:head>
-	<title>Grid styles</title>
-</svelte:head>
-
 <style>
     .outer-panel {
         border: 1px dashed #d2d2d2;
         padding: 20px;
     }
 </style>
+
+<svelte:head>
+  <title>Grid | Svelte Toolkit</title>
+</svelte:head>
 
 <div class="container">
     <h1>Grid</h1>

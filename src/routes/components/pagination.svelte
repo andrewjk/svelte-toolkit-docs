@@ -15,6 +15,10 @@
     "}/>";
 </script>
 
+<svelte:head>
+  <title>Pagination | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Pagination</h2>
   <p>Numbers for navigating through components that contain paged data.</p>

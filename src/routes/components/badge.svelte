@@ -21,6 +21,10 @@
     '" />';
 </script>
 
+<svelte:head>
+  <title>Badge | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Badge</h2>
   <p>A badge for displaying information such as an unread count.</p>

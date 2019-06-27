@@ -13,6 +13,10 @@
     "</Breadcrumb>";
 </script>
 
+<svelte:head>
+  <title>Breadcrumb | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Breadcrumb</h2>
   <p>

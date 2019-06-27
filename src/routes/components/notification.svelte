@@ -30,6 +30,10 @@
     "</Notification>";
 </script>
 
+<svelte:head>
+  <title>Notification | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Notification</h2>
   <p>A notification that can be shown to the user.</p>

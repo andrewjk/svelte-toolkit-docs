@@ -30,6 +30,10 @@
     "});";
 </script>
 
+<svelte:head>
+  <title>Info Dialog | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Info</h2>
   <p>

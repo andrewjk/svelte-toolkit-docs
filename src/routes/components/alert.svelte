@@ -38,6 +38,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>Alert | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Alert</h2>
   <p>

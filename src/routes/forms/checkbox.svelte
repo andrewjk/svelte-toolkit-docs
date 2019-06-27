@@ -9,6 +9,10 @@
   $: exampleCode = `<CheckBox type="${type}" name="${name}" label="${label}" bind:checked />`;
 </script>
 
+<svelte:head>
+  <title>CheckBox | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>CheckBox</h2>
   <p>A box that can be ticked.</p>

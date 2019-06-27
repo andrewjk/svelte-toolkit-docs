@@ -28,6 +28,10 @@
   }
 </script>
 
+<svelte:head>
+  <title>Button | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Button</h2>
   <p>

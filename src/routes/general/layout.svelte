@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Layout styles</title>
+  <title>Layout | Svelte Toolkit</title>
 </svelte:head>
 
 <div class="container">

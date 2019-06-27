@@ -17,6 +17,10 @@
     "</Switcher>";
 </script>
 
+<svelte:head>
+  <title>Switcher | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Switcher</h2>
   <p>

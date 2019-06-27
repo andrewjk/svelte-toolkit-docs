@@ -11,6 +11,10 @@
 </Field>`.trim();
 </script>
 
+<svelte:head>
+  <title>Field | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Field</h2>
   <p>
