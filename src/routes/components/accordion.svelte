@@ -5,31 +5,23 @@
   let value = -1;
   let multiple = false;
 
-  $: exampleCode =
-    "<Accordion multiple={" +
-    multiple +
-    "} value={" +
-    value +
-    "}>\n" +
-    "  {#each items as item}\n" +
-    "    <AccordionItem header={item.header}>{item.text}</AccordionItem>\n" +
-    "  {/each}\n" +
-    "</Accordion>\n" +
-    "\n" +
-    "~ OR ~\n" +
-    "\n" +
-    "<Accordion multiple={" +
-    multiple +
-    "} value={" +
-    value +
-    "}>\n" +
-    "  {#each items as item}\n" +
-    "    <AccordionItem>\n" +
-    '      <div slot="header">{item.header}</div>\n' +
-    "      <div>{item.text}</div>\n" +
-    "    </AccordionItem>\n" +
-    "  {/each}\n" +
-    "</Accordion>\n";
+  $: exampleCode = `
+<Accordion multiple={${multiple}} value={${value}}>
+  {#each items as item}
+    <AccordionItem header={item.header}>{item.text}</AccordionItem>
+  {/each}
+</Accordion>
+
+~ OR ~
+
+<Accordion multiple={${multiple}} value={${value}}>
+  {#each items as item}
+    <AccordionItem>
+      <div slot="header">{item.header}</div>
+      <div>{item.text}</div>
+    </AccordionItem>
+  {/each}
+</Accordion>`.trim();
 </script>
 
 <svelte:head>

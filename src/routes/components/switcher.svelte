@@ -4,17 +4,15 @@
 
   let index = 0;
 
-  $: exampleCode =
-    "<Switcher index={" +
-    index +
-    "}>\n" +
-    "  {#each $items as item}\n" +
-    "    <SwitcherItem>\n" +
-    "      <h4>{item.header}</h4>\n" +
-    "      <p>{item.text}</p>\n" +
-    "    </SwitcherItem>\n" +
-    "  {/each}\n" +
-    "</Switcher>";
+  $: exampleCode = `
+<Switcher index={${index}}>
+  {#each $items as item}
+    <SwitcherItem>
+      <h4>{item.header}</h4>
+      <p>{item.text}</p>
+    </SwitcherItem>
+  {/each}
+</Switcher>`.trim();
 </script>
 
 <svelte:head>

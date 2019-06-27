@@ -1,16 +1,13 @@
 <script>
-  import {
-    Breadcrumb,
-    BreadcrumbItem
-  } from "svelte-toolkit";
+  import { Breadcrumb, BreadcrumbItem } from "svelte-toolkit";
   import { items } from "../../stores/items";
 
-  $: exampleCode =
-    "<Breadcrumb>\n" +
-    "  {#each items as item}\n" +
-    "    <BreadcrumbItem href={item.href}>{item.title}</BreadcrumbItem>\n" +
-    "  {/each}\n" +
-    "</Breadcrumb>";
+  $: exampleCode = `
+<Breadcrumb>
+  {#each items as item}
+    <BreadcrumbItem href={item.href}>{item.title}</BreadcrumbItem>
+  {/each}
+</Breadcrumb>`.trim();
 </script>
 
 <svelte:head>

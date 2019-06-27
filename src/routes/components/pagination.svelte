@@ -5,14 +5,7 @@
   let pageSize = 10;
   let itemCount = 50;
 
-  $: exampleCode =
-    "<Pagination pageNumber={" +
-    pageNumber +
-    "} pageSize={" +
-    pageSize +
-    "} itemCount={" +
-    itemCount +
-    "}/>";
+  $: exampleCode = `<Pagination pageNumber={${pageNumber}} pageSize={${pageSize}} itemCount={${itemCount}} />`.trim();
 </script>
 
 <svelte:head>

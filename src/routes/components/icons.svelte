@@ -13,21 +13,18 @@
     Check
   } from "svelte-toolkit";
 
-  function exampleCode() {
-    return (
-      "<ArrowUp />\n" +
-      "<ArrowDown />\n" +
-      "<ArrowLeft />\n" +
-      "<ArrowRight />\n" +
-      "<ChevronUp />\n" +
-      "<ChevronDown />\n" +
-      "<ChevronLeft />\n" +
-      "<ChevronRight />\n" +
-      "<Bars />\n" +
-      "<Cross />\n" +
-      "<Check />"
-    );
-  }
+  $: exampleCode = `
+<ArrowUp />
+<ArrowDown />
+<ArrowLeft />
+<ArrowRight />
+<ChevronUp />
+<ChevronDown />
+<ChevronLeft />
+<ChevronRight />
+<Bars />
+<Cross />
+<Check />`.trim();
 </script>
 
 <svelte:head>
@@ -67,6 +64,6 @@
 
   <h3>Code</h3>
   <div class="block">
-    <pre>{exampleCode()}</pre>
+    <pre>{exampleCode}</pre>
   </div>
 </div>

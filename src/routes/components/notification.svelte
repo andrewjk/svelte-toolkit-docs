@@ -6,28 +6,14 @@
   let closable = true;
   let duration = 0;
 
-  $: exampleCode =
-    '<Notification content="' +
-    content +
-    '" type={' +
-    type +
-    "} closable={" +
-    closable +
-    "} duration={" +
-    duration +
-    "}/>\n" +
-    "\n" +
-    "~ OR ~\n" +
-    "\n" +
-    "<Notification type={" +
-    type +
-    "} closable={" +
-    closable +
-    "} duration={" +
-    duration +
-    "}/>" +
-    content +
-    "</Notification>";
+  $: exampleCode = `
+<Notification content="${content}" type="${type}" closable={${closable}} duration={${duration}} />
+
+~ OR ~
+
+<Notification type="${type}" closable={${closable}} duration={${duration}}>
+  ${content}
+</Notification>`.trim();
 </script>
 
 <svelte:head>

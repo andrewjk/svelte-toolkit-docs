@@ -17,16 +17,12 @@
     message = "You accepted!";
   }
 
-  $: exampleCode =
-    "const result = await showInfo({\n" +
-    "  header: '" +
-    header +
-    "',\n" +
-    "  content: '" +
-    content +
-    "',\n" +
-    "  buttonContent: '" + buttonContent + "'\n" +
-    "});";
+  $: exampleCode = `
+const result = await showInfo({
+  header: '${header}',
+  content: '${content}',
+  buttonContent: '${buttonContent}'
+});`.trim();
 </script>
 
 <svelte:head>
@@ -90,9 +86,7 @@
         <tr>
           <td>buttonContent</td>
           <td>OK</td>
-          <td>
-            The content to display in the dialog's button
-          </td>
+          <td>The content to display in the dialog's button</td>
           <td>
             <input type="text" bind:value={buttonContent} />
           </td>

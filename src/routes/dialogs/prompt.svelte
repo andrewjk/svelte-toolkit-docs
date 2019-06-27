@@ -2,8 +2,7 @@
   import { Button, showPrompt } from "svelte-toolkit";
 
   export let header = "Header";
-  export let content =
-    "Enter your name below:";
+  export let content = "Enter your name below:";
   export let buttonContent = "OK";
 
   let message = "";
@@ -15,20 +14,16 @@
       buttonContent
     });
     if (result) {
-      message = `Hi, ${result}!`;
+      message = `Hi, ${result}!`.trim();
     }
   }
 
-  $: exampleCode =
-    "const result = await showPrompt({\n" +
-    "  header: '" +
-    header +
-    "',\n" +
-    "  content: '" +
-    content +
-    "',\n" +
-    "  buttonContent: '" + buttonContent + "'\n" +
-    "});";
+  $: exampleCode = `
+const result = await showPrompt({
+  header: '${header}',
+  content: '${content}',
+  buttonContent: '${buttonContent}'
+});`.trim();
 </script>
 
 <svelte:head>
@@ -92,9 +87,7 @@
         <tr>
           <td>buttonContent</td>
           <td>OK</td>
-          <td>
-            The content to display in the dialog's button
-          </td>
+          <td>The content to display in the dialog's button</td>
           <td>
             <input type="text" bind:value={buttonContent} />
           </td>

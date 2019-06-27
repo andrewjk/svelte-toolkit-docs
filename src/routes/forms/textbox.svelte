@@ -7,7 +7,7 @@
   let contentType = "text";
   let maxlength = 10;
 
-  $: exampleCode = `<TextBox name="${name}" type="${type}" contentType="${contentType}" maxlength={${maxlength}} bind:value />`;
+  $: exampleCode = `<TextBox name="${name}" type="${type}" contentType="${contentType}" maxlength={${maxlength}} bind:value />`.trim();
 </script>
 
 <svelte:head>

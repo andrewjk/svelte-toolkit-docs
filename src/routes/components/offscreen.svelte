@@ -6,8 +6,8 @@
 
   $: exampleCode = `
 <OffScreen visible={${visible}} position="${position}\">
-  Here's your hidden content
-</OffScreen>`;
+  Off-screen content
+</OffScreen>`.trim();
 
   function toggleOffScreen(e) {
     visible = !visible;

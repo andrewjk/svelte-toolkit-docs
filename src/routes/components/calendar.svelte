@@ -26,12 +26,7 @@
     }
   ];
 
-  $: exampleCode =
-    "<Calendar startOfWeek={" +
-    startOfWeek +
-    "} selectable={" +
-    selectable +
-    "} value={new Date()} {events} />";
+  $: exampleCode = `<Calendar startOfWeek={${startOfWeek}} selectable={${selectable}} value={new Date()} {events} />`.trim();
 
   function dummyDate(days) {
     const today = new Date();

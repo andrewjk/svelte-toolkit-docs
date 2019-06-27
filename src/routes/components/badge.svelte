@@ -5,20 +5,12 @@
   let boxed = false;
   let content = "5";
 
-  $: exampleCode =
-    'Notifications <Badge type="' +
-    type +
-    '">' +
-    content +
-    "</Badge>\n" +
-    "\n" +
-    "~ OR ~\n" +
-    "\n" +
-    'Notifications <Badge type="' +
-    type +
-    '" content="' +
-    content +
-    '" />';
+  $: exampleCode = `
+Notifications <Badge type="${type}" boxed={${boxed}}>${content}</Badge>
+
+~ OR ~
+
+Notifications <Badge content="${content}" type="${type}" boxed={${boxed} />`.trim();
 </script>
 
 <svelte:head>

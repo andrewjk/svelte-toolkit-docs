@@ -1,18 +1,15 @@
 <script>
-  import {
-    SubNavMenu,
-    SubNavMenuItem
-  } from "svelte-toolkit";
+  import { SubNavMenu, SubNavMenuItem } from "svelte-toolkit";
   import { items } from "../../stores/items";
 
   let type = "";
 
-  $: exampleCode =
-    "<SubNavMenu type=\"" + type + "\">\n" +
-    "  {#each items as item}\n" +
-    "    <SubNavMenuItem href={item.href}>{item.title}</SubNavMenuItem>\n" +
-    "  {/each}\n" +
-    "</SubNavMenu>";
+  $: exampleCode = `
+<SubNavMenu type="${type}">
+  {#each items as item}
+    <SubNavMenuItem href={item.href}>{item.title}</SubNavMenuItem>
+  {/each}
+</SubNavMenu>`.trim();
 </script>
 
 <svelte:head>
@@ -35,9 +32,7 @@
   <div class="block">
     <SubNavMenu {type}>
       {#each $items as item, index}
-        <SubNavMenuItem href={item.href}>
-           {item.name}
-        </SubNavMenuItem>
+        <SubNavMenuItem href={item.href}> {item.name} </SubNavMenuItem>
       {/each}
     </SubNavMenu>
   </div>

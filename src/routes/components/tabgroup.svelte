@@ -5,23 +5,23 @@
   let value = 0;
   let boxed = false;
 
-  $: exampleCode =
-    "<TabGroup boxed={" + boxed + "} value={" + value + "}>\n" +
-    "  {#each items as item}\n" +
-    "    <TabItem id={item.id} header={item.header}>{item.text}</TabItem>\n" +
-    "  {/each}\n" +
-    "</TabGroup>\n" +
-    "\n" +
-    "~ OR ~\n" +
-    "\n" +
-    "<TabGroup boxed={" + boxed + "} value={" + value + "}>\n" +
-    "  {#each items as item}\n" +
-    "    <TabItem id={item.id}>\n" +
-    '      <div slot="header">{item.header}</div>\n' +
-    "      <div>{item.text}</div>\n" +
-    "    </TabItem>\n" +
-    "  {/each}\n" +
-    "</TabGroup>";
+  $: exampleCode = `
+<TabGroup boxed={${boxed}} value={${value}}>
+  {#each items as item}
+    <TabItem id={item.id} header={item.header}>{item.text}</TabItem>
+  {/each}
+</TabGroup>
+
+~ OR ~
+
+<TabGroup boxed={${boxed}} value={${value}}>
+  {#each items as item}
+    <TabItem id={item.id}>
+      <div slot="header">{item.header}</div>
+      <div>{item.text}</div>
+    </TabItem>
+  {/each}
+</TabGroup>`.trim();
 </script>
 
 <svelte:head>

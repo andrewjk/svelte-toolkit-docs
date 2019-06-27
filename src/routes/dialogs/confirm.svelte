@@ -27,16 +27,12 @@
     }
   }
 
-  $: exampleCode =
-    "const result = await showConfirm({\n" +
-    "  header: '" +
-    header +
-    "',\n" +
-    "  content: '" +
-    content +
-    "',\n" +
-    "  buttons\n" +
-    "});";
+  $: exampleCode = `
+const result = await showConfirm({
+  header: '${header}',
+  content: '${content}',
+  buttons
+});`.trim();
 </script>
 
 <svelte:head>

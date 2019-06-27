@@ -6,17 +6,12 @@
 
   $: items = [...Array(itemCount).keys()].map(i => ++i);
 
-  $: exampleCode = 
-    "<WizardNav index={" + index + "} itemCount={" + itemCount + "} on:finished={handleFinished}/>";
+  $: exampleCode = `<WizardNav index={${index}} itemCount={${itemCount}} on:finished={handleFinished} />`.trim();
 
   function handleFinished(e) {
-    alert('Hooray!');
+    alert("Hooray!");
   }
 </script>
-
-<svelte:head>
-  <title>Wizard Navigation | Svelte Toolkit</title>
-</svelte:head>
 
 <style>
   .bignum {
@@ -26,11 +21,13 @@
   }
 </style>
 
+<svelte:head>
+  <title>Wizard Navigation | Svelte Toolkit</title>
+</svelte:head>
+
 <div class="container">
   <h2>Wizard Navigation</h2>
-  <p>
-    Wizard-style navigation for use with a switcher.
-  </p>
+  <p>Wizard-style navigation for use with a switcher.</p>
 
   <h3>Demo</h3>
   <div class="block">
@@ -41,7 +38,7 @@
         </SwitcherItem>
       {/each}
     </Switcher>
-    <WizardNav bind:index {itemCount} on:finished={handleFinished}/>
+    <WizardNav bind:index {itemCount} on:finished={handleFinished} />
   </div>
 
   <h3>Properties</h3>
@@ -59,19 +56,15 @@
         <tr>
           <td>index</td>
           <td>0</td>
-          <td>
-            the current index
-          </td>
+          <td>the current index</td>
           <td>
             <input type="number" bind:value={index} />
           </td>
         </tr>
         <tr>
           <td>itemCount</td>
-          <td>&nbsp;</td>
-          <td>
-            the total number of items
-          </td>
+          <td />
+          <td>the total number of items</td>
           <td>
             <input type="number" bind:value={itemCount} />
           </td>
@@ -96,7 +89,7 @@
         </tr>
         <tr>
           <td>finished</td>
-          <td>&nbsp;</td>
+          <td />
         </tr>
       </tbody>
     </table>

@@ -8,20 +8,10 @@
   let disabled = false;
   let loading = false;
 
-  $: exampleCode =
-    '<Button type="' +
-    type +
-    '" size="' +
-    size +
-    '" submit={' +
-    submit +
-    '} reset={' +
-    reset +
-    '} disabled={' +
-    disabled +
-    "} loading={" +
-    loading +
-    "}>Click me</Button>";
+  $: exampleCode = `
+<Button type="${type}" size="${size}" submit={${submit}} reset={${reset}} disabled={${disabled}} loading={${loading}}>
+  Click me
+</Button>`.trim();
 
   function handleClick(e) {
     alert("Hooray!");

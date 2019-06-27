@@ -7,24 +7,14 @@
   let closable = true;
   let duration = 5000;
 
-  $: exampleCode =
-    "showAlert({\n" +
-    "  type: '" +
-    type +
-    "',\n" +
-    "  content: '" +
-    content +
-    "',\n" +
-    "  position: '" +
-    position +
-    "',\n" +
-    "  closable: '" +
-    closable +
-    "',\n" +
-    "  duration: '" +
-    duration +
-    "'\n" +
-    "});";
+  $: exampleCode = `
+showAlert({
+  type: '${type}',
+  content: '${content}'
+  position: '${position}',
+  closable: ${closable},
+  duration: ${duration}
+});`.trim();
 
   function openAlert(type) {
     showAlert({
