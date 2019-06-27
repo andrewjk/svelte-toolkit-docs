@@ -4,17 +4,27 @@
   let visible = false;
   let position = "left";
 
-  $: exampleCode =
-    "<OffScreen visible={" +
-    visible +
-    '} position="' +
-    position +
-    "\"}>Here's your hidden content</OffScreen>\n";
+  $: exampleCode = `
+<OffScreen visible={${visible}} position="${position}\">
+  Here's your hidden content
+</OffScreen>`;
 
   function toggleOffScreen(e) {
     visible = !visible;
   }
 </script>
+
+<style>
+  .bigtext {
+    color: darkgray;
+    font-size: 96px;
+    line-height: 1.4;
+    margin: 0 2rem;
+    min-width: 140px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+</style>
 
 <svelte:head>
   <title>Off-Screen | Svelte Toolkit</title>
@@ -26,7 +36,9 @@
 
   <h3>Demo</h3>
   <div class="block">
-    <OffScreen bind:visible {position}>Here's your hidden content</OffScreen>
+    <OffScreen bind:visible {position}>
+      <div class="bigtext">{position.substring(0, 1)}</div>
+    </OffScreen>
     <button class="button full-width" on:click={toggleOffScreen}>
       Show the off-screen
     </button>
