@@ -8,6 +8,7 @@
 
 <svelte:head>
   <title>Svelte Toolkit</title>
+  <base href="/svelte-toolkit-docs/">
 </svelte:head>
 
 <div class="page">
