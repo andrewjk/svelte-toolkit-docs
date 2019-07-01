@@ -3740,15 +3740,15 @@ svelte-loader@^2.13.4:
     loader-utils "^1.1.0"
     svelte-dev-helper "^1.1.9"
 
-svelte-toolkit@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/svelte-toolkit/-/svelte-toolkit-0.0.7.tgz#3b1e272c80e8f2969c38d4bf8e8156009dc270db"
-  integrity sha512-ooCoHE5akxjycOqqorIzyl9m4zqnxVpL8Vap0dTAqQoNImtVCqyvIWvrLnIFPmS6K6+VWuN8APNmTtB0f8+R5w==
+svelte-toolkit@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/svelte-toolkit/-/svelte-toolkit-0.0.8.tgz#8bad450226eef80132f50d53a4093448f2193030"
+  integrity sha512-ABxC4e52pOBsN4n4YyxTiHNumRnD/AJDU800AWdarqxYcggf/ZgEanPmYvRuZJ93Wl5cPnBV89oPS2D86Kd10w==
 
-svelte@^3.6.1:
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.6.1.tgz#f6771e32c4e1e9c2a28f5886e26d849fd11d6754"
-  integrity sha512-4TaCyB0nBgpsdLBZ8T0ovIgbVpNoCmXnPvBkJ0v1P9RYY2gcYd7Yv1FX+O7hW4Ak1v8uVSKh6WU0XBlN2oZXEw==
+svelte@^3.6.2:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.6.2.tgz#2eb8d58498b0c45739c8627d1f67ebc902f99f2c"
+  integrity sha512-OzKC7mzHkEXbCxe3+NsHty2NShtFjYDDmJhgmMprXjaCBoTm03lrGUQz0moJxD89+u7iSCUz7GqOT6NE7PgkXA==
 
 tapable@^1.0.0, tapable@^1.1.0:
   version "1.1.3"
