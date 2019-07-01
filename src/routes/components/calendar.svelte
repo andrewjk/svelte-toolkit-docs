@@ -1,10 +1,8 @@
 <script>
   import { Calendar } from "svelte-toolkit";
 
-  const today = new Date();
-
   let selectable = false;
-  let value = dummyDate(+2);
+  let value = new Date();
   let startOfWeek = 1;
 
   let events = [
@@ -26,7 +24,7 @@
     }
   ];
 
-  $: exampleCode = `<Calendar startOfWeek={${startOfWeek}} selectable={${selectable}} value={new Date()} {events} />`.trim();
+  $: exampleCode = `<Calendar startOfWeek={${startOfWeek}} selectable={${selectable}} {value} {events} />`.trim();
 
   function dummyDate(days) {
     const today = new Date();
@@ -88,7 +86,7 @@
           <td>value</td>
           <td />
           <td>the value of the selected date (if selectable is true)</td>
-          <td>TODO:</td>
+          <td />
         </tr>
         <tr>
           <td>events</td>
@@ -97,7 +95,7 @@
             an array of events to display in the calendar, where each event can
             have the properties date, content and color
           </td>
-          <td>TODO:</td>
+          <td />
         </tr>
       </tbody>
     </table>

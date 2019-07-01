@@ -1,5 +1,5 @@
 <script>
-  import { DatePicker } from "../../../../svelte-toolkit/main.js";
+  import { DatePicker } from "svelte-toolkit";
 
   let value = null;
   let dateFormat = "d MMM yyyy"
