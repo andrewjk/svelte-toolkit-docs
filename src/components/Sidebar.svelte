@@ -109,6 +109,9 @@
     <a href="charts/barchart">Bar Chart</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
+    <a href="charts/linechart">Line Chart</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
     <a href="charts/piechart">Pie Chart</a>
   </SubNavMenuItem>
 </SubNavMenu>
