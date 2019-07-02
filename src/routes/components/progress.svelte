@@ -4,8 +4,9 @@
   let type = "info";
   let size = "";
   let value = 50;
+  let total = 100;
 
-  $: exampleCode = `<Progress type="${type}" size="${size}" value={${value}} />`;
+  $: exampleCode = `<Progress type="${type}" size="${size}" value={${value}} total={${total}} />`;
 </script>
 
 <svelte:head>
@@ -42,7 +43,7 @@
 
   <h3>Demo</h3>
   <div class="block">
-    <Progress {type} {size} {value} />
+    <Progress {type} {size} {value} {total} />
     <br />
   </div>
 
@@ -87,9 +88,17 @@
         <tr>
           <td>value</td>
           <td>0</td>
-          <td>0 to 100</td>
+          <td>0 to 100 (or the value of total, below)</td>
           <td>
             <input type="number" bind:value />
+          </td>
+        </tr>
+        <tr>
+          <td>total</td>
+          <td>100</td>
+          <td></td>
+          <td>
+            <input type="number" bind:value={total} />
           </td>
         </tr>
       </tbody>
