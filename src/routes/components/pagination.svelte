@@ -1,12 +1,24 @@
 <script>
-  import { Pagination } from "svelte-toolkit";
+  import { Switcher, SwitcherItem, Pagination } from "svelte-toolkit";
 
   let pageNumber = 1;
   let pageSize = 10;
   let itemCount = 50;
 
+  $: index = pageNumber - 1;
+  $: items = [...Array(itemCount).keys()].map(i => ++i);
+
   $: exampleCode = `<Pagination pageNumber={${pageNumber}} pageSize={${pageSize}} itemCount={${itemCount}} />`.trim();
 </script>
+
+<style>
+  .bignum {
+    color: darkgray;
+    font-size: 96px;
+    line-height: 1.4;
+    text-align: center;
+  }
+</style>
 
 <svelte:head>
   <title>Pagination | Svelte Toolkit</title>
@@ -18,6 +30,15 @@
 
   <h3>Demo</h3>
   <div class="block">
+    <Switcher bind:index>
+      {#each items as item}
+        <SwitcherItem>
+          <div class="panel">
+            <div class="bignum">{item}</div>
+          </div>
+        </SwitcherItem>
+      {/each}
+    </Switcher>
     <Pagination bind:pageNumber {pageSize} {itemCount} />
   </div>
 

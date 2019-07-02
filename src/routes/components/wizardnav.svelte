@@ -18,6 +18,7 @@
     color: darkgray;
     font-size: 96px;
     line-height: 1.4;
+    text-align: center;
   }
 </style>
 
@@ -34,7 +35,9 @@
     <Switcher bind:index>
       {#each items as item}
         <SwitcherItem>
-          <div class="bignum">{item}</div>
+          <div class="panel">
+            <div class="bignum">{item}</div>
+          </div>
         </SwitcherItem>
       {/each}
     </Switcher>

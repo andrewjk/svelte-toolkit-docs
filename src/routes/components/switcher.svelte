@@ -8,8 +8,10 @@
 <Switcher index={${index}}>
   {#each $items as item}
     <SwitcherItem>
-      <h4>{item.header}</h4>
-      <p>{item.text}</p>
+      <div class="panel">
+        <h4>{item.header}</h4>
+        <p>{item.text}</p>
+      </div>
     </SwitcherItem>
   {/each}
 </Switcher>`.trim();
@@ -31,8 +33,10 @@
     <Switcher bind:index>
       {#each $items as item}
         <SwitcherItem>
-          <h4>{item.name}</h4>
-          <p>{item.text}</p>
+          <div class="panel">
+            <h4>{item.name}</h4>
+            <p>{item.text}</p>
+          </div>
         </SwitcherItem>
       {/each}
     </Switcher>
