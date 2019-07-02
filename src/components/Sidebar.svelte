@@ -103,6 +103,13 @@
   </SubNavMenuItem>
 </SubNavMenu>
 
+<SubNavMenuHeader>Charts</SubNavMenuHeader>
+<SubNavMenu type="vertical">
+  <SubNavMenuItem>
+    <a href="charts/piechart">Pie Chart</a>
+  </SubNavMenuItem>
+</SubNavMenu>
+
 <SubNavMenuHeader>Icons</SubNavMenuHeader>
 <SubNavMenu type="vertical">
   <SubNavMenuItem>
