@@ -28,6 +28,9 @@
     <a href="components/alert">Alert</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
+    <a href="components/autocomplete">Auto Complete</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
     <a href="components/badge">Badge</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
