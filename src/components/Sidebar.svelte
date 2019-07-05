@@ -52,10 +52,13 @@
     <a href="components/notification">Notification</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
-    <a href="components/offscreen">Off-Screen</a>
+    <a href="components/offscreen">Off Screen</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
     <a href="components/pagination">Pagination</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
+    <a href="components/palette">Palette</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
     <a href="components/panel">Panel</a>
