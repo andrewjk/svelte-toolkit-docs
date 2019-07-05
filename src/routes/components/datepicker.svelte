@@ -42,7 +42,7 @@
             the selected value
           </td>
           <td>
-
+            {value}
           </td>
         </tr>
         <tr>
