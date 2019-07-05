@@ -2,7 +2,7 @@
   import {
     AutoComplete,
     AutoCompleteItem
-  } from "../../../../svelte-toolkit/main.js";
+  } from "svelte-toolkit";
 
   import { countries } from "../../stores/countries";
 
