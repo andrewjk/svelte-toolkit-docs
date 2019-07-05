@@ -1,5 +1,5 @@
 <script>
-  import { Palette } from "../../../../svelte-toolkit/main.js";
+  import { Palette } from "svelte-toolkit";
 
   let value = "green";
 
