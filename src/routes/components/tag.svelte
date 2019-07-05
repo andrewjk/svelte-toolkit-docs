@@ -1,5 +1,5 @@
 <script>
-  import { Tag } from "../../../../svelte-toolkit/main.js";
+  import { Tag } from "svelte-toolkit";
 
   let type = "info";
   let content = "Awesome!";
