@@ -82,6 +82,9 @@
     <a href="components/tag">Tag</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
+    <a href="components/taginput">Tag Input</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
     <a href="components/wizardnav">Wizard Navigation</a>
   </SubNavMenuItem>
 </SubNavMenu>
