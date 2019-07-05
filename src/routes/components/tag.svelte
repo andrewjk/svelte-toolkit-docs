@@ -1,29 +1,29 @@
 <script>
-  import { Badge } from "svelte-toolkit";
+  import { Tag } from "svelte-toolkit";
 
   let type = "info";
-  let content = "5";
+  let content = "Awesome!";
 
   $: exampleCode = `
-Notifications <Badge type="${type}">${content}</Badge>
+<Tag type="${type}">${content}</Tag>
 
 ~ OR ~
 
-Notifications <Badge content="${content}" type="${type}" />`.trim();
+<Tag content="${content}" type="${type}" />`.trim();
 </script>
 
 <svelte:head>
-  <title>Badge | Svelte Toolkit</title>
+  <title>Tag | Svelte Toolkit</title>
 </svelte:head>
 
 <div class="container">
-  <h2>Badge</h2>
-  <p>A badge for displaying information such as an unread count.</p>
+  <h2>Tag</h2>
+  <p>A tag for displaying information about an item.</p>
 
   <h3>Demo</h3>
   <div class="block">
-    Notifications
-    <Badge {type} {content} />
+    <Tag {type} {content} />
+    <Tag type="success">Great Job!</Tag>
   </div>
 
   <h3>Properties</h3>
@@ -55,7 +55,7 @@ Notifications <Badge content="${content}" type="${type}" />`.trim();
           <td>content</td>
           <td />
           <td>
-            The content to display in the badge, which can also come from slot
+            The content to display in the tag, which can also come from slot
             content
           </td>
           <td>
