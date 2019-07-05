@@ -9,11 +9,11 @@
 </script>
 
 <svelte:head>
-  <title>DatePicker | Svelte Toolkit</title>
+  <title>Date Picker | Svelte Toolkit</title>
 </svelte:head>
 
 <div class="container">
-  <h2>DatePicker</h2>
+  <h2>Date Picker</h2>
   <p>
     A dropdown date picker that can be used to enter or select a date.
   </p>
