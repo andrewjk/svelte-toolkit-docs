@@ -43,6 +43,9 @@
     <a href="components/calendar">Calendar</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
+    <a href="components/colorpicker">Color Picker</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
     <a href="components/datepicker">Date Picker</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
