@@ -1,15 +1,16 @@
 <script>
-  import { Tag } from "svelte-toolkit";
+  import { Tag } from "../../../../svelte-toolkit/main.js";
 
   let type = "info";
   let content = "Awesome!";
+  let closable = false;
 
   $: exampleCode = `
-<Tag type="${type}">${content}</Tag>
+<Tag type="${type}" closable={${closable}}>${content}</Tag>
 
 ~ OR ~
 
-<Tag content="${content}" type="${type}" />`.trim();
+<Tag content="${content}" type="${type}" closable={${closable}} />`.trim();
 </script>
 
 <svelte:head>
@@ -22,8 +23,8 @@
 
   <h3>Demo</h3>
   <div class="block">
-    <Tag {type} {content} />
-    <Tag type="success">Great Job!</Tag>
+    <Tag {type} {content} {closable} />
+    <Tag {type} {closable}>Great Job!</Tag>
   </div>
 
   <h3>Properties</h3>
@@ -60,6 +61,19 @@
           </td>
           <td>
             <input type="text" bind:value={content} />
+          </td>
+        </tr>
+        <tr>
+          <td>closable</td>
+          <td>false</td>
+          <td>
+            Set to true to display a close button at the right of the tag
+          </td>
+          <td>
+            <label>
+              <input type="checkbox" bind:checked={closable} />
+              Allow closing the tag
+            </label>
           </td>
         </tr>
       </tbody>
