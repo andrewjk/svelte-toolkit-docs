@@ -52,7 +52,7 @@
       name="field2"
       bind:value={regexValue}
       {validator}
-      regex={/\d{4}/}
+      regex={/^\d{4}$/}
       friendlyName="Regex field">
       <label slot="label">Please enter four numbers:</label>
       <TextBox />
