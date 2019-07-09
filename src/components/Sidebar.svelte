@@ -49,6 +49,9 @@
     <a href="components/datepicker">Date Picker</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
+    <a href="components/dotnav">Dot Navigation</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
     <a href="components/navbar">Nav Bar</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
