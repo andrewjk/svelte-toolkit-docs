@@ -73,6 +73,9 @@
     <a href="components/progress">Progress</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
+    <a href="components/slider">Slider</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
     <a href="components/subnavmenu">Sub Nav Menu</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
