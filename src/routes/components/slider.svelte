@@ -1,5 +1,5 @@
 <script>
-  import { Slider } from "../../../../svelte-toolkit/main.js";
+  import { Slider } from "svelte-toolkit";
 
   let value = 50;
   let total = 100;
