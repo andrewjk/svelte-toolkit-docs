@@ -104,6 +104,9 @@
     <a href="forms/checkbox">CheckBox</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
+    <a href="forms/select">Select</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
     <a href="forms/textbox">TextBox</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
