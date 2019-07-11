@@ -4,11 +4,12 @@
   let name = "field1";
   let value = "";
   let type = "";
+  let placeholder = "";
 
   import { countries } from "../../stores/countries";
 
   $: exampleCode = `
-<Select name="${name}" type="${type}" bind:value>
+<Select name="${name}" type="${type}" bind:value placeholder="${placeholder}">
   <option value="">-</option>
   {#each countries as country}
     <option>{country.name}</option>
@@ -26,7 +27,7 @@
 
   <h3>Demo</h3>
   <div class="block">
-    <Select {name} {type} bind:value>
+    <Select {name} {type} bind:value {placeholder}>
       <option value="">-</option>
       {#each countries as country}
         <option>{country.name}</option>
@@ -74,6 +75,14 @@
           <td>The value entered into the textbox</td>
           <td>
             <input type="text" bind:value />
+          </td>
+        </tr>
+        <tr>
+          <td>placeholder</td>
+          <td />
+          <td>Placeholder text to show when the textbox is empty.</td>
+          <td>
+            <input type="text" bind:value={placeholder} />
           </td>
         </tr>
       </tbody>

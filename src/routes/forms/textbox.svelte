@@ -1,13 +1,14 @@
 <script>
-  import { TextBox } from "svelte-toolkit";
+  import { TextBox } from "../../../../svelte-toolkit/main.js";
 
   let name = "field1";
   let value = "";
   let type = "";
   let contentType = "text";
+  let placeholder = "";
   let maxlength = 10;
 
-  $: exampleCode = `<TextBox name="${name}" type="${type}" contentType="${contentType}" maxlength={${maxlength}} bind:value />`.trim();
+  $: exampleCode = `<TextBox name="${name}" type="${type}" contentType="${contentType}" placeholder="${placeholder}" maxlength={${maxlength}} bind:value />`.trim();
 </script>
 
 <svelte:head>
@@ -20,7 +21,7 @@
 
   <h3>Demo</h3>
   <div class="block">
-    <TextBox {name} {type} {contentType} {maxlength} bind:value />
+    <TextBox {name} {type} {contentType} {maxlength} bind:value {placeholder} />
   </div>
 
   <h3>Properties</h3>
@@ -77,6 +78,14 @@
           <td>The value entered into the textbox</td>
           <td>
             <input type="text" bind:value />
+          </td>
+        </tr>
+        <tr>
+          <td>placeholder</td>
+          <td />
+          <td>Placeholder text to show when the textbox is empty.</td>
+          <td>
+            <input type="text" bind:value={placeholder} />
           </td>
         </tr>
         <tr>
