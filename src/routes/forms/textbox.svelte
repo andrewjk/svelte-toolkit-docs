@@ -1,5 +1,5 @@
 <script>
-  import { TextBox } from "../../../../svelte-toolkit/main.js";
+  import { TextBox } from "svelte-toolkit";
 
   let name = "field1";
   let value = "";
