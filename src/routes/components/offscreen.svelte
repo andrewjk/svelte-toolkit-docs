@@ -5,6 +5,8 @@
   let position = "left";
 
   $: exampleCode = `
+import { OffScreen } from "svelte-toolkit";
+
 <OffScreen visible={${visible}} position="${position}\">
   Off-screen content
 </OffScreen>`.trim();

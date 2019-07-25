@@ -4,7 +4,10 @@
   let value = 50;
   let total = 100;
 
-  $: exampleCode = `<Slider value={${value}} total={${total}} />`;
+  $: exampleCode = `
+import { Slider } from "svelte-toolkit";
+
+<Slider value={${value}} total={${total}} />`;
 </script>
 
 <svelte:head>

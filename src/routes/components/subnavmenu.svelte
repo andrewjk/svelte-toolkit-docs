@@ -5,6 +5,8 @@
   let type = "";
 
   $: exampleCode = `
+import { SubNavMenu, SubNavMenuItem } from "svelte-toolkit";
+
 <SubNavMenu type="${type}">
   {#each items as item}
     <SubNavMenuItem href={item.href}>{item.title}</SubNavMenuItem>

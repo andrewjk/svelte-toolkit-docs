@@ -6,7 +6,10 @@
   let checked = "";
   let label = "Please tick the box";
 
-  $: exampleCode = `<CheckBox type="${type}" name="${name}" label="${label}" bind:checked />`.trim();
+  $: exampleCode = `
+import { CheckBox } from "svelte-toolkit";
+
+<CheckBox type="${type}" name="${name}" label="${label}" bind:checked />`.trim();
 </script>
 
 <svelte:head>

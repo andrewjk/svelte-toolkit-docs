@@ -3,7 +3,10 @@
 
   let value = "green";
 
-  $: exampleCode = `<Palette value="${value}"`.trim();
+  $: exampleCode = `
+import { Palette } from "svelte-toolkit";
+
+<Palette value="${value}"`.trim();
 </script>
 
 <svelte:head>

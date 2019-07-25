@@ -11,6 +11,16 @@
   } from "svelte-toolkit";
 
   $: exampleCode = `
+import {
+  NavBar,
+  NavLogo,
+  NavMenu,
+  NavMenuItem,
+  NavMenuDropDown,
+  DropDownMenuItem,
+  DropDownMenuDivider
+} from "svelte-toolkit";
+
 <NavBar>
   <NavLogo src="logo-192.png" alt="Svelte logo" />
   <NavMenu>

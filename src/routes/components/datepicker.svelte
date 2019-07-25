@@ -5,7 +5,10 @@
   let dateFormat = "d MMM yyyy"
   let dateOrder = "mdy"
 
-  $: exampleCode = `<DatePicker value={${value}} dateFormat="${dateFormat}" dateOrder="${dateOrder}" />`.trim();
+  $: exampleCode = `
+import { DatePicker } from "svelte-toolkit";
+
+<DatePicker value={${value}} dateFormat="${dateFormat}" dateOrder="${dateOrder}" />`.trim();
 </script>
 
 <svelte:head>

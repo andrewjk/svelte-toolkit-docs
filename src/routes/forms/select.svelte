@@ -9,6 +9,8 @@
   import { countries } from "../../stores/countries";
 
   $: exampleCode = `
+import { Select } from "svelte-toolkit";
+
 <Select name="${name}" type="${type}" bind:value placeholder="${placeholder}">
   <option value="">-</option>
   {#each countries as country}

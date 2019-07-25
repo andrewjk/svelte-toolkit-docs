@@ -5,6 +5,8 @@
   let content = "5";
 
   $: exampleCode = `
+import { Badge } from "svelte-toolkit";
+
 Notifications <Badge type="${type}">${content}</Badge>
 
 ~ OR ~

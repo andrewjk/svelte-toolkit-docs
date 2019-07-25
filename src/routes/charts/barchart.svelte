@@ -8,6 +8,8 @@
   let color = "";
 
   $: exampleCode = `
+import { BarChart, BarChartItem } from "svelte-toolkit";
+
 <BarChart width={${width}} height={${height}}>
   <BarChartItem value="${value}" label="${label}"></BarChartItem>
   <BarChartItem value="35" label="Item 2"></BarChartItem>

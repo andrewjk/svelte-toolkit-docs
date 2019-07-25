@@ -6,6 +6,8 @@
   let closable = false;
 
   $: exampleCode = `
+import { Tag } from "svelte-toolkit";
+
 <Tag type="${type}" closable={${closable}}>${content}</Tag>
 
 ~ OR ~

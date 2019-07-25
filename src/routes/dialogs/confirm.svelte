@@ -28,6 +28,8 @@
   }
 
   $: exampleCode = `
+import { showConfirm } from "svelte-toolkit";
+
 const result = await showConfirm({
   header: '${header}',
   content: '${content}',

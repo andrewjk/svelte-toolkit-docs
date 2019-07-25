@@ -6,6 +6,8 @@
   let value = "";
 
   $: exampleCode = `
+import { Field, TextBox } from "svelte-toolkit";
+
 <Field label="${label}" name="${name}" bind:value>
   <TextBox bind:value />
 </Field>`.trim();

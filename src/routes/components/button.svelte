@@ -9,6 +9,8 @@
   let loading = false;
 
   $: exampleCode = `
+import { Button } from "svelte-toolkit";
+
 <Button type="${type}" size="${size}" submit={${submit}} reset={${reset}} disabled={${disabled}} loading={${loading}}>
   Click me
 </Button>`.trim();

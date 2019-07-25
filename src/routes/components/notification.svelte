@@ -7,6 +7,8 @@
   let duration = 0;
 
   $: exampleCode = `
+import { Notification } from "svelte-toolkit";
+
 <Notification content="${content}" type="${type}" closable={${closable}} duration={${duration}} />
 
 ~ OR ~

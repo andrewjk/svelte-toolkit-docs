@@ -14,6 +14,20 @@
   } from "svelte-toolkit";
 
   $: exampleCode = `
+import {
+  ArrowUp,
+  ArrowDown,
+  ArrowLeft,
+  ArrowRight,
+  ChevronUp,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  Bars,
+  Cross,
+  Check
+} from "svelte-toolkit";
+
 <ArrowUp />
 <ArrowDown />
 <ArrowLeft />

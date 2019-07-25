@@ -7,7 +7,10 @@
 
   $: items = [...Array(itemCount).keys()].map(i => ++i);
 
-  $: exampleCode = `<DotNav index={${index}} itemCount={${itemCount}} type="${type}" />`.trim();
+  $: exampleCode = `
+import { DotNav } from "svelte-toolkit";
+
+<DotNav index={${index}} itemCount={${itemCount}} type="${type}" />`.trim();
 </script>
 
 <style>

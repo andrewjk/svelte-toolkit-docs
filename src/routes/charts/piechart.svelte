@@ -7,6 +7,8 @@
   let color = "";
 
   $: exampleCode = `
+import { PieChart, PieChartItem } from "svelte-toolkit";
+
 <PieChart size={${size}} radius={${radius}}>
   <PieChartItem value="${value}"></PieChartItem>
   <PieChartItem value="35"></PieChartItem>

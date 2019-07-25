@@ -3,6 +3,8 @@
   import { items } from "../../stores/items";
 
   $: exampleCode = `
+import { Breadcrumb, BreadcrumbItem } from "svelte-toolkit";
+
 <Breadcrumb>
   {#each items as item}
     <BreadcrumbItem href={item.href}>{item.title}</BreadcrumbItem>

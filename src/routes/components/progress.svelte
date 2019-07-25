@@ -6,7 +6,10 @@
   let value = 50;
   let total = 100;
 
-  $: exampleCode = `<Progress type="${type}" size="${size}" value={${value}} total={${total}} />`;
+  $: exampleCode = `
+import { Progress } from "svelte-toolkit";
+
+<Progress type="${type}" size="${size}" value={${value}} total={${total}} />`;
 </script>
 
 <svelte:head>

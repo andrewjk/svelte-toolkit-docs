@@ -8,7 +8,10 @@
   let placeholder = "";
   let maxlength = 10;
 
-  $: exampleCode = `<TextBox name="${name}" type="${type}" contentType="${contentType}" placeholder="${placeholder}" maxlength={${maxlength}} bind:value />`.trim();
+  $: exampleCode = `
+import { TextBox } from "svelte-toolkit";
+
+<TextBox name="${name}" type="${type}" contentType="${contentType}" placeholder="${placeholder}" maxlength={${maxlength}} bind:value />`.trim();
 </script>
 
 <svelte:head>

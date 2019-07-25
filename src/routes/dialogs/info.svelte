@@ -18,6 +18,8 @@
   }
 
   $: exampleCode = `
+import { showInfo } from "svelte-toolkit";
+
 const result = await showInfo({
   header: '${header}',
   content: '${content}',

@@ -8,6 +8,8 @@
   let color = "";
 
   $: exampleCode = `
+import { LineChart, LineChartSeries } from "svelte-toolkit";
+
 <LineChart width={${width}} height={${height}}>
   <LineChartSeries
     values={[${value}, 35, 40]}

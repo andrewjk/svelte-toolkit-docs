@@ -6,7 +6,10 @@
 
   $: items = [...Array(itemCount).keys()].map(i => ++i);
 
-  $: exampleCode = `<WizardNav index={${index}} itemCount={${itemCount}} on:finished={handleFinished} />`.trim();
+  $: exampleCode = `
+import { WizardNav } from "svelte-toolkit";
+
+<WizardNav index={${index}} itemCount={${itemCount}} on:finished={handleFinished} />`.trim();
 
   function handleFinished(e) {
     alert("Hooray!");

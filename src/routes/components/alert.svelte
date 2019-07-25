@@ -8,6 +8,8 @@
   let duration = 5000;
 
   $: exampleCode = `
+import { showAlert } from "svelte-toolkit";
+
 showAlert({
   type: '${type}',
   content: '${content}'

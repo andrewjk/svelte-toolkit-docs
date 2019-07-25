@@ -6,6 +6,8 @@
   let multiple = false;
 
   $: exampleCode = `
+import { Accordion, AccordionItem } from "svelte-toolkit";
+
 <Accordion multiple={${multiple}} value={${value}}>
   {#each items as item}
     <AccordionItem header={item.header}>{item.text}</AccordionItem>

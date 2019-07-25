@@ -24,7 +24,10 @@
     }
   ];
 
-  $: exampleCode = `<Calendar startOfWeek={${startOfWeek}} selectable={${selectable}} {value} {events} />`.trim();
+  $: exampleCode = `
+import { Calendar } from "svelte-toolkit";
+
+<Calendar startOfWeek={${startOfWeek}} selectable={${selectable}} {value} {events} />`.trim();
 
   function dummyDate(days) {
     const today = new Date();

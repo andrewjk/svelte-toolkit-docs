@@ -3,7 +3,10 @@
 
   let value = null;
 
-  $: exampleCode = `<ColorPicker value={${value}} />`.trim();
+  $: exampleCode = `
+import { ColorPicker } from "svelte-toolkit";
+
+<ColorPicker value={${value}} />`.trim();
 </script>
 
 <svelte:head>

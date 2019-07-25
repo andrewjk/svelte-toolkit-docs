@@ -6,6 +6,8 @@
   let boxed = false;
 
   $: exampleCode = `
+import { TabGroup, TabItem } from "svelte-toolkit";
+
 <TabGroup boxed={${boxed}} index={${index}}>
   {#each items as item}
     <TabItem id={item.id} header={item.header}>{item.text}</TabItem>

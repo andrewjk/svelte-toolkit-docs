@@ -8,7 +8,10 @@
   $: index = pageNumber - 1;
   $: items = [...Array(itemCount).keys()].map(i => ++i);
 
-  $: exampleCode = `<Pagination pageNumber={${pageNumber}} pageSize={${pageSize}} itemCount={${itemCount}} />`.trim();
+  $: exampleCode = `
+import { Pagination } from "svelte-toolkit";
+
+<Pagination pageNumber={${pageNumber}} pageSize={${pageSize}} itemCount={${itemCount}} />`.trim();
 </script>
 
 <style>

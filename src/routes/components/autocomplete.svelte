@@ -22,6 +22,8 @@
   //}
 
   $: exampleCode = `
+import { AutoComplete, AutoCompleteItem } from "svelte-toolkit";
+
 <AutoComplete source={countries} value={${value}} delay={${delay}} minChars={${minChars}} />
 
 ~ OR ~

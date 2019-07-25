@@ -19,6 +19,8 @@
   }
 
   $: exampleCode = `
+import { showPrompt } from "svelte-toolkit";
+
 const result = await showPrompt({
   header: '${header}',
   content: '${content}',

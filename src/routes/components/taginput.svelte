@@ -22,6 +22,8 @@
   //}
 
   $: exampleCode = `
+import { TagInput, TagInputItem } from "svelte-toolkit";
+
 <TagInput source={countries} value={${value}} delay={${delay}} minChars={${minChars}} />
 
 ~ OR ~

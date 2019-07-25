@@ -5,6 +5,8 @@
   let index = 0;
 
   $: exampleCode = `
+import { Switcher, SwitcherItem } from "svelte-toolkit";
+
 <Switcher index={${index}}>
   {#each $items as item}
     <SwitcherItem>
