@@ -9,6 +9,9 @@
 <SubNavMenuHeader>General</SubNavMenuHeader>
 <SubNavMenu type="vertical">
   <SubNavMenuItem>
+    <a href="general/installation">Installation</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
     <a href="general/base">Base styles</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
