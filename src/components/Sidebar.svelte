@@ -82,6 +82,9 @@
     <a href="components/subnavmenu">Sub Nav Menu</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
+    <a href="components/storynav">Story Navigation</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
     <a href="components/switcher">Switcher</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
