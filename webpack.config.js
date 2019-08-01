@@ -1,3 +1,4 @@
+const path = require('path');
 const webpack = require('webpack');
 const config = require('sapper/config/webpack.js');
 const pkg = require('./package.json');
@@ -12,7 +13,13 @@ module.exports = {
 	client: {
 		entry: config.client.entry(),
 		output: config.client.output(),
-		resolve: { extensions, mainFields },
+		resolve: {
+			extensions,
+			mainFields,
+			alias: {
+				svelte: path.resolve('node_modules', 'svelte')
+			},
+		},
 		module: {
 			rules: [
 				{
