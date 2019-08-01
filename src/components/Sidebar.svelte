@@ -116,6 +116,9 @@
     <a href="forms/textbox">TextBox</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
+    <a href="forms/textarea">TextArea</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
     <a href="forms/validation">Validation</a>
   </SubNavMenuItem>
 </SubNavMenu>
