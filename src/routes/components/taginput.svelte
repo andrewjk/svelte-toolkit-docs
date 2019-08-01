@@ -7,6 +7,7 @@
   import { countries } from "../../stores/countries";
 
   let value = null;
+  let placeholder = "";
   let delay = 300;
   let minChars = 1;
 
@@ -24,15 +25,15 @@
   $: exampleCode = `
 import { TagInput, TagInputItem } from "svelte-toolkit";
 
-<TagInput source={countries} value={${value}} delay={${delay}} minChars={${minChars}} />
+<TagInput source={countries} value={${value}} placeholder="${placeholder}" delay={${delay}} minChars={${minChars}} />
 
 ~ OR ~
 
-<TagInput {items} value={${value}} delay={${delay}} minChars={${minChars}} on:search={loadItems} />
+<TagInput {items} value={${value}} placeholder="${placeholder}" delay={${delay}} minChars={${minChars}} on:search={loadItems} />
 
 ~ OR ~
 
-<TagInput value={${value}} delay={${delay}} minChars={${minChars}} on:search={loadItems}>
+<TagInput value={${value}} placeholder="${placeholder}" delay={${delay}} minChars={${minChars}} on:search={loadItems}>
   <div slot="items">
     {#each items as item}
       <TagInputItem>{item.name}</TagInputItem>
@@ -55,7 +56,7 @@ import { TagInput, TagInputItem } from "svelte-toolkit";
 
   <h3>Demo</h3>
   <div class="block">
-    <TagInput {source} bind:value {delay} {minChars} />
+    <TagInput {source} bind:value {placeholder} {delay} {minChars} />
   </div>
 
   <h3>Properties</h3>
@@ -75,6 +76,14 @@ import { TagInput, TagInputItem } from "svelte-toolkit";
           <td />
           <td>the selected value</td>
           <td> {value} </td>
+        </tr>
+        <tr>
+          <td>placeholder</td>
+          <td />
+          <td>Placeholder text to show when the input is empty.</td>
+          <td>
+            <input type="text" bind:value={placeholder} />
+          </td>
         </tr>
         <tr>
           <td>source</td>

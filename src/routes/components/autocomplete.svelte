@@ -7,6 +7,7 @@
   import { countries } from "../../stores/countries";
 
   let value = null;
+  let placeholder = "";
   let delay = 300;
   let minChars = 1;
 
@@ -24,7 +25,7 @@
   $: exampleCode = `
 import { AutoComplete, AutoCompleteItem } from "svelte-toolkit";
 
-<AutoComplete source={countries} value={${value}} delay={${delay}} minChars={${minChars}} />
+<AutoComplete source={countries} value={${value}} placeholder="${placeholder}" delay={${delay}} minChars={${minChars}} />
 
 ~ OR ~
 
@@ -55,7 +56,7 @@ import { AutoComplete, AutoCompleteItem } from "svelte-toolkit";
 
   <h3>Demo</h3>
   <div class="block">
-    <AutoComplete {source} bind:value {delay} {minChars} />
+    <AutoComplete {source} bind:value {placeholder} {delay} {minChars} />
   </div>
 
   <h3>Properties</h3>
@@ -75,6 +76,14 @@ import { AutoComplete, AutoCompleteItem } from "svelte-toolkit";
           <td />
           <td>the selected value</td>
           <td> {value} </td>
+        </tr>
+        <tr>
+          <td>placeholder</td>
+          <td />
+          <td>Placeholder text to show when the input is empty.</td>
+          <td>
+            <input type="text" bind:value={placeholder} />
+          </td>
         </tr>
         <tr>
           <td>source</td>

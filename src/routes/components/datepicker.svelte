@@ -2,13 +2,14 @@
   import { DatePicker } from "svelte-toolkit";
 
   let value = null;
+  let placeholder = "";
   let dateFormat = "d MMM yyyy"
   let dateOrder = "mdy"
 
   $: exampleCode = `
 import { DatePicker } from "svelte-toolkit";
 
-<DatePicker value={${value}} dateFormat="${dateFormat}" dateOrder="${dateOrder}" />`.trim();
+<DatePicker value={${value}} placeholder="${placeholder}" dateFormat="${dateFormat}" dateOrder="${dateOrder}" />`.trim();
 </script>
 
 <svelte:head>
@@ -23,7 +24,7 @@ import { DatePicker } from "svelte-toolkit";
 
   <h3>Demo</h3>
   <div class="block">
-    <DatePicker {value} {dateFormat} {dateOrder} />
+    <DatePicker {value} {placeholder} {dateFormat} {dateOrder} />
   </div>
 
   <h3>Properties</h3>
@@ -46,6 +47,14 @@ import { DatePicker } from "svelte-toolkit";
           </td>
           <td>
             {value}
+          </td>
+        </tr>
+        <tr>
+          <td>placeholder</td>
+          <td />
+          <td>Placeholder text to show when the input is empty.</td>
+          <td>
+            <input type="text" bind:value={placeholder} />
           </td>
         </tr>
         <tr>

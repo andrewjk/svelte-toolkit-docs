@@ -2,11 +2,12 @@
   import { ColorPicker } from "svelte-toolkit";
 
   let value = null;
+  let placeholder = "";
 
   $: exampleCode = `
 import { ColorPicker } from "svelte-toolkit";
 
-<ColorPicker value={${value}} />`.trim();
+<ColorPicker value={${value}} placeholder="${placeholder}" />`.trim();
 </script>
 
 <svelte:head>
@@ -19,7 +20,7 @@ import { ColorPicker } from "svelte-toolkit";
 
   <h3>Demo</h3>
   <div class="block">
-    <ColorPicker bind:value />
+    <ColorPicker bind:value {placeholder} />
   </div>
 
   <h3>Properties</h3>
@@ -39,6 +40,14 @@ import { ColorPicker } from "svelte-toolkit";
           <td />
           <td>the selected value</td>
           <td>{value}</td>
+        </tr>
+        <tr>
+          <td>placeholder</td>
+          <td />
+          <td>Placeholder text to show when the input is empty.</td>
+          <td>
+            <input type="text" bind:value={placeholder} />
+          </td>
         </tr>
       </tbody>
     </table>

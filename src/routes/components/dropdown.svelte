@@ -20,11 +20,11 @@ import { DropDown, DropDownMenuItem } from "svelte-toolkit";
 </script>
 
 <svelte:head>
-  <title>DropDown | Svelte Toolkit</title>
+  <title>Drop Down | Svelte Toolkit</title>
 </svelte:head>
 
 <div class="container">
-  <h2>DropDown</h2>
+  <h2>Drop Down</h2>
   <p>A select.</p>
 
   <h3>Demo</h3>

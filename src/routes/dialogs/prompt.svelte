@@ -1,9 +1,10 @@
 <script>
   import { Button, showPrompt } from "svelte-toolkit";
 
-  export let header = "Header";
-  export let content = "Enter your name below:";
-  export let buttonContent = "OK";
+  let header = "Header";
+  let content = "Enter your name below:";
+  let buttonContent = "OK";
+  let placeholder = "";
 
   let message = "";
 
@@ -11,7 +12,8 @@
     const result = await showPrompt({
       header,
       content,
-      buttonContent
+      buttonContent,
+      placeholder
     });
     if (result) {
       message = `Hi, ${result}!`.trim();
@@ -24,7 +26,8 @@ import { showPrompt } from "svelte-toolkit";
 const result = await showPrompt({
   header: '${header}',
   content: '${content}',
-  buttonContent: '${buttonContent}'
+  buttonContent: '${buttonContent}',
+  placeholder: '${placeholder}'
 });`.trim();
 </script>
 
@@ -92,6 +95,14 @@ const result = await showPrompt({
           <td>The content to display in the dialog's button</td>
           <td>
             <input type="text" bind:value={buttonContent} />
+          </td>
+        </tr>
+        <tr>
+          <td>placeholder</td>
+          <td />
+          <td>Placeholder text to show when the input is empty.</td>
+          <td>
+            <input type="text" bind:value={placeholder} />
           </td>
         </tr>
       </tbody>
