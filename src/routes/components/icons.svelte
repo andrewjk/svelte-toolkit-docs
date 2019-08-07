@@ -10,7 +10,9 @@
     ChevronRight,
     Bars,
     Cross,
-    Check
+    Check,
+    Plus,
+    Minus
   } from "svelte-toolkit";
 
   $: exampleCode = `
@@ -25,7 +27,9 @@ import {
   ChevronRight,
   Bars,
   Cross,
-  Check
+  Check,
+  Plus,
+  Minus
 } from "svelte-toolkit";
 
 <ArrowUp />
@@ -38,7 +42,9 @@ import {
 <ChevronRight />
 <Bars />
 <Cross />
-<Check />`.trim();
+<Check />
+<Plus />
+<Minus />`.trim();
 </script>
 
 <svelte:head>
@@ -73,6 +79,8 @@ import {
       <Bars />
       <Cross />
       <Check />
+      <Plus />
+      <Minus />
     </div>
   </div>
 
