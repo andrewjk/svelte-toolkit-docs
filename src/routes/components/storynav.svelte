@@ -47,7 +47,7 @@ import { StoryNav } from "svelte-toolkit";
         </SwitcherItem>
       {/each}
     </Switcher>
-    <StoryNav bind:index {itemCount} {type}/>
+    <StoryNav bind:index {itemCount} {type} />
   </div>
 
   <h3>Properties</h3>

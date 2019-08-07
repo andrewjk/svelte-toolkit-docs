@@ -87,7 +87,7 @@ import { Number } from "svelte-toolkit";
         </tr>
         <tr>
           <td>readonly</td>
-          <td>folse</td>
+          <td>false</td>
           <td>Set to true to prevent the field from taking input</td>
           <td>
             <label>

@@ -41,7 +41,7 @@ import { DotNav } from "svelte-toolkit";
         </SwitcherItem>
       {/each}
     </Switcher>
-    <DotNav bind:index {itemCount} {type}/>
+    <DotNav bind:index {itemCount} {type} />
   </div>
 
   <h3>Properties</h3>
