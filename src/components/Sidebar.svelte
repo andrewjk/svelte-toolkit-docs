@@ -113,6 +113,9 @@
     <a href="forms/checkbox">CheckBox</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
+    <a href="forms/number">Number</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
     <a href="forms/radio">Radio</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
