@@ -1,5 +1,5 @@
 <script>
-  import { Number } from "../../../../svelte-toolkit";
+  import { Number } from "svelte-toolkit";
 
   let type = "";
   let name = "field1";
