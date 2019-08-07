@@ -7,11 +7,12 @@
   let contentType = "text";
   let placeholder = "";
   let maxlength = 10;
+  let readonly = false;
 
   $: exampleCode = `
 import { TextBox } from "svelte-toolkit";
 
-<TextBox name="${name}" type="${type}" contentType="${contentType}" placeholder="${placeholder}" maxlength={${maxlength}} bind:value />`.trim();
+<TextBox name="${name}" type="${type}" contentType="${contentType}" placeholder="${placeholder}" maxlength={${maxlength}} readonly={${readonly}} bind:value />`.trim();
 </script>
 
 <svelte:head>
@@ -24,7 +25,7 @@ import { TextBox } from "svelte-toolkit";
 
   <h3>Demo</h3>
   <div class="block">
-    <TextBox {name} {type} {contentType} {maxlength} bind:value {placeholder} />
+    <TextBox {name} {type} {contentType} {placeholder} {maxlength} {readonly} bind:value />
   </div>
 
   <h3>Properties</h3>
@@ -99,6 +100,17 @@ import { TextBox } from "svelte-toolkit";
           </td>
           <td>
             <input type="number" bind:value={maxlength} />
+          </td>
+        </tr>
+        <tr>
+          <td>readonly</td>
+          <td>false</td>
+          <td>Set to true to prevent the field from taking input</td>
+          <td>
+            <label>
+              <input type="checkbox" bind:checked={readonly} />
+              Set readonly
+            </label>
           </td>
         </tr>
       </tbody>

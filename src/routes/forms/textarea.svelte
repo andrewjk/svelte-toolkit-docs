@@ -7,11 +7,12 @@
   let rows = 4;
   let placeholder = "";
   let maxlength = 100;
+  let readonly = false;
 
   $: exampleCode = `
 import { TextArea } from "svelte-toolkit";
 
-<TextArea name="${name}" type="${type}" rows="${rows}" placeholder="${placeholder}" maxlength={${maxlength}} bind:value />`.trim();
+<TextArea name="${name}" type="${type}" rows="${rows}" placeholder="${placeholder}" maxlength={${maxlength}} readonly={${readonly}} bind:value />`.trim();
 </script>
 
 <svelte:head>
@@ -24,7 +25,7 @@ import { TextArea } from "svelte-toolkit";
 
   <h3>Demo</h3>
   <div class="block">
-    <TextArea {name} {type} {rows} {maxlength} bind:value {placeholder} />
+    <TextArea {name} {type} {rows} {maxlength} {readonly} bind:value {placeholder} />
   </div>
 
   <h3>Properties</h3>
@@ -93,6 +94,17 @@ import { TextArea } from "svelte-toolkit";
           </td>
           <td>
             <input type="number" bind:value={maxlength} />
+          </td>
+        </tr>
+        <tr>
+          <td>readonly</td>
+          <td>false</td>
+          <td>Set to true to prevent the field from taking input</td>
+          <td>
+            <label>
+              <input type="checkbox" bind:checked={readonly} />
+              Set readonly
+            </label>
           </td>
         </tr>
       </tbody>
