@@ -1,5 +1,5 @@
 <script>
-  import { Radio } from "../../../../svelte-toolkit";
+  import { Radio } from "svelte-toolkit";
 
   let type = "";
   let name = "field1";
