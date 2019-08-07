@@ -5,15 +5,16 @@
   let type = "info";
   let closable = true;
   let duration = 0;
+  let solid = false;
 
   $: exampleCode = `
 import { Notification } from "svelte-toolkit";
 
-<Notification content="${content}" type="${type}" closable={${closable}} duration={${duration}} />
+<Notification content="${content}" type="${type}" closable={${closable}} duration={${duration}} solid={${solid}} />
 
 ~ OR ~
 
-<Notification type="${type}" closable={${closable}} duration={${duration}}>
+<Notification type="${type}" closable={${closable}} duration={${duration}} solid={${solid}}>
   ${content}
 </Notification>`.trim();
 </script>
@@ -28,7 +29,7 @@ import { Notification } from "svelte-toolkit";
 
   <h3>Demo</h3>
   <div class="block">
-    <Notification {content} {type} {closable} {duration} />
+    <Notification {content} {type} {closable} {duration} {solid} />
   </div>
 
   <h3>Properties</h3>
@@ -69,7 +70,7 @@ import { Notification } from "svelte-toolkit";
         </tr>
         <tr>
           <td>closable</td>
-          <td>true</td>
+          <td>false</td>
           <td>
             Set to true to display a close button at the right of the
             notification
@@ -90,6 +91,17 @@ import { Notification } from "svelte-toolkit";
           </td>
           <td>
             <input type="number" bind:value={duration} />
+          </td>
+        </tr>
+        <tr>
+          <td>solid</td>
+          <td>true</td>
+          <td>Set to true to make the notification have a solid background</td>
+          <td>
+            <label>
+              <input type="checkbox" bind:checked={solid} />
+              Solid notification
+            </label>
           </td>
         </tr>
       </tbody>
@@ -116,6 +128,6 @@ import { Notification } from "svelte-toolkit";
 
   <h3>Code</h3>
   <div class="block">
-    <pre> {exampleCode} </pre>
+    <pre>{exampleCode}</pre>
   </div>
 </div>
