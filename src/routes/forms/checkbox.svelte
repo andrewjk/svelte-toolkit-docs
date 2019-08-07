@@ -3,8 +3,8 @@
 
   let type = "";
   let name = "field1";
-  let checked = "";
   let label = "Please tick the box";
+  let checked = false;
 
   $: exampleCode = `
 import { CheckBox } from "svelte-toolkit";
@@ -47,7 +47,7 @@ import { CheckBox } from "svelte-toolkit";
         </tr>
         <tr>
           <td>type</td>
-          <td></td>
+          <td />
           <td>info, success, warning, or danger</td>
           <td>
             <select bind:value={type}>
@@ -68,11 +68,27 @@ import { CheckBox } from "svelte-toolkit";
           </td>
         </tr>
         <tr>
-          <td>label</td>
+          <td>group</td>
           <td />
           <td>
-            The text label to display next to the checkbox
+            The value of the group field selected with the checkbox when there
+            are multiple checkboxes
           </td>
+          <td />
+        </tr>
+        <tr>
+          <td>value</td>
+          <td />
+          <td>
+            The group value to set when this checkbox is selected and there are
+            multiple checkboxes
+          </td>
+          <td />
+        </tr>
+        <tr>
+          <td>label</td>
+          <td />
+          <td>The text label to display next to the checkbox</td>
           <td>
             <input type="text" bind:value={label} />
           </td>
@@ -83,6 +99,6 @@ import { CheckBox } from "svelte-toolkit";
 
   <h3>Code</h3>
   <div class="block">
-    <pre>{exampleCode} </pre>
+    <pre>{exampleCode}</pre>
   </div>
 </div>
