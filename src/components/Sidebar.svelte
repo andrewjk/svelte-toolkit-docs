@@ -59,6 +59,9 @@
     <a href="components/colorpicker">Color Picker</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
+    <a href="components/coverimage">Cover Image</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
     <a href="components/datepicker">Date Picker</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
@@ -133,6 +136,9 @@
   </SubNavMenuItem>
   <SubNavMenuItem>
     <a href="forms/textarea">TextArea</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
+    <a href="forms/upload">Upload</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
     <a href="forms/validation">Validation</a>
