@@ -11,14 +11,24 @@
   <SubNavMenuItem>
     <a href="general/installation">Installation</a>
   </SubNavMenuItem>
+</SubNavMenu>
+
+<SubNavMenuHeader>Styles</SubNavMenuHeader>
+<SubNavMenu type="vertical">
   <SubNavMenuItem>
-    <a href="general/base">Base styles</a>
+    <a href="general/base">Base</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
-    <a href="general/layout">Layout styles</a>
+    <a href="general/layout">Layout</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
     <a href="general/grid">Grid</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
+    <a href="components/panel">Panel</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
+    <a href="components/card">Card</a>
   </SubNavMenuItem>
 </SubNavMenu>
 
@@ -71,9 +81,6 @@
   </SubNavMenuItem>
   <SubNavMenuItem>
     <a href="components/palette">Palette</a>
-  </SubNavMenuItem>
-  <SubNavMenuItem>
-    <a href="components/panel">Panel</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
     <a href="components/progress">Progress</a>
