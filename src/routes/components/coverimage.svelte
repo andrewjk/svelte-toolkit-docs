@@ -1,5 +1,5 @@
 <script>
-  import { CoverImage } from "../../../../svelte-toolkit";
+  import { CoverImage } from "svelte-toolkit";
 
   let src = "/images/image1.jpg";
   let position = "";
