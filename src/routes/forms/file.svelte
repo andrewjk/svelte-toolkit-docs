@@ -1,9 +1,9 @@
 <script>
-  import { File } from "svelte-toolkit";
+  import { File } from "../../../../svelte-toolkit";
 
   let name = "";
   let accept = "";
-  let placeholder = "Select a file";
+  let placeholder = "";
 
   $: exampleCode = `
 import { File } from "svelte-toolkit";
@@ -18,7 +18,8 @@ import { File } from "svelte-toolkit";
 <div class="container">
   <h2>File</h2>
   <p>
-    A stylable link that shows a file selection dialog when clicked.
+    A file selection control that can be used with drap-and-drop or by selecting
+    a file from a browse dialog.
   </p>
 
   <h3>Demo</h3>
@@ -49,14 +50,17 @@ import { File } from "svelte-toolkit";
         <tr>
           <td>accept</td>
           <td />
-          <td>The type of files that can be selected, e.g. "audio/*", "video/*", "image/*", or a media type</td>
+          <td>
+            The type of files that can be selected, e.g. "audio/*", "video/*",
+            "image/*", or a media type
+          </td>
           <td>
             <input type="text" bind:value={accept} />
           </td>
         </tr>
         <tr>
           <td>placeholder</td>
-          <td>Select a file</td>
+          <td />
           <td>Placeholder text to show when no file has been selected.</td>
           <td>
             <input type="text" bind:value={placeholder} />
