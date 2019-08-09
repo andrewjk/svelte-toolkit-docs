@@ -23,10 +23,10 @@ import { BarChart, BarChartItem } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Bar Chart</h2>
+  <h1>Bar Chart</h1>
   <p>A simple SVG bar chart for displaying data.</p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <BarChart {width} {height}>
       <BarChartItem {value} {label} />
@@ -35,7 +35,7 @@ import { BarChart, BarChartItem } from "svelte-toolkit";
     </BarChart>
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -91,7 +91,7 @@ import { BarChart, BarChartItem } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode} </pre>
   </div>

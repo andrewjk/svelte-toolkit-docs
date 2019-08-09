@@ -24,10 +24,10 @@ import { DropDown, DropDownMenuItem } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Drop Down</h2>
+  <h1>Drop Down</h1>
   <p>A select.</p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <DropDown {type}>
       Items...
@@ -41,7 +41,7 @@ import { DropDown, DropDownMenuItem } from "svelte-toolkit";
     </DropDown>
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -70,7 +70,7 @@ import { DropDown, DropDownMenuItem } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

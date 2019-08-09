@@ -42,7 +42,7 @@ const result = await showConfirm({
 </svelte:head>
 
 <div class="container">
-  <h2>Confirm</h2>
+  <h1>Confirm</h1>
   <p>
     A dialog, per
     <a
@@ -53,7 +53,7 @@ const result = await showConfirm({
     .
   </p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <Button on:click={e => openConfirm()}>Open the confirm dialog</Button>
   </div>
@@ -61,7 +61,7 @@ const result = await showConfirm({
     <div class="block">{message}</div>
   {/if}
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -111,7 +111,7 @@ const result = await showConfirm({
     </table>
   </div>
 
-  <h3>Events</h3>
+  <h2>Events</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -129,7 +129,7 @@ const result = await showConfirm({
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

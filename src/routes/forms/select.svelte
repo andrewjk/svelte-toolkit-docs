@@ -24,10 +24,10 @@ import { Select } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Select</h2>
+  <h1>Select</h1>
   <p>A select.</p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <Select {name} {type} bind:value {placeholder}>
       <option value="">-</option>
@@ -37,7 +37,7 @@ import { Select } from "svelte-toolkit";
     </Select>
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -91,7 +91,7 @@ import { Select } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode} </pre>
   </div>

@@ -33,10 +33,10 @@ import { OffScreen } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Off-Screen</h2>
+  <h1>Off-Screen</h1>
   <p>A panel that can appear from off-screen.</p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <OffScreen bind:visible {position}>
       <div class="bigtext">{position.substring(0, 1)}</div>
@@ -46,7 +46,7 @@ import { OffScreen } from "svelte-toolkit";
     </button>
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -86,7 +86,7 @@ import { OffScreen } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

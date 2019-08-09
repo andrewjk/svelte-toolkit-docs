@@ -20,18 +20,18 @@ import { CoverImage } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Cover Image</h2>
+  <h1>Cover Image</h1>
   <p>
     A div with a background-image, which allows you to do some things you can't
     do with a simple img.
   </p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <CoverImage {src} {position} {repeat} {size} {height} {width} {alt} />
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -109,7 +109,7 @@ import { CoverImage } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

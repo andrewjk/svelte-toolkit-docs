@@ -18,19 +18,19 @@ import { Field, TextBox } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Field</h2>
+  <h1>Field</h1>
   <p>
     A field wraps a form control, providing it with a label, validation etc.
   </p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <Field {label} name="field" bind:value>
       <TextBox />
     </Field>
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -83,7 +83,7 @@ import { Field, TextBox } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

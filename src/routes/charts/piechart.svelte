@@ -22,10 +22,10 @@ import { PieChart, PieChartItem } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Pie Chart</h2>
+  <h1>Pie Chart</h1>
   <p>A simple SVG pie chart for displaying data.</p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <PieChart {size} {radius}>
       <PieChartItem {value} />
@@ -34,7 +34,7 @@ import { PieChart, PieChartItem } from "svelte-toolkit";
     </PieChart>
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -82,7 +82,7 @@ import { PieChart, PieChartItem } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode} </pre>
   </div>

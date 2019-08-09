@@ -20,16 +20,16 @@ import { Tag } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Tag</h2>
+  <h1>Tag</h1>
   <p>A tag for displaying information about an item.</p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <Tag {type} {content} {closable} />
     <Tag {type} {closable}>Great Job!</Tag>
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -82,7 +82,7 @@ import { Tag } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode} </pre>
   </div>

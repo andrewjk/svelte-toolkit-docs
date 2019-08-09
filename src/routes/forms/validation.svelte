@@ -27,10 +27,10 @@
 </svelte:head>
 
 <div class="container">
-  <h2>Validation</h2>
+  <h1>Validation</h1>
   <p>Validation for form elements.</p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <ValidationSummary {validator} />
   <div class="block">
     <h4>Required</h4>
@@ -81,7 +81,7 @@
     <Button on:click={handleClick}>Check it</Button>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode} </pre>
   </div>

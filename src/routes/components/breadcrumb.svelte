@@ -17,7 +17,7 @@ import { Breadcrumb, BreadcrumbItem } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Breadcrumb</h2>
+  <h1>Breadcrumb</h1>
   <p>
     A breadcrumb, per
     <a
@@ -28,7 +28,7 @@ import { Breadcrumb, BreadcrumbItem } from "svelte-toolkit";
     .
   </p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <Breadcrumb>
       {#each $items as item, index}
@@ -39,7 +39,7 @@ import { Breadcrumb, BreadcrumbItem } from "svelte-toolkit";
     </Breadcrumb>
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -61,7 +61,7 @@ import { Breadcrumb, BreadcrumbItem } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode} </pre>
   </div>

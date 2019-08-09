@@ -23,10 +23,10 @@ import { LineChart, LineChartSeries } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Line Chart</h2>
+  <h1>Line Chart</h1>
   <p>A simple SVG line chart for displaying data.</p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <LineChart {width} {height}>
       <LineChartSeries
@@ -37,7 +37,7 @@ import { LineChart, LineChartSeries } from "svelte-toolkit";
     </LineChart>
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -93,7 +93,7 @@ import { LineChart, LineChartSeries } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode} </pre>
   </div>

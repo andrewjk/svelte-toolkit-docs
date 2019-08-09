@@ -24,15 +24,15 @@ import { Notification } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Notification</h2>
+  <h1>Notification</h1>
   <p>A notification that can be shown to the user.</p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <Notification {content} {type} {closable} {duration} {solid} />
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -108,7 +108,7 @@ import { Notification } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Events</h3>
+  <h2>Events</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -126,7 +126,7 @@ import { Notification } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

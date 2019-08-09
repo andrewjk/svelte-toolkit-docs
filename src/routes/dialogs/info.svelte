@@ -32,7 +32,7 @@ const result = await showInfo({
 </svelte:head>
 
 <div class="container">
-  <h2>Info</h2>
+  <h1>Info</h1>
   <p>
     A dialog, per
     <a
@@ -43,7 +43,7 @@ const result = await showInfo({
     .
   </p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <Button on:click={e => openInfo()}>Open the info dialog</Button>
   </div>
@@ -51,7 +51,7 @@ const result = await showInfo({
     <div class="block">{message}</div>
   {/if}
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -97,7 +97,7 @@ const result = await showInfo({
     </table>
   </div>
 
-  <h3>Events</h3>
+  <h2>Events</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -115,7 +115,7 @@ const result = await showInfo({
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

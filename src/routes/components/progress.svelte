@@ -17,10 +17,10 @@ import { Progress } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Progress</h2>
+  <h1>Progress</h1>
   <p>A progress bar.</p>
 
-  <h3>Colors</h3>
+  <h2>Colors</h2>
   <div class="block">
     Info
     <Progress value={15} type="info" />
@@ -32,7 +32,7 @@ import { Progress } from "svelte-toolkit";
     <Progress value={60} type="danger" />
   </div>
 
-  <h3>Sizes</h3>
+  <h2>Sizes</h2>
   <div class="block">
     Default
     <Progress value={45} />
@@ -44,13 +44,13 @@ import { Progress } from "svelte-toolkit";
     <Progress value={90} size="large" type="danger" />
   </div>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <Progress {type} {size} {value} {total} />
     <br />
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -108,7 +108,7 @@ import { Progress } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

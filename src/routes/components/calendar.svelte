@@ -41,18 +41,18 @@ import { Calendar } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Calendar</h2>
+  <h1>Calendar</h1>
   <p>
     A calendar with (optional) day, month and year views that can be used to
     display events or solicit a date input from the user.
   </p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <Calendar {startOfWeek} {selectable} {value} {events} />
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -104,7 +104,7 @@ import { Calendar } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

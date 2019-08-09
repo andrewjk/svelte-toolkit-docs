@@ -15,16 +15,16 @@ import { Slider } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Slider</h2>
+  <h1>Slider</h1>
   <p>A slider that a user can drag and move to select a value.</p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <Slider bind:value bind:total />
     <br />
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -56,7 +56,7 @@ import { Slider } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

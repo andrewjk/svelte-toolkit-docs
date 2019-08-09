@@ -31,7 +31,7 @@ import { TabGroup, TabItem } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Tab Group</h2>
+  <h1>Tab Group</h1>
   <p>
     Tabs, per
     <a
@@ -42,7 +42,7 @@ import { TabGroup, TabItem } from "svelte-toolkit";
     .
   </p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <TabGroup {boxed} bind:index>
       {#each $items as item}
@@ -51,7 +51,7 @@ import { TabGroup, TabItem } from "svelte-toolkit";
     </TabGroup>
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -86,7 +86,7 @@ import { TabGroup, TabItem } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Events</h3>
+  <h2>Events</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -108,7 +108,7 @@ import { TabGroup, TabItem } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

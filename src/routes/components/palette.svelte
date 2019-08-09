@@ -14,15 +14,15 @@ import { Palette } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Palette</h2>
+  <h1>Palette</h1>
   <p>A palette that you can use to choose a color.</p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <Palette bind:value />
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -58,7 +58,7 @@ import { Palette } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

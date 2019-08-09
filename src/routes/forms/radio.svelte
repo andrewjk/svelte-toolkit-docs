@@ -20,10 +20,10 @@ import { Radio } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Radio</h2>
+  <h1>Radio</h1>
   <p>A radio button for selecting a single value from a group.</p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <Radio {type} {name} {label} {value} bind:group />
     {#each $items as item}
@@ -36,7 +36,7 @@ import { Radio } from "svelte-toolkit";
     {/each}
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -104,7 +104,7 @@ import { Radio } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

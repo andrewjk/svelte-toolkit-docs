@@ -36,7 +36,7 @@ const result = await showPrompt({
 </svelte:head>
 
 <div class="container">
-  <h2>Prompt</h2>
+  <h1>Prompt</h1>
   <p>
     A dialog, per
     <a
@@ -47,7 +47,7 @@ const result = await showPrompt({
     .
   </p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <Button on:click={e => openPrompt()}>Open the prompt dialog</Button>
   </div>
@@ -55,7 +55,7 @@ const result = await showPrompt({
     <div class="block">{message}</div>
   {/if}
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -109,7 +109,7 @@ const result = await showPrompt({
     </table>
   </div>
 
-  <h3>Events</h3>
+  <h2>Events</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -127,7 +127,7 @@ const result = await showPrompt({
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

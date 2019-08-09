@@ -21,7 +21,7 @@ import { SubNavMenu, SubNavMenuItem } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Sub Nav Menu</h2>
+  <h1>Sub Nav Menu</h1>
   <p>
     A non-top-level navigation menu, per
     <a
@@ -32,7 +32,7 @@ import { SubNavMenu, SubNavMenuItem } from "svelte-toolkit";
     .
   </p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <SubNavMenu {type}>
       {#each $items as item, index}
@@ -43,7 +43,7 @@ import { SubNavMenu, SubNavMenuItem } from "svelte-toolkit";
     </SubNavMenu>
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -71,7 +71,7 @@ import { SubNavMenu, SubNavMenuItem } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode} </pre>
   </div>

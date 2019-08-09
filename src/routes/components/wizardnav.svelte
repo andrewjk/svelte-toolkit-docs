@@ -30,10 +30,10 @@ import { WizardNav } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Wizard Navigation</h2>
+  <h1>Wizard Navigation</h1>
   <p>Wizard-style navigation for use with a switcher.</p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <Switcher bind:index>
       {#each items as item}
@@ -47,7 +47,7 @@ import { WizardNav } from "svelte-toolkit";
     <WizardNav bind:index {itemCount} on:finished={handleFinished} />
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -79,7 +79,7 @@ import { WizardNav } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Events</h3>
+  <h2>Events</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -101,7 +101,7 @@ import { WizardNav } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

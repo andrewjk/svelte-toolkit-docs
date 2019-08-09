@@ -19,16 +19,16 @@ Notifications <Badge content="${content}" type="${type}" />`.trim();
 </svelte:head>
 
 <div class="container">
-  <h2>Badge</h2>
+  <h1>Badge</h1>
   <p>A badge for displaying information such as an unread count.</p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     Notifications
     <Badge {type} {content} />
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -68,7 +68,7 @@ Notifications <Badge content="${content}" type="${type}" />`.trim();
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode} </pre>
   </div>

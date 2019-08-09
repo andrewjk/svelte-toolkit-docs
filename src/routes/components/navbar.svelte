@@ -71,7 +71,7 @@ import {
   <h1>Navbar</h1>
   <p>A top-level navigation bar.</p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block nav-bar-demo">
     <NavBar>
       <NavLogo src="logo-192.png" alt="Svelte logo" height="48" />
@@ -109,7 +109,7 @@ import {
     </NavBar>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre style=>
       {exampleCode}

@@ -17,15 +17,15 @@ import { CheckBox } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>CheckBox</h2>
+  <h1>CheckBox</h1>
   <p>A box that can be ticked.</p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <CheckBox {type} {name} {label} bind:checked />
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -97,7 +97,7 @@ import { CheckBox } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

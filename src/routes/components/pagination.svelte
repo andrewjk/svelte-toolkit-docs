@@ -28,10 +28,10 @@ import { Pagination } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Pagination</h2>
+  <h1>Pagination</h1>
   <p>Numbers for navigating through components that contain paged data.</p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <Switcher bind:index>
       {#each items as item}
@@ -45,7 +45,7 @@ import { Pagination } from "svelte-toolkit";
     <Pagination bind:pageNumber {pageSize} {itemCount} />
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -85,7 +85,7 @@ import { Pagination } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Events</h3>
+  <h2>Events</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -103,7 +103,7 @@ import { Pagination } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

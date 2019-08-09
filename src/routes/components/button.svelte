@@ -25,7 +25,7 @@ import { Button } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Button</h2>
+  <h1>Button</h1>
   <p>
     A button, per
     <a
@@ -36,7 +36,7 @@ import { Button } from "svelte-toolkit";
     .
   </p>
 
-  <h3>Colors</h3>
+  <h2>Colors</h2>
   <div class="block">
     <Button type="info">Info</Button>
     <Button type="success">Success</Button>
@@ -46,7 +46,7 @@ import { Button } from "svelte-toolkit";
     <Button type="cancel">Cancel</Button>
   </div>
 
-  <h3>Sizes</h3>
+  <h2>Sizes</h2>
   <div class="block">
     <Button>Default</Button>
     <Button size="small" type="success">Small</Button>
@@ -55,7 +55,7 @@ import { Button } from "svelte-toolkit";
     <Button size="inline" type="cancel">Inline</Button>
   </div>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <Button
       {type}
@@ -70,7 +70,7 @@ import { Button } from "svelte-toolkit";
     <br />
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -161,7 +161,7 @@ import { Button } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

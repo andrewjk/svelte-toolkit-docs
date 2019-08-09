@@ -16,18 +16,18 @@ import { File } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>File</h2>
+  <h1>File</h1>
   <p>
     A file selection control that can be used with drap-and-drop or by selecting
     a file from a browse dialog.
   </p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <File {name} {accept} {placeholder} />
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -70,7 +70,7 @@ import { File } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>

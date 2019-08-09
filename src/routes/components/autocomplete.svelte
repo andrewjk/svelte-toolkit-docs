@@ -48,18 +48,18 @@ import { AutoComplete, AutoCompleteItem } from "svelte-toolkit";
 </svelte:head>
 
 <div class="container">
-  <h2>Auto Complete</h2>
+  <h1>Auto Complete</h1>
   <p>
     An input that can be used to enter or select from a drop down list of
     matching items.
   </p>
 
-  <h3>Demo</h3>
+  <h2>Demo</h2>
   <div class="block">
     <AutoComplete {source} bind:value {placeholder} {delay} {minChars} />
   </div>
 
-  <h3>Properties</h3>
+  <h2>Properties</h2>
   <div class="block">
     <table class="table">
       <thead>
@@ -125,7 +125,7 @@ import { AutoComplete, AutoCompleteItem } from "svelte-toolkit";
     </table>
   </div>
 
-  <h3>Code</h3>
+  <h2>Code</h2>
   <div class="block">
     <pre>{exampleCode}</pre>
   </div>
