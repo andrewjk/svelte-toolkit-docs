@@ -123,6 +123,9 @@
     <a href="forms/checkbox">CheckBox</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
+    <a href="forms/file">File</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
     <a href="forms/number">Number</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
