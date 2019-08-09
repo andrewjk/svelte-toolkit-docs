@@ -73,6 +73,7 @@ import { TextBox } from "svelte-toolkit";
               <option>email</option>
               <option>url</option>
               <option>tel</option>
+              <option>file</option>
             </select>
           </td>
         </tr>
