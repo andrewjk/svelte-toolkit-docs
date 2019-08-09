@@ -1,5 +1,5 @@
 <script>
-  import { File } from "../../../../svelte-toolkit";
+  import { File } from "svelte-toolkit";
 
   let name = "";
   let accept = "";
