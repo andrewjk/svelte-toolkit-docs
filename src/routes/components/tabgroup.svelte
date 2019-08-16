@@ -1,5 +1,5 @@
 <script>
-  import { TabGroup, TabItem } from "svelte-toolkit";
+  import { TabGroup, TabItem, TabHeader } from "../../../../svelte-toolkit";
   import { items } from "../../stores/items";
 
   let index = 0;
@@ -97,7 +97,7 @@ import { TabGroup, TabItem } from "svelte-toolkit";
       </thead>
       <tbody>
         <tr>
-          <td>hanged</td>
+          <td>changed</td>
           <td>index: the index of the active item</td>
         </tr>
         <tr>

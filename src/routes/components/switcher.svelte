@@ -79,7 +79,7 @@ import { Switcher, SwitcherItem } from "svelte-toolkit";
       </thead>
       <tbody>
         <tr>
-          <td>hanged</td>
+          <td>changed</td>
           <td>index: the index of the active item</td>
         </tr>
         <tr>
