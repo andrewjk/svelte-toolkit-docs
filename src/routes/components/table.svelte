@@ -6,7 +6,7 @@
     TableColumn,
     TabGroup,
     TabItem
-  } from "../../../../svelte-toolkit";
+  } from "svelte-toolkit";
   import { countries } from "../../stores/countries";
 
   let keyField = "name";
