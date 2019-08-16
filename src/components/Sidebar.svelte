@@ -104,6 +104,9 @@
     <a href="components/tabgroup">Tab Group</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
+    <a href="components/table">Table</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
     <a href="components/tag">Tag</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
