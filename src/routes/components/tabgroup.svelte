@@ -1,5 +1,5 @@
 <script>
-  import { TabGroup, TabItem, TabHeader } from "../../../../svelte-toolkit";
+  import { TabGroup, TabItem, TabHeader } from "svelte-toolkit";
   import { items } from "../../stores/items";
 
   let index = 0;
