@@ -82,7 +82,6 @@ import { Table, TableColumn } from "svelte-toolkit";
     fetch(`https://api.themoviedb.org/3/discover/movie?${params}`)
       .then(response => response.json())
       .then(response => {
-        console.log(response);
         dataItemCount = response.total_results;
         data = response.results;
         loading = false;
@@ -127,77 +126,73 @@ import { Table, TableColumn } from "svelte-toolkit";
 
   <TabGroup>
     <TabItem header="With Items" id="tab1">
-      <div class="block">
+      <Table
+        items={countries}
+        {keyField}
+        bind:pageNumber
+        {pageSize}
+        {itemCount}
+        {type}
+        let:item>
+        <TableColumn field="name" header="Name" sortable>
+          {item.name}
+        </TableColumn>
+        <TableColumn field="title" header="Title" sortable>
+          {item.title}
+        </TableColumn>
+        <TableColumn field="capital" header="Capital" sortable>
+          {item.capital}
+        </TableColumn>
+        <TableColumn field="area" header="Area (km²)" sortable>
+          {formatNumber(item.area)}
+        </TableColumn>
+        <TableColumn field="population" header="Population" sortable>
+          {formatNumber(item.population)}
+        </TableColumn>
+        <TableColumn field="worldPercent" header="World %" sortable>
+          {`${formatNumber(item.worldPercent)}%`}
+        </TableColumn>
+        <div slot="empty">No countries were found...</div>
+      </Table>
+    </TabItem>
+    <TabItem header="With Data" id="tab2">
+      <p>
+        Data from
+        <a href="https://www.themoviedb.org">The Movie DB</a>
+      </p>
+      {#if loading}
+        Loading...
+      {:else}
         <Table
-          items={countries}
-          {keyField}
-          bind:pageNumber
-          {pageSize}
-          {itemCount}
+          {data}
+          keyField="id"
+          itemCount={dataItemCount}
+          pageNumber={dataPageNumber}
+          pageSize={dataPageSize}
           {type}
-          let:item>
-          <TableColumn field="name" header="Name" sortable>
-            {item.name}
-          </TableColumn>
+          let:item
+          on:sort={handleSort}
+          on:page={handlePage}>
           <TableColumn field="title" header="Title" sortable>
             {item.title}
           </TableColumn>
-          <TableColumn field="capital" header="Capital" sortable>
-            {item.capital}
+          <TableColumn field="vote_average" header="Vote Average" sortable>
+            {item.vote_average}
           </TableColumn>
-          <TableColumn field="area" header="Area (km²)" sortable>
-            {formatNumber(item.area)}
+          <TableColumn field="vote_count" header="Vote Count" sortable>
+            {item.vote_count}
           </TableColumn>
-          <TableColumn field="population" header="Population" sortable>
-            {formatNumber(item.population)}
+          <TableColumn field="release_date" header="Release Date" sortable>
+            {item.release_date ? new Date(item.release_date).toLocaleDateString() : ''}
           </TableColumn>
-          <TableColumn field="worldPercent" header="World %" sortable>
-            {`${formatNumber(item.worldPercent)}%`}
+          <TableColumn header="Overview">
+            {item.overview.length > 200 ? item.overview
+                  .substring(0, 199)
+                  .trim() + '…' : item.overview}
           </TableColumn>
-          <div slot="empty">No countries were found...</div>
+          <div slot="empty">No movies were found...</div>
         </Table>
-      </div>
-    </TabItem>
-    <TabItem header="With Data" id="tab2">
-      <div class="block">
-        <p>
-          Data from
-          <a href="https://www.themoviedb.org">The Movie DB</a>
-        </p>
-        {#if loading}
-          Loading...
-        {:else}
-          <Table
-            {data}
-            keyField="id"
-            itemCount={dataItemCount}
-            pageNumber={dataPageNumber}
-            pageSize={dataPageSize}
-            {type}
-            let:item
-            on:sort={handleSort}
-            on:page={handlePage}>
-            <TableColumn field="title" header="Title" sortable>
-              {item.title}
-            </TableColumn>
-            <TableColumn field="vote_average" header="Vote Average" sortable>
-              {item.vote_average}
-            </TableColumn>
-            <TableColumn field="vote_count" header="Vote Count" sortable>
-              {item.vote_count}
-            </TableColumn>
-            <TableColumn field="release_date" header="Release Date" sortable>
-              {item.release_date ? new Date(item.release_date).toLocaleDateString() : ''}
-            </TableColumn>
-            <TableColumn header="Overview">
-              {item.overview.length > 200 ? item.overview
-                    .substring(0, 199)
-                    .trim() + '…' : item.overview}
-            </TableColumn>
-            <div slot="empty">No movies were found...</div>
-          </Table>
-        {/if}
-      </div>
+      {/if}
     </TabItem>
   </TabGroup>
 
