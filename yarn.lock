@@ -3742,10 +3742,10 @@ svelte-loader@^2.13.6:
     loader-utils "^1.1.0"
     svelte-dev-helper "^1.1.9"
 
-svelte-toolkit@^0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/svelte-toolkit/-/svelte-toolkit-0.0.10.tgz#dddef2cee58534fabdc6f4bd2fde51df9449576d"
-  integrity sha512-ezKfwx8yhVUoj8shpCT4gLINKMbQYYulFvnLgSh5n+/QTEsfksKu88wooqRGb6D1p7GWEJghANltmnf2XhiJGA==
+svelte-toolkit@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/svelte-toolkit/-/svelte-toolkit-0.0.11.tgz#78887fad8f2da8f54d6c3c40793df5f57098dd75"
+  integrity sha512-zpjDH4pPW/MXDRoezC3YtE9CaTT9SP4X5qIOztfdrbnnUM0zrTc0t15I7oGOJhBwM+NErJZu2uCulLFXlOc/Eg==
 
 svelte@^3.8.1:
   version "3.8.1"
