@@ -30,7 +30,7 @@
     "style-loader": "^1.0.0",
     "svelte": "^3.8.1",
     "svelte-loader": "^2.13.6",
-    "svelte-toolkit": "^0.0.10",
+    "svelte-toolkit": "^0.0.11",
     "webpack": "^4.39.2"
   }
 }
