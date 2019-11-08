@@ -2,7 +2,7 @@
   import { Progress } from "svelte-toolkit";
 
   let type = "info";
-  let size = "";
+  let size = "medium";
   let value = 50;
   let total = 100;
 
@@ -77,7 +77,7 @@ import { Progress } from "svelte-toolkit";
         </tr>
         <tr>
           <td>size</td>
-          <td />
+          <td>medium</td>
           <td>small, medium, large</td>
           <td>
             <select bind:value={size}>
@@ -99,7 +99,7 @@ import { Progress } from "svelte-toolkit";
         <tr>
           <td>total</td>
           <td>100</td>
-          <td></td>
+          <td />
           <td>
             <input type="number" bind:value={total} />
           </td>
