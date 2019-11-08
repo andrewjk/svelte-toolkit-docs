@@ -2,7 +2,7 @@
   import { Button } from "svelte-toolkit";
 
   let type = "info";
-  let size = "";
+  let size = "medium";
   let submit = false;
   let reset = false;
   let disabled = false;
@@ -88,6 +88,7 @@ import { Button } from "svelte-toolkit";
           <td>info, success, warning, danger, select, cancel</td>
           <td>
             <select bind:value={type}>
+              <option>-</option>
               <option>info</option>
               <option>success</option>
               <option>warning</option>
@@ -99,7 +100,7 @@ import { Button } from "svelte-toolkit";
         </tr>
         <tr>
           <td>size</td>
-          <td />
+          <td>medium</td>
           <td>small, medium, large, or inline</td>
           <td>
             <select bind:value={size}>
