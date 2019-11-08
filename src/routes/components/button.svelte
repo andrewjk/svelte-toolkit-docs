@@ -1,5 +1,5 @@
 <script>
-  import { Button } from "svelte-toolkit";
+  import { Button, Cross, ChevronDown } from "svelte-toolkit";
 
   let type = "info";
   let size = "medium";
@@ -7,11 +7,12 @@
   let reset = false;
   let disabled = false;
   let loading = false;
+  let image = false;
 
   $: exampleCode = `
 import { Button } from "svelte-toolkit";
 
-<Button type="${type}" size="${size}" submit={${submit}} reset={${reset}} disabled={${disabled}} loading={${loading}}>
+<Button type="${type}" size="${size}" submit={${submit}} reset={${reset}} disabled={${disabled}} loading={${loading}} image={${image}}>
   Click me
 </Button>`.trim();
 
@@ -48,7 +49,6 @@ import { Button } from "svelte-toolkit";
 
   <h2>Sizes</h2>
   <div class="block">
-    <Button>Default</Button>
     <Button size="small" type="success">Small</Button>
     <Button size="medium" type="warning">Medium</Button>
     <Button size="large" type="danger">Large</Button>
@@ -64,8 +64,11 @@ import { Button } from "svelte-toolkit";
       {reset}
       {disabled}
       {loading}
+      {image}
       on:click={handleClick}>
-      Click me
+      {#if image}
+        <Cross />
+      {:else}Click me{/if}
     </Button>
     <br />
   </div>
@@ -155,6 +158,20 @@ import { Button } from "svelte-toolkit";
             <label>
               <input type="checkbox" bind:checked={loading} />
               Show loading animation
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>image</td>
+          <td>false</td>
+          <td>
+            Set to true to make this a button that contains an image only. The
+            image must have the class name `icon` for styling.
+          </td>
+          <td>
+            <label>
+              <input type="checkbox" bind:checked={image} />
+              Make an image button
             </label>
           </td>
         </tr>
