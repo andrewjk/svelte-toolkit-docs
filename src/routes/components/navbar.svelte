@@ -34,7 +34,7 @@ import {
       <Button>Button</Button>
     </NavMenuItem>
   </NavMenu>
-  <NavMenu position="right">
+  <NavMenu position="end">
     <NavMenuItem>
       <a href="components/alert">Badge</a>
     </NavMenuItem>
@@ -86,7 +86,7 @@ import {
           <Button>Button</Button>
         </NavMenuItem>
       </NavMenu>
-      <NavMenu position="right">
+      <NavMenu position="end">
         <NavMenuItem>
           <a href="components/alert">Badge</a>
         </NavMenuItem>
