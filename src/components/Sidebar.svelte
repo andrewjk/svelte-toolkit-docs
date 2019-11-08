@@ -1,9 +1,5 @@
 <script>
-  import {
-    SubNavMenu,
-    SubNavMenuItem,
-    SubNavMenuHeader
-  } from "svelte-toolkit";
+  import { SubNavMenu, SubNavMenuItem, SubNavMenuHeader } from "svelte-toolkit";
 </script>
 
 <SubNavMenuHeader>General</SubNavMenuHeader>
@@ -26,6 +22,9 @@
   </SubNavMenuItem>
   <SubNavMenuItem>
     <a href="components/panel">Panel</a>
+  </SubNavMenuItem>
+  <SubNavMenuItem>
+    <a href="general/level">Level</a>
   </SubNavMenuItem>
   <SubNavMenuItem>
     <a href="components/card">Card</a>
