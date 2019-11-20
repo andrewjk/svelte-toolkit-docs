@@ -1,53 +1,50 @@
 <script>
-  import { Switcher, SwitcherItem, StoryNav } from "svelte-toolkit";
+  import { Switcher, SwitcherItem, WizardNav } from "svelte-toolkit";
 
   let index = 0;
   let itemCount = 5;
-  let type = "";
 
   $: items = [...Array(itemCount).keys()].map(i => ++i);
 
   $: exampleCode = `
-import { StoryNav } from "svelte-toolkit";
+import { WizardNav } from "svelte-toolkit";
 
-<StoryNav index={${index}} itemCount={${itemCount}} type="${type}" />`.trim();
+<WizardNav index={${index}} itemCount={${itemCount}} on:finished={handleFinished} />`.trim();
+
+  function handleFinished(e) {
+    alert("Hooray!");
+  }
 </script>
 
 <style>
-  .bignum {
+  .number {
     color: darkgray;
     font-size: 96px;
     line-height: 1.4;
     text-align: center;
   }
-
-  :global(.story-nav) {
-    background-color: #222;
-    border-radius: 2px;
-    margin: 20px 0;
-  }
 </style>
 
 <svelte:head>
-  <title>Story Navigation | Svelte Toolkit</title>
+  <title>Wizard Navigation | Svelte Toolkit</title>
 </svelte:head>
 
 <div class="container">
-  <h1>Story Navigation</h1>
-  <p>Story-style navigation for use with a switcher.</p>
+  <h1>Wizard Navigation</h1>
+  <p>Wizard-style navigation for use with a switcher.</p>
 
   <h2>Demo</h2>
   <div class="block">
     <Switcher bind:index>
       {#each items as item}
         <SwitcherItem>
-          <div class="panel">
-            <div class="bignum">{item}</div>
+          <div class="inner-panel">
+            <div class="number">{item}</div>
           </div>
         </SwitcherItem>
       {/each}
     </Switcher>
-    <StoryNav bind:index {itemCount} {type} />
+    <WizardNav bind:index {itemCount} on:finished={handleFinished} />
   </div>
 
   <h2>Properties</h2>
@@ -78,17 +75,6 @@ import { StoryNav } from "svelte-toolkit";
             <input type="number" bind:value={itemCount} />
           </td>
         </tr>
-        <tr>
-          <td>type</td>
-          <td />
-          <td>vertical</td>
-          <td>
-            <select bind:value={type}>
-              <option>-</option>
-              <option>vertical</option>
-            </select>
-          </td>
-        </tr>
       </tbody>
     </table>
   </div>
@@ -106,6 +92,10 @@ import { StoryNav } from "svelte-toolkit";
         <tr>
           <td>change</td>
           <td>value: the number of the current page</td>
+        </tr>
+        <tr>
+          <td>finished</td>
+          <td />
         </tr>
       </tbody>
     </table>

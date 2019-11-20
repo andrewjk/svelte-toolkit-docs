@@ -10,7 +10,7 @@ import { Switcher, SwitcherItem } from "svelte-toolkit";
 <Switcher index={${index}}>
   {#each $items as item}
     <SwitcherItem>
-      <div class="panel">
+      <div class="inner-panel">
         <h4>{item.header}</h4>
         <p>{item.text}</p>
       </div>
@@ -35,7 +35,7 @@ import { Switcher, SwitcherItem } from "svelte-toolkit";
     <Switcher bind:index>
       {#each $items as item}
         <SwitcherItem>
-          <div class="panel">
+          <div class="inner-panel">
             <h4>{item.name}</h4>
             <p>{item.text}</p>
           </div>

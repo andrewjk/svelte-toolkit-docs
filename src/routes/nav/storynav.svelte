@@ -1,48 +1,53 @@
 <script>
-  import { Switcher, SwitcherItem, Pagination } from "svelte-toolkit";
+  import { Switcher, SwitcherItem, StoryNav } from "svelte-toolkit";
 
-  let pageNumber = 1;
-  let pageSize = 10;
-  let itemCount = 50;
+  let index = 0;
+  let itemCount = 5;
+  let type = "";
 
-  $: index = pageNumber - 1;
   $: items = [...Array(itemCount).keys()].map(i => ++i);
 
   $: exampleCode = `
-import { Pagination } from "svelte-toolkit";
+import { StoryNav } from "svelte-toolkit";
 
-<Pagination pageNumber={${pageNumber}} pageSize={${pageSize}} itemCount={${itemCount}} />`.trim();
+<StoryNav index={${index}} itemCount={${itemCount}} type="${type}" />`.trim();
 </script>
 
 <style>
-  .bignum {
+  .number {
     color: darkgray;
     font-size: 96px;
     line-height: 1.4;
     text-align: center;
   }
+
+  :global(.story-nav) {
+    background-color: #222;
+    border-radius: 2px;
+    margin: 20px 0;
+  }
 </style>
 
 <svelte:head>
-  <title>Pagination | Svelte Toolkit</title>
+  <title>Story Navigation | Svelte Toolkit</title>
 </svelte:head>
 
 <div class="container">
-  <h1>Pagination</h1>
-  <p>Numbers for navigating through components that contain paged data.</p>
+  <h1>Story Navigation</h1>
+  <p>Story-style navigation for use with a switcher.</p>
 
   <h2>Demo</h2>
   <div class="block">
     <Switcher bind:index>
       {#each items as item}
         <SwitcherItem>
-          <div class="panel">
-            <div class="bignum">{item}</div>
+          <div class="inner-panel">
+            <div class="number">{item}</div>
           </div>
         </SwitcherItem>
       {/each}
     </Switcher>
-    <Pagination bind:pageNumber {pageSize} {itemCount} />
+    <StoryNav bind:index {itemCount} {type} />
   </div>
 
   <h2>Properties</h2>
@@ -58,19 +63,11 @@ import { Pagination } from "svelte-toolkit";
       </thead>
       <tbody>
         <tr>
-          <td>pageNumber</td>
-          <td>1</td>
-          <td>the current page number</td>
+          <td>index</td>
+          <td>0</td>
+          <td>the current index</td>
           <td>
-            <input type="number" bind:value={pageNumber} />
-          </td>
-        </tr>
-        <tr>
-          <td>pageSize</td>
-          <td>10</td>
-          <td>the number of items displayed on each page</td>
-          <td>
-            <input type="number" bind:value={pageSize} />
+            <input type="number" bind:value={index} />
           </td>
         </tr>
         <tr>
@@ -79,6 +76,17 @@ import { Pagination } from "svelte-toolkit";
           <td>the total number of items</td>
           <td>
             <input type="number" bind:value={itemCount} />
+          </td>
+        </tr>
+        <tr>
+          <td>type</td>
+          <td />
+          <td>vertical</td>
+          <td>
+            <select bind:value={type}>
+              <option>-</option>
+              <option>vertical</option>
+            </select>
           </td>
         </tr>
       </tbody>
