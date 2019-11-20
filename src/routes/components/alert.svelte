@@ -18,7 +18,7 @@ showAlert({
   duration: ${duration}
 });`.trim();
 
-  function openAlert(type) {
+  function openAlert() {
     showAlert({
       type,
       content,
@@ -47,17 +47,8 @@ showAlert({
 
   <h2>Demo</h2>
   <div class="block">
-    <Button type="info" on:click={e => openAlert('info')}>
-      Open an info alert
-    </Button>
-    <Button type="success" on:click={e => openAlert('success')}>
-      Open a success alert
-    </Button>
-    <Button type="warning" on:click={e => openAlert('warning')}>
-      Open a warning alert
-    </Button>
-    <Button type="danger" on:click={e => openAlert('danger')}>
-      Open a danger alert
+    <Button {type} on:click={e => openAlert()}>
+      Show an alert
     </Button>
   </div>
 
@@ -76,9 +67,11 @@ showAlert({
         <tr>
           <td>type</td>
           <td>info</td>
-          <td>info, success, warning, or danger</td>
+          <td>primary, info, success, warning, or danger</td>
           <td>
             <select bind:value={type}>
+              <option>-</option>
+              <option>primary</option>
               <option>info</option>
               <option>success</option>
               <option>warning</option>

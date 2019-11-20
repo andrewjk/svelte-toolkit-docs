@@ -60,10 +60,11 @@ import { Select } from "svelte-toolkit";
         <tr>
           <td>type</td>
           <td />
-          <td>info, success, warning, or danger</td>
+          <td>primary, info, success, warning, or danger</td>
           <td>
             <select bind:value={type}>
               <option>-</option>
+              <option>primary</option>
               <option>info</option>
               <option>success</option>
               <option>warning</option>

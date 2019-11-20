@@ -68,10 +68,11 @@ import { DropDown, DropDownMenuItem } from "svelte-toolkit";
         <tr>
           <td>buttonType</td>
           <td>info</td>
-          <td>info, success, warning, or danger</td>
+          <td>primary, info, success, warning, or danger</td>
           <td>
             <select bind:value={buttonType}>
               <option>-</option>
+              <option>primary</option>
               <option>info</option>
               <option>success</option>
               <option>warning</option>

@@ -65,9 +65,11 @@ import { Progress } from "svelte-toolkit";
         <tr>
           <td>type</td>
           <td>info</td>
-          <td>info, success, warning, danger</td>
+          <td>primary, info, success, warning, danger</td>
           <td>
             <select bind:value={type}>
+              <option>-</option>
+              <option>primary</option>
               <option>info</option>
               <option>success</option>
               <option>warning</option>

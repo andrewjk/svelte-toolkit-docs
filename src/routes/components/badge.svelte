@@ -43,9 +43,11 @@ Notifications <Badge content="${content}" type="${type}" />`.trim();
         <tr>
           <td>type</td>
           <td>info</td>
-          <td>info, success, warning, or danger</td>
+          <td>primary, info, success, warning, or danger</td>
           <td>
             <select bind:value={type}>
+              <option>-</option>
+              <option>primary</option>
               <option>info</option>
               <option>success</option>
               <option>warning</option>

@@ -1,7 +1,7 @@
 <script>
   import { Button, Cross, ChevronDown } from "svelte-toolkit";
 
-  let type = "info";
+  let type = "primary";
   let size = "medium";
   let submit = false;
   let reset = false;
@@ -38,20 +38,20 @@ import { Button } from "svelte-toolkit";
 
   <h2>Colors</h2>
   <div class="block">
+    <Button type="primary">Primary</Button>
     <Button type="info">Info</Button>
     <Button type="success">Success</Button>
     <Button type="warning">Warning</Button>
     <Button type="danger">Danger</Button>
-    <Button type="select">Select</Button>
     <Button type="cancel">Cancel</Button>
   </div>
 
   <h2>Sizes</h2>
   <div class="block">
-    <Button size="small" type="success">Small</Button>
-    <Button size="medium" type="warning">Medium</Button>
-    <Button size="large" type="danger">Large</Button>
-    <Button size="inline" type="cancel">Inline</Button>
+    <Button size="small" type="info">Small</Button>
+    <Button size="medium" type="success">Medium</Button>
+    <Button size="large" type="warning">Large</Button>
+    <Button size="inline" type="danger">Inline</Button>
   </div>
 
   <h2>Demo</h2>
@@ -83,16 +83,16 @@ import { Button } from "svelte-toolkit";
       <tbody>
         <tr>
           <td>type</td>
-          <td>info</td>
-          <td>info, success, warning, danger, select, cancel</td>
+          <td>primary</td>
+          <td>primary, info, success, warning, danger, cancel</td>
           <td>
             <select bind:value={type}>
               <option>-</option>
+              <option>primary</option>
               <option>info</option>
               <option>success</option>
               <option>warning</option>
               <option>danger</option>
-              <option>select</option>
               <option>cancel</option>
             </select>
           </td>
