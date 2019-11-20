@@ -3,7 +3,7 @@
 </svelte:head>
 
 <div class="container">
-  <h1>Base</h1>
+  <h1>Base Styles</h1>
 
   <h2>Typography</h2>
 
