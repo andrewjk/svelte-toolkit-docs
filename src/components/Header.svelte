@@ -1,7 +1,7 @@
 <script>
-	export let segment;
+	//export let segment;
 </script>
 
-<header class="header">
-	Header
-</header>
+<div>
+	Svelte Toolkit
+</div>

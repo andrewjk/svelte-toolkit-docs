@@ -1,7 +1,7 @@
 <script>
-	export let segment;
+	//export let segment;
 </script>
 
-<footer class="footer">
-	Footer
-</footer>
+<div>
+	Svelte Toolkit
+</div>
