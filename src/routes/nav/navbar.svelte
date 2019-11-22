@@ -38,16 +38,16 @@ import {
     <NavMenuDropDown>
       Others...
       <div slot="menu">
-        <DropDownMenuItem>
-          <a href="components/breadcrumb">Breadcrumb</a>
-        </DropDownMenuItem>
+        <DropDownMenuLink href="components/breadcrumb">
+          Breadcrumb
+        </DropDownMenuLink>
         <DropDownMenuDivider />
-        <DropDownMenuItem>
-          <a href="components/calendar">Calendar</a>
-        </DropDownMenuItem>
-        <DropDownMenuItem>
-          <a href="components/dialog">Dialog</a>
-        </DropDownMenuItem>
+        <DropDownMenuLink href="components/calendar">
+          Calendar
+        </DropDownMenuLink>
+        <DropDownMenuLink href="components/dialog">
+          Dialog
+        </DropDownMenuLink>
       </div>
     </NavMenuDropDown>
   </NavMenu>
@@ -84,18 +84,14 @@ import {
         <NavMenuDropDown>
           Others...
           <div slot="menu">
-            <DropDownMenu>
-              <DropDownMenuLink href="components/breadcrumb">
-                Breadcrumb
-              </DropDownMenuLink>
-              <DropDownMenuDivider />
-              <DropDownMenuLink href="components/calendar">
-                Calendar
-              </DropDownMenuLink>
-              <DropDownMenuLink href="components/dialog">
-                Dialog
-              </DropDownMenuLink>
-            </DropDownMenu>
+            <DropDownMenuLink href="components/breadcrumb">
+              Breadcrumb
+            </DropDownMenuLink>
+            <DropDownMenuDivider />
+            <DropDownMenuLink href="components/calendar">
+              Calendar
+            </DropDownMenuLink>
+            <DropDownMenuLink href="components/dialog">Dialog</DropDownMenuLink>
           </div>
         </NavMenuDropDown>
       </NavMenu>
