@@ -4,10 +4,9 @@
     NavLogo,
     NavMenu,
     NavMenuItem,
-    NavMenuLink,
     NavMenuDropDown,
     DropDownMenu,
-    DropDownMenuLink,
+    DropDownMenuItem,
     DropDownMenuDivider,
     Button
   } from "svelte-toolkit";
@@ -17,7 +16,6 @@ import {
   NavBar,
   NavLogo,
   NavMenu,
-  NavMenuLink,
   NavMenuItem,
   NavMenuDropDown,
   DropDownMenuItem,
@@ -27,27 +25,33 @@ import {
 <NavBar>
   <NavLogo src="logo-192.png" alt="Svelte logo" />
   <NavMenu>
-    <NavMenuLink href="components/accordion">Accordion</NavMenuLink>
-    <NavMenuLink href="components/alert">Alert</NavMenuLink>
+    <NavMenuItem>
+      <a href="components/accordion">Accordion</a>
+    </NavMenuItem>
+    <NavMenuItem>
+      <a href="components/alert">Alert</a>
+    </NavMenuItem>
     <NavMenuItem>
       <Button>Button</Button>
     </NavMenuItem>
   </NavMenu>
   <NavMenu position="end">
-    <NavMenuLink href="components/badge">Badge</NavMenuLink>
+    <NavMenuItem>
+      <a href="components/badge">Badge</a>
+    </NavMenuItem>
     <NavMenuDropDown>
       Others...
       <div slot="menu">
-        <DropDownMenuLink href="components/breadcrumb">
-          Breadcrumb
-        </DropDownMenuLink>
+        <DropDownMenuItem>
+          <a href="components/breadcrumb">Breadcrumb</a>
+        </DropDownMenuItem>
         <DropDownMenuDivider />
-        <DropDownMenuLink href="components/calendar">
-          Calendar
-        </DropDownMenuLink>
-        <DropDownMenuLink href="components/dialog">
-          Dialog
-        </DropDownMenuLink>
+        <DropDownMenuItem>
+          <a href="components/calendar">Calendar</a>
+        </DropDownMenuItem>
+        <DropDownMenuItem>
+          <a href="components/dialog">Dialog</a>
+        </DropDownMenuItem>
       </div>
     </NavMenuDropDown>
   </NavMenu>
@@ -73,25 +77,33 @@ import {
     <NavBar>
       <NavLogo src="logo-192.png" alt="Svelte logo" height="48" />
       <NavMenu>
-        <NavMenuLink href="components/accordion">Accordion</NavMenuLink>
-        <NavMenuLink href="components/alert">Alert</NavMenuLink>
+        <NavMenuItem>
+          <a href="components/accordion">Accordion</a>
+        </NavMenuItem>
+        <NavMenuItem>
+          <a href="components/alert">Alert</a>
+        </NavMenuItem>
         <NavMenuItem>
           <Button>Button</Button>
         </NavMenuItem>
       </NavMenu>
       <NavMenu position="end">
-        <NavMenuLink href="components/badge">Badge</NavMenuLink>
+        <NavMenuItem>
+          <a href="components/badge">Badge</a>
+        </NavMenuItem>
         <NavMenuDropDown>
           Others...
           <div slot="menu">
-            <DropDownMenuLink href="components/breadcrumb">
-              Breadcrumb
-            </DropDownMenuLink>
+            <DropDownMenuItem>
+              <a href="components/breadcrumb">Breadcrumb</a>
+            </DropDownMenuItem>
             <DropDownMenuDivider />
-            <DropDownMenuLink href="components/calendar">
-              Calendar
-            </DropDownMenuLink>
-            <DropDownMenuLink href="components/dialog">Dialog</DropDownMenuLink>
+            <DropDownMenuItem>
+              <a href="components/calendar">Calendar</a>
+            </DropDownMenuItem>
+            <DropDownMenuItem>
+              <a href="components/dialog">Dialog</a>
+            </DropDownMenuItem>
           </div>
         </NavMenuDropDown>
       </NavMenu>

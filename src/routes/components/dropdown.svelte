@@ -1,7 +1,7 @@
 <script>
   import {
     DropDown,
-    DropDownMenuLink,
+    DropDownMenuItem,
     ImageButton,
     ChevronDown
   } from "svelte-toolkit";
@@ -17,7 +17,7 @@
 
   $: exampleCode = imageButton
     ? `
-import { DropDown, DropDownMenuLink, ImageButton, ChevronDown } from "svelte-toolkit";
+import { DropDown, DropDownMenuItem, ImageButton, ChevronDown } from "svelte-toolkit";
 
 <DropDown buttonType="${buttonType}" buttonSize="${buttonSize}" position="${position}" alignment="${alignment}">
   <div slot="element">
@@ -27,22 +27,22 @@ import { DropDown, DropDownMenuLink, ImageButton, ChevronDown } from "svelte-too
   </div>
   <div slot="menu">
     {#each $items as item}
-      <DropDownMenuLink href={item.href}>
-        {item.name}
-      </DropDownMenuLink>
+      <DropDownMenuItem>
+        <a href={item.href}>{item.name}</a>
+      </DropDownMenuItem>
     {/each}
   </div>
 </DropDown>`.trim()
     : `
-import { DropDown, DropDownMenuLink } from "svelte-toolkit";
+import { DropDown, DropDownMenuItem } from "svelte-toolkit";
 
 <DropDown buttonType="${buttonType}" buttonSize="${buttonSize}" position="${position}" alignment="${alignment}">
   <span>Items...</span>
   <div slot="menu">
     {#each items as item}
-      <DropDownMenuLink href={item.href}>
-        {item.name}
-      </DropDownMenuLink>
+      <DropDownMenuItem>
+        <a href={item.href}>{item.name}</a>
+      </DropDownMenuItem>
     {/each}
   </div>
 </DropDown>`.trim();
@@ -67,7 +67,9 @@ import { DropDown, DropDownMenuLink } from "svelte-toolkit";
         </div>
         <div slot="menu">
           {#each $items as item}
-            <DropDownMenuLink href={item.href}>{item.name}</DropDownMenuLink>
+            <DropDownMenuItem>
+              <a href={item.href}>{item.name}</a>
+            </DropDownMenuItem>
           {/each}
         </div>
       </DropDown>
@@ -76,7 +78,9 @@ import { DropDown, DropDownMenuLink } from "svelte-toolkit";
         Items...
         <div slot="menu">
           {#each $items as item}
-            <DropDownMenuLink href={item.href}>{item.name}</DropDownMenuLink>
+            <DropDownMenuItem>
+              <a href={item.href}>{item.name}</a>
+            </DropDownMenuItem>
           {/each}
         </div>
       </DropDown>
