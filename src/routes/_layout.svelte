@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte";
   import {
     Toolkit,
     Page,
@@ -7,7 +8,9 @@
     PageFooter,
     Container,
     Grid,
-    GridItem
+    GridItem,
+    loadTheme,
+    getTheme
   } from "svelte-toolkit";
 
   import Header from "../components/Header.svelte";
@@ -15,12 +18,28 @@
   import Sidebar from "../components/Sidebar.svelte";
 
   export let segment;
+
+  /*
+  onMount(() => {
+    loadTheme({
+      "--header-back-color": "aliceblue",
+      "--footer-back-color": "slategray",
+      "--body-back-color": "#555",
+      "--body-text-color": "white",
+      "--info-color": "pink",
+      "--link-color": "goldenrod",
+      "--label-text-color": "#ccc"
+    });
+
+    console.log(getTheme());
+  });
+  */
 </script>
 
 <style lang="scss">
-  :root {
-    //--info-color: green;
-  }
+  //:root {
+  //  --info-color: green;
+  //}
 
   :global(.outer-panel) {
     background-color: #fafafa;
