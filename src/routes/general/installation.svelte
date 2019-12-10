@@ -12,23 +12,28 @@
   </p>
   <pre>yarn add -D svelte-toolkit</pre>
 
-  <h2>Consuming from Sapper</h2>
+  <h2>Importing Components</h2>
   <p>Import toolkit components in your svelte component:</p>
   <pre>
-    {`import {Button} from "svelte-toolkit";`}
-  </pre>
-  <p>If you receive a warning about SSR, change it to:</p>
-  <pre lang="javascript">
-    {`import { Button } from "svelte-toolkit/main.js";`}
-  </pre>
-  <p>(I'm not 100% sure why this happens some times and not others)</p>
+    {`
+<script>
+  import { Button } from "svelte-toolkit";
+</script>
 
-  <h2>Consuming from Electron</h2>
-  <p>Import toolkit components in your svelte component:</p>
+<Button>Click me</Button>`.trim()}
+  </pre>
+
+  <h2>Base Styles</h2>
+  <p>Import the Toolkit component to set base styles:</p>
   <pre>
-    {`import { Button } from "svelte-toolkit";`}
-  </pre>
+    {`
+<script>
+  import { Toolkit } from "svelte-toolkit";
+</script>
 
-  <h2>Customising</h2>
-  <p>TODO:</p>
+<Toolkit />`.trim()}
+  </pre>
+  <p>
+    When using Sapper, this component is best placed in your _layout file.
+  </p>
 </div>
