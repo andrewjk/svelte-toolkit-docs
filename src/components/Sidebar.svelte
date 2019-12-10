@@ -11,7 +11,7 @@
 
   let pages = [
     { group: "General", title: "Installation" },
-    { group: "General", title: "Styles" },
+    { group: "General", title: "Base Styles" },
     { group: "General", title: "Theming" },
     { group: "General", title: "Theme Properties" },
     { group: "Layout", title: "Page" },
@@ -57,9 +57,9 @@
     { group: "Forms", title: "TextBox" },
     { group: "Forms", title: "TextArea" },
     { group: "Forms", title: "Validation" },
-    { group: "Dialogs", title: "Info Dialog" },
-    { group: "Dialogs", title: "Confirm Dialog" },
-    { group: "Dialogs", title: "Prompt Dialog" },
+    { group: "Dialogs", title: "Info" },
+    { group: "Dialogs", title: "Confirm" },
+    { group: "Dialogs", title: "Prompt" },
     { group: "Charts", title: "Bar Chart" },
     { group: "Charts", title: "Line Chart" },
     { group: "Charts", title: "Pie Chart" },
