@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build",
-    "export": "sapper export --basepath svelte-toolkit-docs",
-    "move": "rimraf docs && move-cli __sapper__/export/svelte-toolkit-docs docs",
+    "export": "sapper export",
+    "move": "rimraf docs && move-cli __sapper__/export docs",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
