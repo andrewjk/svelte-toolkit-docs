@@ -3,15 +3,19 @@
 
   let header = "Header";
   let content = "Enter your name below:";
+  let options = "";
   let buttonContent = "OK";
   let placeholder = "";
 
   let message = "";
 
+  $: optionsArray = options.split(/[\s,;]/).filter(Boolean);
+
   async function openPrompt() {
     const result = await showPrompt({
       header,
       content,
+      options: optionsArray,
       buttonContent,
       placeholder
     });
@@ -26,6 +30,7 @@ import { showPrompt } from "svelte-toolkit";
 const result = await showPrompt({
   header: '${header}',
   content: '${content}',
+  options: [${optionsArray}],
   buttonContent: '${buttonContent}',
   placeholder: '${placeholder}'
 });`.trim();
@@ -87,6 +92,16 @@ const result = await showPrompt({
           </td>
           <td>
             <input type="text" bind:value={content} />
+          </td>
+        </tr>
+        <tr>
+          <td>options</td>
+          <td />
+          <td>
+            An array of options, which will be displayed in a select element
+          </td>
+          <td>
+            <input type="text" bind:value={options} />
           </td>
         </tr>
         <tr>
