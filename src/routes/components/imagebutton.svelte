@@ -6,11 +6,12 @@
   let submit = false;
   let reset = false;
   let disabled = false;
+  let loading = false;
 
   $: exampleCode = `
 import { ImageButton } from "svelte-toolkit";
 
-<ImageButton type="${type}" size="${size}" submit={${submit}} reset={${reset}} disabled={${disabled}}>
+<ImageButton type="${type}" size="${size}" submit={${submit}} reset={${reset}} disabled={${disabled}} loading={${loading}}>
   <Cross />
 </ImageButton>`.trim();
 
@@ -43,6 +44,7 @@ import { ImageButton } from "svelte-toolkit";
       {submit}
       {reset}
       {disabled}
+      {loading}
       on:click={handleClick}>
       <Cross />
     </ImageButton>
@@ -121,6 +123,19 @@ import { ImageButton } from "svelte-toolkit";
             <label>
               <input type="checkbox" bind:checked={disabled} />
               Disable the button
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>loading</td>
+          <td>false</td>
+          <td>
+            Set to true to replace the button's text with a loading animation
+          </td>
+          <td>
+            <label>
+              <input type="checkbox" bind:checked={loading} />
+              Show loading animation
             </label>
           </td>
         </tr>
