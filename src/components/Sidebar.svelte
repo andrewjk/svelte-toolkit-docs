@@ -59,6 +59,7 @@
     { group: "Forms", title: "Validation" },
     { group: "Dialogs", title: "Info" },
     { group: "Dialogs", title: "Confirm" },
+    { group: "Dialogs", title: "Modal" },
     { group: "Dialogs", title: "Prompt" },
     { group: "Charts", title: "Bar Chart" },
     { group: "Charts", title: "Line Chart" },
