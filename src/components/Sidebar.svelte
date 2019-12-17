@@ -50,6 +50,7 @@
     { group: "Nav", title: "Wizard Navigation" },
     { group: "Forms", title: "Field" },
     { group: "Forms", title: "CheckBox" },
+    { group: "Forms", title: "Currency" },
     { group: "Forms", title: "File" },
     { group: "Forms", title: "Number" },
     { group: "Forms", title: "Radio" },
