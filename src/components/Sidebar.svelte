@@ -31,6 +31,7 @@
     { group: "Components", title: "Cover Image" },
     { group: "Components", title: "Date Picker" },
     { group: "Components", title: "Drop Down" },
+    { group: "Components", title: "Focus Group" },
     { group: "Components", title: "Image Button" },
     { group: "Components", title: "Notification" },
     { group: "Components", title: "Off Screen" },
