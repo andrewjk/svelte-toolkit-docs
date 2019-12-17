@@ -3,7 +3,8 @@
 
   let type = "";
   let name = "field1";
-  let value = 0;
+  let value = null;
+  let placeholder = "";
   let min = null;
   let max = null;
   let readonly = false;
@@ -11,7 +12,7 @@
   $: exampleCode = `
 import { Number } from "svelte-toolkit";
 
-<Number type="${type}" name="${name}" min={${min}} max={${max}} readonly={${readonly}} bind:value />`.trim();
+<Number type="${type}" name="${name}" placeholder="${placeholder}" min={${min}} max={${max}} readonly={${readonly}} bind:value />`.trim();
 </script>
 
 <svelte:head>
@@ -24,7 +25,7 @@ import { Number } from "svelte-toolkit";
 
   <h2>Demo</h2>
   <div class="block">
-    <Number {type} {name} {min} {max} {readonly} bind:value />
+    <Number {type} {name} {placeholder} {min} {max} {readonly} bind:value />
   </div>
 
   <h2>Properties</h2>
@@ -42,7 +43,7 @@ import { Number } from "svelte-toolkit";
         <tr>
           <td>name</td>
           <td />
-          <td>The name of the field entered into the number</td>
+          <td>The name of the field entered into the number box</td>
           <td>
             <input type="text" bind:value={name} />
           </td>
@@ -64,10 +65,18 @@ import { Number } from "svelte-toolkit";
         </tr>
         <tr>
           <td>value</td>
-          <td>0</td>
+          <td />
           <td>The number value</td>
           <td>
             <input type="number" bind:value />
+          </td>
+        </tr>
+        <tr>
+          <td>placeholder</td>
+          <td />
+          <td>Placeholder text to show when the textbox is empty.</td>
+          <td>
+            <input type="text" bind:value={placeholder} />
           </td>
         </tr>
         <tr>
