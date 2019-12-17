@@ -1,8 +1,5 @@
 <script>
-  import {
-    TagInput,
-    TagInputItem
-  } from "svelte-toolkit";
+  import { TagInput, TagInputItem } from "svelte-toolkit";
 
   import { countries } from "../../stores/countries";
 
@@ -10,30 +7,45 @@
   let placeholder = "";
   let delay = 300;
   let minChars = 1;
+  let tagClass = null;
+  let tagType = "info";
 
   let source = countries.map(c => c.name);
-
-  //let items = [];
-  //function loadItems(e) {
-  //  items = countries
-  //    .map(c => c.name)
-  //    .filter(
-  //      c => c.toLocaleLowerCase().indexOf(e.detail.toLocaleLowerCase()) !== -1
-  //    );
-  //}
 
   $: exampleCode = `
 import { TagInput, TagInputItem } from "svelte-toolkit";
 
-<TagInput source={countries} value={${value}} placeholder="${placeholder}" delay={${delay}} minChars={${minChars}} />
+<TagInput
+  source={countries}  
+  value={${value}}
+  placeholder="${placeholder}"
+  delay={${delay}}
+  minChars={${minChars}}
+  tagClass="${tagClass}"
+  tagType="${tagType}" />
 
 ~ OR ~
 
-<TagInput {items} value={${value}} placeholder="${placeholder}" delay={${delay}} minChars={${minChars}} on:search={loadItems} />
+<TagInput
+  {items}
+  value={${value}}
+  placeholder="${placeholder}"
+  delay={${delay}}
+  minChars={${minChars}}
+  tagClass="${tagClass}"
+  tagType="${tagType}"
+  on:search={loadItems} />
 
 ~ OR ~
 
-<TagInput value={${value}} placeholder="${placeholder}" delay={${delay}} minChars={${minChars}} on:search={loadItems}>
+<TagInput
+    value={${value}}
+    placeholder="${placeholder}"
+    delay={${delay}}
+    minChars={${minChars}}
+    tagClass="${tagClass}"
+    tagType="${tagType}"
+    on:search={loadItems}>
   <div slot="items">
     {#each items as item}
       <TagInputItem>{item.name}</TagInputItem>
@@ -56,7 +68,14 @@ import { TagInput, TagInputItem } from "svelte-toolkit";
 
   <h2>Demo</h2>
   <div class="block">
-    <TagInput {source} bind:value {placeholder} {delay} {minChars} />
+    <TagInput
+      {source}
+      bind:value
+      {placeholder}
+      {delay}
+      {minChars}
+      {tagClass}
+      {tagType} />
   </div>
 
   <h2>Properties</h2>
@@ -75,7 +94,7 @@ import { TagInput, TagInputItem } from "svelte-toolkit";
           <td>value</td>
           <td />
           <td>the selected value</td>
-          <td> {value} </td>
+          <td>{value}</td>
         </tr>
         <tr>
           <td>placeholder</td>
@@ -98,8 +117,8 @@ import { TagInput, TagInputItem } from "svelte-toolkit";
           <td>items</td>
           <td>[ ]</td>
           <td>
-            The items to display in the TagInput's drop down list, which may
-            be strings or objects with a 'text' property
+            The items to display in the TagInput's drop down list, which may be
+            strings or objects with a 'text' property
           </td>
           <td />
         </tr>
@@ -119,6 +138,29 @@ import { TagInput, TagInputItem } from "svelte-toolkit";
           </td>
           <td>
             <input type="number" bind:value={minChars} />
+          </td>
+        </tr>
+        <tr>
+          <td>tagClass</td>
+          <td />
+          <td>the class to set on each tag</td>
+          <td>
+            <input type="text" bind:value={tagClass} />
+          </td>
+        </tr>
+        <tr>
+          <td>tagType</td>
+          <td>info</td>
+          <td>primary, info, success, warning, or danger</td>
+          <td>
+            <select bind:value={tagType}>
+              <option>-</option>
+              <option>primary</option>
+              <option>info</option>
+              <option>success</option>
+              <option>warning</option>
+              <option>danger</option>
+            </select>
           </td>
         </tr>
       </tbody>
