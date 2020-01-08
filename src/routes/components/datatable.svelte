@@ -1,9 +1,9 @@
 <script>
   import { onMount } from "svelte";
   import {
-    Table,
-    TableHeader,
-    TableColumn,
+    DataTable,
+    DataTableHeader,
+    DataTableColumn,
     TabGroup,
     TabItem
   } from "svelte-toolkit";
@@ -24,22 +24,22 @@
   let dataItemCount = 0;
 
   $: exampleCode = `
-import { Table, TableColumn } from "svelte-toolkit";
+import { DataTable, DataTableColumn } from "svelte-toolkit";
 
-<Table items={countries} keyField="${keyField}" type="${type}" let:item>
-  <TableColumn field="name" header="Name" sortable>
+<DataTable items={countries} keyField="${keyField}" type="${type}" let:item>
+  <DataTableColumn field="name" header="Name" sortable>
     {item.name}
-  </TableColumn>
-  <TableColumn field="title" header="Title" sortable>
+  </DataTableColumn>
+  <DataTableColumn field="title" header="Title" sortable>
     {item.title}
-  </TableColumn>
+  </DataTableColumn>
   …
   <div slot="empty">No countries were found...</div>
-</Table>
+</DataTable>
 
 ~ OR ~
 
-<Table
+<DataTable
   data={countries}
   keyField="${keyField}"
   {itemCount}
@@ -49,15 +49,16 @@ import { Table, TableColumn } from "svelte-toolkit";
   let:item
   on:sort={handleSort}
   on:page={handlePage}>
-  <TableColumn field="name" header="Name" sortable>
+  <DataTableColumn field="name" header="Name" sortable>
     {item.name}
-  </TableColumn>
-  <TableColumn field="title" header="Title" sortable>
+  </DataTableColumn>
+  <DataTableColumn field="title" header="Title" sortable>
     {item.title}
-  </TableColumn>
+  </DataTableColumn>
   …
+  <div slot="loading">Loading countries...</div>
   <div slot="empty">No countries were found...</div>
-</Table>`.trim();
+</DataTable>`.trim();
 
   onMount(async () => {
     await loadData();
@@ -68,6 +69,7 @@ import { Table, TableColumn } from "svelte-toolkit";
   }
 
   async function loadData() {
+    loading = true;
     const params = [
       "api_key=ffd0afce8d1c3d7369391dcc1d19dd7f",
       "language=en-US",
@@ -77,43 +79,38 @@ import { Table, TableColumn } from "svelte-toolkit";
       "vote_count.gte=1000",
       `page=${dataPageNumber}`
     ].join("&");
-
-    loading = true;
-    fetch(`https://api.themoviedb.org/3/discover/movie?${params}`)
+    await fetch(`https://api.themoviedb.org/3/discover/movie?${params}`)
       .then(response => response.json())
       .then(response => {
         dataItemCount = response.total_results;
         data = response.results;
-        loading = false;
       })
       .catch(err => {
         dataItemCount = 0;
         data = [];
-        loading = false;
         throw err;
       });
-
-    return data;
+    loading = false;
   }
 
   async function handleSort(e) {
     dataSortField = e.detail.sort;
     dataSortDirection = e.detail.sortDirection;
-    data = loadData();
+    loadData();
   }
 
   function handlePage(e) {
     dataPageNumber = e.detail;
-    data = loadData();
+    loadData();
   }
 </script>
 
 <svelte:head>
-  <title>Table | Svelte Toolkit</title>
+  <title>Data Table | Svelte Toolkit</title>
 </svelte:head>
 
 <div class="container">
-  <h1>Table</h1>
+  <h1>Data Table</h1>
   <p>A table with data in rows.</p>
   <p>
     The table works in two main ways: you can either pass in an array of items
@@ -126,7 +123,7 @@ import { Table, TableColumn } from "svelte-toolkit";
 
   <TabGroup>
     <TabItem header="With Items" id="tab1">
-      <Table
+      <DataTable
         items={countries}
         {keyField}
         bind:pageNumber
@@ -134,65 +131,63 @@ import { Table, TableColumn } from "svelte-toolkit";
         {itemCount}
         {type}
         let:item>
-        <TableColumn field="name" header="Name" sortable>
+        <DataTableColumn field="name" header="Name" sortable>
           {item.name}
-        </TableColumn>
-        <TableColumn field="title" header="Title" sortable>
+        </DataTableColumn>
+        <DataTableColumn field="title" header="Title" sortable>
           {item.title}
-        </TableColumn>
-        <TableColumn field="capital" header="Capital" sortable>
+        </DataTableColumn>
+        <DataTableColumn field="capital" header="Capital" sortable>
           {item.capital}
-        </TableColumn>
-        <TableColumn field="area" header="Area (km²)" sortable>
+        </DataTableColumn>
+        <DataTableColumn field="area" header="Area (km²)" sortable>
           {formatNumber(item.area)}
-        </TableColumn>
-        <TableColumn field="population" header="Population" sortable>
+        </DataTableColumn>
+        <DataTableColumn field="population" header="Population" sortable>
           {formatNumber(item.population)}
-        </TableColumn>
-        <TableColumn field="worldPercent" header="World %" sortable>
+        </DataTableColumn>
+        <DataTableColumn field="worldPercent" header="World %" sortable>
           {`${formatNumber(item.worldPercent)}%`}
-        </TableColumn>
+        </DataTableColumn>
         <div slot="empty">No countries were found...</div>
-      </Table>
+      </DataTable>
     </TabItem>
     <TabItem header="With Data" id="tab2">
       <p>
         Data from
         <a href="https://www.themoviedb.org">The Movie DB</a>
       </p>
-      {#if loading}
-        Loading...
-      {:else}
-        <Table
-          {data}
-          keyField="id"
-          itemCount={dataItemCount}
-          pageNumber={dataPageNumber}
-          pageSize={dataPageSize}
-          {type}
-          let:item
-          on:sort={handleSort}
-          on:page={handlePage}>
-          <TableColumn field="title" header="Title" sortable>
-            {item.title}
-          </TableColumn>
-          <TableColumn field="vote_average" header="Vote Average" sortable>
-            {item.vote_average}
-          </TableColumn>
-          <TableColumn field="vote_count" header="Vote Count" sortable>
-            {item.vote_count}
-          </TableColumn>
-          <TableColumn field="release_date" header="Release Date" sortable>
-            {item.release_date ? new Date(item.release_date).toLocaleDateString() : ''}
-          </TableColumn>
-          <TableColumn header="Overview">
-            {item.overview.length > 200 ? item.overview
-                  .substring(0, 199)
-                  .trim() + '…' : item.overview}
-          </TableColumn>
-          <div slot="empty">No movies were found...</div>
-        </Table>
-      {/if}
+      <DataTable
+        {data}
+        {loading}
+        keyField="id"
+        itemCount={dataItemCount}
+        pageNumber={dataPageNumber}
+        pageSize={dataPageSize}
+        {type}
+        let:item
+        on:sort={handleSort}
+        on:page={handlePage}>
+        <DataTableColumn field="title" header="Title" sortable>
+          {item.title}
+        </DataTableColumn>
+        <DataTableColumn field="vote_average" header="Vote Average" sortable>
+          {item.vote_average}
+        </DataTableColumn>
+        <DataTableColumn field="vote_count" header="Vote Count" sortable>
+          {item.vote_count}
+        </DataTableColumn>
+        <DataTableColumn field="release_date" header="Release Date" sortable>
+          {item.release_date ? new Date(item.release_date).toLocaleDateString() : ''}
+        </DataTableColumn>
+        <DataTableColumn header="Overview">
+          {item.overview.length > 200 ? item.overview
+                .substring(0, 199)
+                .trim() + '…' : item.overview}
+        </DataTableColumn>
+        <div slot="loading">Loading movies...</div>
+        <div slot="empty">No movies were found...</div>
+      </DataTable>
     </TabItem>
   </TabGroup>
 
@@ -223,6 +218,15 @@ import { Table, TableColumn } from "svelte-toolkit";
           <td>
             An array of items to show in the table. When using this property,
             you will need to handle sorting and paging yourself
+          </td>
+          <td />
+        </tr>
+        <tr>
+          <td>loading</td>
+          <td>false</td>
+          <td>
+            Whether the data property is being loaded. If true, the `loading`
+            slot will be displayed
           </td>
           <td />
         </tr>
