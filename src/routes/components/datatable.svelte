@@ -235,7 +235,7 @@ import { DataTable, DataTableColumn } from "svelte-toolkit";
           <td />
           <td>The name of the field to use for keying items for updates</td>
           <td>
-            <input bind:value={keyField} />
+            <input type="text" bind:value={keyField} />
           </td>
         </tr>
         <tr>
