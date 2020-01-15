@@ -1,20 +1,66 @@
 <script>
-  import { BarChart, BarChartItem } from "svelte-toolkit";
+  import { BarChart } from "svelte-toolkit";
 
-  let width = 400;
   let height = 200;
-  let value = 25;
-  let label = "Item 1"
+  let width = 400;
+
+  let xlabel = "Things";
+  let ylabel = "";
+  let labels = "Item1, Item2, Item3";
+  let data = "25, 35, 45";
   let color = "";
+  let data2 = "";
+  let color2 = "";
+  let stepCount = 2;
+  let showXaxis = true;
+  let showYaxis = true;
+  let showHlines = false;
 
-  $: exampleCode = `
-import { BarChart, BarChartItem } from "svelte-toolkit";
+  $: labelsArray = labels.split(/[\s,;]/).filter(Boolean);
+  $: dataArray = data2 ? null : data.split(/[\s,;]/).filter(Boolean);
+  $: seriesArray = data2
+    ? [
+        { color, data: data.split(/[\s,;]/).filter(Boolean) },
+        { color: color2, data: data2.split(/[\s,;]/).filter(Boolean) }
+      ]
+    : null;
 
-<BarChart width={${width}} height={${height}}>
-  <BarChartItem value="${value}" label="${label}"></BarChartItem>
-  <BarChartItem value="35" label="Item 2"></BarChartItem>
-  <BarChartItem value="40" label="Item 3"></BarChartItem>
-</BarChart>
+  $: exampleCode = data2
+    ? `
+import { BarChart } from "svelte-toolkit";
+
+<BarChart
+  width={${width}}
+  height={${height}} 
+  xlabel="${xlabel}"
+  ylabel="${ylabel}"
+  labels={[${labelsArray.map(l => `"${l}"`)}]}
+  series={[${seriesArray.map(s => `
+    {
+      color: "${s.color}",
+      data: [${s.data}]
+    }`)}
+  ]}
+  stepCount={${stepCount}}
+  showXaxis={${showXaxis}}
+  showYaxis={${showYaxis}}
+  showHlines={${showHlines}} />
+`.trim()
+    : `
+import { BarChart } from "svelte-toolkit";
+
+<BarChart
+  width={${width}}
+  height={${height}} 
+  xlabel="${xlabel}"
+  ylabel="${ylabel}"
+  labels={[${labelsArray.map(l => `"${l}"`)}]}
+  data={[${dataArray}]}
+  color="${color}"
+  stepCount={${stepCount}}
+  showXaxis={${showXaxis}}
+  showYaxis={${showYaxis}}
+  showHlines={${showHlines}} />
 `.trim();
 </script>
 
@@ -28,11 +74,19 @@ import { BarChart, BarChartItem } from "svelte-toolkit";
 
   <h2>Demo</h2>
   <div class="block">
-    <BarChart {width} {height}>
-      <BarChartItem {value} {label} />
-      <BarChartItem value="35" label="Item 2" />
-      <BarChartItem value="40" label="Item 3" />
-    </BarChart>
+    <BarChart
+      {height}
+      {width}
+      {xlabel}
+      {ylabel}
+      labels={labelsArray}
+      data={dataArray}
+      {color}
+      series={seriesArray}
+      {stepCount}
+      {showXaxis}
+      {showYaxis}
+      {showHlines} />
   </div>
 
   <h2>Properties</h2>
@@ -48,14 +102,6 @@ import { BarChart, BarChartItem } from "svelte-toolkit";
       </thead>
       <tbody>
         <tr>
-          <td>width</td>
-          <td>400</td>
-          <td>The width of the chart, in pixels</td>
-          <td>
-            <input type="number" bind:value={width} />
-          </td>
-        </tr>
-        <tr>
           <td>height</td>
           <td>200</td>
           <td>The height of the chart, in pixels</td>
@@ -64,27 +110,108 @@ import { BarChart, BarChartItem } from "svelte-toolkit";
           </td>
         </tr>
         <tr>
-          <td>BarChartItem: value</td>
-          <td />
-          <td>The value of the item</td>
+          <td>width</td>
+          <td>400</td>
+          <td>The width of the chart, in pixels. Set to 0 to auto-size</td>
           <td>
-            <input type="number" bind:value />
+            <input type="number" bind:value={width} />
           </td>
         </tr>
         <tr>
-          <td>BarChartItem: label</td>
+          <td>xlabel</td>
           <td />
-          <td>The label of the item to show along bottom of the chart</td>
+          <td>A label to display along the x-axis</td>
           <td>
-            <input type="text" bind:value={label} />
+            <input type="text" bind:value={xlabel} />
           </td>
         </tr>
         <tr>
-          <td>BarChartItem: color</td>
-          <td>A default color, chosen from a list</td>
-          <td>The color of the item</td>
+          <td>ylabel</td>
+          <td />
+          <td>A label to display along the y-axis</td>
+          <td>
+            <input type="text" bind:value={ylabel} />
+          </td>
+        </tr>
+        <tr>
+          <td>labels</td>
+          <td />
+          <td>The labels to display for each bar</td>
+          <td>
+            <input type="text" bind:value={labels} />
+          </td>
+        </tr>
+        <tr>
+          <td>data</td>
+          <td />
+          <td>The data to display as bars</td>
+          <td>
+            <input type="text" bind:value={data} />
+          </td>
+        </tr>
+        <tr>
+          <td>color</td>
+          <td />
+          <td>The color of the bars</td>
           <td>
             <input type="text" bind:value={color} />
+          </td>
+        </tr>
+        <tr>
+          <td>data 2</td>
+          <td />
+          <td>You can pass multiple data arrays in a series property</td>
+          <td>
+            <input type="text" bind:value={data2} />
+          </td>
+        </tr>
+        <tr>
+          <td>color 2</td>
+          <td />
+          <td>You can pass multiple colors in a series property</td>
+          <td>
+            <input type="text" bind:value={color2} />
+          </td>
+        </tr>
+        <tr>
+          <td>stepCount</td>
+          <td>2</td>
+          <td>The number of steps to show on the y-axis</td>
+          <td>
+            <input type="number" bind:value={stepCount} />
+          </td>
+        </tr>
+        <tr>
+          <td>showXaxis</td>
+          <td>true</td>
+          <td>set to true to show the x-axis line, or false to hide it</td>
+          <td>
+            <label>
+              <input type="checkbox" bind:checked={showXaxis} />
+              Show the x-axis
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>showYaxis</td>
+          <td>true</td>
+          <td>set to true to show the y-axis line, or false to hide it</td>
+          <td>
+            <label>
+              <input type="checkbox" bind:checked={showYaxis} />
+              Show the y-axis
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>showHlines</td>
+          <td>false</td>
+          <td>set to true to show horizontal gridlines</td>
+          <td>
+            <label>
+              <input type="checkbox" bind:checked={showHlines} />
+              Show horizontal gridlines
+            </label>
           </td>
         </tr>
       </tbody>
@@ -93,6 +220,6 @@ import { BarChart, BarChartItem } from "svelte-toolkit";
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode} </pre>
+    <pre>{exampleCode}</pre>
   </div>
 </div>
