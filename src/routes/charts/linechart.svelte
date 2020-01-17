@@ -100,7 +100,7 @@ import { LineChart } from "svelte-toolkit";
 
 <div class="container">
   <h1>Line Chart</h1>
-  <p>A simple SVG bar chart for displaying data.</p>
+  <p>A simple SVG line chart for displaying data.</p>
 
   <h2>Demo</h2>
   <div class="block">
@@ -174,7 +174,7 @@ import { LineChart } from "svelte-toolkit";
         <tr>
           <td>labels</td>
           <td />
-          <td>The labels to display for each bar</td>
+          <td>The labels to display for each line</td>
           <td>
             <input type="text" bind:value={labels} />
           </td>
@@ -183,7 +183,7 @@ import { LineChart } from "svelte-toolkit";
         <tr>
           <td>data</td>
           <td />
-          <td>The data to display as bars</td>
+          <td>The data to display as lines</td>
           <td>
             <input type="text" bind:value={data} />
           </td>
@@ -194,7 +194,7 @@ import { LineChart } from "svelte-toolkit";
         <tr>
           <td>color</td>
           <td />
-          <td>The color of the bars</td>
+          <td>The color of the lines</td>
           <td>
             <input type="text" bind:value={color} />
           </td>
