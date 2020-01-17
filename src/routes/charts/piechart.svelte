@@ -1,20 +1,57 @@
 <script>
-  import { PieChart, PieChartItem } from "svelte-toolkit";
+  import { PieChart } from "svelte-toolkit";
 
   let size = 200;
-  let radius = 100;
-  let value = 25;
-  let color = "";
+  let radius = 50;
+  let cutout = 0;
+  let labels = "Item1, Item2, Item3";
+  let data = "35, 25, 45";
+  let colors = "";
+
+  $: dataArray = buildDataArray(labels, data, colors);
 
   $: exampleCode = `
-import { PieChart, PieChartItem } from "svelte-toolkit";
+import { PieChart } from "svelte-toolkit";
 
-<PieChart size={${size}} radius={${radius}}>
-  <PieChartItem value="${value}"></PieChartItem>
-  <PieChartItem value="35"></PieChartItem>
-  <PieChartItem value="40"></PieChartItem>
-</PieChart>
+<PieChart
+  size={${size}}
+  radius={${radius}}
+  cutout={${cutout}}
+  data={[${dataArray.map(
+    d => `
+    {
+      label: "${d.label || ""}",
+      value: ${d.value || ""},
+      color: "${d.color || ""}"
+    }`
+  )}
+  ]} />
 `.trim();
+
+  function buildDataArray(theLabels, theData, theColors) {
+    const labelsArray = theLabels.split(/[\s,;]/).filter(Boolean);
+    const dataArray = theData.split(/[\s,;]/).filter(Boolean);
+    const colorsArray = theColors.split(/[\s,;]/).filter(Boolean);
+    var thing = dataArray.map((d, i) => {
+      return {
+        label: labelsArray[i] || "",
+        value: d || "",
+        color: colorsArray[i] || ""
+      };
+    });
+    return thing
+  }
+
+  function addRandom() {
+    const darray = data.split(/[\s,;]/).filter(Boolean);
+    darray.push(Math.floor(Math.random() * 100) + 1);
+    data = darray.join(", ");
+    const larray = labels.split(/[\s,;]/).filter(Boolean);
+    while (larray.length < darray.length) {
+      larray.push(`Item${larray.length}`);
+    }
+    labels = larray.join(", ");
+  }
 </script>
 
 <svelte:head>
@@ -27,11 +64,7 @@ import { PieChart, PieChartItem } from "svelte-toolkit";
 
   <h2>Demo</h2>
   <div class="block">
-    <PieChart {size} {radius}>
-      <PieChartItem {value} />
-      <PieChartItem value="35" />
-      <PieChartItem value="40" />
-    </PieChart>
+    <PieChart {size} {radius} {cutout} data={dataArray} />
   </div>
 
   <h2>Properties</h2>
@@ -43,6 +76,7 @@ import { PieChart, PieChartItem } from "svelte-toolkit";
           <th>Default</th>
           <th>Description</th>
           <th>Change</th>
+          <th />
         </tr>
       </thead>
       <tbody>
@@ -53,30 +87,54 @@ import { PieChart, PieChartItem } from "svelte-toolkit";
           <td>
             <input type="number" bind:value={size} />
           </td>
+          <td />
         </tr>
         <tr>
           <td>radius</td>
-          <td>100</td>
-          <td>The size of the chart's radius, in pixels</td>
+          <td>50</td>
+          <td>The size of the chart's radius as a percentage of size</td>
           <td>
             <input type="number" bind:value={radius} />
           </td>
-        </tr>
-        <tr>
-          <td>PieChartItem: value</td>
           <td />
-          <td>The value of the item</td>
+        </tr>
+        <tr>
+          <td>cutout</td>
+          <td>0</td>
+          <td>The size of the chart's cutout as a percentage of size</td>
           <td>
-            <input type="number" bind:value />
+            <input type="number" bind:value={cutout} />
+          </td>
+          <td />
+        </tr>
+        <tr>
+          <td>labels</td>
+          <td />
+          <td>The labels to display for each segment</td>
+          <td>
+            <input type="text" bind:value={labels} />
+          </td>
+          <td />
+        </tr>
+        <tr>
+          <td>values</td>
+          <td />
+          <td>The value to display for each segment</td>
+          <td>
+            <input type="text" bind:value={data} />
+          </td>
+          <td>
+            <button on:click={addRandom}>++</button>
           </td>
         </tr>
         <tr>
-          <td>PieChartItem: color</td>
-          <td>A default color, chosen from a list</td>
-          <td>The color of the item</td>
+          <td>colors</td>
+          <td />
+          <td>The color to display for each segment</td>
           <td>
-            <input type="text" bind:value={color} />
+            <input type="text" bind:value={colors} />
           </td>
+          <td />
         </tr>
       </tbody>
     </table>
@@ -84,6 +142,6 @@ import { PieChart, PieChartItem } from "svelte-toolkit";
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode} </pre>
+    <pre>{exampleCode}</pre>
   </div>
 </div>
