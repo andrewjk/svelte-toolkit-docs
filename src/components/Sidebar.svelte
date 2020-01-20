@@ -67,6 +67,7 @@
     { group: "Charts", title: "Bar Chart" },
     { group: "Charts", title: "Line Chart" },
     { group: "Charts", title: "Pie Chart" },
+    { group: "Charts", title: "Scatter Chart" },
     { group: "Charts", title: "Sparkline" },
     { group: "Icons", title: "Icons" }
   ];

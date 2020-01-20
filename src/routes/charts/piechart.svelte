@@ -32,14 +32,13 @@ import { PieChart } from "svelte-toolkit";
     const labelsArray = theLabels.split(/[\s,;]/).filter(Boolean);
     const dataArray = theData.split(/[\s,;]/).filter(Boolean);
     const colorsArray = theColors.split(/[\s,;]/).filter(Boolean);
-    var thing = dataArray.map((d, i) => {
+    return dataArray.map((d, i) => {
       return {
         label: labelsArray[i] || "",
         value: d || "",
         color: colorsArray[i] || ""
       };
     });
-    return thing
   }
 
   function addRandom() {
