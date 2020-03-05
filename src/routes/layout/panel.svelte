@@ -21,7 +21,9 @@ import { Panel } from "svelte-toolkit";
   </p>
 
   <h2>Demo</h2>
+  <div class="block">
     <Panel {type}>This is a panel.</Panel>
+  </div>
 
   <h2>Properties</h2>
   <div class="block">

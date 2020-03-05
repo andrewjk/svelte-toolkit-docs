@@ -39,7 +39,7 @@
       bind:value={requiredValue}
       name="field1"
       {validator}
-      required={true}
+      required
       minlength="2"
       maxlength="10"
       friendlyName="Required field">

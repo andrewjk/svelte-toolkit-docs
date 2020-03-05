@@ -45,27 +45,29 @@ import { Table } from "svelte-toolkit";
   <p>The table can be used to present data.</p>
 
   <h2>Demo</h2>
-  <Table {type}>
-    <TableHeader>
-      <TableHeaderCell>Name</TableHeaderCell>
-      <TableHeaderCell>Title</TableHeaderCell>
-    </TableHeader>
-    <TableBody>
-      {#each countries.filter(c => c.name[0] === 'A') as item}
+  <div class="block">
+    <Table {type}>
+      <TableHeader>
+        <TableHeaderCell>Name</TableHeaderCell>
+        <TableHeaderCell>Title</TableHeaderCell>
+      </TableHeader>
+      <TableBody>
+        {#each countries.filter(c => c.name[0] === 'A') as item}
+          <TableRow>
+            <TableCell>{item.name}</TableCell>
+            <TableCell>{item.title}</TableCell>
+          </TableRow>
+        {/each}
         <TableRow>
-          <TableCell>{item.name}</TableCell>
-          <TableCell>{item.title}</TableCell>
+          <TableCell colspan="2">...</TableCell>
         </TableRow>
-      {/each}
-      <TableRow>
-        <TableCell colspan="2">...</TableCell>
-      </TableRow>
-    </TableBody>
-    <TableFooter>
-      <TableCell>Total</TableCell>
-      <TableCell>{countries.length}</TableCell>
-    </TableFooter>
-  </Table>
+      </TableBody>
+      <TableFooter>
+        <TableCell>Total</TableCell>
+        <TableCell>{countries.length}</TableCell>
+      </TableFooter>
+    </Table>
+  </div>
 
   <h2>Properties</h2>
   <div class="block">

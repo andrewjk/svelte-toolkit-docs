@@ -61,7 +61,7 @@ import { DropDown, DropDownMenuItem } from "svelte-toolkit";
     {#if imageButton}
       <DropDown {buttonType} {buttonSize} {position} {alignment} bind:expanded>
         <div slot="element">
-          <ImageButton hasPopup={true} on:click={e => (expanded = !expanded)}>
+          <ImageButton hasPopup on:click={e => (expanded = !expanded)}>
             <ChevronDown />
           </ImageButton>
         </div>
