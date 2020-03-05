@@ -79,14 +79,14 @@
   </PageHeader>
 
   <PageBody>
-    <Grid spaced={true}>
-      <GridItem smwidth="1-2" mdwidth="1-4" lgwidth="1-6">
-        <Container padded={true}>
+    <Grid spaced>
+      <GridItem smspan="6" mdspan="3" lgspan="2">
+        <Container padded>
           <Sidebar />
         </Container>
       </GridItem>
-      <GridItem smwidth="1-2" mdwidth="3-4" lgwidth="5-6">
-        <Container padded={true}>
+      <GridItem smspan="6" mdspan="9" lgspan="10">
+        <Container padded>
           <slot />
         </Container>
       </GridItem>
