@@ -19,6 +19,7 @@
     { group: "Layout", title: "Grid" },
     { group: "Layout", title: "Level" },
     { group: "Layout", title: "Panel" },
+    { group: "Layout", title: "Stack" },
     { group: "Layout", title: "Table" },
     { group: "Components", title: "Accordion" },
     { group: "Components", title: "Alert" },
