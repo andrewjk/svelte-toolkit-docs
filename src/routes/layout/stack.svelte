@@ -2,13 +2,13 @@
   import { Stack, StackItem } from "svelte-toolkit";
 
   let direction = "vertical";
-  let width = "grow";
+  let size = "auto";
 
   $: exampleCode = `
 import { Stack, StackItem } from "svelte-toolkit";
 
 <Stack direction="${direction}">
-  <StackItem width="${width}">
+  <StackItem size="${size}">
     Item 1
   </StackItem>
   <StackItem>Item 2</StackItem>
@@ -34,7 +34,7 @@ import { Stack, StackItem } from "svelte-toolkit";
   <h2>Demo</h2>
   <div class="block">
     <Stack {direction}>
-      <StackItem {width}>
+      <StackItem {size}>
         <div class="inner-panel">Item 1</div>
       </StackItem>
       <StackItem>
@@ -70,13 +70,13 @@ import { Stack, StackItem } from "svelte-toolkit";
           </td>
         </tr>
         <tr>
-          <td>StackItem width</td>
-          <td>grow</td>
+          <td>StackItem size</td>
+          <td>auto</td>
           <td>grow, auto</td>
           <td>
-            <select bind:value={width}>
-              <option>grow</option>
+            <select bind:value={size}>
               <option>auto</option>
+              <option>grow</option>
             </select>
           </td>
         </tr>
