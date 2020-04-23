@@ -7,11 +7,13 @@
   let reset = false;
   let disabled = false;
   let loading = false;
+  let rounded = false;
+  let outlined = false;
 
   $: exampleCode = `
 import { Button } from "svelte-toolkit";
 
-<Button type="${type}" size="${size}" submit={${submit}} reset={${reset}} disabled={${disabled}} loading={${loading}}>
+<Button type="${type}" size="${size}" submit={${submit}} reset={${reset}} disabled={${disabled}} loading={${loading}} rounded={${rounded}} outlined={${outlined}}>
   Click me
 </Button>`.trim();
 
@@ -63,6 +65,8 @@ import { Button } from "svelte-toolkit";
       {reset}
       {disabled}
       {loading}
+      {rounded}
+      {outlined}
       on:click={handleClick}>
       Click me
     </Button>
@@ -154,6 +158,32 @@ import { Button } from "svelte-toolkit";
             <label>
               <input type="checkbox" bind:checked={loading} />
               Show loading animation
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>rounded</td>
+          <td>false</td>
+          <td>
+            Set to true for rounded borders
+          </td>
+          <td>
+            <label>
+              <input type="checkbox" bind:checked={rounded} />
+              Rounded borders
+            </label>
+          </td>
+        </tr>
+        <tr>
+          <td>outlined</td>
+          <td>false</td>
+          <td>
+            Set to true for an outlined button
+          </td>
+          <td>
+            <label>
+              <input type="checkbox" bind:checked={outlined} />
+              Outlined button
             </label>
           </td>
         </tr>
