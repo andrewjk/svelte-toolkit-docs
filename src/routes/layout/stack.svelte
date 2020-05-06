@@ -18,8 +18,8 @@ import { Stack, StackItem } from "svelte-toolkit";
 </script>
 
 <style>
-  .block {
-    height: 400px;
+  .inner-panel {
+    height: 100%;
   }
 </style>
 
@@ -32,7 +32,7 @@ import { Stack, StackItem } from "svelte-toolkit";
   <p>Stacks allow you to lay items out vertically or horizontally.</p>
 
   <h2>Demo</h2>
-  <div class="block">
+  <div class="block" style={direction === 'vertical' ? 'height: 280px' : null}>
     <Stack {direction}>
       <StackItem {size}>
         <div class="inner-panel">Item 1</div>
