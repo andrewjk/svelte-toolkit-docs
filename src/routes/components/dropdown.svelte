@@ -10,7 +10,7 @@
   let buttonType = "info";
   let buttonSize = "medium";
   let position = "below";
-  let alignment = "left";
+  let alignment = "start";
 
   let imageButton = false;
   let expanded = false;
@@ -141,13 +141,13 @@ import { DropDown, DropDownMenuItem } from "svelte-toolkit";
         </tr>
         <tr>
           <td>alignment</td>
-          <td>left</td>
-          <td>left, center, right</td>
+          <td>start</td>
+          <td>start, center, end</td>
           <td>
             <select bind:value={alignment}>
-              <option>left</option>
+              <option>start</option>
               <option>center</option>
-              <option>right</option>
+              <option>end</option>
             </select>
           </td>
         </tr>
