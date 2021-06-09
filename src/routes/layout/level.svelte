@@ -34,8 +34,8 @@
   </div>
 
   <p>
-    Add LevelItems with position="start" to align them to the start of the
-    level, or position="end" to align them with the end of the level:
+    Add LevelItems with <code>position="start"</code> to align them to the start
+    of the level, or <code>position="end"</code> to align them with the end of the level:
   </p>
   <div class="block">
     <div class="outer-panel">
@@ -73,6 +73,27 @@
         </LevelItem>
         <LevelItem position="end">
           <div class="inner-panel">An item at the end.</div>
+        </LevelItem>
+      </Level>
+    </div>
+  </div>
+
+  <p>
+    Levels can have a <code>spaced</code> attribute to put some space between
+    the items, and a <code>collapse</code> attribute to display items vertically
+    on small screens:
+  </p>
+  <div class="block">
+    <div class="outer-panel">
+      <Level spaced collapse>
+        <LevelItem>
+          <div class="inner-panel">1</div>
+        </LevelItem>
+        <LevelItem>
+          <div class="inner-panel">2</div>
+        </LevelItem>
+        <LevelItem>
+          <div class="inner-panel">3</div>
         </LevelItem>
       </Level>
     </div>
