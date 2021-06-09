@@ -80,12 +80,12 @@
 
   <PageBody>
     <Grid spaced>
-      <GridItem smspan="6" mdspan="3" lgspan="2">
+      <GridItem span="6" mdspan="3" lgspan="2">
         <Container padded>
           <Sidebar />
         </Container>
       </GridItem>
-      <GridItem smspan="6" mdspan="9" lgspan="10">
+      <GridItem span="6" mdspan="9" lgspan="10">
         <Container padded>
           <slot />
         </Container>
