@@ -34,6 +34,8 @@
     { group: "Components", title: "Data Table" },
     { group: "Components", title: "Date Picker" },
     { group: "Components", title: "Drop Down" },
+    { group: "Components", title: "Drop Down Button" },
+    { group: "Components", title: "Drop Down Link" },
     { group: "Components", title: "Focus Group" },
     { group: "Components", title: "Image Button" },
     { group: "Components", title: "Notification" },
