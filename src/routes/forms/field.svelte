@@ -4,11 +4,12 @@
   let label = "Your location:";
   let name = "location";
   let value = "";
+  let info = "";
 
   $: exampleCode = `
 import { Field, TextBox } from "svelte-toolkit";
 
-<Field label="${label}" name="${name}" bind:value>
+<Field label="${label}" name="${name}" bind:value info="${info}">
   <TextBox bind:value />
 </Field>`.trim();
 </script>
@@ -25,7 +26,7 @@ import { Field, TextBox } from "svelte-toolkit";
 
   <h2>Demo</h2>
   <div class="block">
-    <Field {label} name="field" bind:value>
+    <Field {label} name="field" bind:value {info}>
       <TextBox />
     </Field>
   </div>
@@ -67,6 +68,14 @@ import { Field, TextBox } from "svelte-toolkit";
           <td>The value held in this field's control</td>
           <td>
             <input type="text" bind:value />
+          </td>
+        </tr>
+        <tr>
+          <td>info</td>
+          <td />
+          <td>Some informational text to display underneath the field</td>
+          <td>
+            <input type="text" bind:value={info} />
           </td>
         </tr>
         <tr>
