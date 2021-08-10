@@ -33,7 +33,7 @@
     "svelte": "^3.42.1",
     "svelte-loader": "^2.13.6",
     "svelte-preprocess": "^4.7.4",
-    "svelte-toolkit": "^0.5.0",
+    "svelte-toolkit": "^0.6.0",
     "webpack": "^4.46.0"
   }
 }
