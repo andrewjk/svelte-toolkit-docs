@@ -54,8 +54,8 @@
       {validator}
       regex={/^\d{4}$/}
       friendlyName="Regex field">
-      <label slot="label">Please enter four numbers:</label>
-      <TextBox />
+      <label for="four-numbers-input" slot="label">Please enter four numbers:</label>
+      <TextBox id="four-numbers-input" />
     </Field>
   </div>
   <div class="block">
@@ -65,8 +65,8 @@
       bind:value={password1Value}
       {validator}
       friendlyName="Password">
-      <label slot="label">Enter two fields that are the same:</label>
-      <TextBox contentType="password" />
+      <label for="two-passwords-input" slot="label">Enter two fields that are the same:</label>
+      <TextBox contentType="password" id="two-passwords-input" />
     </Field>
     <Field
       name="field4"
