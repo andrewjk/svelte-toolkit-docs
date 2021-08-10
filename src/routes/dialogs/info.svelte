@@ -1,5 +1,15 @@
 <script>
-  import { Button, showInfo } from "svelte-toolkit";
+  import {
+    Button,
+    showInfo,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   export let header = "Header";
   export let content =
@@ -53,70 +63,72 @@ const result = await showInfo({
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>header</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>header</TableCell>
           <td />
-          <td>
+          <TableCell>
             The header to display in the dialog, which can also come from slot
             content
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="text" bind:value={header} />
-          </td>
-        </tr>
-        <tr>
-          <td>content</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>content</TableCell>
           <td />
-          <td>
+          <TableCell>
             The content to display in the dialog, which can also come from slot
             content
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="text" bind:value={content} />
-          </td>
-        </tr>
-        <tr>
-          <td>buttonContent</td>
-          <td>OK</td>
-          <td>The content to display in the dialog's button</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>buttonContent</TableCell>
+          <TableCell>OK</TableCell>
+          <TableCell>The content to display in the dialog's button</TableCell>
+          <TableCell>
             <input type="text" bind:value={buttonContent} />
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Events</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Args</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>closed</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Args</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>closed</TableCell>
           <td />
-        </tr>
-      </tbody>
-    </table>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

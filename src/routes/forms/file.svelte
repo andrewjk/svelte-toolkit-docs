@@ -1,5 +1,14 @@
 <script>
-  import { File } from "svelte-toolkit";
+  import {
+    File,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let name = "";
   let accept = "";
@@ -29,49 +38,51 @@ import { File } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>name</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>name</TableCell>
           <td />
-          <td>The name of the field entered into the checkbox</td>
-          <td>
+          <TableCell>The name of the field entered into the checkbox</TableCell>
+          <TableCell>
             <input type="text" bind:value={name} />
-          </td>
-        </tr>
-        <tr>
-          <td>accept</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>accept</TableCell>
           <td />
-          <td>
+          <TableCell>
             The type of files that can be selected, e.g. "audio/*", "video/*",
             "image/*", or a media type
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="text" bind:value={accept} />
-          </td>
-        </tr>
-        <tr>
-          <td>placeholder</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>placeholder</TableCell>
           <td />
-          <td>Placeholder text to show when no file has been selected.</td>
-          <td>
+          <TableCell>Placeholder text to show when no file has been selected.</TableCell>
+          <TableCell>
             <input type="text" bind:value={placeholder} />
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

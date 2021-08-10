@@ -2,6 +2,13 @@
   import {
     DropDownLink,
     DropDownMenuItem,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
   } from "svelte-toolkit";
   import { items } from "../../stores/items";
 
@@ -49,65 +56,67 @@ import { DropDownLink, DropDownMenuItem } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>position</td>
-          <td>below</td>
-          <td>below, above</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>position</TableCell>
+          <TableCell>below</TableCell>
+          <TableCell>below, above</TableCell>
+          <TableCell>
             <select bind:value={position}>
               <option>below</option>
               <option>above</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <td>alignment</td>
-          <td>start</td>
-          <td>start, center, end</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>alignment</TableCell>
+          <TableCell>start</TableCell>
+          <TableCell>start, center, end</TableCell>
+          <TableCell>
             <select bind:value={alignment}>
               <option>start</option>
               <option>center</option>
               <option>end</option>
             </select>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Slots</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>element</td>
-          <td>Replace the button with components of your choice.</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>element</TableCell>
+          <TableCell>Replace the button with components of your choice.</TableCell>
           <td />
-        </tr>
-      </tbody>
-    </table>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

@@ -1,5 +1,15 @@
 <script>
-  import { Switcher, SwitcherItem } from "svelte-toolkit";
+  import {
+    Switcher,
+    SwitcherItem,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
   import { items } from "../../stores/items";
 
   let index = 0;
@@ -46,52 +56,54 @@ import { Switcher, SwitcherItem } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>index</td>
-          <td>0</td>
-          <td>the index of the active item</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>index</TableCell>
+          <TableCell>0</TableCell>
+          <TableCell>the index of the active item</TableCell>
+          <TableCell>
             <input type="number" bind:value={index} />
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Events</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Args</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>changed</td>
-          <td>index: the index of the active item</td>
-        </tr>
-        <tr>
-          <td>activeChange (SwitcherItem)</td>
-          <td>active: whether the changed item is active</td>
-        </tr>
-      </tbody>
-    </table>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Args</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>changed</TableCell>
+          <TableCell>index: the index of the active item</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>activeChange (SwitcherItem)</TableCell>
+          <TableCell>active: whether the changed item is active</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

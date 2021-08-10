@@ -1,5 +1,14 @@
 <script>
-  import { TextBox } from "svelte-toolkit";
+  import {
+    TextBox,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let name = "field1";
   let value = "";
@@ -30,29 +39,29 @@ import { TextBox } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>name</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>name</TableCell>
           <td />
-          <td>The name of the field entered into the textbox</td>
-          <td>
+          <TableCell>The name of the field entered into the textbox</TableCell>
+          <TableCell>
             <input type="text" bind:value={name} />
-          </td>
-        </tr>
-        <tr>
-          <td>type</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>type</TableCell>
           <td />
-          <td>primary, info, success, warning, or danger</td>
-          <td>
+          <TableCell>primary, info, success, warning, or danger</TableCell>
+          <TableCell>
             <select bind:value={type}>
               <option>-</option>
               <option>primary</option>
@@ -61,13 +70,13 @@ import { TextBox } from "svelte-toolkit";
               <option>warning</option>
               <option>danger</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <td>contentType</td>
-          <td>text</td>
-          <td>text, password, email, url, tel</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>contentType</TableCell>
+          <TableCell>text</TableCell>
+          <TableCell>text, password, email, url, tel</TableCell>
+          <TableCell>
             <select bind:value={contentType}>
               <option>text</option>
               <option>password</option>
@@ -76,47 +85,47 @@ import { TextBox } from "svelte-toolkit";
               <option>tel</option>
               <option>file</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <td>value</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>value</TableCell>
           <td />
-          <td>The value entered into the textbox</td>
-          <td>
+          <TableCell>The value entered into the textbox</TableCell>
+          <TableCell>
             <input type="text" bind:value />
-          </td>
-        </tr>
-        <tr>
-          <td>placeholder</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>placeholder</TableCell>
           <td />
-          <td>Placeholder text to show when the textbox is empty.</td>
-          <td>
+          <TableCell>Placeholder text to show when the textbox is empty.</TableCell>
+          <TableCell>
             <input type="text" bind:value={placeholder} />
-          </td>
-        </tr>
-        <tr>
-          <td>maxlength</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>maxlength</TableCell>
           <td />
-          <td>
+          <TableCell>
             The maximum length of text that can be entered into the textbox
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="number" bind:value={maxlength} />
-          </td>
-        </tr>
-        <tr>
-          <td>readonly</td>
-          <td>false</td>
-          <td>Set to true to prevent the field from taking input</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>readonly</TableCell>
+          <TableCell>false</TableCell>
+          <TableCell>Set to true to prevent the field from taking input</TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={readonly} />
               Set readonly
             </label>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>

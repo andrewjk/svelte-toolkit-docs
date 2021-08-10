@@ -1,5 +1,14 @@
 <script>
-  import { Palette } from "svelte-toolkit";
+  import {
+    Palette,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let value = "green";
 
@@ -24,42 +33,44 @@ import { Palette } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>value</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>value</TableCell>
           <td />
-          <td>
+          <TableCell>
             the value of the color that is selected, which can be hex, rgb() or
             a named CSS color
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="text" bind:value />
-          </td>
-        </tr>
-        <tr>
-          <td>standardColors</td>
-          <td>an array of generic standard colors</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>standardColors</TableCell>
+          <TableCell>an array of generic standard colors</TableCell>
+          <TableCell>
             you can pass in an array of custom standard colors that the user can
             select
-          </td>
+          </TableCell>
           <td />
-        </tr>
-      </tbody>
-    </table>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

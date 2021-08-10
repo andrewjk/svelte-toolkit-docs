@@ -1,5 +1,14 @@
 <script>
-  import { CoverImage } from "svelte-toolkit";
+  import {
+    CoverImage,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let src = "/images/image1.jpg";
   let position = "";
@@ -33,84 +42,86 @@ import { CoverImage } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>src</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>src</TableCell>
           <td />
-          <td>The image source as a URL</td>
-          <td>
+          <TableCell>The image source as a URL</TableCell>
+          <TableCell>
             <input type="text" bind:value={src} />
-          </td>
-        </tr>
-        <tr>
-          <td>position</td>
-          <td>50% 50%</td>
-          <td>Overrides the background-position style</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>position</TableCell>
+          <TableCell>50% 50%</TableCell>
+          <TableCell>Overrides the background-position style</TableCell>
+          <TableCell>
             <input type="text" bind:value={position} />
-          </td>
-        </tr>
-        <tr>
-          <td>repeat</td>
-          <td>no-repeat</td>
-          <td>Overrides the background-repeat style</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>repeat</TableCell>
+          <TableCell>no-repeat</TableCell>
+          <TableCell>Overrides the background-repeat style</TableCell>
+          <TableCell>
             <input type="text" bind:value={repeat} />
-          </td>
-        </tr>
-        <tr>
-          <td>size</td>
-          <td>cover</td>
-          <td>Overrides the background-size style</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>size</TableCell>
+          <TableCell>cover</TableCell>
+          <TableCell>Overrides the background-size style</TableCell>
+          <TableCell>
             <input type="text" bind:value={size} />
-          </td>
-        </tr>
-        <tr>
-          <td>height</td>
-          <td>0</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>height</TableCell>
+          <TableCell>0</TableCell>
+          <TableCell>
             You MUST provide a height for your image, either via this property
             or by CSS styling
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="text" bind:value={height} />
-          </td>
-        </tr>
-        <tr>
-          <td>width</td>
-          <td>100%</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>width</TableCell>
+          <TableCell>100%</TableCell>
+          <TableCell>
             You can also provide a width for your image, either via this
             property or by CSS styling
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="text" bind:value={width} />
-          </td>
-        </tr>
-        <tr>
-          <td>alt</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>alt</TableCell>
           <td />
-          <td>Alternative text used to describe this image to a screen-reader</td>
-          <td>
+          <TableCell>Alternative text used to describe this image to a screen-reader</TableCell>
+          <TableCell>
             <input type="text" bind:value={alt} />
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

@@ -1,5 +1,14 @@
 <script>
-  import { Slider } from "svelte-toolkit";
+  import {
+    Slider,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let value = 50;
   let total = 100;
@@ -26,38 +35,40 @@ import { Slider } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>value</td>
-          <td>0</td>
-          <td>0 to 100 (or the value of total, below)</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>value</TableCell>
+          <TableCell>0</TableCell>
+          <TableCell>0 to 100 (or the value of total, below)</TableCell>
+          <TableCell>
             <input type="number" bind:value />
-          </td>
-        </tr>
-        <tr>
-          <td>total</td>
-          <td>100</td>
-          <td></td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>total</TableCell>
+          <TableCell>100</TableCell>
+          <TableCell></TableCell>
+          <TableCell>
             <input type="number" bind:value={total} />
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

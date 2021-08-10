@@ -1,5 +1,14 @@
 <script>
-  import { Badge } from "svelte-toolkit";
+  import {
+    Badge,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let type = "info";
   let content = "5";
@@ -30,21 +39,21 @@ Notifications <Badge content="${content}" type="${type}" />`.trim();
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>type</td>
-          <td>info</td>
-          <td>primary, info, success, warning, or danger</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>type</TableCell>
+          <TableCell>info</TableCell>
+          <TableCell>primary, info, success, warning, or danger</TableCell>
+          <TableCell>
             <select bind:value={type}>
               <option>-</option>
               <option>primary</option>
@@ -53,21 +62,21 @@ Notifications <Badge content="${content}" type="${type}" />`.trim();
               <option>warning</option>
               <option>danger</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <td>content</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>content</TableCell>
           <td />
-          <td>
+          <TableCell>
             The content to display in the badge, which can also come from slot
             content
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="text" bind:value={content} />
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>

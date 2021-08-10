@@ -1,5 +1,15 @@
 <script>
-  import { Grid, GridItem } from "svelte-toolkit";
+  import {
+    Grid,
+    GridItem,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let spaced = false;
   let cols = 6;
@@ -87,126 +97,128 @@ import { Grid, GridItem } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>spaced</td>
-          <td>false</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>spaced</TableCell>
+          <TableCell>false</TableCell>
+          <TableCell>
             Whether there should be space between the rows and columns of the
             grid.
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={spaced} />
               Add space
             </label>
-          </td>
-        </tr>
-        <tr>
-          <td>cols</td>
-          <td>12</td>
-          <td>The number of columns in the grid (up to 12).</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>cols</TableCell>
+          <TableCell>12</TableCell>
+          <TableCell>The number of columns in the grid (up to 12).</TableCell>
+          <TableCell>
             <input type="number" bind:value={cols} />
-          </td>
-        </tr>
-        <tr>
-          <td>smcols</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>smcols</TableCell>
           <td />
-          <td>The number of columns in the grid on a small screen (and up).</td>
-          <td>
+          <TableCell>The number of columns in the grid on a small screen (and up).</TableCell>
+          <TableCell>
             <input type="number" bind:value={smcols} />
-          </td>
-        </tr>
-        <tr>
-          <td>mdcols</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>mdcols</TableCell>
           <td />
-          <td>The number of columns in the grid on a medium screen (and up).</td>
-          <td>
+          <TableCell>The number of columns in the grid on a medium screen (and up).</TableCell>
+          <TableCell>
             <input type="number" bind:value={mdcols} />
-          </td>
-        </tr>
-        <tr>
-          <td>lgcols</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>lgcols</TableCell>
           <td />
-          <td>The number of columns in the grid on a large screen (and up).</td>
-          <td>
+          <TableCell>The number of columns in the grid on a large screen (and up).</TableCell>
+          <TableCell>
             <input type="number" bind:value={lgcols} />
-          </td>
-        </tr>
-        <tr>
-          <td>xlcols</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>xlcols</TableCell>
           <td />
-          <td>The number of columns in the grid on an extra large screen (and up).</td>
-          <td>
+          <TableCell>The number of columns in the grid on an extra large screen (and up).</TableCell>
+          <TableCell>
             <input type="number" bind:value={xlcols} />
-          </td>
-        </tr>
-        <tr>
-          <td>GridItem span</td>
-          <td>1</td>
-          <td>The number of columns to span with a GridItem (up to 12).</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>GridItem span</TableCell>
+          <TableCell>1</TableCell>
+          <TableCell>The number of columns to span with a GridItem (up to 12).</TableCell>
+          <TableCell>
             <input type="number" bind:value={span} />
-          </td>
-        </tr>
-        <tr>
-          <td>GridItem smspan</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>GridItem smspan</TableCell>
           <td />
-          <td>
+          <TableCell>
             The number of columns to span with a GridItem on a small screen (and up).
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="number" bind:value={smspan} />
-          </td>
-        </tr>
-        <tr>
-          <td>GridItem mdspan</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>GridItem mdspan</TableCell>
           <td />
-          <td>
+          <TableCell>
             The number of columns to span with a GridItem on a medium screen (and up).
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="number" bind:value={mdspan} />
-          </td>
-        </tr>
-        <tr>
-          <td>GridItem lgspan</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>GridItem lgspan</TableCell>
           <td />
-          <td>
+          <TableCell>
             The number of columns to span with a GridItem on a large screen (and up).
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="number" bind:value={lgspan} />
-          </td>
-        </tr>
-        <tr>
-          <td>GridItem xlspan</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>GridItem xlspan</TableCell>
           <td />
-          <td>
+          <TableCell>
             The number of columns to span with a GridItem on an extra large
             screen (and up).
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="number" bind:value={xlspan} />
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 
   <h2>Nested Layout</h2>

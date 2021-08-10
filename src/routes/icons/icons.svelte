@@ -12,7 +12,8 @@
     Cross,
     Check,
     Plus,
-    Minus
+    Minus,
+    Panel,
   } from "svelte-toolkit";
 
   $: exampleCode = `
@@ -86,6 +87,8 @@ import {
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

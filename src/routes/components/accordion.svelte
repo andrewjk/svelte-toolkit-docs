@@ -1,5 +1,15 @@
 <script>
-  import { Accordion, AccordionItem } from "svelte-toolkit";
+  import {
+    Accordion,
+    AccordionItem,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
   import { items } from "../../stores/items";
 
   let value = -1;
@@ -53,70 +63,72 @@ import { Accordion, AccordionItem } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>value</td>
-          <td>-1</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>value</TableCell>
+          <TableCell>-1</TableCell>
+          <TableCell>
             the index of the expanded item, or an array of indices if multiple
             is true (see below)
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             {#if multiple}
               <input type="text" bind:value />
             {:else}
               <input type="number" bind:value />
             {/if}
-          </td>
-        </tr>
-        <tr>
-          <td>multiple</td>
-          <td>false</td>
-          <td>set to true to allow multiple items to be expanded at once</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>multiple</TableCell>
+          <TableCell>false</TableCell>
+          <TableCell>set to true to allow multiple items to be expanded at once</TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={multiple} />
               Allow multiple expanded items
             </label>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Events</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Args</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>change</td>
-          <td>value: the index of the expanded item</td>
-        </tr>
-        <tr>
-          <td>expandedChange (AccordionItem)</td>
-          <td>expanded: whether the changed item is expanded</td>
-        </tr>
-      </tbody>
-    </table>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Args</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>change</TableCell>
+          <TableCell>value: the index of the expanded item</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>expandedChange (AccordionItem)</TableCell>
+          <TableCell>expanded: whether the changed item is expanded</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

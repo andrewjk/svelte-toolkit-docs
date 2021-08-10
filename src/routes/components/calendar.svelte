@@ -1,5 +1,14 @@
 <script>
-  import { Calendar } from "svelte-toolkit";
+  import {
+    Calendar,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let selectable = false;
   let value = new Date();
@@ -54,58 +63,60 @@ import { Calendar } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>startOfWeek</td>
-          <td>1</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>startOfWeek</TableCell>
+          <TableCell>1</TableCell>
+          <TableCell>
             the day of the week to start with, where 0 = Sunday, 1 = Monday etc
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="number" bind:value={startOfWeek} />
-          </td>
-        </tr>
-        <tr>
-          <td>selectable</td>
-          <td>false</td>
-          <td>set to true to allow the user to select a day</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>selectable</TableCell>
+          <TableCell>false</TableCell>
+          <TableCell>set to true to allow the user to select a day</TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={selectable} />
               Allow selecting
             </label>
-          </td>
-        </tr>
-        <tr>
-          <td>value</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>value</TableCell>
           <td />
-          <td>the value of the selected date (if selectable is true)</td>
+          <TableCell>the value of the selected date (if selectable is true)</TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>events</td>
+        </TableRow>
+        <TableRow>
+          <TableCell>events</TableCell>
           <td />
-          <td>
+          <TableCell>
             an array of events to display in the calendar, where each event can
             have the properties date, content and color
-          </td>
+          </TableCell>
           <td />
-        </tr>
-      </tbody>
-    </table>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

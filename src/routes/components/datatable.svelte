@@ -5,7 +5,14 @@
     DataTableHeader,
     DataTableColumn,
     TabGroup,
-    TabItem
+    TabItem,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
   } from "svelte-toolkit";
   import { countries } from "../../stores/countries";
 
@@ -193,117 +200,119 @@ import { DataTable, DataTableColumn } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>items</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>items</TableCell>
           <td />
-          <td>
+          <TableCell>
             An array of items to show in the table. When using this property,
             the table will handle sorting and paging
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>data</td>
+        </TableRow>
+        <TableRow>
+          <TableCell>data</TableCell>
           <td />
-          <td>
+          <TableCell>
             An array of items to show in the table. When using this property,
             you will need to handle sorting and paging yourself
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>loading</td>
-          <td>false</td>
-          <td>
+        </TableRow>
+        <TableRow>
+          <TableCell>loading</TableCell>
+          <TableCell>false</TableCell>
+          <TableCell>
             Whether the data property is being loaded. If true, the `loading`
             slot will be displayed
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>keyField</td>
+        </TableRow>
+        <TableRow>
+          <TableCell>keyField</TableCell>
           <td />
-          <td>The name of the field to use for keying items for updates</td>
-          <td>
+          <TableCell>The name of the field to use for keying items for updates</TableCell>
+          <TableCell>
             <input type="text" bind:value={keyField} />
-          </td>
-        </tr>
-        <tr>
-          <td>pageNumber</td>
-          <td>1</td>
-          <td>The current page number</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>pageNumber</TableCell>
+          <TableCell>1</TableCell>
+          <TableCell>The current page number</TableCell>
+          <TableCell>
             <input type="number" bind:value={pageNumber} />
-          </td>
-        </tr>
-        <tr>
-          <td>pageSize</td>
-          <td>10</td>
-          <td>The number of items displayed on each page</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>pageSize</TableCell>
+          <TableCell>10</TableCell>
+          <TableCell>The number of items displayed on each page</TableCell>
+          <TableCell>
             <input type="number" bind:value={pageSize} />
-          </td>
-        </tr>
-        <tr>
-          <td>itemCount</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>itemCount</TableCell>
           <td />
-          <td>The total number of items</td>
-          <td>
+          <TableCell>The total number of items</TableCell>
+          <TableCell>
             <input type="number" bind:value={itemCount} />
-          </td>
-        </tr>
-        <tr>
-          <td>type</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>type</TableCell>
           <td />
-          <td>line</td>
-          <td>
+          <TableCell>line</TableCell>
+          <TableCell>
             <select bind:value={type}>
               <option>-</option>
               <option>line</option>
             </select>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Events</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Args</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>sort</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Args</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>sort</TableCell>
+          <TableCell>
             field: the name of the field that was sorted; sortDirection: "asc"
             or "desc"
-          </td>
-        </tr>
-        <tr>
-          <td>page</td>
-          <td>value: the number of the current page</td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>page</TableCell>
+          <TableCell>value: the number of the current page</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

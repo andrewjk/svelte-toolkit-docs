@@ -1,5 +1,14 @@
 <script>
-  import { Tag } from "svelte-toolkit";
+  import {
+    Tag,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let type = "info";
   let content = "Awesome!";
@@ -31,21 +40,21 @@ import { Tag } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>type</td>
-          <td>info</td>
-          <td>primary, info, success, warning, or danger</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>type</TableCell>
+          <TableCell>info</TableCell>
+          <TableCell>primary, info, success, warning, or danger</TableCell>
+          <TableCell>
             <select bind:value={type}>
               <option>-</option>
               <option>primary</option>
@@ -54,34 +63,34 @@ import { Tag } from "svelte-toolkit";
               <option>warning</option>
               <option>danger</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <td>content</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>content</TableCell>
           <td />
-          <td>
+          <TableCell>
             The content to display in the tag, which can also come from slot
             content
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="text" bind:value={content} />
-          </td>
-        </tr>
-        <tr>
-          <td>closable</td>
-          <td>false</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>closable</TableCell>
+          <TableCell>false</TableCell>
+          <TableCell>
             Set to true to display a close button at the right of the tag
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={closable} />
               Allow closing the tag
             </label>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>

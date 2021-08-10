@@ -1,3 +1,15 @@
+<script>
+  import {
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit"
+</script>
+
 <style>
   .color-preview {
     border: 1px solid #d2d2d2;
@@ -21,656 +33,656 @@
   </p>
 
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>--element-margin</td>
-          <td>1.5rem</td>
-          <td>The margin between elements.</td>
-        </tr>
-        <tr>
-          <td>--element-padding</td>
-          <td>2rem</td>
-          <td>The padding within elements.</td>
-        </tr>
-        <tr>
-          <td>--border-radius</td>
-          <td>2px</td>
-          <td>The border radius.</td>
-        </tr>
-        <tr>
-          <td>--border-color</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>--element-margin</TableCell>
+          <TableCell>1.5rem</TableCell>
+          <TableCell>The margin between elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--element-padding</TableCell>
+          <TableCell>2rem</TableCell>
+          <TableCell>The padding within elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--border-radius</TableCell>
+          <TableCell>2px</TableCell>
+          <TableCell>The border radius.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--border-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #d2d2d2" />
             #d2d2d2
-          </td>
-          <td>The border color.</td>
-        </tr>
-        <tr>
-          <td>--light-border-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The border color.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--light-border-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #aaaaaa" />
             #aaaaaa
-          </td>
-          <td>The light border color.</td>
-        </tr>
-        <tr>
-          <td>--icon-size</td>
-          <td>1.5rem</td>
-          <td>The size of icons.</td>
-        </tr>
-        <tr>
-          <td>--font-size</td>
-          <td>1.4rem</td>
-          <td>The base font size.</td>
-        </tr>
-        <tr>
-          <td>--font-size-small</td>
-          <td>1.1rem</td>
-          <td>The small font size.</td>
-        </tr>
-        <tr>
-          <td>--font-size-large</td>
-          <td>1.7rem</td>
-          <td>The large font size.</td>
-        </tr>
-        <tr>
-          <td>--font-size-title</td>
-          <td>1.6rem</td>
-          <td>
+          </TableCell>
+          <TableCell>The light border color.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--icon-size</TableCell>
+          <TableCell>1.5rem</TableCell>
+          <TableCell>The size of icons.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--font-size</TableCell>
+          <TableCell>1.4rem</TableCell>
+          <TableCell>The base font size.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--font-size-small</TableCell>
+          <TableCell>1.1rem</TableCell>
+          <TableCell>The small font size.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--font-size-large</TableCell>
+          <TableCell>1.7rem</TableCell>
+          <TableCell>The large font size.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--font-size-title</TableCell>
+          <TableCell>1.6rem</TableCell>
+          <TableCell>
             The font size for titles (e.g. in TabGroup and Accordion headers).
-          </td>
-        </tr>
-        <tr>
-          <td>--line-height</td>
-          <td>1.4</td>
-          <td>The base line height.</td>
-        </tr>
-        <tr>
-          <td>--body-back-color</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--line-height</TableCell>
+          <TableCell>1.4</TableCell>
+          <TableCell>The base line height.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--body-back-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #ffffff" />
             #ffffff
-          </td>
-          <td>The background color of the body.</td>
-        </tr>
-        <tr>
-          <td>--body-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The background color of the body.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--body-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #222222" />
             #222222
-          </td>
-          <td>The text color of the body.</td>
-        </tr>
-        <tr>
-          <td>--light-back-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of the body.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--light-back-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #fafafa" />
             #fafafa
-          </td>
-          <td>A light back color.</td>
-        </tr>
-        <tr>
-          <td>--middle-back-color</td>
-          <td>
+          </TableCell>
+          <TableCell>A light back color.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--middle-back-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #e5e5e5" />
             #e5e5e5
-          </td>
-          <td>A middle back color.</td>
-        </tr>
-        <tr>
-          <td>--dark-back-color</td>
-          <td>
+          </TableCell>
+          <TableCell>A middle back color.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--dark-back-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #888888" />
             #888888
-          </td>
-          <td>A dark back color.</td>
-        </tr>
-        <tr>
-          <td>--link-color</td>
-          <td>
+          </TableCell>
+          <TableCell>A dark back color.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--link-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #0265b7" />
             #0265b7
-          </td>
-          <td>The color of links.</td>
-        </tr>
-        <tr>
-          <td>--link-hover-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The color of links.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--link-hover-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #0265b7" />
             #0265b7
-          </td>
-          <td>The hover color for links.</td>
-        </tr>
-        <tr>
-          <td>--button-back-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The hover color for links.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--button-back-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #ffffff" />
             #ffffff
-          </td>
-          <td>The background color of buttons used in components.</td>
-        </tr>
-        <tr>
-          <td>--button-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The background color of buttons used in components.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--button-text-color</TableCell>
+          <TableCell>
             <span
               class="color-preview"
               style="background-color: rgba(0, 0, 0, 0.7)" />
             rgba(0, 0, 0, 0.7)
-          </td>
-          <td>The text color of buttons used in components.</td>
-        </tr>
-        <tr>
-          <td>--button-hover-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of buttons used in components.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--button-hover-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #cccccc" />
             #cccccc
-          </td>
-          <td>The hover color for buttons used in components.</td>
-        </tr>
-        <tr>
-          <td>--list-back-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The hover color for buttons used in components.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--list-back-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #ffffff" />
             #ffffff
-          </td>
-          <td>The background color of drop-down lists.</td>
-        </tr>
-        <tr>
-          <td>--list-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The background color of drop-down lists.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--list-text-color</TableCell>
+          <TableCell>
             <span
               class="color-preview"
               style="background-color: rgba(0, 0, 0, 0.7)" />
             rgba(0, 0, 0, 0.7)
-          </td>
-          <td>The text color of drop-down lists.</td>
-        </tr>
-        <tr>
-          <td>--select-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of drop-down lists.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--select-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #3396ff" />
             #3396ff
-          </td>
-          <td>The select color of drop-down lists and buttons.</td>
-        </tr>
-        <tr>
-          <td>--select-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The select color of drop-down lists and buttons.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--select-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #ffffff" />
             #ffffff
-          </td>
-          <td>The select text color of drop-down lists and buttons.</td>
-        </tr>
-        <tr>
-          <td>--focus-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The select text color of drop-down lists and buttons.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--focus-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #8fc5ff" />
             #8fc5ff
-          </td>
-          <td>The color of focused inputs.</td>
-        </tr>
-        <tr>
-          <td>--active-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The color of focused inputs.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--active-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #ffa500" />
             #ffa500
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             The color of active sections (e.g. in TabGroups and the NavBar).
-          </td>
-        </tr>
-        <tr>
-          <td>--mark-back-color</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--mark-back-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #ffff00" />
             #ffff00
-          </td>
-          <td>The background color of highlight marks.</td>
-        </tr>
-        <tr>
-          <td>--mark-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The background color of highlight marks.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--mark-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #222222" />
             #222222
-          </td>
-          <td>The text color of highlight marks.</td>
-        </tr>
-        <tr>
-          <td>--primary-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of highlight marks.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--primary-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #ff0066" />
             #ff0066
-          </td>
-          <td>The primary color, which you can change to your brand color.</td>
-        </tr>
-        <tr>
-          <td>--primary-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The primary color, which you can change to your brand color.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--primary-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #ffffff" />
             #ffffff
-          </td>
-          <td>The text color of primary elements.</td>
-        </tr>
-        <tr>
-          <td>--primary-hover-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of primary elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--primary-hover-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #cc0052" />
             #cc0052
-          </td>
-          <td>The hover color for primary elements.</td>
-        </tr>
-        <tr>
-          <td>--light-primary-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The hover color for primary elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--light-primary-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #fff2f7" />
             #fff2f7
-          </td>
-          <td>The color of light primary elements.</td>
-        </tr>
-        <tr>
-          <td>--light-primary-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The color of light primary elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--light-primary-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #c70050" />
             #c70050
-          </td>
-          <td>The text color of light primary elements.</td>
-        </tr>
-        <tr>
-          <td>--light-primary-border-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of light primary elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--light-primary-border-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #ff0066" />
             #ff0066
-          </td>
-          <td>The border color of light primary elements.</td>
-        </tr>
-        <tr>
-          <td>--info-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The border color of light primary elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--info-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #4d90fe" />
             #4d90fe
-          </td>
-          <td>The info color.</td>
-        </tr>
-        <tr>
-          <td>--info-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The info color.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--info-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #ffffff" />
             #ffffff
-          </td>
-          <td>The text color of info elements.</td>
-        </tr>
-        <tr>
-          <td>--info-hover-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of info elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--info-hover-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #0b67fe" />
             #0b67fe
-          </td>
-          <td>The hover color for info elements.</td>
-        </tr>
-        <tr>
-          <td>--light-info-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The hover color for info elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--light-info-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #f6f9ff" />
             #f6f9ff
-          </td>
-          <td>The color of light info elements.</td>
-        </tr>
-        <tr>
-          <td>--light-info-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The color of light info elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--light-info-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #0563fe" />
             #0563fe
-          </td>
-          <td>The text color of light info elements.</td>
-        </tr>
-        <tr>
-          <td>--light-info-border-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of light info elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--light-info-border-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #4d90fe" />
             #4d90fe
-          </td>
-          <td>The border color of light info elements.</td>
-        </tr>
-        <tr>
-          <td>--success-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The border color of light info elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--success-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #00a852" />
             #00a852
-          </td>
-          <td>The success color.</td>
-        </tr>
-        <tr>
-          <td>--success-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The success color.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--success-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #ffffff" />
             #ffffff
-          </td>
-          <td>The text color of success elements.</td>
-        </tr>
-        <tr>
-          <td>--success-hover-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of success elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--success-hover-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #008642" />
             #008642
-          </td>
-          <td>The hover color for success elements.</td>
-        </tr>
-        <tr>
-          <td>--light-success-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The hover color for success elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--light-success-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #eefff6" />
             #eefff6
-          </td>
-          <td>The color of light success elements.</td>
-        </tr>
-        <tr>
-          <td>--light-success-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The color of light success elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--light-success-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #008340" />
             #008340
-          </td>
-          <td>The text color of light success elements.</td>
-        </tr>
-        <tr>
-          <td>--light-success-border-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of light success elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--light-success-border-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #00a852" />
             #00a852
-          </td>
-          <td>The border color of light success elements.</td>
-        </tr>
-        <tr>
-          <td>--warning-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The border color of light success elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--warning-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #f3c42e" />
             #f3c42e
-          </td>
-          <td>The warning color.</td>
-        </tr>
-        <tr>
-          <td>--warning-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The warning color.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--warning-text-color</TableCell>
+          <TableCell>
             <span
               class="color-preview"
               style="background-color: rgba(0, 0, 0, 0.7)" />
             rgba(0, 0, 0, 0.7)
-          </td>
-          <td>The text color of warning elements.</td>
-        </tr>
-        <tr>
-          <td>--warning-hover-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of warning elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--warning-hover-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #dba90d" />
             #dba90d
-          </td>
-          <td>The hover color for warning elements.</td>
-        </tr>
-        <tr>
-          <td>--light-warning-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The hover color for warning elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--light-warning-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #fefcf5" />
             #fefcf5
-          </td>
-          <td>The color of light warning elements.</td>
-        </tr>
-        <tr>
-          <td>--light-warning-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The color of light warning elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--light-warning-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #b28a0a" />
             #b28a0a
-          </td>
-          <td>The text color of light warning elements.</td>
-        </tr>
-        <tr>
-          <td>--light-warning-border-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of light warning elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--light-warning-border-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #f3c42e" />
             #f3c42e
-          </td>
-          <td>The border color of light warning elements.</td>
-        </tr>
-        <tr>
-          <td>--danger-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The border color of light warning elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--danger-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #ee2e24" />
             #ee2e24
-          </td>
-          <td>The danger color.</td>
-        </tr>
-        <tr>
-          <td>--danger-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The danger color.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--danger-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #ffffff" />
             #ffffff
-          </td>
-          <td>The text color of danger elements.</td>
-        </tr>
-        <tr>
-          <td>--danger-hover-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of danger elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--danger-hover-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #cb1910" />
             #cb1910
-          </td>
-          <td>The hover color for danger elements.</td>
-        </tr>
-        <tr>
-          <td>--light-danger-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The hover color for danger elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--light-danger-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #fef5f4" />
             #fef5f4
-          </td>
-          <td>The color of light danger elements.</td>
-        </tr>
-        <tr>
-          <td>--light-danger-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The color of light danger elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--light-danger-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #c6180f" />
             #c6180f
-          </td>
-          <td>The text color of light danger elements.</td>
-        </tr>
-        <tr>
-          <td>--light-danger-border-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of light danger elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--light-danger-border-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #ee2e24" />
             #ee2e24
-          </td>
-          <td>The border color of light danger elements.</td>
-        </tr>
-        <tr>
-          <td>--confirm-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The border color of light danger elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--confirm-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #3396ff" />
             #3396ff
-          </td>
-          <td>The confirm color.</td>
-        </tr>
-        <tr>
-          <td>--confirm-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The confirm color.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--confirm-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #ffffff" />
             #ffffff
-          </td>
-          <td>The text color of confirm elements.</td>
-        </tr>
-        <tr>
-          <td>--confirm-hover-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of confirm elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--confirm-hover-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #0077f5" />
             #0077f5
-          </td>
-          <td>The hover color for confirm elements.</td>
-        </tr>
-        <tr>
-          <td>--cancel-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The hover color for confirm elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--cancel-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #949494" />
             #949494
-          </td>
-          <td>The cancel color.</td>
-        </tr>
-        <tr>
-          <td>--cancel-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The cancel color.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--cancel-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #ffffff" />
             #ffffff
-          </td>
-          <td>The text color of cancel elements.</td>
-        </tr>
-        <tr>
-          <td>--cancel-hover-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of cancel elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--cancel-hover-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #767676" />
             #767676
-          </td>
-          <td>The hover color for cancel elements.</td>
-        </tr>
-        <tr>
-          <td>--disabled-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The hover color for cancel elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--disabled-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #f2f2f2" />
             #f2f2f2
-          </td>
-          <td>The color of disabled elements.</td>
-        </tr>
-        <tr>
-          <td>--disabled-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The color of disabled elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--disabled-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #c2c2c2" />
             #c2c2c2
-          </td>
-          <td>The text color of disabled elements.</td>
-        </tr>
-        <tr>
-          <td>--header-back-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of disabled elements.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--header-back-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #fafafa" />
             #fafafa
-          </td>
-          <td>The background color of the header.</td>
-        </tr>
-        <tr>
-          <td>--header-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The background color of the header.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--header-text-color</TableCell>
+          <TableCell>
             <span
               class="color-preview"
               style="background-color: rgba(0, 0, 0, 0.7)" />
             rgba(0, 0, 0, 0.7)
-          </td>
-          <td>The text color of the header.</td>
-        </tr>
-        <tr>
-          <td>--header-line-height</td>
-          <td>4rem</td>
-          <td>The line height of the header.</td>
-        </tr>
-        <tr>
-          <td>--footer-back-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of the header.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--header-line-height</TableCell>
+          <TableCell>4rem</TableCell>
+          <TableCell>The line height of the header.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--footer-back-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #fafafa" />
             #fafafa
-          </td>
-          <td>The background color of the footer.</td>
-        </tr>
-        <tr>
-          <td>--footer-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The background color of the footer.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--footer-text-color</TableCell>
+          <TableCell>
             <span
               class="color-preview"
               style="background-color: rgba(0, 0, 0, 0.7)" />
             rgba(0, 0, 0, 0.7)
-          </td>
-          <td>The text color of the footer.</td>
-        </tr>
-        <tr>
-          <td>--footer-line-height</td>
-          <td>4rem</td>
-          <td>The line height of the footer.</td>
-        </tr>
-        <tr>
-          <td>--nav-bar-item-back-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of the footer.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--footer-line-height</TableCell>
+          <TableCell>4rem</TableCell>
+          <TableCell>The line height of the footer.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--nav-bar-item-back-color</TableCell>
+          <TableCell>
             <span
               class="color-preview"
               style="background-color: rgba(0, 0, 0, 0)" />
             transparent
-          </td>
-          <td>The background color of a nav bar item.</td>
-        </tr>
-        <tr>
-          <td>--nav-bar-item-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The background color of a nav bar item.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--nav-bar-item-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #222222" />
             #222222
-          </td>
-          <td>The text color of a nav bar item.</td>
-        </tr>
-        <tr>
-          <td>--nav-bar-item-hover-back-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of a nav bar item.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--nav-bar-item-hover-back-color</TableCell>
+          <TableCell>
             <span
               class="color-preview"
               style="background-color: rgba(0, 0, 0, 0.1)" />
             rgba(0, 0, 0, 0.1)
-          </td>
-          <td>The hover color for a nav bar item.</td>
-        </tr>
-        <tr>
-          <td>--nav-bar-item-hover-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The hover color for a nav bar item.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--nav-bar-item-hover-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #222222" />
             #222222
-          </td>
-          <td>The hover text color for a nav bar item.</td>
-        </tr>
-        <tr>
-          <td>--input-back-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The hover text color for a nav bar item.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--input-back-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #ffffff" />
             #ffffff
-          </td>
-          <td>The background color of inputs.</td>
-        </tr>
-        <tr>
-          <td>--input-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The background color of inputs.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--input-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #000000" />
             #000000
-          </td>
-          <td>The text color of inputs.</td>
-        </tr>
-        <tr>
-          <td>--input-height</td>
-          <td>3.2rem</td>
-          <td>The height of inputs.</td>
-        </tr>
-        <tr>
-          <td>--input-width</td>
-          <td>32rem</td>
-          <td>The width of inputs.</td>
-        </tr>
-        <tr>
-          <td>--label-text-color</td>
-          <td>
+          </TableCell>
+          <TableCell>The text color of inputs.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--input-height</TableCell>
+          <TableCell>3.2rem</TableCell>
+          <TableCell>The height of inputs.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--input-width</TableCell>
+          <TableCell>32rem</TableCell>
+          <TableCell>The width of inputs.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--label-text-color</TableCell>
+          <TableCell>
             <span class="color-preview" style="background-color: #777777" />
             #777777
-          </td>
-          <td>The text color of labels.</td>
-        </tr>
-        <tr>
-          <td>--label-width</td>
-          <td>16rem</td>
-          <td>The width of labels.</td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+          <TableCell>The text color of labels.</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--label-width</TableCell>
+          <TableCell>16rem</TableCell>
+          <TableCell>The width of labels.</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 </div>

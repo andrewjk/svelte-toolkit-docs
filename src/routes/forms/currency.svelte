@@ -1,5 +1,14 @@
 <script>
-  import { Currency } from "svelte-toolkit";
+  import {
+    Currency,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let type = "";
   let name = "field1";
@@ -39,29 +48,29 @@ import { Currency } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>name</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>name</TableCell>
           <td />
-          <td>The name of the field entered into the currency box</td>
-          <td>
+          <TableCell>The name of the field entered into the currency box</TableCell>
+          <TableCell>
             <input type="text" bind:value={name} />
-          </td>
-        </tr>
-        <tr>
-          <td>type</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>type</TableCell>
           <td />
-          <td>primary, info, success, warning, or danger</td>
-          <td>
+          <TableCell>primary, info, success, warning, or danger</TableCell>
+          <TableCell>
             <select bind:value={type}>
               <option>-</option>
               <option>primary</option>
@@ -70,21 +79,21 @@ import { Currency } from "svelte-toolkit";
               <option>warning</option>
               <option>danger</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <td>value</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>value</TableCell>
           <td />
-          <td>The currency value</td>
-          <td>
+          <TableCell>The currency value</TableCell>
+          <TableCell>
             <input type="number" bind:value />
-          </td>
-        </tr>
-        <tr>
-          <td>format</td>
-          <td>USD</td>
-          <td>The currency's format, as an ISO currency code (see https://www.currency-iso.org/dam/downloads/lists/list_one.xml)</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>format</TableCell>
+          <TableCell>USD</TableCell>
+          <TableCell>The currency's format, as an ISO currency code (see https://www.currency-iso.org/dam/downloads/lists/list_one.xml)</TableCell>
+          <TableCell>
             <select bind:value={format}>
               <option value="USD">United States dollar</option>
               <option value="EUR">Euro</option>
@@ -122,49 +131,51 @@ import { Currency } from "svelte-toolkit";
               <option value="MYR">Malaysian ringgit</option>
               <option value="RON">Romanian leu</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <td>placeholder</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>placeholder</TableCell>
           <td />
-          <td>Placeholder text to show when the textbox is empty.</td>
-          <td>
+          <TableCell>Placeholder text to show when the textbox is empty.</TableCell>
+          <TableCell>
             <input type="text" bind:value={placeholder} />
-          </td>
-        </tr>
-        <tr>
-          <td>min</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>min</TableCell>
           <td />
-          <td>The minimum allowed currency value</td>
-          <td>
+          <TableCell>The minimum allowed currency value</TableCell>
+          <TableCell>
             <input type="number" bind:value={min} />
-          </td>
-        </tr>
-        <tr>
-          <td>max</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>max</TableCell>
           <td />
-          <td>The maximum allowed currency value</td>
-          <td>
+          <TableCell>The maximum allowed currency value</TableCell>
+          <TableCell>
             <input type="number" bind:value={max} />
-          </td>
-        </tr>
-        <tr>
-          <td>readonly</td>
-          <td>false</td>
-          <td>Set to true to prevent the field from taking input</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>readonly</TableCell>
+          <TableCell>false</TableCell>
+          <TableCell>Set to true to prevent the field from taking input</TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={readonly} />
               Set readonly
             </label>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

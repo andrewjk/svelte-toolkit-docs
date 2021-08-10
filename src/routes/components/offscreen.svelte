@@ -1,5 +1,14 @@
 <script>
-  import { OffScreen } from "svelte-toolkit";
+  import {
+    OffScreen,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let visible = false;
   let position = "left";
@@ -48,46 +57,48 @@ import { OffScreen } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>visible</td>
-          <td>false</td>
-          <td>true to show the off-screen</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>visible</TableCell>
+          <TableCell>false</TableCell>
+          <TableCell>true to show the off-screen</TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={visible} />
               Show the off-screen
             </label>
-          </td>
-        </tr>
-        <tr>
-          <td>position</td>
-          <td>left</td>
-          <td>left, top, right, or bottom</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>position</TableCell>
+          <TableCell>left</TableCell>
+          <TableCell>left, top, right, or bottom</TableCell>
+          <TableCell>
             <select bind:value={position}>
               <option>left</option>
               <option>top</option>
               <option>right</option>
               <option>bottom</option>
             </select>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

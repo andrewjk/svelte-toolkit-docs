@@ -1,6 +1,17 @@
 <script>
   import { onMount } from "svelte";
-  import { FocusGroup, FocusGroupItem, ImageButton } from "svelte-toolkit";
+  import {
+    FocusGroup,
+    FocusGroupItem,
+    ImageButton,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
   import { items } from "../../stores/items";
 
   var numbers = ["1", "2", "3", "4", "5"];
@@ -76,33 +87,35 @@ import { FocusGroup, FocusGroupItem } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>tagName</td>
-          <td>button</td>
-          <td>the tag of the item to focus e.g. button, a, etc</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>tagName</TableCell>
+          <TableCell>button</TableCell>
+          <TableCell>the tag of the item to focus e.g. button, a, etc</TableCell>
+          <TableCell>
             <select bind:value={tagName}>
               <option>button</option>
               <option>a</option>
             </select>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

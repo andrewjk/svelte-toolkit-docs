@@ -1,5 +1,16 @@
 <script>
-  import { Switcher, SwitcherItem, WizardNav } from "svelte-toolkit";
+  import {
+    Switcher,
+    SwitcherItem,
+    WizardNav,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let index = 0;
   let itemCount = 5;
@@ -49,60 +60,62 @@ import { WizardNav } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>index</td>
-          <td>0</td>
-          <td>the current index</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>index</TableCell>
+          <TableCell>0</TableCell>
+          <TableCell>the current index</TableCell>
+          <TableCell>
             <input type="number" bind:value={index} />
-          </td>
-        </tr>
-        <tr>
-          <td>itemCount</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>itemCount</TableCell>
           <td />
-          <td>the total number of items</td>
-          <td>
+          <TableCell>the total number of items</TableCell>
+          <TableCell>
             <input type="number" bind:value={itemCount} />
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Events</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Args</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>change</td>
-          <td>value: the number of the current page</td>
-        </tr>
-        <tr>
-          <td>finished</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Args</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>change</TableCell>
+          <TableCell>value: the number of the current page</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>finished</TableCell>
           <td />
-        </tr>
-      </tbody>
-    </table>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

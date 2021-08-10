@@ -1,5 +1,14 @@
 <script>
-  import { ColorPicker } from "svelte-toolkit";
+  import {
+    ColorPicker,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let value = null;
   let placeholder = "";
@@ -25,36 +34,38 @@ import { ColorPicker } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>value</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>value</TableCell>
           <td />
-          <td>the selected value</td>
-          <td>{value}</td>
-        </tr>
-        <tr>
-          <td>placeholder</td>
+          <TableCell>the selected value</TableCell>
+          <TableCell>{value}</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>placeholder</TableCell>
           <td />
-          <td>Placeholder text to show when the input is empty.</td>
-          <td>
+          <TableCell>Placeholder text to show when the input is empty.</TableCell>
+          <TableCell>
             <input type="text" bind:value={placeholder} />
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

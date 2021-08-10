@@ -1,5 +1,14 @@
 <script>
-  import { Notification } from "svelte-toolkit";
+  import {
+    Notification,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let content = "You might be interested to know this...";
   let type = "info";
@@ -34,21 +43,21 @@ import { Notification } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>type</td>
-          <td>info</td>
-          <td>primary, info, success, warning, or danger</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>type</TableCell>
+          <TableCell>info</TableCell>
+          <TableCell>primary, info, success, warning, or danger</TableCell>
+          <TableCell>
             <select bind:value={type}>
               <option>-</option>
               <option>primary</option>
@@ -57,79 +66,81 @@ import { Notification } from "svelte-toolkit";
               <option>warning</option>
               <option>danger</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <td>content</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>content</TableCell>
           <td />
-          <td>
+          <TableCell>
             The content to display in the notification, which can also come from
             slot content
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="text" bind:value={content} />
-          </td>
-        </tr>
-        <tr>
-          <td>closable</td>
-          <td>false</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>closable</TableCell>
+          <TableCell>false</TableCell>
+          <TableCell>
             Set to true to display a close button at the right of the
             notification
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={closable} />
               Allow closing the notification
             </label>
-          </td>
-        </tr>
-        <tr>
-          <td>duration</td>
-          <td>-1</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>duration</TableCell>
+          <TableCell>-1</TableCell>
+          <TableCell>
             The number of milliseconds to wait before closing the notification.
             Set to -1 to never close
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="number" bind:value={duration} />
-          </td>
-        </tr>
-        <tr>
-          <td>solid</td>
-          <td>true</td>
-          <td>Set to true to make the notification have a solid background</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>solid</TableCell>
+          <TableCell>true</TableCell>
+          <TableCell>Set to true to make the notification have a solid background</TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={solid} />
               Solid notification
             </label>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Events</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Args</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>closed</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Args</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>closed</TableCell>
           <td />
-        </tr>
-      </tbody>
-    </table>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

@@ -1,5 +1,16 @@
 <script>
-  import { Switcher, SwitcherItem, Pagination } from "svelte-toolkit";
+  import {
+    Switcher,
+    SwitcherItem,
+    Pagination,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let pageNumber = 1;
   let pageSize = 10;
@@ -38,64 +49,66 @@ import { Pagination } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>pageNumber</td>
-          <td>1</td>
-          <td>the current page number</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>pageNumber</TableCell>
+          <TableCell>1</TableCell>
+          <TableCell>the current page number</TableCell>
+          <TableCell>
             <input type="number" bind:value={pageNumber} />
-          </td>
-        </tr>
-        <tr>
-          <td>pageSize</td>
-          <td>10</td>
-          <td>the number of items displayed on each page</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>pageSize</TableCell>
+          <TableCell>10</TableCell>
+          <TableCell>the number of items displayed on each page</TableCell>
+          <TableCell>
             <input type="number" bind:value={pageSize} />
-          </td>
-        </tr>
-        <tr>
-          <td>itemCount</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>itemCount</TableCell>
           <td />
-          <td>the total number of items</td>
-          <td>
+          <TableCell>the total number of items</TableCell>
+          <TableCell>
             <input type="number" bind:value={itemCount} />
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Events</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Args</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>change</td>
-          <td>value: the number of the current page</td>
-        </tr>
-      </tbody>
-    </table>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Args</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>change</TableCell>
+          <TableCell>value: the number of the current page</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

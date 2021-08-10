@@ -1,5 +1,15 @@
 <script>
-  import { Field, TextBox } from "svelte-toolkit";
+  import {
+    Field,
+    TextBox,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let label = "Your location:";
   let name = "location";
@@ -33,67 +43,69 @@ import { Field, TextBox } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>label</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>label</TableCell>
           <td />
-          <td>
+          <TableCell>
             The label to display for the field. A label can also be placed into
             the named "label" slot
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="text" bind:value={label} />
-          </td>
-        </tr>
-        <tr>
-          <td>name</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>name</TableCell>
           <td />
-          <td>The name of the data held in this field</td>
-          <td>
+          <TableCell>The name of the data held in this field</TableCell>
+          <TableCell>
             <input type="text" bind:value={name} />
-          </td>
-        </tr>
-        <tr>
-          <td>value</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>value</TableCell>
           <td />
-          <td>The value held in this field's control</td>
-          <td>
+          <TableCell>The value held in this field's control</TableCell>
+          <TableCell>
             <input type="text" bind:value />
-          </td>
-        </tr>
-        <tr>
-          <td>info</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>info</TableCell>
           <td />
-          <td>Some informational text to display underneath the field</td>
-          <td>
+          <TableCell>Some informational text to display underneath the field</TableCell>
+          <TableCell>
             <input type="text" bind:value={info} />
-          </td>
-        </tr>
-        <tr>
-          <td>Validation</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Validation</TableCell>
           <td />
-          <td>
+          <TableCell>
             Various validation fields. See
             <a href="/forms/validation">validation</a>
             for info.
-          </td>
+          </TableCell>
           <td />
-        </tr>
-      </tbody>
-    </table>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

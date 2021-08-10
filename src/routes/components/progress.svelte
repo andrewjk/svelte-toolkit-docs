@@ -1,5 +1,14 @@
 <script>
-  import { Progress } from "svelte-toolkit";
+  import {
+    Progress,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let type = "info";
   let size = "medium";
@@ -52,21 +61,21 @@ import { Progress } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>type</td>
-          <td>info</td>
-          <td>primary, info, success, warning, danger</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>type</TableCell>
+          <TableCell>info</TableCell>
+          <TableCell>primary, info, success, warning, danger</TableCell>
+          <TableCell>
             <select bind:value={type}>
               <option>-</option>
               <option>primary</option>
@@ -75,43 +84,45 @@ import { Progress } from "svelte-toolkit";
               <option>warning</option>
               <option>danger</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <td>size</td>
-          <td>medium</td>
-          <td>small, medium, large</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>size</TableCell>
+          <TableCell>medium</TableCell>
+          <TableCell>small, medium, large</TableCell>
+          <TableCell>
             <select bind:value={size}>
               <option>-</option>
               <option>small</option>
               <option>medium</option>
               <option>large</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <td>value</td>
-          <td>0</td>
-          <td>0 to 100 (or the value of total, below)</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>value</TableCell>
+          <TableCell>0</TableCell>
+          <TableCell>0 to 100 (or the value of total, below)</TableCell>
+          <TableCell>
             <input type="number" bind:value />
-          </td>
-        </tr>
-        <tr>
-          <td>total</td>
-          <td>100</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>total</TableCell>
+          <TableCell>100</TableCell>
           <td />
-          <td>
+          <TableCell>
             <input type="number" bind:value={total} />
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

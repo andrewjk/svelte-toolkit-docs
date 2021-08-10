@@ -1,5 +1,13 @@
 <script>
-  import { Panel } from "svelte-toolkit";
+  import {
+    Panel,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+  } from "svelte-toolkit";
 
   let type = "";
 
@@ -27,23 +35,23 @@ import { Panel } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>type</td>
-          <td>-</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>type</TableCell>
+          <TableCell>-</TableCell>
+          <TableCell>
             transparent, light, dark, primary, info, success, warning, or danger
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <select bind:value={type}>
               <option>-</option>
               <option>transparent</option>
@@ -55,14 +63,16 @@ import { Panel } from "svelte-toolkit";
               <option>warning</option>
               <option>danger</option>
             </select>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

@@ -1,5 +1,14 @@
 <script>
-  import { Select } from "svelte-toolkit";
+  import {
+    Select,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let name = "field1";
   let value = "";
@@ -39,29 +48,29 @@ import { Select } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>name</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>name</TableCell>
           <td />
-          <td>The name of the field entered into the textbox</td>
-          <td>
+          <TableCell>The name of the field entered into the textbox</TableCell>
+          <TableCell>
             <input type="text" bind:value={name} />
-          </td>
-        </tr>
-        <tr>
-          <td>type</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>type</TableCell>
           <td />
-          <td>primary, info, success, warning, or danger</td>
-          <td>
+          <TableCell>primary, info, success, warning, or danger</TableCell>
+          <TableCell>
             <select bind:value={type}>
               <option>-</option>
               <option>primary</option>
@@ -70,26 +79,26 @@ import { Select } from "svelte-toolkit";
               <option>warning</option>
               <option>danger</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <td>value</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>value</TableCell>
           <td />
-          <td>The value entered into the textbox</td>
-          <td>
+          <TableCell>The value entered into the textbox</TableCell>
+          <TableCell>
             <input type="text" bind:value />
-          </td>
-        </tr>
-        <tr>
-          <td>placeholder</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>placeholder</TableCell>
           <td />
-          <td>Placeholder text to show when the textbox is empty.</td>
-          <td>
+          <TableCell>Placeholder text to show when the textbox is empty.</TableCell>
+          <TableCell>
             <input type="text" bind:value={placeholder} />
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>

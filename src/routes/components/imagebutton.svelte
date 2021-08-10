@@ -1,5 +1,15 @@
 <script>
-  import { ImageButton, Cross } from "svelte-toolkit";
+  import {
+    ImageButton,
+    Cross,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let type = "";
   let size = "medium";
@@ -53,21 +63,21 @@ import { ImageButton } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>type</td>
-          <td>-</td>
-          <td>primary, info, success, warning, danger, cancel</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>type</TableCell>
+          <TableCell>-</TableCell>
+          <TableCell>primary, info, success, warning, danger, cancel</TableCell>
+          <TableCell>
             <select bind:value={type}>
               <option>-</option>
               <option>primary</option>
@@ -77,13 +87,13 @@ import { ImageButton } from "svelte-toolkit";
               <option>danger</option>
               <option>cancel</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <td>size</td>
-          <td>medium</td>
-          <td>small, medium, large, or inline</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>size</TableCell>
+          <TableCell>medium</TableCell>
+          <TableCell>small, medium, large, or inline</TableCell>
+          <TableCell>
             <select bind:value={size}>
               <option>-</option>
               <option>small</option>
@@ -91,60 +101,62 @@ import { ImageButton } from "svelte-toolkit";
               <option>large</option>
               <option>inline</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <td>submit</td>
-          <td>false</td>
-          <td>Set to true to make this a submit button</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>submit</TableCell>
+          <TableCell>false</TableCell>
+          <TableCell>Set to true to make this a submit button</TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={submit} />
               Make a submit button
             </label>
-          </td>
-        </tr>
-        <tr>
-          <td>reset</td>
-          <td>false</td>
-          <td>Set to true to make this a reset button</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>reset</TableCell>
+          <TableCell>false</TableCell>
+          <TableCell>Set to true to make this a reset button</TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={reset} />
               Make a reset button
             </label>
-          </td>
-        </tr>
-        <tr>
-          <td>disabled</td>
-          <td>false</td>
-          <td>Set to true to disable the button</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>disabled</TableCell>
+          <TableCell>false</TableCell>
+          <TableCell>Set to true to disable the button</TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={disabled} />
               Disable the button
             </label>
-          </td>
-        </tr>
-        <tr>
-          <td>loading</td>
-          <td>false</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>loading</TableCell>
+          <TableCell>false</TableCell>
+          <TableCell>
             Set to true to replace the button's text with a loading animation
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={loading} />
               Show loading animation
             </label>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

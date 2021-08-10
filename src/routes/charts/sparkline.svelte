@@ -1,5 +1,14 @@
 <script>
-  import { Sparkline } from "svelte-toolkit";
+  import {
+    Sparkline,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let height = 20;
   let width = 100;
@@ -41,61 +50,63 @@ import { Sparkline } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
           <th />
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>height</td>
-          <td>200</td>
-          <td>The height of the chart, in pixels</td>
-          <td>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>height</TableCell>
+          <TableCell>200</TableCell>
+          <TableCell>The height of the chart, in pixels</TableCell>
+          <TableCell>
             <input type="number" bind:value={height} />
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>width</td>
-          <td>400</td>
-          <td>The width of the chart, in pixels. Set to 0 to auto-size</td>
-          <td>
+        </TableRow>
+        <TableRow>
+          <TableCell>width</TableCell>
+          <TableCell>400</TableCell>
+          <TableCell>The width of the chart, in pixels. Set to 0 to auto-size</TableCell>
+          <TableCell>
             <input type="number" bind:value={width} />
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>data</td>
+        </TableRow>
+        <TableRow>
+          <TableCell>data</TableCell>
           <td />
-          <td>The data to display as lines</td>
-          <td>
+          <TableCell>The data to display as lines</TableCell>
+          <TableCell>
             <input type="text" bind:value={data} />
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <button on:click={addRandom}>++</button>
-          </td>
-        </tr>
-        <tr>
-          <td>color</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>color</TableCell>
           <td />
-          <td>The color of the lines</td>
-          <td>
+          <TableCell>The color of the lines</TableCell>
+          <TableCell>
             <input type="text" bind:value={color} />
-          </td>
+          </TableCell>
           <td />
-        </tr>
-      </tbody>
-    </table>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

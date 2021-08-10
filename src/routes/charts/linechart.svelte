@@ -1,5 +1,14 @@
 <script>
-  import { LineChart } from "svelte-toolkit";
+  import {
+    LineChart,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let height = 200;
   let width = 400;
@@ -124,187 +133,188 @@ import { LineChart } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-          <th />
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>height</td>
-          <td>200</td>
-          <td>The height of the chart, in pixels</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>height</TableCell>
+          <TableCell>200</TableCell>
+          <TableCell>The height of the chart, in pixels</TableCell>
+          <TableCell>
             <input type="number" bind:value={height} />
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>width</td>
-          <td>400</td>
-          <td>The width of the chart, in pixels. Set to 0 to auto-size</td>
-          <td>
+        </TableRow>
+        <TableRow>
+          <TableCell>width</TableCell>
+          <TableCell>400</TableCell>
+          <TableCell>The width of the chart, in pixels. Set to 0 to auto-size</TableCell>
+          <TableCell>
             <input type="number" bind:value={width} />
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>xLabel</td>
+        </TableRow>
+        <TableRow>
+          <TableCell>xLabel</TableCell>
           <td />
-          <td>A label to display along the x-axis</td>
-          <td>
+          <TableCell>A label to display along the x-axis</TableCell>
+          <TableCell>
             <input type="text" bind:value={xLabel} />
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>yLabel</td>
+        </TableRow>
+        <TableRow>
+          <TableCell>yLabel</TableCell>
           <td />
-          <td>A label to display along the y-axis</td>
-          <td>
+          <TableCell>A label to display along the y-axis</TableCell>
+          <TableCell>
             <input type="text" bind:value={yLabel} />
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>labels</td>
+        </TableRow>
+        <TableRow>
+          <TableCell>labels</TableCell>
           <td />
-          <td>The labels to display for each line</td>
-          <td>
+          <TableCell>The labels to display for each line</TableCell>
+          <TableCell>
             <input type="text" bind:value={labels} />
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>data</td>
+        </TableRow>
+        <TableRow>
+          <TableCell>data</TableCell>
           <td />
-          <td>The data to display as lines</td>
-          <td>
+          <TableCell>The data to display as lines</TableCell>
+          <TableCell>
             <input type="text" bind:value={data} />
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <button on:click={addRandom}>++</button>
-          </td>
-        </tr>
-        <tr>
-          <td>color</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>color</TableCell>
           <td />
-          <td>The color of the lines</td>
-          <td>
+          <TableCell>The color of the lines</TableCell>
+          <TableCell>
             <input type="text" bind:value={color} />
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>data 2</td>
+        </TableRow>
+        <TableRow>
+          <TableCell>data 2</TableCell>
           <td />
-          <td>You can pass multiple data arrays in a series property</td>
-          <td>
+          <TableCell>You can pass multiple data arrays in a series property</TableCell>
+          <TableCell>
             <input type="text" bind:value={data2} />
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>color 2</td>
+        </TableRow>
+        <TableRow>
+          <TableCell>color 2</TableCell>
           <td />
-          <td>You can pass multiple colors in a series property</td>
-          <td>
+          <TableCell>You can pass multiple colors in a series property</TableCell>
+          <TableCell>
             <input type="text" bind:value={color2} />
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>showPoints</td>
-          <td>true</td>
-          <td>set to true to show points on the line, or false to hide them</td>
-          <td>
+        </TableRow>
+        <TableRow>
+          <TableCell>showPoints</TableCell>
+          <TableCell>true</TableCell>
+          <TableCell>set to true to show points on the line, or false to hide them</TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={showPoints} />
               Show points
             </label>
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>stepCount</td>
-          <td>2</td>
-          <td>The number of steps to show on the y-axis</td>
-          <td>
+        </TableRow>
+        <TableRow>
+          <TableCell>stepCount</TableCell>
+          <TableCell>2</TableCell>
+          <TableCell>The number of steps to show on the y-axis</TableCell>
+          <TableCell>
             <input type="number" bind:value={stepCount} />
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>stepValue</td>
+        </TableRow>
+        <TableRow>
+          <TableCell>stepValue</TableCell>
           <td />
-          <td>
+          <TableCell>
             The value of each step on the y-axis. By default, this is
             automatically calculated
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="number" bind:value={stepValue} />
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>showXAxis</td>
-          <td>true</td>
-          <td>set to true to show the x-axis line, or false to hide it</td>
-          <td>
+        </TableRow>
+        <TableRow>
+          <TableCell>showXAxis</TableCell>
+          <TableCell>true</TableCell>
+          <TableCell>set to true to show the x-axis line, or false to hide it</TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={showXAxis} />
               Show the x-axis
             </label>
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>showYAxis</td>
-          <td>true</td>
-          <td>set to true to show the y-axis line, or false to hide it</td>
-          <td>
+        </TableRow>
+        <TableRow>
+          <TableCell>showYAxis</TableCell>
+          <TableCell>true</TableCell>
+          <TableCell>set to true to show the y-axis line, or false to hide it</TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={showYAxis} />
               Show the y-axis
             </label>
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>showHLines</td>
-          <td>false</td>
-          <td>set to true to show horizontal gridlines</td>
-          <td>
+        </TableRow>
+        <TableRow>
+          <TableCell>showHLines</TableCell>
+          <TableCell>false</TableCell>
+          <TableCell>set to true to show horizontal gridlines</TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={showHLines} />
               Show horizontal gridlines
             </label>
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>showVLines</td>
-          <td>false</td>
-          <td>set to true to show vertical gridlines</td>
-          <td>
+        </TableRow>
+        <TableRow>
+          <TableCell>showVLines</TableCell>
+          <TableCell>false</TableCell>
+          <TableCell>set to true to show vertical gridlines</TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={showVLines} />
               Show vertical gridlines
             </label>
-          </td>
+          </TableCell>
           <td />
-        </tr>
-      </tbody>
-    </table>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

@@ -1,5 +1,15 @@
 <script>
-  import { Breadcrumb, BreadcrumbItem } from "svelte-toolkit";
+  import {
+    Breadcrumb,
+    BreadcrumbItem,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
   import { items } from "../../stores/items";
 
   $: exampleCode = `
@@ -41,24 +51,24 @@ import { Breadcrumb, BreadcrumbItem } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>current (BreadcrumbItem)</td>
-          <td>false</td>
-          <td>true if this breadcrumb item is the current page</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>current (BreadcrumbItem)</TableCell>
+          <TableCell>false</TableCell>
+          <TableCell>true if this breadcrumb item is the current page</TableCell>
           <td />
-        </tr>
-      </tbody>
-    </table>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>

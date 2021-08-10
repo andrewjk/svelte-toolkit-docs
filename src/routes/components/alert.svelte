@@ -1,5 +1,15 @@
 <script>
-  import { Button, showAlert } from "svelte-toolkit";
+  import {
+    Button,
+    showAlert,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let type = "info";
   let content = "Pay attention to me!";
@@ -54,21 +64,21 @@ showAlert({
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>type</td>
-          <td>info</td>
-          <td>primary, info, success, warning, or danger</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>type</TableCell>
+          <TableCell>info</TableCell>
+          <TableCell>primary, info, success, warning, or danger</TableCell>
+          <TableCell>
             <select bind:value={type}>
               <option>-</option>
               <option>primary</option>
@@ -77,26 +87,26 @@ showAlert({
               <option>warning</option>
               <option>danger</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <td>content</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>content</TableCell>
           <td />
-          <td>
+          <TableCell>
             The content to display in the alert, which can also come from slot
             content
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="text" bind:value={content} />
-          </td>
-        </tr>
-        <tr>
-          <td>position</td>
-          <td>top</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>position</TableCell>
+          <TableCell>top</TableCell>
+          <TableCell>
             top-left, top, top-right, bottom-left, bottom, or bottom-right
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <select bind:value={position}>
               <option>top-left</option>
               <option>top</option>
@@ -105,56 +115,58 @@ showAlert({
               <option>bottom</option>
               <option>bottom-right</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <td>closable</td>
-          <td>true</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>closable</TableCell>
+          <TableCell>true</TableCell>
+          <TableCell>
             Set to true to display a close button at the right of the alert
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <label>
               <input type="checkbox" bind:checked={closable} />
               Allow closing the alert
             </label>
-          </td>
-        </tr>
-        <tr>
-          <td>duration</td>
-          <td>5000</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>duration</TableCell>
+          <TableCell>5000</TableCell>
+          <TableCell>
             The number of milliseconds to wait before closing the alert. Set to
             -1 to never close (but make sure you leave closable true!)
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="number" bind:value={duration} />
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Events</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Args</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>closed</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Args</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>closed</TableCell>
           <td />
-        </tr>
-      </tbody>
-    </table>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

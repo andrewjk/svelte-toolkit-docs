@@ -1,5 +1,15 @@
 <script>
-  import { TagInput, TagInputItem } from "svelte-toolkit";
+  import {
+    TagInput,
+    TagInputItem,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   import { countries } from "../../stores/countries";
 
@@ -80,79 +90,79 @@ import { TagInput, TagInputItem } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>value</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>value</TableCell>
           <td />
-          <td>the selected value</td>
-          <td>{value}</td>
-        </tr>
-        <tr>
-          <td>placeholder</td>
+          <TableCell>the selected value</TableCell>
+          <TableCell>{value}</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>placeholder</TableCell>
           <td />
-          <td>Placeholder text to show when the input is empty.</td>
-          <td>
+          <TableCell>Placeholder text to show when the input is empty.</TableCell>
+          <TableCell>
             <input type="text" bind:value={placeholder} />
-          </td>
-        </tr>
-        <tr>
-          <td>source</td>
-          <td>[ ]</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>source</TableCell>
+          <TableCell>[ ]</TableCell>
+          <TableCell>
             an array of source items that will be filtered by the TagInput,
             which may be strings or objects with a 'text' property
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>items</td>
-          <td>[ ]</td>
-          <td>
+        </TableRow>
+        <TableRow>
+          <TableCell>items</TableCell>
+          <TableCell>[ ]</TableCell>
+          <TableCell>
             The items to display in the TagInput's drop down list, which may be
             strings or objects with a 'text' property
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>delay</td>
-          <td>300</td>
-          <td>a delay (in milliseconds) to wait before filtering items</td>
-          <td>
+        </TableRow>
+        <TableRow>
+          <TableCell>delay</TableCell>
+          <TableCell>300</TableCell>
+          <TableCell>a delay (in milliseconds) to wait before filtering items</TableCell>
+          <TableCell>
             <input type="number" bind:value={delay} />
-          </td>
-        </tr>
-        <tr>
-          <td>minChars</td>
-          <td>1</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>minChars</TableCell>
+          <TableCell>1</TableCell>
+          <TableCell>
             the minimum number of characters to wait before filtering items
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="number" bind:value={minChars} />
-          </td>
-        </tr>
-        <tr>
-          <td>tagClass</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>tagClass</TableCell>
           <td />
-          <td>the class to set on each tag</td>
-          <td>
+          <TableCell>the class to set on each tag</TableCell>
+          <TableCell>
             <input type="text" bind:value={tagClass} />
-          </td>
-        </tr>
-        <tr>
-          <td>tagType</td>
-          <td>info</td>
-          <td>primary, info, success, warning, or danger</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>tagType</TableCell>
+          <TableCell>info</TableCell>
+          <TableCell>primary, info, success, warning, or danger</TableCell>
+          <TableCell>
             <select bind:value={tagType}>
               <option>-</option>
               <option>primary</option>
@@ -161,14 +171,16 @@ import { TagInput, TagInputItem } from "svelte-toolkit";
               <option>warning</option>
               <option>danger</option>
             </select>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

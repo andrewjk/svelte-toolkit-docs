@@ -1,5 +1,14 @@
 <script>
-  import { CheckBox } from "svelte-toolkit";
+  import {
+    CheckBox,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let type = "";
   let name = "field1";
@@ -27,29 +36,29 @@ import { CheckBox } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>name</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>name</TableCell>
           <td />
-          <td>The name of the field entered into the checkbox</td>
-          <td>
+          <TableCell>The name of the field entered into the checkbox</TableCell>
+          <TableCell>
             <input type="text" bind:value={name} />
-          </td>
-        </tr>
-        <tr>
-          <td>type</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>type</TableCell>
           <td />
-          <td>primary, info, success, warning, or danger</td>
-          <td>
+          <TableCell>primary, info, success, warning, or danger</TableCell>
+          <TableCell>
             <select bind:value={type}>
               <option>-</option>
               <option>primary</option>
@@ -58,48 +67,50 @@ import { CheckBox } from "svelte-toolkit";
               <option>warning</option>
               <option>danger</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <td>checked</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>checked</TableCell>
           <td />
-          <td>Whether the checkbox is checked</td>
-          <td>
+          <TableCell>Whether the checkbox is checked</TableCell>
+          <TableCell>
             <input type="checkbox" bind:checked />
-          </td>
-        </tr>
-        <tr>
-          <td>group</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>group</TableCell>
           <td />
-          <td>
+          <TableCell>
             The value of the group field selected with the checkbox when there
             are multiple checkboxes
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>value</td>
+        </TableRow>
+        <TableRow>
+          <TableCell>value</TableCell>
           <td />
-          <td>
+          <TableCell>
             The group value to set when this checkbox is selected and there are
             multiple checkboxes
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>label</td>
+        </TableRow>
+        <TableRow>
+          <TableCell>label</TableCell>
           <td />
-          <td>The text label to display next to the checkbox</td>
-          <td>
+          <TableCell>The text label to display next to the checkbox</TableCell>
+          <TableCell>
             <input type="text" bind:value={label} />
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

@@ -1,5 +1,14 @@
 <script>
-  import { PieChart } from "svelte-toolkit";
+  import {
+    PieChart,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let size = 200;
   let radius = 50;
@@ -68,79 +77,81 @@ import { PieChart } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
           <th />
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>size</td>
-          <td>200</td>
-          <td>The size of the chart, in pixels</td>
-          <td>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>size</TableCell>
+          <TableCell>200</TableCell>
+          <TableCell>The size of the chart, in pixels</TableCell>
+          <TableCell>
             <input type="number" bind:value={size} />
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>radius</td>
-          <td>50</td>
-          <td>The size of the chart's radius as a percentage of size</td>
-          <td>
+        </TableRow>
+        <TableRow>
+          <TableCell>radius</TableCell>
+          <TableCell>50</TableCell>
+          <TableCell>The size of the chart's radius as a percentage of size</TableCell>
+          <TableCell>
             <input type="number" bind:value={radius} />
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>cutout</td>
-          <td>0</td>
-          <td>The size of the chart's cutout as a percentage of size</td>
-          <td>
+        </TableRow>
+        <TableRow>
+          <TableCell>cutout</TableCell>
+          <TableCell>0</TableCell>
+          <TableCell>The size of the chart's cutout as a percentage of size</TableCell>
+          <TableCell>
             <input type="number" bind:value={cutout} />
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>labels</td>
+        </TableRow>
+        <TableRow>
+          <TableCell>labels</TableCell>
           <td />
-          <td>The labels to display for each segment</td>
-          <td>
+          <TableCell>The labels to display for each segment</TableCell>
+          <TableCell>
             <input type="text" bind:value={labels} />
-          </td>
+          </TableCell>
           <td />
-        </tr>
-        <tr>
-          <td>values</td>
+        </TableRow>
+        <TableRow>
+          <TableCell>values</TableCell>
           <td />
-          <td>The value to display for each segment</td>
-          <td>
+          <TableCell>The value to display for each segment</TableCell>
+          <TableCell>
             <input type="text" bind:value={data} />
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <button on:click={addRandom}>++</button>
-          </td>
-        </tr>
-        <tr>
-          <td>colors</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>colors</TableCell>
           <td />
-          <td>The color to display for each segment</td>
-          <td>
+          <TableCell>The color to display for each segment</TableCell>
+          <TableCell>
             <input type="text" bind:value={colors} />
-          </td>
+          </TableCell>
           <td />
-        </tr>
-      </tbody>
-    </table>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

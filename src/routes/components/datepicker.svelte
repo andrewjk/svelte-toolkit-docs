@@ -1,7 +1,16 @@
 <script>
-  import { DatePicker } from "svelte-toolkit";
+  import {
+    DatePicker,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
-  let value = null;
+  let value = new Date();
   let placeholder = "";
   let dateFormat = "d MMM yyyy"
   let dateOrder = "mdy"
@@ -29,60 +38,62 @@ import { DatePicker } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>value</td>
-          <td></td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>value</TableCell>
+          <TableCell></TableCell>
+          <TableCell>
             the selected value
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             {value}
-          </td>
-        </tr>
-        <tr>
-          <td>placeholder</td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>placeholder</TableCell>
           <td />
-          <td>Placeholder text to show when the input is empty.</td>
-          <td>
+          <TableCell>Placeholder text to show when the input is empty.</TableCell>
+          <TableCell>
             <input type="text" bind:value={placeholder} />
-          </td>
-        </tr>
-        <tr>
-          <td>dateFormat</td>
-          <td>d MMM yyyy</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>dateFormat</TableCell>
+          <TableCell>d MMM yyyy</TableCell>
+          <TableCell>
             the format to display the date in, where 'd' is days, 'M' is months and 'y' is years
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="text" bind:value={dateFormat}>
-          </td>
-        </tr>
-        <tr>
-          <td>dateOrder</td>
-          <td>mdy</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>dateOrder</TableCell>
+          <TableCell>mdy</TableCell>
+          <TableCell>
             the order to process dates entered by the user (e.g. 31/1 vs 1/31)
-          </td>
-          <td>
+          </TableCell>
+          <TableCell>
             <input type="text" bind:value={dateOrder}>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

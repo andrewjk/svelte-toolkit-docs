@@ -1,5 +1,15 @@
 <script>
-  import { Stack, StackItem } from "svelte-toolkit";
+  import {
+    Stack,
+    StackItem,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
 
   let direction = "vertical";
   let size = "auto";
@@ -48,44 +58,46 @@ import { Stack, StackItem } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>direction</td>
-          <td>vertical</td>
-          <td>vertical, horizontal</td>
-          <td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>direction</TableCell>
+          <TableCell>vertical</TableCell>
+          <TableCell>vertical, horizontal</TableCell>
+          <TableCell>
             <select bind:value={direction}>
               <option>vertical</option>
               <option>horizontal</option>
             </select>
-          </td>
-        </tr>
-        <tr>
-          <td>StackItem size</td>
-          <td>auto</td>
-          <td>grow, auto</td>
-          <td>
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>StackItem size</TableCell>
+          <TableCell>auto</TableCell>
+          <TableCell>grow, auto</TableCell>
+          <TableCell>
             <select bind:value={size}>
               <option>auto</option>
               <option>grow</option>
             </select>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
   <div class="block">
-    <pre>{exampleCode}</pre>
+    <Panel>
+      <pre>{exampleCode}</pre>
+    </Panel>
   </div>
 </div>

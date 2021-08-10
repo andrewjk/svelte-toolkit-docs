@@ -1,5 +1,15 @@
 <script>
-  import { SubNavMenu, SubNavMenuItem } from "svelte-toolkit";
+  import {
+    SubNavMenu,
+    SubNavMenuItem,
+    Table,
+    TableRow,
+    TableHeader,
+    TableHeaderCell,
+    TableBody,
+    TableCell,
+    Panel,
+  } from "svelte-toolkit";
   import { items } from "../../stores/items";
 
   let type = "";
@@ -45,30 +55,30 @@ import { SubNavMenu, SubNavMenuItem } from "svelte-toolkit";
 
   <h2>Properties</h2>
   <div class="block">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Default</th>
-          <th>Description</th>
-          <th>Change</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>type</td>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+          <TableHeaderCell>Change</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>type</TableCell>
           <td />
-          <td>line, vertical</td>
-          <td>
+          <TableCell>line, vertical</TableCell>
+          <TableCell>
             <select bind:value={type}>
               <option>-</option>
               <option>line</option>
               <option>vertical</option>
             </select>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   </div>
 
   <h2>Code</h2>
