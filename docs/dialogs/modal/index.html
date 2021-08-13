@@ -8,14 +8,14 @@
 	<link rel="manifest" href="/manifest.json">
 	<link rel="icon" type="image/png" href="/favicon.png">
 
-	<title>Svelte Toolkit</title>
+	<title>Modal Dialog | Svelte Toolkit</title>
 
 		
 
 		<link rel="modulepreload" href="/./_app/start-4a6b92fb.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-2c2bd768.js">
 		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-156cf363.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-f5d317bc.js">
+		<link rel="modulepreload" href="/./_app/pages/dialogs/modal.svelte-56b25db1.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
 		<link rel="stylesheet" href="/./_app/assets/vendor-53ea8f2a.css">
 		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-e7b925bc.css">
@@ -35,11 +35,11 @@
 					error: null,
 					nodes: [
 						import("/./_app/pages/__layout.svelte-156cf363.js"),
-						import("/./_app/pages/index.svelte-f5d317bc.js")
+						import("/./_app/pages/dialogs/modal.svelte-56b25db1.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/",
+						path: "/dialogs/modal",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -77,9 +77,46 @@
       
 
 
-<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded"><div class="container"><h1>Svelte Toolkit</h1>
+<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded">
 
-  <p>These are some components and styles, based on Svelte and Sass.</p></div></div></div></div></main>
+<div class="container"><h1>Modal</h1>
+  <p>A modal dialog that can contain any content, per
+    <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal" target="_blank">https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal
+    </a>
+    .
+  </p>
+
+  <h2>Demo</h2>
+  <div class="block"><button class="button primary medium svelte-1sowyxx" type="button" title="" >
+  Open the modal dialog</button>
+    </div>
+  
+
+  <h2>Properties</h2>
+  <div class="block"><table class="table svelte-1k7ft03"><thead><tr class=""><th class=" svelte-1r3b7j4">Name</th>
+          <th class=" svelte-1r3b7j4">Default</th>
+          <th class=" svelte-1r3b7j4">Description</th>
+          <th class=" svelte-1r3b7j4">Change</th></tr></thead>
+      <tbody></tbody></table></div>
+
+  <h2>Code</h2>
+  <div class="block"><div class="panel svelte-8s1cfm"><pre>{#if visible}
+  &lt;Modal&gt;
+    &lt;div slot=&quot;header&quot;&gt;Enter your email:&lt;/div&gt;
+    &lt;div slot=&quot;body&quot;&gt;
+      &lt;div class=&quot;block&quot;&gt;
+        &lt;TextBox contentType=&quot;email&quot; bind:value={email} placeholder=&quot;Email&quot; autofocus /&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;block&quot;&gt;
+        &lt;TextBox contentType=&quot;email&quot; bind:value={confirmEmail} placeholder=&quot;Confirm email&quot; /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div slot=&quot;footer&quot;&gt;
+      &lt;DialogButton confirm on:click={handleOk}&gt;OK&lt;/DialogButton&gt;
+      &lt;DialogButton cancel on:click={handleCancel}&gt;Cancel&lt;/DialogButton&gt;
+    &lt;/div&gt;
+  &lt;/Modal&gt;
+{/if}</pre></div></div></div></div></div></div></main>
 
   <footer class="page-footer svelte-120o530"><div>Svelte Toolkit
 </div></footer></div>

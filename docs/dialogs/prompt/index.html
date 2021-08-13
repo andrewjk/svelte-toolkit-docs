@@ -8,14 +8,14 @@
 	<link rel="manifest" href="/manifest.json">
 	<link rel="icon" type="image/png" href="/favicon.png">
 
-	<title>Svelte Toolkit</title>
+	<title>Prompt Dialog | Svelte Toolkit</title>
 
 		
 
 		<link rel="modulepreload" href="/./_app/start-4a6b92fb.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-2c2bd768.js">
 		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-156cf363.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-f5d317bc.js">
+		<link rel="modulepreload" href="/./_app/pages/dialogs/prompt.svelte-dd55fe84.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
 		<link rel="stylesheet" href="/./_app/assets/vendor-53ea8f2a.css">
 		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-e7b925bc.css">
@@ -35,11 +35,11 @@
 					error: null,
 					nodes: [
 						import("/./_app/pages/__layout.svelte-156cf363.js"),
-						import("/./_app/pages/index.svelte-f5d317bc.js")
+						import("/./_app/pages/dialogs/prompt.svelte-dd55fe84.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/",
+						path: "/dialogs/prompt",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -77,9 +77,67 @@
       
 
 
-<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded"><div class="container"><h1>Svelte Toolkit</h1>
+<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded">
 
-  <p>These are some components and styles, based on Svelte and Sass.</p></div></div></div></div></main>
+<div class="container"><h1>Prompt</h1>
+  <p>A dialog, per
+    <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal" target="_blank">https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal
+    </a>
+    .
+  </p>
+
+  <h2>Demo</h2>
+  <div class="block"><button class="button primary medium svelte-1sowyxx" type="button" title="" >
+  Open the prompt dialog</button></div>
+  
+
+  <h2>Properties</h2>
+  <div class="block"><table class="table svelte-1k7ft03"><thead><tr class=""><th class=" svelte-1r3b7j4">Name</th>
+          <th class=" svelte-1r3b7j4">Default</th>
+          <th class=" svelte-1r3b7j4">Description</th>
+          <th class=" svelte-1r3b7j4">Change</th></tr></thead>
+      <tbody><tr class=""><td class=" svelte-yv4v5n">header</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">The header to display in the dialog, which can also come from slot
+            content
+          </td>
+          <td class=" svelte-yv4v5n"><input type="text" value="Header"></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">content</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">The content to display in the dialog, which can also come from slot
+            content
+          </td>
+          <td class=" svelte-yv4v5n"><input type="text" value="Enter your name below:"></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">options</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">An array of options, which will be displayed in a select element
+          </td>
+          <td class=" svelte-yv4v5n"><input type="text" value=""></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">buttonContent</td>
+          <td class=" svelte-yv4v5n">OK</td>
+          <td class=" svelte-yv4v5n">The content to display in the dialog&#39;s button</td>
+          <td class=" svelte-yv4v5n"><input type="text" value="OK"></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">placeholder</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">Placeholder text to show when the input is empty.</td>
+          <td class=" svelte-yv4v5n"><input type="text" value=""></td></tr></tbody></table></div>
+
+  <h2>Events</h2>
+  <div class="block"><table class="table svelte-1k7ft03"><thead><tr class=""><th class=" svelte-1r3b7j4">Name</th>
+          <th class=" svelte-1r3b7j4">Args</th></tr></thead>
+      <tbody><tr class=""><td class=" svelte-yv4v5n">closed</td>
+          <td></td></tr></tbody></table></div>
+
+  <h2>Code</h2>
+  <div class="block"><div class="panel svelte-8s1cfm"><pre>import { showPrompt } from &quot;svelte-toolkit&quot;;
+
+const result = await showPrompt({
+  header: &#39;Header&#39;,
+  content: &#39;Enter your name below:&#39;,
+  options: [],
+  buttonContent: &#39;OK&#39;,
+  placeholder: &#39;&#39;
+});</pre></div></div></div></div></div></div></main>
 
   <footer class="page-footer svelte-120o530"><div>Svelte Toolkit
 </div></footer></div>

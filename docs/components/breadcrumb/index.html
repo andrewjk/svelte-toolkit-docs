@@ -8,14 +8,15 @@
 	<link rel="manifest" href="/manifest.json">
 	<link rel="icon" type="image/png" href="/favicon.png">
 
-	<title>Svelte Toolkit</title>
+	<title>Breadcrumb | Svelte Toolkit</title>
 
 		
 
 		<link rel="modulepreload" href="/./_app/start-4a6b92fb.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-2c2bd768.js">
 		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-156cf363.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-f5d317bc.js">
+		<link rel="modulepreload" href="/./_app/pages/components/breadcrumb.svelte-9691d659.js">
+		<link rel="modulepreload" href="/./_app/chunks/items-34670d13.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
 		<link rel="stylesheet" href="/./_app/assets/vendor-53ea8f2a.css">
 		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-e7b925bc.css">
@@ -35,11 +36,11 @@
 					error: null,
 					nodes: [
 						import("/./_app/pages/__layout.svelte-156cf363.js"),
-						import("/./_app/pages/index.svelte-f5d317bc.js")
+						import("/./_app/pages/components/breadcrumb.svelte-9691d659.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/",
+						path: "/components/breadcrumb",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -77,9 +78,41 @@
       
 
 
-<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded"><div class="container"><h1>Svelte Toolkit</h1>
+<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded">
 
-  <p>These are some components and styles, based on Svelte and Sass.</p></div></div></div></div></main>
+<div class="container"><h1>Breadcrumb</h1>
+  <p>A breadcrumb, per
+    <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#breadcrumb" target="_blank">https://www.w3.org/TR/wai-aria-practices-1.1/#breadcrumb
+    </a>
+    .
+  </p>
+
+  <h2>Demo</h2>
+  <div class="block"><nav class="breadcrumb svelte-pejy0k" aria-label="}"><ol class="svelte-pejy0k"><li class="breadcrumb-item svelte-1122whz"><a href="https://en.wikipedia.org/wiki/Kangaroo" aria-current="">Kangaroo
+        </a></li><li class="breadcrumb-item svelte-1122whz"><a href="https://en.wikipedia.org/wiki/platypus" aria-current="">Platypus
+        </a></li><li class="breadcrumb-item svelte-1122whz"><span>Kookaburra
+        </span></li><li class="breadcrumb-item svelte-1122whz"><a href="https://en.wikipedia.org/wiki/Echidna" aria-current="">Echidna
+        </a></li><li class="breadcrumb-item svelte-1122whz"><a href="https://en.wikipedia.org/wiki/Goanna" aria-current="">Goanna
+        </a></li></ol></nav></div>
+
+  <h2>Properties</h2>
+  <div class="block"><table class="table svelte-1k7ft03"><thead><tr class=""><th class=" svelte-1r3b7j4">Name</th>
+          <th class=" svelte-1r3b7j4">Default</th>
+          <th class=" svelte-1r3b7j4">Description</th>
+          <th class=" svelte-1r3b7j4">Change</th></tr></thead>
+      <tbody><tr class=""><td class=" svelte-yv4v5n">current (BreadcrumbItem)</td>
+          <td class=" svelte-yv4v5n">false</td>
+          <td class=" svelte-yv4v5n">true if this breadcrumb item is the current page</td>
+          <td></td></tr></tbody></table></div>
+
+  <h2>Code</h2>
+  <div class="block"><pre>import { Breadcrumb, BreadcrumbItem } from &quot;svelte-toolkit&quot;;
+
+&lt;Breadcrumb&gt;
+  {#each items as item}
+    &lt;BreadcrumbItem href={item.href}&gt;{item.title}&lt;/BreadcrumbItem&gt;
+  {/each}
+&lt;/Breadcrumb&gt;</pre></div></div></div></div></div></main>
 
   <footer class="page-footer svelte-120o530"><div>Svelte Toolkit
 </div></footer></div>

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="theme-color" content="#333333">
+
+	<link rel="manifest" href="/manifest.json">
+	<link rel="icon" type="image/png" href="/favicon.png">
+
+	<title>Alert | Svelte Toolkit</title>
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-4a6b92fb.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-2c2bd768.js">
+		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-156cf363.js">
+		<link rel="modulepreload" href="/./_app/pages/components/alert.svelte-62ccf19c.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/vendor-53ea8f2a.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-e7b925bc.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-4a6b92fb.js";
+			start({
+				target: document.body,
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/pages/__layout.svelte-156cf363.js"),
+						import("/./_app/pages/components/alert.svelte-62ccf19c.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/components/alert",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+</head>
+<body>
+	
+
+
+
+
+
+
+<div class="page svelte-m50phk"><header class="page-header svelte-1yeyzpe"><div>Svelte Toolkit
+</div></header>
+
+  <main class="page-body svelte-6whmn3">
+
+
+<div class="grid spaced">
+
+
+<div class="grid-item span-6 md-span-3 lg-span-2"><div class="container svelte-1u9r5bx padded"><div class="block"><input type="text" placeholder="Search..."></div>
+<div class="accordion svelte-qzuxuv" tabindex="0"><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">GENERAL</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">LAYOUT</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">COMPONENTS</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">NAVIGATION</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">FORMS</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">DIALOGS</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">CHARTS</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">ICONS</button></div>
+  </div></div></div></div>
+      
+
+
+<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded">
+
+<div class="container"><h1>Alert</h1>
+  <p>An alert, per
+    <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#alert" target="_blank">https://www.w3.org/TR/wai-aria-practices-1.1/#alert
+    </a>
+    .
+  </p>
+
+  <h2>Demo</h2>
+  <div class="block"><button class="button info medium svelte-1sowyxx" type="button" title="" >
+  Show an alert
+    </button></div>
+
+  <h2>Properties</h2>
+  <div class="block"><table class="table svelte-1k7ft03"><thead><tr class=""><th class=" svelte-1r3b7j4">Name</th>
+          <th class=" svelte-1r3b7j4">Default</th>
+          <th class=" svelte-1r3b7j4">Description</th>
+          <th class=" svelte-1r3b7j4">Change</th></tr></thead>
+      <tbody><tr class=""><td class=" svelte-yv4v5n">type</td>
+          <td class=" svelte-yv4v5n">info</td>
+          <td class=" svelte-yv4v5n">primary, info, success, warning, or danger</td>
+          <td class=" svelte-yv4v5n"><select><option value="-">-</option><option value="primary">primary</option><option value="info">info</option><option value="success">success</option><option value="warning">warning</option><option value="danger">danger</option></select></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">content</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">The content to display in the alert, which can also come from slot
+            content
+          </td>
+          <td class=" svelte-yv4v5n"><input type="text" value="Pay attention to me!"></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">position</td>
+          <td class=" svelte-yv4v5n">top</td>
+          <td class=" svelte-yv4v5n">top-left, top, top-right, bottom-left, bottom, or bottom-right
+          </td>
+          <td class=" svelte-yv4v5n"><select><option value="top-left">top-left</option><option value="top">top</option><option value="top-right">top-right</option><option value="bottom-left">bottom-left</option><option value="bottom">bottom</option><option value="bottom-right">bottom-right</option></select></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">closable</td>
+          <td class=" svelte-yv4v5n">true</td>
+          <td class=" svelte-yv4v5n">Set to true to display a close button at the right of the alert
+          </td>
+          <td class=" svelte-yv4v5n"><label><input type="checkbox" checked>
+              Allow closing the alert
+            </label></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">duration</td>
+          <td class=" svelte-yv4v5n">5000</td>
+          <td class=" svelte-yv4v5n">The number of milliseconds to wait before closing the alert. Set to
+            -1 to never close (but make sure you leave closable true!)
+          </td>
+          <td class=" svelte-yv4v5n"><input type="number" value="5000"></td></tr></tbody></table></div>
+
+  <h2>Events</h2>
+  <div class="block"><table class="table svelte-1k7ft03"><thead><tr class=""><th class=" svelte-1r3b7j4">Name</th>
+          <th class=" svelte-1r3b7j4">Args</th></tr></thead>
+      <tbody><tr class=""><td class=" svelte-yv4v5n">closed</td>
+          <td></td></tr></tbody></table></div>
+
+  <h2>Code</h2>
+  <div class="block"><div class="panel svelte-8s1cfm"><pre>import { showAlert } from &quot;svelte-toolkit&quot;;
+
+showAlert({
+  type: &#39;info&#39;,
+  content: &#39;Pay attention to me!&#39;
+  position: &#39;top&#39;,
+  closable: true,
+  duration: 5000
+});</pre></div></div></div></div></div></div></main>
+
+  <footer class="page-footer svelte-120o530"><div>Svelte Toolkit
+</div></footer></div>
+
+
+
+	
+
+</body>
+</html>

@@ -8,17 +8,18 @@
 	<link rel="manifest" href="/manifest.json">
 	<link rel="icon" type="image/png" href="/favicon.png">
 
-	<title>Svelte Toolkit</title>
+	<title>Stack | Svelte Toolkit</title>
 
 		
 
 		<link rel="modulepreload" href="/./_app/start-4a6b92fb.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-2c2bd768.js">
 		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-156cf363.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-f5d317bc.js">
+		<link rel="modulepreload" href="/./_app/pages/layout/stack.svelte-167142c6.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
 		<link rel="stylesheet" href="/./_app/assets/vendor-53ea8f2a.css">
 		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-e7b925bc.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/layout/stack.svelte-a9ab63ee.css">
 
 		<script type="module">
 			import { start } from "/./_app/start-4a6b92fb.js";
@@ -35,11 +36,11 @@
 					error: null,
 					nodes: [
 						import("/./_app/pages/__layout.svelte-156cf363.js"),
-						import("/./_app/pages/index.svelte-f5d317bc.js")
+						import("/./_app/pages/layout/stack.svelte-167142c6.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/",
+						path: "/layout/stack",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -77,9 +78,41 @@
       
 
 
-<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded"><div class="container"><h1>Svelte Toolkit</h1>
+<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded">
 
-  <p>These are some components and styles, based on Svelte and Sass.</p></div></div></div></div></main>
+<div class="container"><h1>Stack</h1>
+  <p>Stacks allow you to lay items out vertically or horizontally.</p>
+
+  <h2>Demo</h2>
+  <div class="block" style="height: 280px"><div class="stack vertical svelte-1be95nk"><div class="stack-item auto svelte-1brcqbu"><div class="inner-panel svelte-1p5a4t8">Item 1</div></div>
+      <div class="stack-item auto svelte-1brcqbu"><div class="inner-panel svelte-1p5a4t8">Item 2</div></div>
+      <div class="stack-item auto svelte-1brcqbu"><div class="inner-panel svelte-1p5a4t8">Item 3</div></div></div></div>
+
+  <h2>Properties</h2>
+  <div class="block"><table class="table svelte-1k7ft03"><thead><tr class=""><th class=" svelte-1r3b7j4">Name</th>
+          <th class=" svelte-1r3b7j4">Default</th>
+          <th class=" svelte-1r3b7j4">Description</th>
+          <th class=" svelte-1r3b7j4">Change</th></tr></thead>
+      <tbody><tr class=""><td class=" svelte-yv4v5n">direction</td>
+          <td class=" svelte-yv4v5n">vertical</td>
+          <td class=" svelte-yv4v5n">vertical, horizontal</td>
+          <td class=" svelte-yv4v5n"><select><option value="vertical">vertical</option><option value="horizontal">horizontal</option></select></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">StackItem size</td>
+          <td class=" svelte-yv4v5n">auto</td>
+          <td class=" svelte-yv4v5n">grow, auto</td>
+          <td class=" svelte-yv4v5n"><select><option value="auto">auto</option><option value="grow">grow</option></select></td></tr></tbody></table></div>
+
+  <h2>Code</h2>
+  <div class="block"><div class="panel svelte-8s1cfm"><pre>import { Stack, StackItem } from &quot;svelte-toolkit&quot;;
+
+&lt;Stack direction=&quot;vertical&quot;&gt;
+  &lt;StackItem size=&quot;auto&quot;&gt;
+    Item 1
+  &lt;/StackItem&gt;
+  &lt;StackItem&gt;Item 2&lt;/StackItem&gt;
+  &lt;StackItem&gt;Item 3&lt;/StackItem&gt;
+  &lt;StackItem&gt;...&lt;/StackItem&gt;
+&lt;/Stack&gt;</pre></div></div></div></div></div></div></main>
 
   <footer class="page-footer svelte-120o530"><div>Svelte Toolkit
 </div></footer></div>

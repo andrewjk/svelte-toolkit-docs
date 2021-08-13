@@ -8,14 +8,14 @@
 	<link rel="manifest" href="/manifest.json">
 	<link rel="icon" type="image/png" href="/favicon.png">
 
-	<title>Svelte Toolkit</title>
+	<title>Slider | Svelte Toolkit</title>
 
 		
 
 		<link rel="modulepreload" href="/./_app/start-4a6b92fb.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-2c2bd768.js">
 		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-156cf363.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-f5d317bc.js">
+		<link rel="modulepreload" href="/./_app/pages/components/slider.svelte-58b8b5e6.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
 		<link rel="stylesheet" href="/./_app/assets/vendor-53ea8f2a.css">
 		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-e7b925bc.css">
@@ -35,11 +35,11 @@
 					error: null,
 					nodes: [
 						import("/./_app/pages/__layout.svelte-156cf363.js"),
-						import("/./_app/pages/index.svelte-f5d317bc.js")
+						import("/./_app/pages/components/slider.svelte-58b8b5e6.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/",
+						path: "/components/slider",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -77,9 +77,35 @@
       
 
 
-<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded"><div class="container"><h1>Svelte Toolkit</h1>
+<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded">
 
-  <p>These are some components and styles, based on Svelte and Sass.</p></div></div></div></div></main>
+<div class="container"><h1>Slider</h1>
+  <p>A slider that a user can drag and move to select a value.</p>
+
+  <h2>Demo</h2>
+  <div class="block"><div class="slider svelte-1dh3l6g"><div class="slider-background svelte-1dh3l6g"></div>
+  <div class="slider-handle svelte-1dh3l6g" style="left: 0px;"></div></div>
+    <br></div>
+
+  <h2>Properties</h2>
+  <div class="block"><table class="table svelte-1k7ft03"><thead><tr class=""><th class=" svelte-1r3b7j4">Name</th>
+          <th class=" svelte-1r3b7j4">Default</th>
+          <th class=" svelte-1r3b7j4">Description</th>
+          <th class=" svelte-1r3b7j4">Change</th></tr></thead>
+      <tbody><tr class=""><td class=" svelte-yv4v5n">value</td>
+          <td class=" svelte-yv4v5n">0</td>
+          <td class=" svelte-yv4v5n">0 to 100 (or the value of total, below)</td>
+          <td class=" svelte-yv4v5n"><input type="number" value="50"></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">total</td>
+          <td class=" svelte-yv4v5n">100</td>
+          <td class=" svelte-yv4v5n"></td>
+          <td class=" svelte-yv4v5n"><input type="number" value="100"></td></tr></tbody></table></div>
+
+  <h2>Code</h2>
+  <div class="block"><div class="panel svelte-8s1cfm"><pre>
+import { Slider } from &quot;svelte-toolkit&quot;;
+
+&lt;Slider value={50} total={100} /&gt;</pre></div></div></div></div></div></div></main>
 
   <footer class="page-footer svelte-120o530"><div>Svelte Toolkit
 </div></footer></div>

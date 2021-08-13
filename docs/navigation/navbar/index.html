@@ -8,17 +8,18 @@
 	<link rel="manifest" href="/manifest.json">
 	<link rel="icon" type="image/png" href="/favicon.png">
 
-	<title>Svelte Toolkit</title>
+	<title>Navbar | Svelte Toolkit</title>
 
 		
 
 		<link rel="modulepreload" href="/./_app/start-4a6b92fb.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-2c2bd768.js">
 		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-156cf363.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-f5d317bc.js">
+		<link rel="modulepreload" href="/./_app/pages/navigation/navbar.svelte-51a1d100.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
 		<link rel="stylesheet" href="/./_app/assets/vendor-53ea8f2a.css">
 		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-e7b925bc.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/navigation/navbar.svelte-d6605c19.css">
 
 		<script type="module">
 			import { start } from "/./_app/start-4a6b92fb.js";
@@ -35,11 +36,11 @@
 					error: null,
 					nodes: [
 						import("/./_app/pages/__layout.svelte-156cf363.js"),
-						import("/./_app/pages/index.svelte-f5d317bc.js")
+						import("/./_app/pages/navigation/navbar.svelte-51a1d100.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/",
+						path: "/navigation/navbar",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -77,9 +78,71 @@
       
 
 
-<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded"><div class="container"><h1>Svelte Toolkit</h1>
+<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded">
 
-  <p>These are some components and styles, based on Svelte and Sass.</p></div></div></div></div></main>
+<div class="container"><h1>Navbar</h1>
+  <p>A top-level navigation bar.</p>
+
+  <h2>Demo</h2>
+  <div class="block nav-bar-demo svelte-8zdi8s"><div class="nav-bar svelte-1no079k" role="navigation"><a class="nav-logo svelte-98gcrm" href="" title=""><img class="nav-logo-image svelte-98gcrm" src="/logo-192.png" alt="Svelte logo" height="48"></a>
+      <nav class="nav-menu start svelte-13lyu7c" aria-label=""><ul class="nav-menu-bar svelte-13lyu7c" role="menubar"><li role="menuitem" class="nav-menu-item svelte-16rl1mt"><a href="../components/accordion">Accordion</a></li>
+        <li role="menuitem" class="nav-menu-item svelte-16rl1mt"><a href="../components/alert">Alert</a></li>
+        <li role="menuitem" class="nav-menu-item svelte-16rl1mt"><button class="button primary medium svelte-1sowyxx" type="button" title="" >
+  Button</button></li></ul></nav>
+      <nav class="nav-menu end svelte-13lyu7c" aria-label=""><ul class="nav-menu-bar svelte-13lyu7c" role="menubar"><li role="menuitem" class="nav-menu-item svelte-16rl1mt"><a href="../components/badge">Badge</a></li>
+        <li class="nav-menu-drop-down svelte-1enxzy3" role="menuitem"><a href="#" class="nav-menu-link svelte-1enxzy3" aria-haspopup="true">Others...
+          
+    
+      <svg class="icon svelte-k0p79n" viewBox="0 0 100 100" stroke-width="12"><g><path d="M10,30 L50,70 L90,30" fill="none"></path></g></svg>
+    </a>
+  
+</li></ul></nav></div></div>
+
+  <h2>Code</h2>
+  <div class="block"><pre style="">import {
+  NavBar,
+  NavLogo,
+  NavMenu,
+  NavMenuItem,
+  NavMenuDropDown,
+  DropDownMenuItem,
+  DropDownMenuDivider
+} from &quot;svelte-toolkit&quot;;
+
+&lt;NavBar&gt;
+  &lt;NavLogo src=&quot;/logo-192.png&quot; alt=&quot;Svelte logo&quot; /&gt;
+  &lt;NavMenu&gt;
+    &lt;NavMenuItem&gt;
+      &lt;a href=&quot;../components/accordion&quot;&gt;Accordion&lt;/a&gt;
+    &lt;/NavMenuItem&gt;
+    &lt;NavMenuItem&gt;
+      &lt;a href=&quot;../components/alert&quot;&gt;Alert&lt;/a&gt;
+    &lt;/NavMenuItem&gt;
+    &lt;NavMenuItem&gt;
+      &lt;Button&gt;Button&lt;/Button&gt;
+    &lt;/NavMenuItem&gt;
+  &lt;/NavMenu&gt;
+  &lt;NavMenu position=&quot;end&quot;&gt;
+    &lt;NavMenuItem&gt;
+      &lt;a href=&quot;../components/badge&quot;&gt;Badge&lt;/a&gt;
+    &lt;/NavMenuItem&gt;
+    &lt;NavMenuDropDown&gt;
+      Others...
+      &lt;div slot=&quot;menu&quot;&gt;
+        &lt;DropDownMenuItem&gt;
+          &lt;a href=&quot;../components/breadcrumb&quot;&gt;Breadcrumb&lt;/a&gt;
+        &lt;/DropDownMenuItem&gt;
+        &lt;DropDownMenuDivider /&gt;
+        &lt;DropDownMenuItem&gt;
+          &lt;a href=&quot;../components/calendar&quot;&gt;Calendar&lt;/a&gt;
+        &lt;/DropDownMenuItem&gt;
+        &lt;DropDownMenuItem&gt;
+          &lt;a href=&quot;../components/dialog&quot;&gt;Dialog&lt;/a&gt;
+        &lt;/DropDownMenuItem&gt;
+      &lt;/div&gt;
+    &lt;/NavMenuDropDown&gt;
+  &lt;/NavMenu&gt;
+&lt;/NavBar&gt;</pre></div></div></div></div></div></main>
 
   <footer class="page-footer svelte-120o530"><div>Svelte Toolkit
 </div></footer></div>

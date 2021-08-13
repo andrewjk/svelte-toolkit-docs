@@ -8,14 +8,14 @@
 	<link rel="manifest" href="/manifest.json">
 	<link rel="icon" type="image/png" href="/favicon.png">
 
-	<title>Svelte Toolkit</title>
+	<title>CheckBox | Svelte Toolkit</title>
 
 		
 
 		<link rel="modulepreload" href="/./_app/start-4a6b92fb.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-2c2bd768.js">
 		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-156cf363.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-f5d317bc.js">
+		<link rel="modulepreload" href="/./_app/pages/forms/checkbox.svelte-7103b47e.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
 		<link rel="stylesheet" href="/./_app/assets/vendor-53ea8f2a.css">
 		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-e7b925bc.css">
@@ -35,11 +35,11 @@
 					error: null,
 					nodes: [
 						import("/./_app/pages/__layout.svelte-156cf363.js"),
-						import("/./_app/pages/index.svelte-f5d317bc.js")
+						import("/./_app/pages/forms/checkbox.svelte-7103b47e.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/",
+						path: "/forms/checkbox",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -77,9 +77,54 @@
       
 
 
-<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded"><div class="container"><h1>Svelte Toolkit</h1>
+<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded">
 
-  <p>These are some components and styles, based on Svelte and Sass.</p></div></div></div></div></main>
+<div class="container"><h1>CheckBox</h1>
+  <p>A box that can be ticked.</p>
+
+  <h2>Demo</h2>
+  <div class="block">
+<label class="checkbox svelte-gp1pre"><input class="checkbox-input svelte-gp1pre" name="field1" type="checkbox" value>
+  <span class="svelte-gp1pre">Please tick the box</span></label></div>
+
+  <h2>Properties</h2>
+  <div class="block"><table class="table svelte-1k7ft03"><thead><tr class=""><th class=" svelte-1r3b7j4">Name</th>
+          <th class=" svelte-1r3b7j4">Default</th>
+          <th class=" svelte-1r3b7j4">Description</th>
+          <th class=" svelte-1r3b7j4">Change</th></tr></thead>
+      <tbody><tr class=""><td class=" svelte-yv4v5n">name</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">The name of the field entered into the checkbox</td>
+          <td class=" svelte-yv4v5n"><input type="text" value="field1"></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">type</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">primary, info, success, warning, or danger</td>
+          <td class=" svelte-yv4v5n"><select><option value="-">-</option><option value="primary">primary</option><option value="info">info</option><option value="success">success</option><option value="warning">warning</option><option value="danger">danger</option></select></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">checked</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">Whether the checkbox is checked</td>
+          <td class=" svelte-yv4v5n"><input type="checkbox"></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">group</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">The value of the group field selected with the checkbox when there
+            are multiple checkboxes
+          </td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">value</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">The group value to set when this checkbox is selected and there are
+            multiple checkboxes
+          </td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">label</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">The text label to display next to the checkbox</td>
+          <td class=" svelte-yv4v5n"><input type="text" value="Please tick the box"></td></tr></tbody></table></div>
+
+  <h2>Code</h2>
+  <div class="block"><div class="panel svelte-8s1cfm"><pre>import { CheckBox } from &quot;svelte-toolkit&quot;;
+
+&lt;CheckBox type=&quot;&quot; name=&quot;field1&quot; label=&quot;Please tick the box&quot; bind:checked /&gt;</pre></div></div></div></div></div></div></main>
 
   <footer class="page-footer svelte-120o530"><div>Svelte Toolkit
 </div></footer></div>

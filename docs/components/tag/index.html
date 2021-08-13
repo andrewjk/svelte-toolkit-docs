@@ -8,14 +8,14 @@
 	<link rel="manifest" href="/manifest.json">
 	<link rel="icon" type="image/png" href="/favicon.png">
 
-	<title>Svelte Toolkit</title>
+	<title>Tag | Svelte Toolkit</title>
 
 		
 
 		<link rel="modulepreload" href="/./_app/start-4a6b92fb.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-2c2bd768.js">
 		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-156cf363.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-f5d317bc.js">
+		<link rel="modulepreload" href="/./_app/pages/components/tag.svelte-000efd92.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
 		<link rel="stylesheet" href="/./_app/assets/vendor-53ea8f2a.css">
 		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-e7b925bc.css">
@@ -35,11 +35,11 @@
 					error: null,
 					nodes: [
 						import("/./_app/pages/__layout.svelte-156cf363.js"),
-						import("/./_app/pages/index.svelte-f5d317bc.js")
+						import("/./_app/pages/components/tag.svelte-000efd92.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/",
+						path: "/components/tag",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -77,9 +77,48 @@
       
 
 
-<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded"><div class="container"><h1>Svelte Toolkit</h1>
+<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded">
 
-  <p>These are some components and styles, based on Svelte and Sass.</p></div></div></div></div></main>
+<div class="container"><h1>Tag</h1>
+  <p>A tag for displaying information about an item.</p>
+
+  <h2>Demo</h2>
+  <div class="block"><span class="tag info svelte-k72t2q">Awesome!
+    </span>
+    <span class="tag info svelte-k72t2q">Great Job!
+    </span></div>
+
+  <h2>Properties</h2>
+  <div class="block"><table class="table svelte-1k7ft03"><thead><tr class=""><th class=" svelte-1r3b7j4">Name</th>
+          <th class=" svelte-1r3b7j4">Default</th>
+          <th class=" svelte-1r3b7j4">Description</th>
+          <th class=" svelte-1r3b7j4">Change</th></tr></thead>
+      <tbody><tr class=""><td class=" svelte-yv4v5n">type</td>
+          <td class=" svelte-yv4v5n">info</td>
+          <td class=" svelte-yv4v5n">primary, info, success, warning, or danger</td>
+          <td class=" svelte-yv4v5n"><select><option value="-">-</option><option value="primary">primary</option><option value="info">info</option><option value="success">success</option><option value="warning">warning</option><option value="danger">danger</option></select></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">content</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">The content to display in the tag, which can also come from slot
+            content
+          </td>
+          <td class=" svelte-yv4v5n"><input type="text" value="Awesome!"></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">closable</td>
+          <td class=" svelte-yv4v5n">false</td>
+          <td class=" svelte-yv4v5n">Set to true to display a close button at the right of the tag
+          </td>
+          <td class=" svelte-yv4v5n"><label><input type="checkbox">
+              Allow closing the tag
+            </label></td></tr></tbody></table></div>
+
+  <h2>Code</h2>
+  <div class="block"><pre>import { Tag } from &quot;svelte-toolkit&quot;;
+
+&lt;Tag type=&quot;info&quot; closable={false}&gt;Awesome!&lt;/Tag&gt;
+
+~ OR ~
+
+&lt;Tag content=&quot;Awesome!&quot; type=&quot;info&quot; closable={false} /&gt;</pre></div></div></div></div></div></main>
 
   <footer class="page-footer svelte-120o530"><div>Svelte Toolkit
 </div></footer></div>

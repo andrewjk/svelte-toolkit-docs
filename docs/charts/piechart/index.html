@@ -8,14 +8,14 @@
 	<link rel="manifest" href="/manifest.json">
 	<link rel="icon" type="image/png" href="/favicon.png">
 
-	<title>Svelte Toolkit</title>
+	<title>Pie Chart | Svelte Toolkit</title>
 
 		
 
 		<link rel="modulepreload" href="/./_app/start-4a6b92fb.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-2c2bd768.js">
 		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-156cf363.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-f5d317bc.js">
+		<link rel="modulepreload" href="/./_app/pages/charts/piechart.svelte-1560b234.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
 		<link rel="stylesheet" href="/./_app/assets/vendor-53ea8f2a.css">
 		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-e7b925bc.css">
@@ -35,11 +35,11 @@
 					error: null,
 					nodes: [
 						import("/./_app/pages/__layout.svelte-156cf363.js"),
-						import("/./_app/pages/index.svelte-f5d317bc.js")
+						import("/./_app/pages/charts/piechart.svelte-1560b234.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/",
+						path: "/charts/piechart",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -77,9 +77,78 @@
       
 
 
-<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded"><div class="container"><h1>Svelte Toolkit</h1>
+<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded">
 
-  <p>These are some components and styles, based on Svelte and Sass.</p></div></div></div></div></main>
+<div class="container"><h1>Pie Chart</h1>
+  <p>A simple SVG pie chart for displaying data.</p>
+
+  <h2>Demo</h2>
+  <div class="block"><svg class="chart svelte-2cwqy8" version="1.1" width="200" height="200"><g><path class="chart-segment svelte-2cwqy8" d="M100,100 L100.00000000000004,2 A98,98 0 0 1 184.870489570875,148.99999999999997 Z" fill="#A6CEE3"><title>Item1
+35</title></path><path class="chart-segment svelte-2cwqy8" d="M100,100 L184.870489570875,148.99999999999997 A98,98 0 0 1 57.47939356647928,188.29494905443707 Z" fill="#B2DF8A"><title>Item2
+25</title></path><path class="chart-segment svelte-2cwqy8" d="M100,100 L57.47939356647928,188.29494905443707 A98,98 0 0 1 100.00000000000001,2 Z" fill="#FB9A99"><title>Item3
+45</title></path></g></svg></div>
+
+  <h2>Properties</h2>
+  <div class="block"><table class="table svelte-1k7ft03"><thead><tr class=""><th class=" svelte-1r3b7j4">Name</th>
+          <th class=" svelte-1r3b7j4">Default</th>
+          <th class=" svelte-1r3b7j4">Description</th>
+          <th class=" svelte-1r3b7j4">Change</th>
+          <th></th></tr></thead>
+      <tbody><tr class=""><td class=" svelte-yv4v5n">size</td>
+          <td class=" svelte-yv4v5n">200</td>
+          <td class=" svelte-yv4v5n">The size of the chart, in pixels</td>
+          <td class=" svelte-yv4v5n"><input type="number" value="200"></td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">radius</td>
+          <td class=" svelte-yv4v5n">50</td>
+          <td class=" svelte-yv4v5n">The size of the chart&#39;s radius as a percentage of size</td>
+          <td class=" svelte-yv4v5n"><input type="number" value="50"></td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">cutout</td>
+          <td class=" svelte-yv4v5n">0</td>
+          <td class=" svelte-yv4v5n">The size of the chart&#39;s cutout as a percentage of size</td>
+          <td class=" svelte-yv4v5n"><input type="number" value="0"></td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">labels</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">The labels to display for each segment</td>
+          <td class=" svelte-yv4v5n"><input type="text" value="Item1, Item2, Item3"></td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">values</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">The value to display for each segment</td>
+          <td class=" svelte-yv4v5n"><input type="text" value="35, 25, 45"></td>
+          <td class=" svelte-yv4v5n"><button>++</button></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">colors</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">The color to display for each segment</td>
+          <td class=" svelte-yv4v5n"><input type="text" value=""></td>
+          <td></td></tr></tbody></table></div>
+
+  <h2>Code</h2>
+  <div class="block"><div class="panel svelte-8s1cfm"><pre>import { PieChart } from &quot;svelte-toolkit&quot;;
+
+&lt;PieChart
+  size={200}
+  radius={50}
+  cutout={0}
+  data={[
+    {
+      label: &quot;Item1&quot;,
+      value: 35,
+      color: &quot;&quot;
+    },
+    {
+      label: &quot;Item2&quot;,
+      value: 25,
+      color: &quot;&quot;
+    },
+    {
+      label: &quot;Item3&quot;,
+      value: 45,
+      color: &quot;&quot;
+    }
+  ]} /&gt;</pre></div></div></div></div></div></div></main>
 
   <footer class="page-footer svelte-120o530"><div>Svelte Toolkit
 </div></footer></div>

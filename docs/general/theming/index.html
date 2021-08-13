@@ -8,14 +8,14 @@
 	<link rel="manifest" href="/manifest.json">
 	<link rel="icon" type="image/png" href="/favicon.png">
 
-	<title>Svelte Toolkit</title>
+	<title>Theming | Svelte Toolkit</title>
 
 		
 
 		<link rel="modulepreload" href="/./_app/start-4a6b92fb.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-2c2bd768.js">
 		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-156cf363.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-f5d317bc.js">
+		<link rel="modulepreload" href="/./_app/pages/general/theming.svelte-5ad1986f.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
 		<link rel="stylesheet" href="/./_app/assets/vendor-53ea8f2a.css">
 		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-e7b925bc.css">
@@ -35,11 +35,11 @@
 					error: null,
 					nodes: [
 						import("/./_app/pages/__layout.svelte-156cf363.js"),
-						import("/./_app/pages/index.svelte-f5d317bc.js")
+						import("/./_app/pages/general/theming.svelte-5ad1986f.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/",
+						path: "/general/theming",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -77,9 +77,50 @@
       
 
 
-<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded"><div class="container"><h1>Svelte Toolkit</h1>
+<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded">
 
-  <p>These are some components and styles, based on Svelte and Sass.</p></div></div></div></div></main>
+<div class="container"><h1>Theming</h1>
+
+  <p>Theming is handled using CSS custom properties. The properties that are supported are listed
+    <a href="/general/themeproperties">here</a>. There are two main ways you can set these properties.
+  </p>
+
+  <h2>Styles</h2>
+  <p>You can set custom properties in the style tag of your component:</p>
+  <pre lang="javascript">&lt;style&gt;
+  :root {
+    --info-color: green;
+  }
+&lt;/style&gt;</pre>
+  <p>When setting custom properties in the style tag, you need to make sure you set all related
+    colors (e.g. if you set --info-color, you will also need to set --info-hover-color).
+  </p>
+
+  <h2>loadTheme</h2>
+  <p>Alternatively, you can pass an object into the loadTheme method in the onMount method of your
+    component:
+  </p>
+  <pre lang="javascript">import { loadTheme } from &quot;svelte-toolkit&quot;;
+
+onMount(() =&gt; {
+  loadTheme({
+    &quot;--info-color&quot;: &quot;pink&quot;
+  });
+});</pre>
+  <p>The loadTheme method will set related colors (e.g. in the example above it will set
+    --info-hover-color as well as --info-color) but as it&#39;s called on onMount the original colors
+    will be displayed briefly before the theme colors are loaded.
+  </p>
+
+  <h2>getTheme</h2>
+  <p>You can use the getTheme method to get all colors that have been set (including related
+    colors if set through loadTheme):
+  </p>
+  <pre lang="javascript">import { getTheme } from &quot;svelte-toolkit&quot;;
+
+onMount(() =&gt; {
+  alert(getTheme());
+});</pre></div></div></div></div></main>
 
   <footer class="page-footer svelte-120o530"><div>Svelte Toolkit
 </div></footer></div>

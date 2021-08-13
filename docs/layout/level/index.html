@@ -8,14 +8,14 @@
 	<link rel="manifest" href="/manifest.json">
 	<link rel="icon" type="image/png" href="/favicon.png">
 
-	<title>Svelte Toolkit</title>
+	<title>Level | Svelte Toolkit</title>
 
 		
 
 		<link rel="modulepreload" href="/./_app/start-4a6b92fb.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-2c2bd768.js">
 		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-156cf363.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-f5d317bc.js">
+		<link rel="modulepreload" href="/./_app/pages/layout/level.svelte-77b4ea03.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
 		<link rel="stylesheet" href="/./_app/assets/vendor-53ea8f2a.css">
 		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-e7b925bc.css">
@@ -35,11 +35,11 @@
 					error: null,
 					nodes: [
 						import("/./_app/pages/__layout.svelte-156cf363.js"),
-						import("/./_app/pages/index.svelte-f5d317bc.js")
+						import("/./_app/pages/layout/level.svelte-77b4ea03.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/",
+						path: "/layout/level",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -77,9 +77,58 @@
       
 
 
-<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded"><div class="container"><h1>Svelte Toolkit</h1>
+<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded">
 
-  <p>These are some components and styles, based on Svelte and Sass.</p></div></div></div></div></main>
+<div class="container"><h1>Level</h1>
+
+  <p>A container for laying out items horizontally.</p>
+
+  <p>Add LevelItems to a Level to ensure all items are the same width and
+    vertically centered:
+  </p>
+  <div class="block"><div class="outer-panel"><div class="level svelte-vecv2c"><div class="level-item svelte-taoocu"><div class="inner-panel">An item.</div>
+</div>
+        <div class="level-item svelte-taoocu"><div class="inner-panel"><div class="title">Title</div></div>
+</div>
+        <div class="level-item svelte-taoocu"><div class="inner-panel">Another item.</div>
+</div>
+</div></div></div>
+
+  <p>Add LevelItems with <code>position=&quot;start&quot;</code> to align them to the start
+    of the level, or <code>position=&quot;end&quot;</code> to align them with the end of the level:
+  </p>
+  <div class="block"><div class="outer-panel"><div class="level svelte-vecv2c"><div class="level-item start svelte-taoocu"><div class="inner-panel">An item at the start.</div>
+</div>
+        <div class="level-item end svelte-taoocu"><div class="inner-panel">An item at the end.</div>
+</div>
+</div></div></div>
+
+  <p>LevelItems placed between start and end items will expand to fill the
+    available space:
+  </p>
+  <div class="block"><div class="outer-panel"><div class="level svelte-vecv2c"><div class="level-item start svelte-taoocu"><div class="inner-panel">An item at the start.</div>
+</div>
+        <div class="level-item svelte-taoocu"><div class="inner-panel">1</div>
+</div>
+        <div class="level-item svelte-taoocu"><div class="inner-panel"><div class="title">2</div></div>
+</div>
+        <div class="level-item svelte-taoocu"><div class="inner-panel">3</div>
+</div>
+        <div class="level-item end svelte-taoocu"><div class="inner-panel">An item at the end.</div>
+</div>
+</div></div></div>
+
+  <p>Levels can have a <code>spaced</code> attribute to put some space between
+    the items, and a <code>collapse</code> attribute to display items vertically
+    on small screens:
+  </p>
+  <div class="block"><div class="outer-panel"><div class="level svelte-vecv2c collapse"><div class="level-item svelte-taoocu spaced collapse"><div class="inner-panel">1</div>
+</div>
+        <div class="level-item svelte-taoocu spaced collapse"><div class="inner-panel">2</div>
+</div>
+        <div class="level-item svelte-taoocu spaced collapse"><div class="inner-panel">3</div>
+</div>
+</div></div></div></div></div></div></div></main>
 
   <footer class="page-footer svelte-120o530"><div>Svelte Toolkit
 </div></footer></div>

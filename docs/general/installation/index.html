@@ -8,14 +8,14 @@
 	<link rel="manifest" href="/manifest.json">
 	<link rel="icon" type="image/png" href="/favicon.png">
 
-	<title>Svelte Toolkit</title>
+	<title>Installation | Svelte Toolkit</title>
 
 		
 
 		<link rel="modulepreload" href="/./_app/start-4a6b92fb.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-2c2bd768.js">
 		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-156cf363.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-f5d317bc.js">
+		<link rel="modulepreload" href="/./_app/pages/general/installation.svelte-7d35993c.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
 		<link rel="stylesheet" href="/./_app/assets/vendor-53ea8f2a.css">
 		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-e7b925bc.css">
@@ -35,11 +35,11 @@
 					error: null,
 					nodes: [
 						import("/./_app/pages/__layout.svelte-156cf363.js"),
-						import("/./_app/pages/index.svelte-f5d317bc.js")
+						import("/./_app/pages/general/installation.svelte-7d35993c.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/",
+						path: "/general/installation",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -77,9 +77,33 @@
       
 
 
-<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded"><div class="container"><h1>Svelte Toolkit</h1>
+<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded">
 
-  <p>These are some components and styles, based on Svelte and Sass.</p></div></div></div></div></main>
+<div class="container"><h1>Installation</h1>
+
+  <h2>Getting Started</h2>
+  <p>The use of the <a href="https://yarnpkg.com/">Yarn</a> package manager is <strong>strongly</strong>
+    recommended, as opposed to using `npm`.
+  </p>
+  <pre>yarn add -D svelte-toolkit</pre>
+
+  <h2>Importing Components</h2>
+  <p>Import toolkit components in your svelte component:</p>
+  <pre>&lt;script&gt;
+  import { Button } from &quot;svelte-toolkit&quot;;
+&lt;/script&gt;
+
+&lt;Button&gt;Click me&lt;/Button&gt;</pre>
+
+  <h2>Base Styles</h2>
+  <p>Import the Toolkit component to set base styles:</p>
+  <pre>&lt;script&gt;
+  import { Toolkit } from &quot;svelte-toolkit&quot;;
+&lt;/script&gt;
+
+&lt;Toolkit /&gt;</pre>
+  <p>When using SvelteKit or Sapper, this component is best placed in your _layout file.
+  </p></div></div></div></div></main>
 
   <footer class="page-footer svelte-120o530"><div>Svelte Toolkit
 </div></footer></div>

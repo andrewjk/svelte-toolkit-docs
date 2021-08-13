@@ -8,14 +8,14 @@
 	<link rel="manifest" href="/manifest.json">
 	<link rel="icon" type="image/png" href="/favicon.png">
 
-	<title>Svelte Toolkit</title>
+	<title>CoverImage | Svelte Toolkit</title>
 
 		
 
 		<link rel="modulepreload" href="/./_app/start-4a6b92fb.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-2c2bd768.js">
 		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-156cf363.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-f5d317bc.js">
+		<link rel="modulepreload" href="/./_app/pages/components/coverimage.svelte-3a7e5542.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
 		<link rel="stylesheet" href="/./_app/assets/vendor-53ea8f2a.css">
 		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-e7b925bc.css">
@@ -35,11 +35,11 @@
 					error: null,
 					nodes: [
 						import("/./_app/pages/__layout.svelte-156cf363.js"),
-						import("/./_app/pages/index.svelte-f5d317bc.js")
+						import("/./_app/pages/components/coverimage.svelte-3a7e5542.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/",
+						path: "/components/coverimage",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -77,9 +77,58 @@
       
 
 
-<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded"><div class="container"><h1>Svelte Toolkit</h1>
+<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded">
 
-  <p>These are some components and styles, based on Svelte and Sass.</p></div></div></div></div></main>
+<div class="container"><h1>Cover Image</h1>
+  <p>A div with a background-image, which allows you to do some things you can&#39;t
+    do with a simple img.
+  </p>
+
+  <h2>Demo</h2>
+  <div class="block"><div class="cover-image svelte-1h858t5" style="background-image: url(&#39;/images/image1.jpg&#39;); height: 100px;" role="img" aria-label="A kangaroo"></div></div>
+
+  <h2>Properties</h2>
+  <div class="block"><table class="table svelte-1k7ft03"><thead><tr class=""><th class=" svelte-1r3b7j4">Name</th>
+          <th class=" svelte-1r3b7j4">Default</th>
+          <th class=" svelte-1r3b7j4">Description</th>
+          <th class=" svelte-1r3b7j4">Change</th></tr></thead>
+      <tbody><tr class=""><td class=" svelte-yv4v5n">src</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">The image source as a URL</td>
+          <td class=" svelte-yv4v5n"><input type="text" value="/images/image1.jpg"></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">position</td>
+          <td class=" svelte-yv4v5n">50% 50%</td>
+          <td class=" svelte-yv4v5n">Overrides the background-position style</td>
+          <td class=" svelte-yv4v5n"><input type="text" value=""></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">repeat</td>
+          <td class=" svelte-yv4v5n">no-repeat</td>
+          <td class=" svelte-yv4v5n">Overrides the background-repeat style</td>
+          <td class=" svelte-yv4v5n"><input type="text" value=""></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">size</td>
+          <td class=" svelte-yv4v5n">cover</td>
+          <td class=" svelte-yv4v5n">Overrides the background-size style</td>
+          <td class=" svelte-yv4v5n"><input type="text" value=""></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">height</td>
+          <td class=" svelte-yv4v5n">0</td>
+          <td class=" svelte-yv4v5n">You MUST provide a height for your image, either via this property
+            or by CSS styling
+          </td>
+          <td class=" svelte-yv4v5n"><input type="text" value="100px"></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">width</td>
+          <td class=" svelte-yv4v5n">100%</td>
+          <td class=" svelte-yv4v5n">You can also provide a width for your image, either via this
+            property or by CSS styling
+          </td>
+          <td class=" svelte-yv4v5n"><input type="text" value=""></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">alt</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">Alternative text used to describe this image to a screen-reader</td>
+          <td class=" svelte-yv4v5n"><input type="text" value="A kangaroo"></td></tr></tbody></table></div>
+
+  <h2>Code</h2>
+  <div class="block"><div class="panel svelte-8s1cfm"><pre>import { CoverImage } from &quot;svelte-toolkit&quot;;
+
+&lt;CoverImage src=&quot;/images/image1.jpg&quot; position=&quot;&quot; repeat=&quot;&quot; size=&quot;&quot; height=&quot;100px&quot; width=&quot;&quot; alt=&quot;A kangaroo&quot; /&gt;</pre></div></div></div></div></div></div></main>
 
   <footer class="page-footer svelte-120o530"><div>Svelte Toolkit
 </div></footer></div>

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="theme-color" content="#333333">
+
+	<link rel="manifest" href="/manifest.json">
+	<link rel="icon" type="image/png" href="/favicon.png">
+
+	<title>Bar Chart | Svelte Toolkit</title>
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-4a6b92fb.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-2c2bd768.js">
+		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-156cf363.js">
+		<link rel="modulepreload" href="/./_app/pages/charts/barchart.svelte-75ebee14.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/vendor-53ea8f2a.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-e7b925bc.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-4a6b92fb.js";
+			start({
+				target: document.body,
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/pages/__layout.svelte-156cf363.js"),
+						import("/./_app/pages/charts/barchart.svelte-75ebee14.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/charts/barchart",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+</head>
+<body>
+	
+
+
+
+
+
+
+<div class="page svelte-m50phk"><header class="page-header svelte-1yeyzpe"><div>Svelte Toolkit
+</div></header>
+
+  <main class="page-body svelte-6whmn3">
+
+
+<div class="grid spaced">
+
+
+<div class="grid-item span-6 md-span-3 lg-span-2"><div class="container svelte-1u9r5bx padded"><div class="block"><input type="text" placeholder="Search..."></div>
+<div class="accordion svelte-qzuxuv" tabindex="0"><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">GENERAL</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">LAYOUT</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">COMPONENTS</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">NAVIGATION</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">FORMS</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">DIALOGS</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">CHARTS</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">ICONS</button></div>
+  </div></div></div></div>
+      
+
+
+<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded">
+
+<div class="container"><h1>Bar Chart</h1>
+  <p>A simple SVG bar chart for displaying data.</p>
+
+  <h2>Demo</h2>
+  <div class="block"><div class="chart svelte-1eqjn3w"><svg version="1.1" width="400" height="200"><g><text>8</text></g></svg></div></div>
+
+  <h2>Properties</h2>
+  <div class="block"><table class="table svelte-1k7ft03"><thead><tr class=""><th class=" svelte-1r3b7j4">Name</th>
+          <th class=" svelte-1r3b7j4">Default</th>
+          <th class=" svelte-1r3b7j4">Description</th>
+          <th class=" svelte-1r3b7j4">Change</th>
+          <th></th></tr></thead>
+      <tbody><tr class=""><td class=" svelte-yv4v5n">height</td>
+          <td class=" svelte-yv4v5n">200</td>
+          <td class=" svelte-yv4v5n">The height of the chart, in pixels</td>
+          <td class=" svelte-yv4v5n"><input type="number" value="200"></td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">width</td>
+          <td class=" svelte-yv4v5n">400</td>
+          <td class=" svelte-yv4v5n">The width of the chart, in pixels. Set to 0 to auto-size</td>
+          <td class=" svelte-yv4v5n"><input type="number" value="400"></td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">xLabel</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">A label to display along the x-axis</td>
+          <td class=" svelte-yv4v5n"><input type="text" value="Things"></td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">yLabel</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">A label to display along the y-axis</td>
+          <td class=" svelte-yv4v5n"><input type="text" value=""></td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">labels</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">The labels to display for each bar</td>
+          <td class=" svelte-yv4v5n"><input type="text" value="Item1, Item2, Item3"></td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">data</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">The data to display as bars</td>
+          <td class=" svelte-yv4v5n"><input type="text" value="35, 25, 45"></td>
+          <td class=" svelte-yv4v5n"><button>++</button></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">color</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">The color of the bars</td>
+          <td class=" svelte-yv4v5n"><input type="text" value=""></td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">data 2</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">You can pass multiple data arrays in a series property</td>
+          <td class=" svelte-yv4v5n"><input type="text" value=""></td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">color 2</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">You can pass multiple colors in a series property</td>
+          <td class=" svelte-yv4v5n"><input type="text" value=""></td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">stepCount</td>
+          <td class=" svelte-yv4v5n">2</td>
+          <td class=" svelte-yv4v5n">The number of steps to show on the y-axis</td>
+          <td class=" svelte-yv4v5n"><input type="number" value="2"></td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">stepValue</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">The value of each step on the y-axis. By default, this is
+            automatically calculated
+          </td>
+          <td class=" svelte-yv4v5n"><input type="number" value="0"></td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">showXAxis</td>
+          <td class=" svelte-yv4v5n">true</td>
+          <td class=" svelte-yv4v5n">set to true to show the x-axis line, or false to hide it</td>
+          <td class=" svelte-yv4v5n"><label><input type="checkbox" checked>
+              Show the x-axis
+            </label></td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">showYAxis</td>
+          <td class=" svelte-yv4v5n">true</td>
+          <td class=" svelte-yv4v5n">set to true to show the y-axis line, or false to hide it</td>
+          <td class=" svelte-yv4v5n"><label><input type="checkbox" checked>
+              Show the y-axis
+            </label></td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">showHLines</td>
+          <td class=" svelte-yv4v5n">false</td>
+          <td class=" svelte-yv4v5n">set to true to show horizontal gridlines</td>
+          <td class=" svelte-yv4v5n"><label><input type="checkbox">
+              Show horizontal gridlines
+            </label></td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">showVLines</td>
+          <td class=" svelte-yv4v5n">false</td>
+          <td class=" svelte-yv4v5n">set to true to show vertical gridlines</td>
+          <td class=" svelte-yv4v5n"><label><input type="checkbox">
+              Show vertical gridlines
+            </label></td>
+          <td></td></tr></tbody></table></div>
+
+  <h2>Code</h2>
+  <div class="block"><div class="panel svelte-8s1cfm"><pre>import { BarChart } from &quot;svelte-toolkit&quot;;
+
+&lt;BarChart
+  width={400}
+  height={200} 
+  xLabel=&quot;Things&quot;
+  yLabel=&quot;&quot;
+  labels={[&quot;Item1&quot;,&quot;Item2&quot;,&quot;Item3&quot;]}
+  data={[35,25,45]}
+  color=&quot;&quot;
+  stepCount={2}
+  stepValue={0}
+  showXAxis={true}
+  showYAxis={true}
+  showHLines={false}
+  showVLines={false} /&gt;</pre></div></div></div></div></div></div></main>
+
+  <footer class="page-footer svelte-120o530"><div>Svelte Toolkit
+</div></footer></div>
+
+
+
+	
+
+</body>
+</html>

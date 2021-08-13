@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="theme-color" content="#333333">
+
+	<link rel="manifest" href="/manifest.json">
+	<link rel="icon" type="image/png" href="/favicon.png">
+
+	<title>Tag Input | Svelte Toolkit</title>
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-4a6b92fb.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-2c2bd768.js">
+		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-156cf363.js">
+		<link rel="modulepreload" href="/./_app/pages/components/taginput.svelte-a2fcee4b.js">
+		<link rel="modulepreload" href="/./_app/chunks/countries-3ee79671.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/vendor-53ea8f2a.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-e7b925bc.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-4a6b92fb.js";
+			start({
+				target: document.body,
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/pages/__layout.svelte-156cf363.js"),
+						import("/./_app/pages/components/taginput.svelte-a2fcee4b.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/components/taginput",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+</head>
+<body>
+	
+
+
+
+
+
+
+<div class="page svelte-m50phk"><header class="page-header svelte-1yeyzpe"><div>Svelte Toolkit
+</div></header>
+
+  <main class="page-body svelte-6whmn3">
+
+
+<div class="grid spaced">
+
+
+<div class="grid-item span-6 md-span-3 lg-span-2"><div class="container svelte-1u9r5bx padded"><div class="block"><input type="text" placeholder="Search..."></div>
+<div class="accordion svelte-qzuxuv" tabindex="0"><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">GENERAL</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">LAYOUT</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">COMPONENTS</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">NAVIGATION</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">FORMS</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">DIALOGS</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">CHARTS</button></div>
+  </div><div class="accordion-item svelte-cnurs9"><div id="undefined-header" class="accordion-header" aria-expanded="false"><button class="button accordion-header-button svelte-cnurs9" type="button" tabindex="-1">ICONS</button></div>
+  </div></div></div></div>
+      
+
+
+<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded">
+
+<div class="container"><h1>Tag Input</h1>
+  <p>An input that can be used to enter or select from a drop down list of
+    matching items.
+  </p>
+
+  <h2>Demo</h2>
+  <div class="block"><div class="tag-input drop-down svelte-1c91lto" role="combobox"><div class="drop-down-input-container svelte-1c91lto"><div class="tag-input-value-list svelte-1c91lto"></div>
+    <input class="drop-down-input svelte-1c91lto" placeholder="" value=""></div>
+  </div></div>
+
+  <h2>Properties</h2>
+  <div class="block"><table class="table svelte-1k7ft03"><thead><tr class=""><th class=" svelte-1r3b7j4">Name</th>
+          <th class=" svelte-1r3b7j4">Default</th>
+          <th class=" svelte-1r3b7j4">Description</th>
+          <th class=" svelte-1r3b7j4">Change</th></tr></thead>
+      <tbody><tr class=""><td class=" svelte-yv4v5n">value</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">the selected value</td>
+          <td class=" svelte-yv4v5n">null</td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">placeholder</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">Placeholder text to show when the input is empty.</td>
+          <td class=" svelte-yv4v5n"><input type="text" value=""></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">source</td>
+          <td class=" svelte-yv4v5n">[ ]</td>
+          <td class=" svelte-yv4v5n">an array of source items that will be filtered by the TagInput,
+            which may be strings or objects with a &#39;text&#39; property
+          </td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">items</td>
+          <td class=" svelte-yv4v5n">[ ]</td>
+          <td class=" svelte-yv4v5n">The items to display in the TagInput&#39;s drop down list, which may be
+            strings or objects with a &#39;text&#39; property
+          </td>
+          <td></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">delay</td>
+          <td class=" svelte-yv4v5n">300</td>
+          <td class=" svelte-yv4v5n">a delay (in milliseconds) to wait before filtering items</td>
+          <td class=" svelte-yv4v5n"><input type="number" value="300"></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">minChars</td>
+          <td class=" svelte-yv4v5n">1</td>
+          <td class=" svelte-yv4v5n">the minimum number of characters to wait before filtering items
+          </td>
+          <td class=" svelte-yv4v5n"><input type="number" value="1"></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">tagClass</td>
+          <td></td>
+          <td class=" svelte-yv4v5n">the class to set on each tag</td>
+          <td class=" svelte-yv4v5n"><input type="text"></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">tagType</td>
+          <td class=" svelte-yv4v5n">info</td>
+          <td class=" svelte-yv4v5n">primary, info, success, warning, or danger</td>
+          <td class=" svelte-yv4v5n"><select><option value="-">-</option><option value="primary">primary</option><option value="info">info</option><option value="success">success</option><option value="warning">warning</option><option value="danger">danger</option></select></td></tr></tbody></table></div>
+
+  <h2>Code</h2>
+  <div class="block"><div class="panel svelte-8s1cfm"><pre>import { TagInput, TagInputItem } from &quot;svelte-toolkit&quot;;
+
+&lt;TagInput
+  source={countries}  
+  value={null}
+  placeholder=&quot;&quot;
+  delay={300}
+  minChars={1}
+  tagClass=&quot;null&quot;
+  tagType=&quot;info&quot; /&gt;
+
+~ OR ~
+
+&lt;TagInput
+  {items}
+  value={null}
+  placeholder=&quot;&quot;
+  delay={300}
+  minChars={1}
+  tagClass=&quot;null&quot;
+  tagType=&quot;info&quot;
+  on:search={loadItems} /&gt;
+
+~ OR ~
+
+&lt;TagInput
+    value={null}
+    placeholder=&quot;&quot;
+    delay={300}
+    minChars={1}
+    tagClass=&quot;null&quot;
+    tagType=&quot;info&quot;
+    on:search={loadItems}&gt;
+  &lt;div slot=&quot;items&quot;&gt;
+    {#each items as item}
+      &lt;TagInputItem&gt;{item.name}&lt;/TagInputItem&gt;
+    {/each}
+  &lt;/div&gt;
+&lt;/TagInput&gt;</pre></div></div></div></div></div></div></main>
+
+  <footer class="page-footer svelte-120o530"><div>Svelte Toolkit
+</div></footer></div>
+
+
+
+	
+
+</body>
+</html>

@@ -8,14 +8,14 @@
 	<link rel="manifest" href="/manifest.json">
 	<link rel="icon" type="image/png" href="/favicon.png">
 
-	<title>Svelte Toolkit</title>
+	<title>Validation | Svelte Toolkit</title>
 
 		
 
 		<link rel="modulepreload" href="/./_app/start-4a6b92fb.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-2c2bd768.js">
 		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-156cf363.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-f5d317bc.js">
+		<link rel="modulepreload" href="/./_app/pages/forms/validation.svelte-09c5ab16.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
 		<link rel="stylesheet" href="/./_app/assets/vendor-53ea8f2a.css">
 		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-e7b925bc.css">
@@ -35,11 +35,11 @@
 					error: null,
 					nodes: [
 						import("/./_app/pages/__layout.svelte-156cf363.js"),
-						import("/./_app/pages/index.svelte-f5d317bc.js")
+						import("/./_app/pages/forms/validation.svelte-09c5ab16.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/",
+						path: "/forms/validation",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -77,9 +77,49 @@
       
 
 
-<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded"><div class="container"><h1>Svelte Toolkit</h1>
+<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded">
 
-  <p>These are some components and styles, based on Svelte and Sass.</p></div></div></div></div></main>
+<div class="container"><h1>Validation</h1>
+  <p>Validation for form elements.</p>
+
+  <h2>Demo</h2>
+  
+  <div class="block"><h4>Required</h4>
+    <div class="field svelte-95xtk7">
+    <label for="field1">Please enter something:</label>
+  
+  
+<input type="text" class="" name="field1" placeholder=""  maxlength="10" value="">
+  
+  
+</div></div>
+  <div class="block"><h4>Regex</h4>
+    <div class="field svelte-95xtk7"><label for="four-numbers-input" slot="label">Please enter four numbers:</label>
+  
+<input type="text" id="four-numbers-input" class="" name="field2" placeholder=""  value="">
+  
+  
+</div></div>
+  <div class="block"><h4>Compare</h4>
+    <div class="field svelte-95xtk7"><label for="two-passwords-input" slot="label">Enter two fields that are the same:</label>
+  
+<input type="password" id="two-passwords-input" class="" name="field3" placeholder=""  value="">
+  
+  
+</div>
+    <div class="field svelte-95xtk7">
+    
+  
+  
+<input type="password" class="" name="field4" placeholder=""  value="">
+  
+  
+</div></div>
+  <div class="block"><button class="button primary medium svelte-1sowyxx" type="button" title="" >
+  Check it</button></div>
+
+  <h2>Code</h2>
+  <div class="block"><pre></pre></div></div></div></div></div></main>
 
   <footer class="page-footer svelte-120o530"><div>Svelte Toolkit
 </div></footer></div>

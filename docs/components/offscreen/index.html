@@ -8,17 +8,18 @@
 	<link rel="manifest" href="/manifest.json">
 	<link rel="icon" type="image/png" href="/favicon.png">
 
-	<title>Svelte Toolkit</title>
+	<title>Off-Screen | Svelte Toolkit</title>
 
 		
 
 		<link rel="modulepreload" href="/./_app/start-4a6b92fb.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-2c2bd768.js">
 		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-156cf363.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-f5d317bc.js">
+		<link rel="modulepreload" href="/./_app/pages/components/offscreen.svelte-6d15fb8b.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
 		<link rel="stylesheet" href="/./_app/assets/vendor-53ea8f2a.css">
 		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-e7b925bc.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/components/offscreen.svelte-31606ff0.css">
 
 		<script type="module">
 			import { start } from "/./_app/start-4a6b92fb.js";
@@ -35,11 +36,11 @@
 					error: null,
 					nodes: [
 						import("/./_app/pages/__layout.svelte-156cf363.js"),
-						import("/./_app/pages/index.svelte-f5d317bc.js")
+						import("/./_app/pages/components/offscreen.svelte-6d15fb8b.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
-						path: "/",
+						path: "/components/offscreen",
 						query: new URLSearchParams(""),
 						params: {}
 					}
@@ -77,9 +78,38 @@
       
 
 
-<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded"><div class="container"><h1>Svelte Toolkit</h1>
+<div class="grid-item span-6 md-span-9 lg-span-10"><div class="container svelte-1u9r5bx padded">
 
-  <p>These are some components and styles, based on Svelte and Sass.</p></div></div></div></div></main>
+<div class="container"><h1>Off-Screen</h1>
+  <p>A panel that can appear from off-screen.</p>
+
+  <h2>Demo</h2>
+  <div class="block">
+    <button class="button full-width">Show the off-screen
+    </button></div>
+
+  <h2>Properties</h2>
+  <div class="block"><table class="table svelte-1k7ft03"><thead><tr class=""><th class=" svelte-1r3b7j4">Name</th>
+          <th class=" svelte-1r3b7j4">Default</th>
+          <th class=" svelte-1r3b7j4">Description</th>
+          <th class=" svelte-1r3b7j4">Change</th></tr></thead>
+      <tbody><tr class=""><td class=" svelte-yv4v5n">visible</td>
+          <td class=" svelte-yv4v5n">false</td>
+          <td class=" svelte-yv4v5n">true to show the off-screen</td>
+          <td class=" svelte-yv4v5n"><label><input type="checkbox">
+              Show the off-screen
+            </label></td></tr>
+        <tr class=""><td class=" svelte-yv4v5n">position</td>
+          <td class=" svelte-yv4v5n">left</td>
+          <td class=" svelte-yv4v5n">left, top, right, or bottom</td>
+          <td class=" svelte-yv4v5n"><select><option value="left">left</option><option value="top">top</option><option value="right">right</option><option value="bottom">bottom</option></select></td></tr></tbody></table></div>
+
+  <h2>Code</h2>
+  <div class="block"><div class="panel svelte-8s1cfm"><pre>import { OffScreen } from &quot;svelte-toolkit&quot;;
+
+&lt;OffScreen visible={false} position=&quot;left&quot;&gt;
+  Off-screen content
+&lt;/OffScreen&gt;</pre></div></div></div></div></div></div></main>
 
   <footer class="page-footer svelte-120o530"><div>Svelte Toolkit
 </div></footer></div>
