@@ -1,4 +1,5 @@
 <script>
+  import { base } from "$app/paths";
   import {
     Accordion,
     AccordionItem,
@@ -94,7 +95,7 @@
       p.title.toLowerCase().replaceAll(' ', '').includes(search.toLowerCase().replaceAll(' ', ''))
     ) as page}
       <SubNavMenuItem>
-        <a href={`/${page.group}/${page.title.replace(/ /g, '')}`.toLowerCase()}>
+        <a href={`${base}/${page.group}/${page.title.replace(/ /g, '')}`.toLowerCase()}>
           {page.group} &gt; {page.title}
         </a>
       </SubNavMenuItem>
@@ -108,7 +109,7 @@
           {#each pages.filter(p => p.group === group) as page}
             <SubNavMenuItem>
               <a
-                href={`/${page.group}/${page.title.replace(/ /g, '')}`.toLowerCase()}>
+                href={`${base}/${page.group}/${page.title.replace(/ /g, '')}`.toLowerCase()}>
                 {page.title}
               </a>
             </SubNavMenuItem>

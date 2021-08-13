@@ -1,3 +1,7 @@
+<script>
+  import { base } from "$app/paths";
+</script>
+
 <svelte:head>
   <title>Theming | Svelte Toolkit</title>
 </svelte:head>
@@ -7,7 +11,7 @@
 
   <p>
     Theming is handled using CSS custom properties. The properties that are supported are listed
-    <a href="/general/themeproperties">here</a>. There are two main ways you can set these properties.
+    <a href={`${base}/general/themeproperties`}>here</a>. There are two main ways you can set these properties.
   </p>
 
   <h2>Styles</h2>
