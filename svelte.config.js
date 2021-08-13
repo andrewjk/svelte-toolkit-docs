@@ -10,6 +10,12 @@ const config = {
       assets: 'docs',
       fallback: null
     }),
+    // GitHub Pages stores the website at /svelte-toolkit-docs
+    // We need to comment this out if running in dev where it doesn't apply
+    paths: {
+      base: '/svelte-toolkit-docs',
+      assets: '/svelte-toolkit-docs',
+    },
     vite: (() => ({
       resolve: {
         // Add .svelte to the default extensions to resolve svelte files in node_modules
