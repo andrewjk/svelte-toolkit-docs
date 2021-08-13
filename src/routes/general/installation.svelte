@@ -34,6 +34,6 @@
 <Toolkit />`.trim()}
   </pre>
   <p>
-    When using Sapper, this component is best placed in your _layout file.
+    When using SvelteKit or Sapper, this component is best placed in your _layout file.
   </p>
 </div>

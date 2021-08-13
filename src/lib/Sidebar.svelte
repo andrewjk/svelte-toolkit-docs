@@ -4,7 +4,6 @@
     AccordionItem,
     SubNavMenu,
     SubNavMenuItem,
-    SubNavMenuHeader
   } from "svelte-toolkit";
 
   let search = null;
@@ -92,10 +91,10 @@
 {#if search}
   <SubNavMenu type="vertical">
     {#each pages.filter(p =>
-      p.title.toLowerCase().includes(search.toLowerCase())
+      p.title.toLowerCase().replaceAll(' ', '').includes(search.toLowerCase().replaceAll(' ', ''))
     ) as page}
       <SubNavMenuItem>
-        <a href={`${page.group}/${page.title.replace(/ /g, '')}`.toLowerCase()}>
+        <a href={`/${page.group}/${page.title.replace(/ /g, '')}`.toLowerCase()}>
           {page.group} &gt; {page.title}
         </a>
       </SubNavMenuItem>
@@ -109,7 +108,7 @@
           {#each pages.filter(p => p.group === group) as page}
             <SubNavMenuItem>
               <a
-                href={`${page.group}/${page.title.replace(/ /g, '')}`.toLowerCase()}>
+                href={`/${page.group}/${page.title.replace(/ /g, '')}`.toLowerCase()}>
                 {page.title}
               </a>
             </SubNavMenuItem>

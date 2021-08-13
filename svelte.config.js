@@ -1,33 +1,25 @@
-const sass = require('node-sass')
+import staticAdapter from '@sveltejs/adapter-static';
+import sveltePreprocess from 'svelte-preprocess';
 
-module.exports = {
-  preprocess: {
-    style: async ({ content, attributes }) => {
-      if (attributes.lang !== 'scss') {
-        return
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+  kit: {
+    // Use the static adapter so that we can deploy to GitHub Pages
+    adapter: staticAdapter({
+      pages: 'docs',
+      assets: 'docs',
+      fallback: null
+    }),
+    vite: (() => ({
+      resolve: {
+        // Add .svelte to the default extensions to resolve svelte files in node_modules
+        // Without this, the svelte-toolkit components wouldn't be resolved
+        extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.svelte']
       }
-      return processSass(content)
-    }
-  }
-}
+    }))
+  },
+  // Preprocess SASS styles in Svelte components
+  preprocess: sveltePreprocess()
+};
 
-function processSass(content) {
-  return new Promise((resolve, reject) => {
-    sass.render(
-      {
-        data: content,
-        sourceMap: true,
-        outFile: 'x' // this is necessary, but is ignored
-      },
-      (err, result) => {
-        if (err) {
-          return reject(err)
-        }
-        resolve({
-          code: result.css.toString(),
-          map: result.map.toString()
-        })
-      }
-    )
-  })
-}
+export default config;

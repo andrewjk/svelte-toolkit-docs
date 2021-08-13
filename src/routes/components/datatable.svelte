@@ -159,43 +159,45 @@ import { DataTable, DataTableColumn } from "svelte-toolkit";
         <div slot="empty">No countries were found...</div>
       </DataTable>
     </TabItem>
-    <TabItem header="With Data" id="tab2">
-      <p>
-        Data from
-        <a href="https://www.themoviedb.org">The Movie DB</a>
-      </p>
-      <DataTable
-        {data}
-        {loading}
-        keyField="id"
-        itemCount={dataItemCount}
-        pageNumber={dataPageNumber}
-        pageSize={dataPageSize}
-        {type}
-        let:item
-        on:sort={handleSort}
-        on:page={handlePage}>
-        <DataTableColumn field="title" header="Title" sortable>
-          {item.title}
-        </DataTableColumn>
-        <DataTableColumn field="vote_average" header="Vote Average" sortable>
-          {item.vote_average}
-        </DataTableColumn>
-        <DataTableColumn field="vote_count" header="Vote Count" sortable>
-          {item.vote_count}
-        </DataTableColumn>
-        <DataTableColumn field="release_date" header="Release Date" sortable>
-          {item.release_date ? new Date(item.release_date).toLocaleDateString() : ''}
-        </DataTableColumn>
-        <DataTableColumn header="Overview">
-          {item.overview.length > 200 ? item.overview
-                .substring(0, 199)
-                .trim() + '…' : item.overview}
-        </DataTableColumn>
-        <div slot="loading">Loading movies...</div>
-        <div slot="empty">No movies were found...</div>
-      </DataTable>
-    </TabItem>
+    {#if typeof document !== 'undefined'}
+      <TabItem header="With Data" id="tab2">
+        <p>
+          Data from
+          <a href="https://www.themoviedb.org">The Movie DB</a>
+        </p>
+        <DataTable
+          {data}
+          {loading}
+          keyField="id"
+          itemCount={dataItemCount}
+          pageNumber={dataPageNumber}
+          pageSize={dataPageSize}
+          {type}
+          let:item
+          on:sort={handleSort}
+          on:page={handlePage}>
+          <DataTableColumn field="title" header="Title" sortable>
+            {item.title}
+          </DataTableColumn>
+          <DataTableColumn field="vote_average" header="Vote Average" sortable>
+            {item.vote_average}
+          </DataTableColumn>
+          <DataTableColumn field="vote_count" header="Vote Count" sortable>
+            {item.vote_count}
+          </DataTableColumn>
+          <DataTableColumn field="release_date" header="Release Date" sortable>
+            {item.release_date ? new Date(item.release_date).toLocaleDateString() : ''}
+          </DataTableColumn>
+          <DataTableColumn header="Overview">
+            {item.overview.length > 200 ? item.overview
+                  .substring(0, 199)
+                  .trim() + '…' : item.overview}
+          </DataTableColumn>
+          <div slot="loading">Loading movies...</div>
+          <div slot="empty">No movies were found...</div>
+        </DataTable>
+      </TabItem>
+    {/if}
   </TabGroup>
 
   <h2>Properties</h2>

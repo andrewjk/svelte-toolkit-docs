@@ -13,9 +13,9 @@
     getTheme
   } from "svelte-toolkit";
 
-  import Header from "../components/Header.svelte";
-  import Footer from "../components/Footer.svelte";
-  import Sidebar from "../components/Sidebar.svelte";
+  import Header from "$lib/Header.svelte";
+  import Footer from "$lib/Footer.svelte";
+  import Sidebar from "$lib/Sidebar.svelte";
 
   export let segment;
 

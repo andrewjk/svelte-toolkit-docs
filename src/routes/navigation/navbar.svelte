@@ -5,7 +5,6 @@
     NavMenu,
     NavMenuItem,
     NavMenuDropDown,
-    DropDownMenu,
     DropDownMenuItem,
     DropDownMenuDivider,
     Button
@@ -23,13 +22,13 @@ import {
 } from "svelte-toolkit";
 
 <NavBar>
-  <NavLogo src="logo-192.png" alt="Svelte logo" />
+  <NavLogo src="/logo-192.png" alt="Svelte logo" />
   <NavMenu>
     <NavMenuItem>
-      <a href="components/accordion">Accordion</a>
+      <a href="../components/accordion">Accordion</a>
     </NavMenuItem>
     <NavMenuItem>
-      <a href="components/alert">Alert</a>
+      <a href="../components/alert">Alert</a>
     </NavMenuItem>
     <NavMenuItem>
       <Button>Button</Button>
@@ -37,20 +36,20 @@ import {
   </NavMenu>
   <NavMenu position="end">
     <NavMenuItem>
-      <a href="components/badge">Badge</a>
+      <a href="../components/badge">Badge</a>
     </NavMenuItem>
     <NavMenuDropDown>
       Others...
       <div slot="menu">
         <DropDownMenuItem>
-          <a href="components/breadcrumb">Breadcrumb</a>
+          <a href="../components/breadcrumb">Breadcrumb</a>
         </DropDownMenuItem>
         <DropDownMenuDivider />
         <DropDownMenuItem>
-          <a href="components/calendar">Calendar</a>
+          <a href="../components/calendar">Calendar</a>
         </DropDownMenuItem>
         <DropDownMenuItem>
-          <a href="components/dialog">Dialog</a>
+          <a href="../components/dialog">Dialog</a>
         </DropDownMenuItem>
       </div>
     </NavMenuDropDown>
@@ -75,13 +74,13 @@ import {
   <h2>Demo</h2>
   <div class="block nav-bar-demo">
     <NavBar>
-      <NavLogo src="logo-192.png" alt="Svelte logo" height="48" />
+      <NavLogo src="/logo-192.png" alt="Svelte logo" height="48" />
       <NavMenu>
         <NavMenuItem>
-          <a href="components/accordion">Accordion</a>
+          <a href="../components/accordion">Accordion</a>
         </NavMenuItem>
         <NavMenuItem>
-          <a href="components/alert">Alert</a>
+          <a href="../components/alert">Alert</a>
         </NavMenuItem>
         <NavMenuItem>
           <Button>Button</Button>
@@ -89,20 +88,20 @@ import {
       </NavMenu>
       <NavMenu position="end">
         <NavMenuItem>
-          <a href="components/badge">Badge</a>
+          <a href="../components/badge">Badge</a>
         </NavMenuItem>
         <NavMenuDropDown>
           Others...
           <div slot="menu">
             <DropDownMenuItem>
-              <a href="components/breadcrumb">Breadcrumb</a>
+              <a href="../components/breadcrumb">Breadcrumb</a>
             </DropDownMenuItem>
             <DropDownMenuDivider />
             <DropDownMenuItem>
-              <a href="components/calendar">Calendar</a>
+              <a href="../components/calendar">Calendar</a>
             </DropDownMenuItem>
             <DropDownMenuItem>
-              <a href="components/dialog">Dialog</a>
+              <a href="../components/dialog">Dialog</a>
             </DropDownMenuItem>
           </div>
         </NavMenuDropDown>
