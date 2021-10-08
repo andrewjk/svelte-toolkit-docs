@@ -1,4 +1,5 @@
 <script>
+  import { base } from "$app/paths";
   import {
     NavBar,
     NavLogo,
@@ -7,7 +8,7 @@
     NavMenuDropDown,
     DropDownMenuItem,
     DropDownMenuDivider,
-    Button
+    Button,
   } from "svelte-toolkit";
 
   $: exampleCode = `
@@ -57,12 +58,6 @@ import {
 </NavBar>`.trim();
 </script>
 
-<style>
-  .nav-bar-demo {
-    border: 1px dashed #d2d2d2;
-  }
-</style>
-
 <svelte:head>
   <title>Navbar | Svelte Toolkit</title>
 </svelte:head>
@@ -74,7 +69,7 @@ import {
   <h2>Demo</h2>
   <div class="block nav-bar-demo">
     <NavBar>
-      <NavLogo src="/logo-192.png" alt="Svelte logo" height="48" />
+      <NavLogo src={`${base}/logo-192.png`} alt="Svelte logo" height="48" />
       <NavMenu>
         <NavMenuItem>
           <a href="../components/accordion">Accordion</a>
@@ -114,3 +109,9 @@ import {
     <pre style="">{exampleCode}</pre>
   </div>
 </div>
+
+<style>
+  .nav-bar-demo {
+    border: 1px dashed #d2d2d2;
+  }
+</style>

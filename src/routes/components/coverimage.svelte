@@ -1,4 +1,5 @@
 <script>
+  import { base } from "$app/paths";
   import {
     CoverImage,
     Table,
@@ -10,7 +11,7 @@
     Panel,
   } from "svelte-toolkit";
 
-  let src = "/images/image1.jpg";
+  let src = base + "/images/image1.jpg";
   let position = "";
   let repeat = "";
   let size = "";
@@ -109,7 +110,9 @@ import { CoverImage } from "svelte-toolkit";
         <TableRow>
           <TableCell>alt</TableCell>
           <td />
-          <TableCell>Alternative text used to describe this image to a screen-reader</TableCell>
+          <TableCell>
+            Alternative text used to describe this image to a screen-reader
+          </TableCell>
           <TableCell>
             <input type="text" bind:value={alt} />
           </TableCell>
