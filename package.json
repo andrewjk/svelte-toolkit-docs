@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "svelte-kit dev",
+    "prebuild": "stk theme",
     "build": "svelte-kit build",
     "preview": "svelte-kit preview",
     "theme": "stk theme"
