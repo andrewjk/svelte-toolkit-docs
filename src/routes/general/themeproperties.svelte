@@ -7,19 +7,8 @@
     TableBody,
     TableCell,
     Panel,
-  } from "svelte-toolkit"
+  } from "svelte-toolkit";
 </script>
-
-<style>
-  .color-preview {
-    border: 1px solid #d2d2d2;
-    border-radius: 2px;
-    display: inline-block;
-    height: 1.5rem;
-    width: 1.5rem;
-    margin-right: 4px;
-  }
-</style>
 
 <svelte:head>
   <title>Theme Properties | Svelte Toolkit</title>
@@ -167,14 +156,17 @@
             <span class="color-preview" style="background-color: #ffffff" />
             #ffffff
           </TableCell>
-          <TableCell>The background color of buttons used in components.</TableCell>
+          <TableCell>
+            The background color of buttons used in components.
+          </TableCell>
         </TableRow>
         <TableRow>
           <TableCell>--button-text-color</TableCell>
           <TableCell>
             <span
               class="color-preview"
-              style="background-color: rgba(0, 0, 0, 0.7)" />
+              style="background-color: rgba(0, 0, 0, 0.7)"
+            />
             rgba(0, 0, 0, 0.7)
           </TableCell>
           <TableCell>The text color of buttons used in components.</TableCell>
@@ -200,7 +192,8 @@
           <TableCell>
             <span
               class="color-preview"
-              style="background-color: rgba(0, 0, 0, 0.7)" />
+              style="background-color: rgba(0, 0, 0, 0.7)"
+            />
             rgba(0, 0, 0, 0.7)
           </TableCell>
           <TableCell>The text color of drop-down lists.</TableCell>
@@ -211,7 +204,8 @@
             <span class="color-preview" style="background-color: #3396ff" />
             #3396ff
           </TableCell>
-          <TableCell>The select color of drop-down lists and buttons.</TableCell>
+          <TableCell>The select color of drop-down lists and buttons.</TableCell
+          >
         </TableRow>
         <TableRow>
           <TableCell>--select-text-color</TableCell>
@@ -219,7 +213,9 @@
             <span class="color-preview" style="background-color: #ffffff" />
             #ffffff
           </TableCell>
-          <TableCell>The select text color of drop-down lists and buttons.</TableCell>
+          <TableCell>
+            The select text color of drop-down lists and buttons.
+          </TableCell>
         </TableRow>
         <TableRow>
           <TableCell>--focus-color</TableCell>
@@ -261,7 +257,9 @@
             <span class="color-preview" style="background-color: #ff0066" />
             #ff0066
           </TableCell>
-          <TableCell>The primary color, which you can change to your brand color.</TableCell>
+          <TableCell>
+            The primary color, which you can change to your brand color.
+          </TableCell>
         </TableRow>
         <TableRow>
           <TableCell>--primary-text-color</TableCell>
@@ -412,7 +410,8 @@
           <TableCell>
             <span
               class="color-preview"
-              style="background-color: rgba(0, 0, 0, 0.7)" />
+              style="background-color: rgba(0, 0, 0, 0.7)"
+            />
             rgba(0, 0, 0, 0.7)
           </TableCell>
           <TableCell>The text color of warning elements.</TableCell>
@@ -574,7 +573,8 @@
           <TableCell>
             <span
               class="color-preview"
-              style="background-color: rgba(0, 0, 0, 0.7)" />
+              style="background-color: rgba(0, 0, 0, 0.7)"
+            />
             rgba(0, 0, 0, 0.7)
           </TableCell>
           <TableCell>The text color of the header.</TableCell>
@@ -597,7 +597,8 @@
           <TableCell>
             <span
               class="color-preview"
-              style="background-color: rgba(0, 0, 0, 0.7)" />
+              style="background-color: rgba(0, 0, 0, 0.7)"
+            />
             rgba(0, 0, 0, 0.7)
           </TableCell>
           <TableCell>The text color of the footer.</TableCell>
@@ -612,7 +613,8 @@
           <TableCell>
             <span
               class="color-preview"
-              style="background-color: rgba(0, 0, 0, 0)" />
+              style="background-color: rgba(0, 0, 0, 0)"
+            />
             transparent
           </TableCell>
           <TableCell>The background color of a nav bar item.</TableCell>
@@ -630,7 +632,8 @@
           <TableCell>
             <span
               class="color-preview"
-              style="background-color: rgba(0, 0, 0, 0.1)" />
+              style="background-color: rgba(0, 0, 0, 0.1)"
+            />
             rgba(0, 0, 0, 0.1)
           </TableCell>
           <TableCell>The hover color for a nav bar item.</TableCell>
@@ -685,4 +688,63 @@
       </TableBody>
     </Table>
   </div>
+
+  <h2>Script Only</h2>
+  <p>
+    If theming via the Svelte Toolkit script, you can set some additional
+    properties:
+  </p>
+
+  <div class="block">
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell>Name</TableHeaderCell>
+          <TableHeaderCell>Default</TableHeaderCell>
+          <TableHeaderCell>Description</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>--small-screen</TableCell>
+          <TableCell>480px</TableCell>
+          <TableCell>
+            The width of a small screen as used in media queries.
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--medium-screen</TableCell>
+          <TableCell>760px</TableCell>
+          <TableCell>
+            The width of a medium screen as used in media queries.
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--large-screen</TableCell>
+          <TableCell>1040px</TableCell>
+          <TableCell>
+            The width of a large screen as used in media queries.
+          </TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>--xlarge-screen</TableCell>
+          <TableCell>1320px</TableCell>
+          <TableCell>
+            The width of an extra-large screen as used in media queries.
+          </TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </div>
 </div>
+
+<style>
+  .color-preview {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 4px;
+  }
+</style>
