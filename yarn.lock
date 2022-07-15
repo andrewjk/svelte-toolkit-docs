@@ -1388,10 +1388,10 @@ svelte-toolkit@^0.7.1:
   resolved "https://registry.yarnpkg.com/svelte-toolkit/-/svelte-toolkit-0.7.1.tgz#43ee27df2e2cd6a74aa407479675077559d8870b"
   integrity sha512-g7p2ql3ai4kNMq9u4bExOCrm8y+T3FTJmV/BW58YqmqiTCiD69DybKf0Dst96WWR6TO2EhBn+RIRn/lqI70EOw==
 
-svelte@^3.43.1:
-  version "3.43.1"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.43.1.tgz#8370c08a970bcc1c118baaa86a38fae82e0a8396"
-  integrity sha512-nvPIaKx4HLzYlSdquISZpgG1Kqr2VAWQjZOt3Iwm3UhbqmA0LnSx4k1YpRMEhjQYW3ZCqQoK8Egto9tv4YewMA==
+svelte@^3.49.0:
+  version "3.49.0"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.49.0.tgz#5baee3c672306de1070c3b7888fc2204e36a4029"
+  integrity sha512-+lmjic1pApJWDfPCpUUTc1m8azDqYCG1JN9YEngrx/hUyIcFJo6VZhj0A1Ai0wqoHcEIuQy+e9tk+4uDgdtsFA==
 
 tar@^6.0.2:
   version "6.1.11"
